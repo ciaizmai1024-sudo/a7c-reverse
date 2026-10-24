@@ -1,0 +1,81 @@
+/setting/updater/mode              DIR/MISSING(130)
+/setting/updater/mode1             MISSING(130)
+/setting/updater/mode2             MISSING(130)
+/setting/updater/mode3             MISSING(130)
+/setting/updater/mode4             MISSING(130)
+/setting/updater/mode5             MISSING(130)
+/setting/updater/mode6             MISSING(130)
+/setting/updater/comp              READABLE 0 B
+/setting/updater/uincomp           MISSING(130)
+/setting/updater/debug             MISSING(130)
+/setting/updater/dat4              READABLE 2 B = 00 02
+/setting/updater/version.txt       MISSING(130)
+/setting/updater/kikilog.dat       MISSING(130)
+/setting/Backup.bin                READABLE 1210408 B
+/setting/updater/Backup.bin        MISSING(130)
+/setting/partinf.conf              MISSING(130)
+/setting/mount.conf                MISSING(130)
+/setting/kemco.txt                 READABLE 1905 B
+/usr/bin/crypter.elf               READABLE 39036 B
+/usr/bin/udtrbody.bin              READABLE 143360 B
+/usr/bin/up.sh                     READABLE 5008 B
+/usr/bin/mf                        MISSING(130)
+/usr/bin/sauu                      MISSING(130)
+/tmp/jiritsu                       DIR -> 130
+/tmp/jiritsu/libJit.so             MISSING(130)
+/tmp/jbusy                         MISSING(130)
+/tmp/etc/nsswitch.conf             MISSING(130)  (真路径是 /tmp/nsswitch.conf)
+/version.txt                       READABLE 19 B = '39119_05.2021111501'
+/tmp/nsswitch.conf                 READABLE 261 B
+/tmp/kikilog.dat                   READABLE 1957888 B
+/tmp/uipc_set.txt                  MISSING(130) (真名 uipc_set? 见 FAT: UIPC_S~1 = uipc_set? 大小写/名不全)
+/tmp/toprc                         READABLE 617 B
+/tmp/protoc.conf                   MISSING(130)
+/tmp/services                      READABLE 19666 B
+/tmp/resolve.conf                  MISSING(130)
+/tmp/mtab.dat                      MISSING(130)
+/tmp/config.spec                   READABLE 0 B
+/dat1                              MISSING(130)
+/dat2                              MISSING(130)
+/dat3                              MISSING(130)
+/dat4                              MISSING(130)
+/p1chksum                          MISSING(130)
+/Backup.bin                        MISSING(130)
+/kemco.txt                         MISSING(130)
+/partinf.conf                      MISSING(130)
+/mount.conf                        MISSING(130)
+/updater/comp                      MISSING(130)
+/updater/dat4                      MISSING(130)
+/system/setting/kemco.txt          MISSING(130)
+/system/updater/comp               MISSING(130)
+/PMBP/PMHOME                       DIR -> 130
+/lens                              DIR -> 130
+/setting                           DIR -> 130
+/tmp                               DIR -> 130
+/usr                               DIR -> 130
+/usr/lib/libupdaterufp.so          READABLE 12936 B
+/usr/lib/libupdatertalk.so         READABLE 3404 B
+/usr/lib/libupdaterufunc.so        READABLE 4324 B
+/usr/lib/libupdatercommon.so       READABLE 37004 B
+/usr/lib/libupdatermedia.so        READABLE 3992 B
+/usr/lib/libJiritsu.so             READABLE 174816 B
+/usr/lib/libsencore.so             READABLE 369804 B
+/usr/local/bin/sen.elf             MISSING(130) -> 真路径 /usr/bin/sen.elf READABLE 19164 B
+/usr/bin/sen.elf                   READABLE 19164 B
+/usr/bin/us_remove_modes.sh        READABLE 52 B
+/usr/bin/change_mode.sh            READABLE 4022 B
+/usr/sbin/sen.elf                  MISSING(130)
+/usr/bin/sauu.elf                  MISSING(130)
+/usr/bin/mf.elf                    MISSING(130)
+/usr/bin/udtrmain.sh               MISSING(130)
+/usr/bin/us_mkfs.sh                MISSING(130)  (它在 nflasha1 的 updater 里，不在 /usr)
+/usr/bin/endupdate.sh              MISSING(130)
+/usr/bin/us_crc32sum_appli.sh      MISSING(130)
+/usr/bin/ud_lerase.elf             MISSING(130)
+/usr/bin/ud_fsys_format.elf        MISSING(130)
+/usr/tool/libkmcsup.so             MISSING(130)
+/boot/p1chksum                     MISSING(130)
+/boot/dat2                         MISSING(130)
+/boot/initrd.img                   MISSING(130)
+/history/update.log                MISSING(130) (nflasha13 挂点不在 rootfs)
+/hash                              MISSING(130)

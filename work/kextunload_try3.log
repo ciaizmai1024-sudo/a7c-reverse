@@ -1,0 +1,2 @@
+Executing: /usr/bin/kmutil unload -b com.apple.iokit.IOUSBMassStorageDriver
+Kernel request failed: (libkern/kext) kext is in use or retained (cannot unload) (-603946984)

@@ -1,0 +1,12 @@
+AArch32 mode switch from svc to irq PC 0x6013fd50
+AArch32 mode switch from irq to abt PC 0x6013fd54
+AArch32 mode switch from abt to und PC 0x6013fd60
+AArch32 mode switch from und to svc PC 0x6013fd6c
+Taking exception 4 [Data Abort]
+...from EL1 to EL1
+...with ESR 0x25/0x9600003f
+...with DFSR 0x5 DFAR 0x0
+Taking exception 3 [Prefetch Abort]
+...from EL1 to EL1
+...with ESR 0x21/0x8600003f
+...with IFSR 0x7 IFAR 0xffff1000

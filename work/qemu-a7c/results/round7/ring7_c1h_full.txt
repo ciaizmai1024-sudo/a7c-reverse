@@ -1,0 +1,1163 @@
+<5>[    0.000000] Linux version 3.0.27_nl-rt106 (wubin@ubuntu) (gcc version 6.4.0 (Buildroot 2018.02-rc2-00002-gcab6743) ) #9 SMP PREEMPT RT Sat Oct 24 05:55:10 CST 2026
+<4>[    0.000000] CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c5387d
+<4>[    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+<6>[    0.000000] cmdline override at 60103005
+<4>[    0.000000] Machine: ARM-CXD900X0
+<4>[    0.000000] arm_add_memory: 0 0x0 0x40000000
+<4>[    0.000000] reserve area 0: 100000 @ 0
+<4>[    0.000000] reserve area 1: 75E000 @ 2E68000
+<4>[    0.000000] reserve area 2: 500000 @ 9B00000
+<4>[    0.000000] reserve area 3: 20000000 @ 20000000
+<4>[    0.000000] arm_add_memory: 1 0x80000000 0x3f800000
+<4>[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+<6>[    0.000000] L310 cache controller enabled
+<6>[    0.000000] l2x0: 8 ways, CACHE_ID 0x410000c8, AUX_CTRL 0x02420000, Cache size: 131072 B
+<6>[    0.000000] L2 cache controller: enabled
+<6>[    0.000000] 
+Lockdown by master
+<6>[    0.000000] 
+Ignore shared
+<6>[    0.000000] 
+Way-size = 16KB
+<6>[    0.000000] 
+8-way
+<6>[    0.000000] 
+Tag RAM latency = 000
+<6>[    0.000000] 
+Data RAM latency = 000
+<4>[    0.000000] bootmem_init: max_low=0x784384, max_high=0x784384
+<6>[    0.000000] Section 5 and 4 (node 0) have a circular dependency on usemap and pgdat allocations
+<7>[    0.000000] On node 0 totalpages: 0
+<7>[    0.000000] On node 1 totalpages: 0
+<7>[    0.000000] On node 2 totalpages: 0
+<7>[    0.000000] On node 3 totalpages: 0
+<7>[    0.000000] On node 4 totalpages: 0
+<7>[    0.000000] On node 5 totalpages: 0
+<7>[    0.000000] On node 6 totalpages: 0
+<7>[    0.000000] On node 7 totalpages: 0
+<7>[    0.000000] On node 8 totalpages: 0
+<7>[    0.000000] On node 9 totalpages: 0
+<7>[    0.000000] On node 10 totalpages: 0
+<7>[    0.000000] On node 11 totalpages: 0
+<7>[    0.000000] On node 12 totalpages: 0
+<7>[    0.000000] On node 13 totalpages: 0
+<7>[    0.000000] On node 14 totalpages: 0
+<7>[    0.000000] On node 15 totalpages: 0
+<4>[    0.000000] high_memory: df800000
+<4>[    0.000000] Zone PFN ranges:
+<4>[    0.000000]   Normal   0x00000000 -> 0x000bf800
+<4>[    0.000000] Movable zone start PFN for each node
+<4>[    0.000000] early_node_map[2] active PFN ranges
+<4>[    0.000000]     0: 0x00000000 -> 0x00040000
+<4>[    0.000000]     1: 0x00080000 -> 0x000bf800
+<7>[    0.000000] On node 0 totalpages: 127650
+<7>[    0.000000]   Normal zone: 2304 pages used for memmap
+<7>[    0.000000]   Normal zone: 0 pages reserved
+<7>[    0.000000]   Normal zone: 125346 pages, LIFO batch:31
+<7>[    0.000000] On node 1 totalpages: 260096
+<7>[    0.000000]   Normal zone: 2286 pages used for memmap
+<7>[    0.000000]   Normal zone: 0 pages reserved
+<7>[    0.000000]   Normal zone: 257810 pages, LIFO batch:31
+<6>[    0.066681] PERCPU: Embedded 7 pages/cpu @6056e000 s5280 r8192 d15200 u32768
+<7>[    0.067045] pcpu-alloc: s5280 r8192 d15200 u32768 alloc=8*4096
+<7>[    0.067096] pcpu-alloc: [0] 0 
+<4>[    0.067936] Built 2 zonelists in Node order, mobility grouping on.  Total pages: 383156
+<4>[    0.067947] Policy zone: Normal
+<5>[    0.068230] Kernel command line:  ip=off initrd=0x00700000,0x00800000 root=/dev/ram0 rw noatime noalign init=/sbin/init heap_profile.records=0 snsc_workqueue.kipid=130 manage.irqd=129 softirq.sirqd=128 exception.reboot=1 exception.console_option=115200n8 softlockup_panic=0 softlockup_thresh=30 wdt.timeout=500 warm.boot_drop=0 warm.ignore_drop=1 pcie.refclk=9,2 pcie.pwr1=2,18 pcie.pwr2=2,23 pcie.pwr3=2,22 pcie.ch0_enable=Y pcie.ch0_select=1 pcie.ch0_start=0 pcie.ch1_enable=Y pcie.ch1_select=1 pcie.ch1_start=0 pcie.cold_delay=0 pcie.pon_delay=0 pcie_ports=native pci=ecrc=on,hpiosize=0,hpprefsize=0 pciehp.pciehp_force=Y pcie_aspm.policy=performance error.led=0,0 cfg.poff=0,10 console=ttyAM0,115200n8 amba2.console=0 xrstreq=0 wdt.mode=0 stack_usage=y cxd90014.bam=Y cfg.uart=15 tmonitor.addr=0x1A00000 tmonitor.size=0x500000 tmonitor.mask=0 wbi_memclr=0x200210e8 em_console=0x200210ec boottime=0x20000@0x03480000 klog.addr=0x034A0000 klog.size=0x20000 mem=1G@0 memrsv=1M@0 memrsv=0x75e000@0x02E68000 memrsv=0x500000@0x09b00000
+<6>[    0.069653] PID hash table entries: 4096 (order: 2, 16384 bytes)
+<6>[    0.070009] Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+<6>[    0.070888] Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+<6>[    0.101981] Memory: 1024MB 1016MB = 2040MB total
+<5>[    0.102032] Memory: 1518220k/1518220k available, 570740k reserved, 0K highmem
+<5>[    0.102118] Virtual kernel memory layout:
+<5>[    0.102121]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+<5>[    0.102124]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+<5>[    0.102127]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+<5>[    0.102130]     vmalloc : 0xb0800000 - 0xef800000   (1008 MB)
+<5>[    0.102133]     lowmem  : 0x60000000 - 0xdf800000   (2040 MB)
+<5>[    0.102138]     modules : 0x5f000000 - 0x60000000   (  16 MB)
+<5>[    0.102141]       .text : 0x60108000 - 0x60478024   (3521 kB)
+<5>[    0.102144]       .init : 0x60479000 - 0x604a54a0   ( 178 kB)
+<5>[    0.102147]       .data : 0x604a6000 - 0x604d7180   ( 197 kB)
+<5>[    0.102150]        .bss : 0x604d7180 - 0x60526890   ( 318 kB)
+<6>[    0.105675] NR_IRQS:256
+<6>[    0.108707] sched_clock: 32 bits at 2000kHz, resolution 500ns, wraps every 2147483ms
+<4>[    0.108980] cxd4115_clocksource_init: 4194304000 23 
+<6>[    0.162868] allocated 37601280 bytes of page_cgroup
+<6>[    0.162890] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+<6>[    0.163426] Calibrating delay loop... 2315.05 BogoMIPS (lpj=11575296)
+<6>[    0.219987] pid_max: default: 4096 minimum: 301
+<6>[    0.221014] Mount-cache hash table entries: 512
+<6>[    0.226550] Initializing cgroup subsys memory
+<6>[    0.227299] CPU: Testing write buffer coherency: mm/memory.c:427: bad pmd 9081140e.
+<4>[    0.228252] failed, enabling work-around
+<7>[    0.315931] Synthetic TSC timer will fire each 131104 jiffies.
+<6>[    0.322336] Brought up 1 CPUs
+<6>[    0.322428] SMP: Total of 1 processors activated.
+<6>[    0.340076] NET: Registered protocol family 16
+<6>[    0.356228] bio: create slab <bio-0> at 0
+<6>[    0.362038] Switching to clocksource cxd4105-freerun-timer
+<6>[    0.364527] NET: Registered protocol family 2
+<6>[    0.365866] IP route cache hash table entries: 65536 (order: 6, 262144 bytes)
+<6>[    0.368260] TCP established hash table entries: 262144 (order: 9, 2097152 bytes)
+<6>[    0.369803] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes)
+<6>[    0.372336] TCP: Hash tables configured (established 262144 bind 65536)
+<6>[    0.372410] TCP reno registered
+<6>[    0.373534] NET: Registered protocol family 1
+<7>[    0.373739] PCI: CLS 0 bytes, default 32
+<6>[    0.377353] Trying to unpack rootfs image as initramfs...
+<6>[    0.381021] rootfs image is not initramfs (junk in compressed archive); looks like an initrd
+<6>[    0.405788] Freeing initrd memory: 8192K
+<6>[    0.406265] PMU: registered new PMU device of type 0
+<4>[    0.408235] hwtimer cpu0 OK
+<4>[    0.408471] hwtimer cpu1 OK
+<4>[    0.408516] hwtimer cpu2 OK
+<4>[    0.408561] hwtimer cpu3 OK
+<4>[    0.408624] hwtimer jitter 0
+<6>[    0.412106] klog: initialize logging buffer: 0x00020000@0x034a0000, magic wrong nbit: 20(0x00000000)
+<6>[    0.414855] console [klog0] enabled
+<6>[    0.417286] ashmem: initialized
+<6>[    0.419124] fuse init (API version 7.16)
+<6>[    0.419668] msgmni has been set to 2981
+<6>[    0.427337] io scheduler noop registered (default)
+<6>[    0.427920] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+<6>[    0.428064] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+<6>[    0.429209] uart0: ttyAM0 at MMIO 0xf2000000 (irq = 150) is a AMBA/PL011
+<6>[    0.429906] console [ttyAM0] enabled
+<6>[    0.430770] uart1: ttyAM1 at MMIO 0xf2001000 (irq = 151) is a AMBA/PL011
+<6>[    0.430976] uart2: ttyAM2 at MMIO 0xf2002000 (irq = 152) is a AMBA/PL011
+<6>[    0.431144] uart3: ttyAM3 at MMIO 0xf2003000 (irq = 120) is a AMBA/PL011
+<4>[    0.431591] ttynull: NULL console driver $Revision: 1.1.2.1 $
+<6>[    0.436452] brd: module loaded
+<6>[    0.438615] loop: module loaded
+<6>[    0.438704] CompSwap: num_devices not specified. Using default: 1
+<6>[    0.438742] CompSwap: Creating 1 devices ...
+<4>[    0.439283] Register CompSwap LZO compressor/decompressor
+<6>[    0.439538] tun: Universal TUN/TAP device driver, 1.6
+<6>[    0.439570] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+<6>[    0.442834] mousedev: PS/2 mouse device common for all mice
+<3>[    0.444499] Logger@Error can't get alog.addr & alog.size! Alloc memory by logger itself!
+<6>[    0.444665] logger: created 256K log 'log_main'
+<6>[    0.444774] logger: created 128K log 'log_events'
+<6>[    0.444864] logger: created 64K log 'log_radio'
+<6>[    0.445643] IPv4 over IPv4 tunneling driver
+<6>[    0.446577] GRE over IPv4 demultiplexor driver
+<6>[    0.446630] GRE over IPv4 tunneling driver
+<6>[    0.448006] ip_tables: (C) 2000-2006 Netfilter Core Team
+<6>[    0.449543] TCP cubic registered
+<6>[    0.449583] Initializing XFRM netlink socket
+<6>[    0.450143] NET: Registered protocol family 10
+<6>[    0.455401] Mobile IPv6
+<6>[    0.455474] IPv6 over IPv4 tunneling driver
+<6>[    0.457115] NET: Registered protocol family 17
+<6>[    0.457319] NET: Registered protocol family 15
+<6>[    0.457370] lib80211: common routines for IEEE802.11 drivers
+<7>[    0.457444] lib80211_crypt: registered algorithm 'NULL'
+<6>[    0.458107] VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+<6>[    0.471561] sony_usb_init: CXD4132
+<6>[    0.472138] usb_gcore_module_init: usb_gcw_register_driver()
+<6>[    0.472195] usb_gcw_register_driver: gcore prototype for Astra
+<3>[    0.472451] usb_gadgetcore0724: usb_gadget_register_driver()-->failed(-19)
+<3>[    0.472670] drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+<5>[    0.487706] RAMDISK: cramfs filesystem found at block 0
+<5>[    0.488078] RAMDISK: Loading 4700KiB [1 disk] into ram disk... |
+done.
+<6>[    0.560914] VFS: Mounted root (cramfs filesystem) readonly on device 1:0.
+<6>[    0.569073] Freeing init memory: 176K
+<4>[    0.569201] default_nodeorder is not valid. Force it to 0.
+<4>[    0.832149] devno: module license 'unspecified' taints kernel.
+<4>[    0.832225] Disabling lock debugging due to kernel taint
+<6>[    0.896346] ALFReD (v161102p2)
+<6>[    0.898134] eMMC: SDR mode
+<4>[    0.898829] AL_EMMC_SEQ     (5729[execute_tuning  ]) : Warning : Software Tuning is forbiden for non-HS200 mode
+<4>[    0.901553] AL_EMMC_SEQ     (2009[set_emmc_spec   ]) : Warning : BKOPS is not supported
+<4>[    0.901629] AL_EMMC_SEQ     (2028[set_emmc_spec   ]) : Warning : HPI is not supported
+<4>[    0.901691] AL_EMMC_SEQ     (2053[set_emmc_spec   ]) : Warning : Sanitize is not supported
+<4>[    0.902054] AL_EMMC_SEQ     (4126[init_emmc_access_mode]) : Warning : Discrepancy between OCR/EXT_CSD register about device capacity. Trying to access as the non-High Capacity device.
+<4>[    0.902213] AL_EMMC_SEQ     (5729[execute_tuning  ]) : Warning : Software Tuning is forbiden for non-HS200 mode
+<4>[    0.902921] AL_EMMC_SEQ     (5729[execute_tuning  ]) : Warning : Software Tuning is forbiden for non-HS200 mode
+<6>[    0.903378] eMMC: 1286MiB, Unknown PEF1G4 (rev 0x4d, date 0x15, serial 0x4c4b0001)
+<4>[    0.908161] AL_EMMC_SEQ     (5729[execute_tuning  ]) : Warning : Software Tuning is forbiden for non-HS200 mode
+<6>[    0.910368]  nflasha: unknown partition table
+<4>[    0.912806] AL_EMMC_SEQ     (5729[execute_tuning  ]) : Warning : Software Tuning is forbiden for non-HS200 mode
+<6>[    0.913261] partition table invalid
+8cM`
+h4P`h4P`
+4P`~
+5P`$5P`$5P`,5P`,5P`45P`45P`<5P`<5P`D5P`D5P`L5P`L5P`T5P`T5P`\5P`\5P`d5P`d5P`l5P`l5P`t5P`t5P`|5P`|5P`
+6P`$6P`$6P`,6P`,6P`46P`46P`<6P`<6P`D6P`D6P`L6P`L6P`T6P`T6P`\6P`\6P`d6P`d6P`l6P`l6P`t6P`t6P`|6P`|6P`
+KM`<
+7P`$7P`$7P`
+7M`47P`47P`<7P`<7P`D7P`D7P`L7P`L7P`T7P`T7P``$M``$M`d7P`d7P`l7P`l7P`t7P`t7P`|7P`|7P`
+~;~dAR`lcR`
+8P`$8P`$8P`,8P`,8P`48P`48P`<8P`<8P`D8P`D8P`L8P`L8P`T8P`T8P`\8P`\8P`d8P`d8P`l8P`l8P`t8P`t8P`|8P`|8P`
+`X=~`X=~
+a4P` 3
+`4P`
+QW` 
+S;`<
+S;`<
+S;`<
+@Z~~ V=~
+`*L`
+`*L`
+$@P`$@P`
+4@P`4@P`
+H@P`H@P`
+X@P`X@P`
+l@P`l@P`
+|@P`|@P`
+ AP` AP`
+0AP`0AP`
+DAP`DAP`
+TAP`TAP`
+hAP`hAP`
+xAP`xAP`
+,HP`,HP`4HP`4HP`
+HP`$HP`DZP`DZP`
+,IP`,IP`
+YP`PZP`PZP`
+HP`$HP`
+YP``Y=~
+(`115200n8
+L`P_P`
+(_P`
+h_P`h_P`
+P_P`
+?~`W<~`S=~
+`4P`(
+QW`@QW`
+L`P&K`0yJ`
+lR=~
+XeP`
+LaP`
+ _=~
+T<~@U~~
+Compressed ROMFSl
+Compressed
+kmod
+media
+mnt1
+mnt2
+mnt3
+mnt4
+mnt5
+proc
+ramdsk
+root
+sbin
+setting
+system
+tmp_updater
+version.txt
+busybox
+chgrp
+chmod
+chown
+cpio
+date
+dmesg
+echo
+egrep
+false
+fgrep
+grep
+gunzip
+gzip
+kill
+login
+md5sum
+mkdir
+mkfifo
+mknod
+mktemp
+mount
+pidof
+ping
+ping6
+rmdir
+sleep
+sync
+touch
+true
+umount
+uname
+usleep
+xargs
+zcat
+MAKEDEV
+backup
+bootimg
+boss-t1
+boss-t2
+boss-t3
+compswap
+console
+core
+crash
+dma330
+dmac
+dmpgles2
+dnflasha
+dnflasha1
+dnflasha10
+dnflasha11
+dnflasha12
+dnflasha13
+dnflasha14
+dnflasha15
+dnflasha16
+dnflasha17
+dnflasha18
+dnflasha19
+dnflasha2
+dnflasha20
+dnflasha21
+dnflasha22
+dnflasha23
+dnflasha24
+dnflasha25
+dnflasha26
+dnflasha27
+dnflasha28
+dnflasha29
+dnflasha3
+dnflasha30
+dnflasha31
+dnflasha4
+dnflasha5
+dnflasha6
+dnflasha7
+dnflasha8
+dnflasha9
+emif
+full
+fuse
+gpio
+hdmi
+hdmi_external_tx
+hdmi_input
+input
+ioexp
+kmem
+ldec
+loop0
+loop1
+loop2
+loop3
+loop4
+loop5
+loop6
+loop7
+mcmn
+mmca
+mmca-char
+mmca1
+mmca2
+mmca3
+mmca4
+mmcaa
+mmcaa1
+mmcab
+mmcab1
+mmcac
+mmcac1
+mmcad
+mmcad1
+mmcb
+mmcb-char
+mmcb1
+mmcb2
+mmcb3
+mmcb4
+mmcba
+mmcba1
+mmcbb
+mmcbb1
+mmcbc
+mmcbc1
+mmcbd
+mmcbd1
+mmcc
+mmcc-char
+mmcc1
+mmcc2
+mmcc3
+mmcc4
+mmcca
+mmcca1
+mmccb
+mmccb1
+mmccc
+mmccc1
+mmccd
+mmccd1
+mmcd
+mmcd-char
+mmcd1
+mmcd2
+mmcd3
+mmcd4
+mmcda
+mmcda1
+mmcdb
+mmcdb1
+mmcdc
+mmcdc1
+mmcdd
+mmcdd1
+mmce
+mmce-char
+mmce1
+mmce2
+mmce3
+mmce4
+mmcea
+mmcea1
+mmceb
+mmceb1
+mmcec
+mmcec1
+mmced
+mmced1
+ms-char
+nflasha
+nflasha1
+nflasha10
+nflasha11
+nflasha12
+nflasha13
+nflasha14
+nflasha15
+nflasha16
+nflasha17
+nflasha18
+nflasha19
+nflasha2
+nflasha20
+nflasha21
+nflasha22
+nflasha23
+nflasha24
+nflasha25
+nflasha26
+nflasha27
+nflasha28
+nflasha29
+nflasha3
+nflasha30
+nflasha31
+nflasha4
+nflasha5
+nflasha6
+nflasha7
+nflasha8
+nflasha9
+nflashaB0
+nflashaB1
+null
+port
+ptmx
+qcqmi0
+qcqmi1
+qcqmi2
+ram0
+ram1
+ram10
+ram11
+ram12
+ram13
+ram14
+ram15
+ram16
+ram2
+ram3
+ram4
+ram5
+ram6
+ram7
+ram8
+ram9$!
+random
+rmon
+sata
+sataa
+satab
+satac
+satad
+satassd
+satauhs
+satauhsa
+satauhsb
+sda1
+sda2
+sda3
+sda4
+sdb1
+sdc1
+sdd1
+sio0
+sio1
+sio2
+sio3
+sio4
+stderr
+stdin
+stdout
+stream
+stream2
+sxs_blk0
+sxs_blk1
+tty0
+tty1
+tty10
+tty11
+tty12
+tty13
+tty14
+tty15
+tty16
+tty17
+tty18
+tty19
+tty2
+tty3
+tty4
+tty5
+tty6
+tty7
+tty8
+tty9
+ttyACM0
+ttyACM1
+ttyACM2
+ttyAM0
+ttyAM1
+ttyAM2
+ttyAM3
+ttyS0
+ttyS1
+ttyS2
+ttyS3
+ttyUSB0
+ttyUSB1
+ttyUSB10
+ttyUSB11
+ttyUSB2
+ttyUSB3
+ttyUSB4
+ttyUSB5
+ttyUSB6
+ttyUSB7
+ttyUSB8
+ttyUSB9
+ttycons
+uinput
+uio0
+uipc$!
+urandom
+vcs0
+vcs1
+vcs10
+vcs11
+vcs12
+vcs13
+vcs14
+vcs15
+vcs16
+vcs17
+vcs18
+vcs19
+vcs2
+vcs3
+vcs4
+vcs5
+vcs6
+vcs7
+vcs8
+vcs9
+vcsa
+vcsa0
+vcsa1
+vcsa10
+vcsa11
+vcsa12
+vcsa13
+vcsa14
+vcsa15
+vcsa16
+vcsa17
+vcsa18
+vcsa19
+vcsa2
+vcsa3
+vcsa4
+vcsa5
+vcsa6
+vcsa7
+vcsa8
+vcsa9
+zero
+event0
+event1
+event2
+TransferJet_APM2PCLCD
+TransferJet_PCLCD2APM
+adj_drv
+event
+obex
+pcl_obex
+pclc_ctr
+pclc_msg
+scsi_tgt
+wrapper
+controlC0
+pcmC0D0c
+pcmC0D0p
+timer
+buspwr
+buspwric
+event
+gadgetcore
+kikilog
+massstorage
+otgcore
+portmon
+scsi
+sicd_core
+sicd_data
+sicd_event
+swic
+usb_extcmd
+usbcore
+usbg_bspwr
+vspe
+DmmConfig.bin
+VerificationKey.pem
+ld-2.11.2.so
+ld-linux.so.3
+libSTMcmdexecute.so
+libc-2.11.2.so
+libc.so.6
+libcrypt-2.11.2.so
+libcrypt.so.1
+libcrypto.so
+libcrypto.so.1
+libcrypto.so.1.1
+libdl-2.11.2.so
+libdl.so.2
+libgcc_s.so.1
+libm-2.11.2.so
+libm.so.6
+libproc-3.2.7.so
+libpthread-2.11.2.so
+libpthread.so.0
+librt-2.11.2.so
+librt.so.1
+libssl.so
+libssl.so.1
+libssl.so.1.1
+libssp.so
+libssp.so.0
+libssp.so.0.0.0
+libstdc++.so
+libstdc++.so.6
+libstdc++.so.6.0.14
+IAMUPDATER
+chassis
+dosfsck
+freeramdisk
+getty
+halt
+ifconfig
+init
+insmod
+lsmod
+mkdosfs
+pivot_root
+poweroff
+reboot
+rmmod
+swapoff
+swapon
+kmod
+local
+share
+UdtrMain.sh
+common.src
+crypter.elf
+execute_prod.sh
+execute_ufp.sh
+hash_check.sh
+hash_drop.sh
+hash_update.sh
+insmod.sh
+is_valid_boot.sh
+mkramdsk.sh
+pformat.elf
+prepare-usb.sh
+sauu
+sdfileinput.elf
+sen.elf
+uc_portctl.elf
+ud_cons.elf
+ud_darwin_firmup.elf
+ud_darwin_init.elf
+ud_datcnv.elf
+ud_get_mem2file.elf
+ud_get_power_ic_type.elf
+ud_get_serial_cfg_file.elf
+ud_im.elf
+ud_init_sio_port_setting.elf
+ud_read_lsi_type.elf
+ud_reboot.elf
+ud_send_lsi.elf
+ud_spirom_firmup.elf
+ud_timeout_poweroff.elf
+ulogio.elf
+up.sh
+updater_log.sh
+updater_log_rotate.sh
+updater_storage_backup.sh
+updater_storage_mount.sh
+updater_storage_restore.sh
+us_darwin_firm.sh
+us_darwin_init.sh
+us_error.sh
+us_pulse_led.sh
+us_remove_modes.sh
+usb_insmod.sh
+backup.ko
+ca.ko
+devno.ko
+dmac.ko
+dmm.ko
+emif.ko
+emmc.ko
+i2c.ko
+ldec.ko
+mcmn_drv.ko
+mmc_drv.ko
+ms_drv.ko
+osal_uipc.ko
+osal_ulogio.ko
+osal_utm.ko
+sio.ko
+stream.ko
+stream2.ko
+usb_buspwr.ko
+usb_current.ko
+usb_darwin.ko
+usb_extcmd.ko
+usb_portMonitor.ko
+usbg_buspower.ko
+usbg_cmn.ko
+usbg_sen.ko
+usbg_stillimage.ko
+usbg_storage.ko
+utimer.ko
+libInfraFsys.so
+libInfraMediaCommon.so
+libInfraSKD.so
+libMWF.so
+libSysDef.so
+libUsbBusPower.so
+libUsbControl.so
+libbackup.so
+libosal_uipc.so
+libosal_ulogio.so
+libosal_utm.so
+libpro00.so
+libptp.so
+libsdfileinputupdaterapi.so
+libsencore.so
+libsensapi.so
+libsenupdater.so
+libtestcmd.so
+libtestcmd_scn.so
+libul_GpioCtrl.so
+libul_xml.so
+libupdater0604.so
+libupdatercommon.so
+libupdatertalk.so
+libupdaterufunc.so
+libusb.so
+libusbcmd.so
+terminfo
+linux
+$hU>@
+N`-5
+1]l/$
+QaXU
+BQlb
+Ni~g
+@$joC6
+HB}"
+}`&`
+mat!N
+^0Ev
+wgQn
+hO|z
+y_Y[L
+{[]I
+}[7t
+-~[$
+x-Yi
+4_d~
+3y-/
+0+~eN
+v%3L
+pxp,
+:qEt
+j>=e31
+e?{l3
+EOiBg
+ ,?}
+A,~,
+%#L"
+v'x7
+event0
+event1
+event2
+TransferJet_APM2PCLCD
+TransferJet_PCLCD2APM
+adj_drv
+event
+obex
+pcl_obex
+pclc_ctr
+pclc_msg
+scsi_tgt
+wrapper
+controlC0
+pcmC0D0c
+pcmC0D0p
+timer
+buspwr
+buspwric
+event
+gadgetcore
+kikilog
+massstorage
+otgcore
+portmon
+scsi
+sicd_core
+sicd_data
+sicd_event
+swic
+usb_extcmd
+usbcore
+usbg_bspwr
+vspe
+DmmConfig.bin
+VerificationKey.pem
+ld-2.11.2.so
+ld-linux.so.3
+libSTMcmdexecute.so
+libc-2.11.2.so
+libc.so.6
+libcrypt-2.11.2.so
+libcrypt.so.1
+libcrypto.so
+libcrypto.so.1
+libcrypto.so.1.1
+libdl-2.11.2.so
+libdl.so.2
+libgcc_s.so.1
+libm-2.11.2.so
+libm.so.6
+libproc-3.2.7.so
+libpthread-2.11.2.so
+libpthread.so.0
+librt-2.11.2.so
+librt.so.1
+libssl.so
+libssl.so.1
+libssl.so.1.1
+libssp.so
+libssp.so.0
+libssp.so.0.0.0
+libstdc++.so
+libstdc++.so.6
+libstdc++.so.6.0.14
+IAMUPDATER
+chassis
+dosfsck
+freeramdisk
+getty
+halt
+ifconfig
+init
+insmod
+lsmod
+mkdosfs
+pivot_root
+poweroff
+reboot
+rmmod
+swapoff
+swapon
+kmod
+local
+share
+UdtrMain.sh
+common.src
+crypter.elf
+execute_prod.sh
+execute_ufp.sh
+hash_check.sh
+hash_drop.sh
+hash_update.sh
+insmod.sh
+is_valid_boot.sh
+mkramdsk.sh
+pformat.elf
+prepare-usb.sh
+sauu
+sdfileinput.elf
+sen.elf
+uc_portctl.elf
+ud_cons.elf
+ud_darwin_firmup.elf
+ud_darwin_init.elf
+ud_datcnv.elf
+ud_get_mem2file.elf
+ud_get_power_ic_type.elf
+ud_get_serial_cfg_file.elf
+ud_im.elf
+ud_init_sio_port_setting.elf
+ud_read_lsi_type.elf
+ud_reboot.elf
+ud_send_lsi.elf
+ud_spirom_firmup.elf
+ud_timeout_poweroff.elf
+ulogio.elf
+up.sh
+updater_log.sh
+updater_log_rotate.sh
+updater_storage_backup.sh
+updater_storage_mount.sh
+updater_storage_restore.sh
+us_darwin_firm.sh
+us_darwin_init.sh
+us_error.sh
+us_pulse_led.sh
+us_remove_modes.sh
+usb_insmod.sh
+backup.ko
+ca.ko
+devno.ko
+dmac.ko
+dmm.ko
+emif.ko
+emmc.ko
+i2c.ko
+ldec.ko
+mcmn_drv.ko
+mmc_drv.ko
+ms_drv.ko
+osal_uipc.ko
+osal_ulogio.ko
+osal_utm.ko
+sio.ko
+stream.ko
+stream2.ko
+usb_buspwr.ko
+usb_current.ko
+usb_darwin.ko
+usb_extcmd.ko
+usb_portMonitor.ko
+usbg_buspower.ko
+usbg_cmn.ko
+usbg_sen.ko
+usbg_stillimage.ko
+usbg_storage.ko
+utimer.ko
+libInfraFsys.so
+libInfraMediaCommon.so
+libInfraSKD.so
+libMWF.so
+libSysDef.so
+libUsbBusPower.so
+libUsbControl.so
+libbackup.so
+libosal_uipc.so
+libosal_ulogio.so
+libosal_utm.so
+libpro00.so
+libptp.so
+libsdfileinputupdaterapi.so
+libsencore.so
+libsensapi.so
+libsenupdater.so
+libtestcmd.so
+libtestcmd_scn.so
+libul_GpioCtrl.so
+libul_xml.so
+libupdater0604.so
+libupdatercommon.so
+libupdatertalk.so
+libupdaterufunc.so
+libusb.so
+libusbcmd.so
+terminfo
+linux
+$hU>@
+N`-5
+1]l/$
+QaXU
+BQlb
+Ni~g
+@$joC6
+HB}"
+}`&`
+mat!N
+^0Ev
+wgQn
+hO|z
+y_Y[L
+{[]I
+}[7t
+-~[$
+x-Yi
+4_d~
+3y-/
+0+~eN
+v%3L
+pxp,
+:qEt
+j>=e31
+e?{l3
+EOiBg
+ ,?}
+A,~,
+%#L"
+v'x7
+[Uo1
+~.s>Zt~
+z>&|
+}%~#
+Os}P
+YJr{_e^p
+ %[lS
+a&EH
+s5MU
+D!2-
+>+T+/u
+1(|!
+*SC"
+U>k70k
+qoR&
+d[ ;x
+AK*!<9
+UPU\
+pUjB"a
+CXEI
+]Z|l
+Hy8N
+h|U*
+;R9vH
+,\Sj
+z|Oj
+Yk8k
+cxIx
+<@k.
+|4il
+%F<-
+V;f2
+.+]~i
+G/,]
+Ssul
+JSd~
+R)Fi
+*>=4
+'s}L
+[83S3
+;$~*
+%uCl
+z=gT
+_zMx
+uN$f
+W{xS
+#/nS
+2"xu
+s\+%
+*9&t
+p>sUFE
+}N/S
+Z\05
+T<9Ff
+j)uUQ
+wU!5
+Dr(e
+u(BS
+q2s6
+H<UA
+6v8v9i\<]dQ
+*j\k
+q-'EetEz
+j<5s
+OgGJ
+Irw#
+>&zL
+R~~ 
+`S~~
+8VQ`8VQ`
+wQ`$xQ`$xQ`
+txQ`txQ`
+0OL`
+|(L`P
+PyQ`PyQ`
+,zQ`,zQ`
+pLL`
+z6>\V
+((|6
+Btho+
+qM<=
+Zm50
+ q0So=
+>`_E/U
+"2-[j=
+sV9O
+aM^"
+o?I-
+<+w~a
+ >A}
+`W=~ W=~@
+L`8V
+L`XT
+($R`($R`
+L`P$R`P$R`
+h$R`h$R`
+x)R`
+(*R`
+T*R`T*R`
+@+R`
+h+R`
+Sh5>N
+lcR`dAR`
+`4P`
+=R` =R` =R`(=R`(=R`0=R`0=R`8=R`8=R`@=R`@=R`H=R`H=R`P=R`P=R`X=R`X=R``=R``=R`h=R`h=R`p=R`p=R`x=R`x=R`
+a4P`
+@AR`@AR`
+`4P`
+3`8@R`
+8k0`Py0`
+AR`PBR`
+AR`X
+`]~~
+(CR`(CR`
+HCR`HCR`
+hCR`hCR`
+(DR`(DR`
+HDR`HDR`
+hDR`hDR`
+(ER`(ER`
+HER`HER`
+hER`hER`
+(FR`(FR`
+HFR`HFR`
+hFR`hFR`
+,KR`,KR`@*M`@*M`X*M`p*M`
+*M`LKR`LKR`TKR`TKR`\KR`\KR`dKR`dKR`lKR`lKR`tKR`tKR`|KR`|KR`

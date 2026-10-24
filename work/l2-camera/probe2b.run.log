@@ -1,0 +1,37 @@
+### attempt 1
+  found 0x0d29
+054c:0d29
+MSC 0x0d29 鉴权…
+  服务模式 0x0336 已出现
+  服务通道鉴权 OK
+== session up ==
+/setting/updater/mode                ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/mode1               ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/mode2               ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/mode3               ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/mode4               ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/mode5               ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/mode6               ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/comp                OK size=0 sha=e3b0c44298fc1c14 0.0s
+/setting/updater/uincomp             ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/debug               ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/dat4                OK size=2 sha=fcf0a6c700dd13e2 0.0s
+/setting/updater/version.txt         ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/updater/kikilog.dat         ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/Backup.bin                  OK size=1210408 sha=c31cd55a791afa84 0.1s
+/setting/updater/Backup.bin          ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/partinf.conf                ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/mount.conf                  ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/setting/kemco.txt                   OK size=1905 sha=ff9a739e2c01c4c8 0.0s
+/usr/bin/crypter.elf                 OK size=39036 sha=5721d6f3147d54ff 0.0s
+/usr/bin/udtrbody.bin                OK size=143360 sha=b0b344292be92fea 0.0s
+/usr/bin/up.sh                       OK size=5008 sha=03a70fd0d0ef269c 0.0s
+/usr/bin/mf                          ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/usr/bin/sauu                        ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/tmp/jiritsu                         ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/tmp/jiritsu/libJit.so               ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/tmp/jbusy                           ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/tmp/etc/nsswitch.conf               ERR130(不存在/不可读/未挂载) Exception: Senser file control error 130 0.0s
+/version.txt                         OK size=19 sha=57a441d21bef2cf7 0.0s
+== session down, dead=False ==
+### rc=0

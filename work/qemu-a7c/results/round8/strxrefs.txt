@@ -1,0 +1,1757 @@
+00000110 000000 <6>eMMC: %s mode
+
+0000021c 000058 AL_SDHCI_EMMC
+00000220 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+00000228 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+0000022c 0000a6 Register unchanged in a time
+
+000003cc 0000c4 <4>%-16s(%4d[%-16s]) : Warning : Invalid tune_point_val: 0x%x, 0x%x will be used
+
+000003d0 000058 AL_SDHCI_EMMC
+000003e8 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+000003f0 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+000003f4 0000a6 Register unchanged in a time
+
+00000578 000058 AL_SDHCI_EMMC
+0000057c 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+00000584 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+00000588 0000a6 Register unchanged in a time
+
+00000774 000058 AL_SDHCI_EMMC
+00000778 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+00000780 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+00000784 0000a6 Register unchanged in a time
+
+0000078c 000116 <4>%-16s(%4d[%-16s]) : Warning : Auto CMD19 error detected!
+
+00000790 000153 <4>%-16s(%4d[%-16s]) : Warning : Unexpected IRQ Status: 0x%08x
+
+000009d4 000058 AL_SDHCI_EMMC
+000009dc 000193 <3>%-16s(%4d[%-16s]) : Error : Not supported ADMA2
+
+000009e8 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+000009f4 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+000009f8 0000a6 Register unchanged in a time
+
+00000b60 0001c7 
+
+00000b64 0001c9 0x%04x: 
+00000b68 0001d2  
+00000b70 0001d4 %02x%02x 
+00000b74 0001de %04x 
+00000b78 0001e4 %04x %04x 
+0000119c 000058 AL_SDHCI_EMMC
+000011a0 0001ef <3>%-16s(%4d[%-16s]) : Error : Signal on %s(), err = %d, timeout_us = %lu
+
+000011a4 00023a <4>%-16s(%4d[%-16s]) : Warning : irq_handler didn't work in a time while command already completed
+
+000011b4 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+000011bc 00029e <3>%-16s(%4d[%-16s]) : Error : Error on %s(), err = %d, timeout_us = %lu
+
+000011c0 0002e8 <3>%-16s(%4d[%-16s]) : Error : cmd->index: %d
+
+000011c4 000317 <3>%-16s(%4d[%-16s]) : Error : STAT: 0x%08x
+
+000011c8 000344 <3>%-16s(%4d[%-16s]) : Error : dev->irq_status: 0x%08x
+
+000011cc 00037c <3>%-16s(%4d[%-16s]) : Error : Error on Response Timeout
+
+000011d0 0003b6 <3>%-16s(%4d[%-16s]) : Error : Error IRQ on %s(): 0x%08x
+
+000011d4 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+000011d8 0000a6 Register unchanged in a time
+
+0000164c 000058 AL_SDHCI_EMMC
+00001650 0001ef <3>%-16s(%4d[%-16s]) : Error : Signal on %s(), err = %d, timeout_us = %lu
+
+00001654 00023a <4>%-16s(%4d[%-16s]) : Warning : irq_handler didn't work in a time while command already completed
+
+00001664 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+0000166c 00029e <3>%-16s(%4d[%-16s]) : Error : Error on %s(), err = %d, timeout_us = %lu
+
+00001670 0002e8 <3>%-16s(%4d[%-16s]) : Error : cmd->index: %d
+
+00001674 000317 <3>%-16s(%4d[%-16s]) : Error : STAT: 0x%08x
+
+00001678 000344 <3>%-16s(%4d[%-16s]) : Error : dev->irq_status: 0x%08x
+
+0000167c 0003f0 <3>%-16s(%4d[%-16s]) : Error : Error on Data Timeout
+
+00001680 0003b6 <3>%-16s(%4d[%-16s]) : Error : Error IRQ on %s(): 0x%08x
+
+00001684 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+00001688 0000a6 Register unchanged in a time
+
+00001a74 000058 AL_SDHCI_EMMC
+00001a78 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+00001a80 000426 <3>%-16s(%4d[%-16s]) : Error : Error on polling command, timeout_us = %lu
+
+00001a84 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+00001a88 0000a6 Register unchanged in a time
+
+00001a8c 000471 <3>%-16s(%4d[%-16s]) : Error : Error on polling data, timeout_us = %lu
+
+00001a94 00037c <3>%-16s(%4d[%-16s]) : Error : Error on Response Timeout
+
+00001a98 0003f0 <3>%-16s(%4d[%-16s]) : Error : Error on Data Timeout
+
+00001a9c 0004b9 <3>%-16s(%4d[%-16s]) : Error : Error status : 0x%08x
+
+00001b04 000058 AL_SDHCI_EMMC
+00001b0c 0004ef <3>%-16s(%4d[%-16s]) : Error : Unknown tuning block size for bus width : %d
+
+00001da0 00053c <4>%-16s(%4d[%-16s]) : Warning : Invalid clearing IRQ operation 0x%08x
+
+00001da4 000058 AL_SDHCI_EMMC
+00001dbc 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+00001dc0 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+00001dc4 0000a6 Register unchanged in a time
+
+00001fb8 000058 AL_SDHCI_EMMC
+00001fc0 00062c <3>%-16s(%4d[%-16s]) : Error : udif_request_irq failed.
+
+00001fc4 000665 <3>%-16s(%4d[%-16s]) : Error : DDR speed mode support is obsoleted now.
+
+00001fd4 0006ae <3>%-16s(%4d[%-16s]) : Error : Re-Tuning mode can only be forced as 1 or 2
+
+000028dc 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+000028e0 000058 AL_SDHCI_EMMC
+000028e8 0006fa <3>%-16s(%4d[%-16s]) : Error : Error on polling buffer ready, timeout_us = %lu
+
+000028f0 0004b9 <3>%-16s(%4d[%-16s]) : Error : Error status : 0x%08x
+
+000028f4 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+000028f8 0000a6 Register unchanged in a time
+
+00002918 0001ef <3>%-16s(%4d[%-16s]) : Error : Signal on %s(), err = %d, timeout_us = %lu
+
+0000291c 00023a <4>%-16s(%4d[%-16s]) : Warning : irq_handler didn't work in a time while command already completed
+
+00002920 00029e <3>%-16s(%4d[%-16s]) : Error : Error on %s(), err = %d, timeout_us = %lu
+
+00002924 0002e8 <3>%-16s(%4d[%-16s]) : Error : cmd->index: %d
+
+00002928 000317 <3>%-16s(%4d[%-16s]) : Error : STAT: 0x%08x
+
+0000292c 000344 <3>%-16s(%4d[%-16s]) : Error : dev->irq_status: 0x%08x
+
+00002930 00037c <3>%-16s(%4d[%-16s]) : Error : Error on Response Timeout
+
+00002934 0003f0 <3>%-16s(%4d[%-16s]) : Error : Error on Data Timeout
+
+00002938 0003b6 <3>%-16s(%4d[%-16s]) : Error : Error IRQ on %s(): 0x%08x
+
+00002944 00074a <4>%-16s(%4d[%-16s]) : Warning : Desc table has not been mapped
+
+00002950 00078b <3>%-16s(%4d[%-16s]) : Error : Not supported response type, type = %u
+00003138 000058 AL_SDHCI_EMMC
+0000313c 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+00003144 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+00003148 0000a6 Register unchanged in a time
+
+0000314c 0007d1 <4>%-16s(%4d[%-16s]) : Warning : Some status[0x%08x] has been set after previous operation
+
+0000315c 00082d <3>%-16s(%4d[%-16s]) : Error : Unsupported Non-DMA write
+
+00003170 00078b <3>%-16s(%4d[%-16s]) : Error : Not supported response type, type = %u
+00003694 000058 AL_SDHCI_EMMC
+00003698 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+000036a0 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+000036a4 0000a6 Register unchanged in a time
+
+000036ac 000867 <3>%-16s(%4d[%-16s]) : Error : Error on al_sg_dma_map(), err = %d
+
+000036b4 0008aa <4>%-16s(%4d[%-16s]) : Warning : Not align addr found: addr = %08x
+
+000036c0 0008ee <3>%-16s(%4d[%-16s]) : Error : Error on sdhci_desc_new(), err = %d
+
+000036d4 000932 <3>%-16s(%4d[%-16s]) : Error : Error on %s(), not big enough descriptor table, err = %d
+
+00003bec 000058 AL_SDHCI_EMMC
+00003bf0 00098b <3>%-16s(%4d[%-16s]) : Error : Signal on %s(), err = %ld, timeout_us = %lu
+
+00003bf4 00023a <4>%-16s(%4d[%-16s]) : Warning : irq_handler didn't work in a time while command already completed
+
+00003c00 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+00003c08 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+00003c0c 0000a6 Register unchanged in a time
+
+00003c10 0009d7 <3>%-16s(%4d[%-16s]) : Error : Error on %s(), err = %ld, timeout_us = %lu
+
+00003c14 0002e8 <3>%-16s(%4d[%-16s]) : Error : cmd->index: %d
+
+00003c18 000317 <3>%-16s(%4d[%-16s]) : Error : STAT: 0x%08x
+
+00003c1c 000344 <3>%-16s(%4d[%-16s]) : Error : dev->irq_status: 0x%08x
+
+00003c20 0003b6 <3>%-16s(%4d[%-16s]) : Error : Error IRQ on %s(): 0x%08x
+
+00003c24 000a22 <3>%-16s(%4d[%-16s]) : Error : Invalid argument: method %d!
+
+00003e00 000a5f <3>%-16s(%4d[%-16s]) : Error : invalid tuning point detected, tuning_point = %08x
+
+00003e04 000058 AL_SDHCI_EMMC
+00003e0c 000ab2 <4>%-16s(%4d[%-16s]) : Warning : Wrong key value %d
+
+000042b8 000058 AL_SDHCI_EMMC
+000042c0 000ae7 <3>%-16s(%4d[%-16s]) : Error : Unsupported bus width
+
+000042cc 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+000042d4 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+000042d8 0000a6 Register unchanged in a time
+
+000042dc 000ab2 <4>%-16s(%4d[%-16s]) : Warning : Wrong key value %d
+
+000049b4 000058 AL_SDHCI_EMMC
+000049bc 000b1d <4>%-16s(%4d[%-16s]) : Warning : eMMC reset begin...
+
+000049cc 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+000049d4 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+000049e0 0000a6 Register unchanged in a time
+
+000049ec 000b53 <0>%-16s(%4d[%-16s]) : Emergency : eMMC reset failed
+
+000049f0 000b89 Panic on eMMC reset failed
+
+000049f4 000ba5 <4>%-16s(%4d[%-16s]) : Warning : eMMC reset successfully
+
+00004f8c 000bdf <3>%-16s(%4d[%-16s]) : Error : Not supported non-HS200 speed mode tuning
+
+00004f90 000058 AL_SDHCI_EMMC
+00004fa4 000012 <0>%-16s(%4d[%-16s]) : Emergency : Error on wait timeout after %d us
+
+00004fac 000066 <0>%-16s(%4d[%-16s]) : Emergency : Reg value: 0x%x, bits: 0x%x
+
+00004fb8 0000a6 Register unchanged in a time
+
+00004fbc 000c29 <3>%-16s(%4d[%-16s]) : Error : send single tuning block error, resp:0x%08x err = %d
+
+00004fc4 000ab2 <4>%-16s(%4d[%-16s]) : Warning : Wrong key value %d
+
+00005464 000058 AL_SDHCI_EMMC
+0000546c 000c7e <0>%-16s(%4d[%-16s]) : Emergency : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+00005474 000cf9 initialized
+00005478 000ccb <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %d
+
+0000547c 000d05 tune_err
+00005480 000d0e tune_err_autocmd19
+00005484 000d21 speed_mode
+00005488 000d2c tune_again
+0000548c 000d37 tuning_pattern_read
+00005490 000d7b tune_point_val
+00005494 000d4b <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %02x
+
+00005498 000d8a tune_result_val
+0000549c 000dca irq_status
+000054a0 000d9a <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %08x
+
+000054a4 000dd5 wait_mode
+000054a8 000ddf <0>%-16s(%4d[%-16s]) : Emergency : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+000054b0 000e2c index
+000054b4 000e32 resp_type
+000054b8 000e6b timeout_us
+000054bc 000e3c <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %lu
+
+000054c0 000e76 has_data
+000054c4 000e7f may_resp_timeout
+000054c8 000e90 may_resp_err
+000054d0 000e9d <0>%-16s(%4d[%-16s]) : Emergency : ADMA desc table:
+
+000054d4 000f00 idx
+000054d8 000ed2 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %u
+
+000054dc 000f04 size
+000054e0 000f09 dma_addr
+000054e4 000f12 is_mapped
+000054e8 000f1c map_size
+000054ec 000f25 <0>%-16s(%4d[%-16s]) : Emergency : ADMA desc lines:
+
+000054f0 000f5a <0>%-16s(%4d[%-16s]) : Emergency : [%4d] 0x%04x 0x%04x 0x%08x
+
+000054f4 000f99 cnt_retune_evt
+000054f8 000fa8 cnt_retune_again_evt
+000055a4 000058 AL_SDHCI_EMMC
+000055a8 000c7e <0>%-16s(%4d[%-16s]) : Emergency : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+000055ac 0001c7 
+
+000055b0 000ddf <0>%-16s(%4d[%-16s]) : Emergency : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+00005908 0010d5 <3>%-16s(%4d[%-16s]) : Error : emmc_ops->exec_cmd() failed...[%d]
+
+0000590c 00100a AL_UZ_EMMC
+00005a98 0010d5 <3>%-16s(%4d[%-16s]) : Error : emmc_ops->exec_cmd() failed...[%d]
+
+00005a9c 00100a AL_UZ_EMMC
+00005ecc 001118 <3>%-16s(%4d[%-16s]) : Error : uz_emmc_seq_buf_read() failed...[%d]
+
+00005ed0 00100a AL_UZ_EMMC
+00005fdc 00100a AL_UZ_EMMC
+00005fe4 00115d <3>%-16s(%4d[%-16s]) : Error : load lzp header failed...[%d]
+
+00006070 00100a AL_UZ_EMMC
+00006078 00119b <3>%-16s(%4d[%-16s]) : Error : preload_lzp_header() failed...[%d]
+
+00006af4 00119b <3>%-16s(%4d[%-16s]) : Error : preload_lzp_header() failed...[%d]
+
+00006af8 00100a AL_UZ_EMMC
+00006b00 0011de <3>%-16s(%4d[%-16s]) : Error : invalid access the /dev/dnflasha%d, since partition size and image size are mismatch
+
+00006b04 001253 <3>%-16s(%4d[%-16s]) : Error : now accessing sector(%u), but valid image sector range is (0 ~ %u)
+
+00006b10 0012b6 <3>%-16s(%4d[%-16s]) : Error : load lzp entry failed...[%d]
+
+00006b14 0012f3 <3>%-16s(%4d[%-16s]) : Error : do_lzp_entry_load() failed...[%d]
+
+00006b18 001335 <3>%-16s(%4d[%-16s]) : Error : ldec_out_buf_alloc() failed...[%d]
+
+00006b28 001378 <3>%-16s(%4d[%-16s]) : Error : tranfer to ldec failed...[%d]
+
+00006b30 0013b6 <3>%-16s(%4d[%-16s]) : Error : transfer_to_ldec() failed...[%d]
+
+00006b38 0013f7 <3>%-16s(%4d[%-16s]) : Error : boss_hw_ldec_wait() error, udif_err = %d
+
+00006b40 001440 <3>%-16s(%4d[%-16s]) : Error : al_sg_dma_map() failed...[%d]
+
+00006b50 00147e <3>%-16s(%4d[%-16s]) : Error : boss_hw_dmac_start_wait() error, udif_err = %d
+
+00006b54 0014cd <3>%-16s(%4d[%-16s]) : Error : xdmac_transfer() failed...[%d]
+
+00006b5c 00150c <3>%-16s(%4d[%-16s]) : Error : do_xdmac_transfer() failed...[%d]
+
+00006b60 00154e <3>%-16s(%4d[%-16s]) : Error : lzp_data_tranfer() failed...[%d]
+
+00006b64 00158f <3>%-16s(%4d[%-16s]) : Error : lzp_data_decomp() failed...[%d]
+
+00006b6c 0015cf <3>%-16s(%4d[%-16s]) : Error : preload_lzp_entry() failed...[%d]
+
+00006b70 001611 <3>%-16s(%4d[%-16s]) : Error : xdmac_prepare() failed...[%d]
+
+00006c5c 00167d uz_dev
+00006c64 00100a AL_UZ_EMMC
+00006c68 00164f <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %p
+
+00006c6c 0016b2 initialized
+00006c70 001684 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %d
+
+00006c74 0016be emmc_ops
+00006c78 0016f5 dma_throughput
+00006c7c 0016c7 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %u
+
+00006c80 001704 nr_sectors_per_unit
+00006e14 001718 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) device invalid
+
+00006e18 001759 AL_EMMC_BLK_UZ
+00006e1c 001768 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) type(%08x) invalid
+
+00006f50 001718 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) device invalid
+
+00006f54 001759 AL_EMMC_BLK_UZ
+00006f58 001768 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) type(%08x) invalid
+
+00006f60 0017ad <3>%-16s(%4d[%-16s]) : Error : WBI device read range is not correctly set, %s (0 - %u) sectors
+
+00006f68 00180d <3>%-16s(%4d[%-16s]) : Error : emmc_seq_read() failed...[%d]
+
+000070a4 001718 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) device invalid
+
+000070a8 001759 AL_EMMC_BLK_UZ
+000070ac 001768 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) type(%08x) invalid
+
+000070b4 00184b <3>%-16s(%4d[%-16s]) : Error : WBI device write range is not correctly set, %s (0 - %u) sectors
+
+000070bc 0018ac <3>%-16s(%4d[%-16s]) : Error : emmc_seq_write() failed...[%d]
+
+0000719c 001718 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) device invalid
+
+000071a0 001759 AL_EMMC_BLK_UZ
+000071a4 001768 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) type(%08x) invalid
+
+000071b0 0018eb <3>%-16s(%4d[%-16s]) : Error : Error on emmc_seq_stop_bkops(), err = %d
+
+00007804 001759 AL_EMMC_BLK_UZ
+00007810 001938 <0>%-16s(%4d[%-16s]) : Emergency : ALFReD dump information >>>
+
+00007814 0019a6 DRV_VERSION
+00007818 001978 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %s
+
+0000781c 0019b2 v161102p2
+00007820 0019ea blk_uz_handle
+00007824 0019bc <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %p
+
+0000782c 001a26 blk_uz_handle->initialized
+00007830 0019f8 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %d
+
+00007834 001a41 blk_uz_handle->sg_list
+00007838 001a86 blk_uz_handle->nr_list
+0000783c 001a58 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %u
+
+00007840 001a9d blk_uz_handle->nr_sg_items
+00007848 001ab8 <0>%-16s(%4d[%-16s]) : Emergency : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+0000784c 001b05 <0>%-16s(%4d[%-16s]) : Emergency : dumping partition table info ...
+
+00007850 001b4a <0>%-16s(%4d[%-16s]) : Emergency : dumping dev_params[%d].ptbl_info ...
+
+00007854 001b93 ptbl_info
+00007858 001b9d ptbl_info->ptbl
+0000785c 001bdd ptbl_info->ptbl_magic
+00007860 001bad <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %08x
+
+00007864 001bf3 ptbl_info->ptbl_version
+00007868 001c0b ptbl_info->ptbl_part_max
+0000786c 001c24 ptbl_info->ptbl_sz_bytes
+00007870 001c3d ptbl_info->ptbl_in_sector
+00007874 001c57 ptbl_info->ptbl_in_part
+00007878 001c6f <0>%-16s(%4d[%-16s]) : Emergency : dumping ptbl_info->ptbl ...
+
+0000787c 001caf ptbl->magic
+00007880 001cbb ptbl->version
+00007884 001cc9 ptbl->n_partition
+00007888 001cdb ptbl->partitions
+0000788c 001cec <0>%-16s(%4d[%-16s]) : Emergency : ptbl_info->ptbl invalid ...
+
+00007890 001d2c <0>%-16s(%4d[%-16s]) : Emergency : dumping ptbl->partitions ...
+
+00007894 001d6d <0>%-16s(%4d[%-16s]) : Emergency : [%02d] 0x%08x,0x%08x,0x%08x,0x%08x
+
+00007898 001db4 <0>%-16s(%4d[%-16s]) : Emergency : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+000078a0 001e01 <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_wbi_device ...
+
+000078a4 001e41 wbi_dev
+000078a8 001e49 wbi_dev->wbi_registered
+000078ac 001e61 wbi_dev->wbi_opened
+000078b0 001e75 wbi_dev->sector_st
+000078b4 001e88 wbi_dev->sector_sz
+000078b8 001e9b wbi_dev->reliable_write
+000078bc 001eb3 wbi_dev->dev_sg
+000078c0 001ec3 wbi_dev->wb
+000078c4 001ecf wbi_dev->part
+000078c8 001edd wbi_dev->name
+000078cc 001eeb wbi_dev->pt
+000078d0 001ef7 wbi_dev->bkops_restore
+000078d4 001f0e wbi_dev->seq_initialized
+000078d8 001f27 <0>%-16s(%4d[%-16s]) : Emergency : ALFReD dump information <<<
+
+000079b4 001f67 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_suspend_pre() failed...[%d]
+
+000079b8 001759 AL_EMMC_BLK_UZ
+000079bc 001fac <3>%-16s(%4d[%-16s]) : Error : emmc_seq_switch_to_hs_mode() failed... [%d]
+
+000079c4 001ff8 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_switch_partition() failed...[%d]
+
+000079c8 002042 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_sleep() failed...[%d]
+
+000079cc 002081 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_suspend() failed...[%d]
+
+00007bfc 001759 AL_EMMC_BLK_UZ
+00007c00 001718 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) device invalid
+
+00007c04 001768 <3>%-16s(%4d[%-16s]) : Error : WBI partition(%s) type(%08x) invalid
+
+00007c0c 0020c2 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_resume_pre() failed...[%d]
+
+00007c10 002106 <3>%-16s(%4d[%-16s]) : Error : emmc seq awake failed...[%d]
+
+00007c14 002143 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_resume() failed...[%d]
+
+00007c1c 002183 <4>%-16s(%4d[%-16s]) : Warning : Information table is invalid, tbl = %p
+
+00007c20 0021cc <3>%-16s(%4d[%-16s]) : Error : emmc_blk_update_max_discard_sectors() failed...[%d]
+
+00007c24 002220 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_refresh_validate_capacity() failed...[%d]
+
+00007c2c 002273 <3>%-16s(%4d[%-16s]) : Error : emmc_wbi_resume_post() failed...[%d]
+
+000083d0 002456 <3>%-16s(%4d[%-16s]) : Error : partition table not defined in any part (%d)
+
+000083d4 001759 AL_EMMC_BLK_UZ
+000083e0 0024a3 <3>%-16s(%4d[%-16s]) : Error : Error on emmc_seq_read(), err = %d
+
+000083e8 0024e6 <3>%-16s(%4d[%-16s]) : Error : Error on emmc_load_partition_tbl(), err = %d
+
+000083ec 002533 <6>partition table invalid
+
+000083f8 00254f %s%d
+00008400 002554 <3>%-16s(%4d[%-16s]) : Error : Error on alloc_decomp_param(), err = %d
+
+00008404 00259c <3>%-16s(%4d[%-16s]) : Error : Error on uz_emmc_lzp_part_size(), err = %d
+
+0000840c 0025e7 <3>%-16s(%4d[%-16s]) : Error : Error on init_dfs_part(), err = %d
+
+00008414 00262a <6>Invalid compressed image in LZP partition, skip register dnflasha%d
+
+00008418 002672 <3>%-16s(%4d[%-16s]) : Error : Error on request_emmc_blk_dev(), err = %d
+
+00008424 002724 wbi
+00008428 0026bc <4>%-16s(%4d[%-16s]) : Warning : Register WBI device(%s%d) failed, as (%s) had already been registered
+
+00008440 002728 <3>%-16s(%4d[%-16s]) : Error : Error on wb_register_device(), err = %d
+
+00008444 002770 <3>%-16s(%4d[%-16s]) : Error : Error on emmc_register_wbi(), err = %d
+
+0000844c 0027b7 <3>%-16s(%4d[%-16s]) : Error : Error on emmc_register_wbi_partition(), err = %d
+
+0000852c 002808 <0>%-16s(%4d[%-16s]) : Emergency : uz_panic at line %d
+
+00008530 002840 AL_UZ
+0000856c 002840 AL_UZ
+00008574 002846 <0>%-16s(%4d[%-16s]) : Emergency : UZ registers
+
+000085e8 002840 AL_UZ
+000085f0 002877 <4>%-16s(%4d[%-16s]) : Warning : uz is not initialized
+
+00008634 002840 AL_UZ
+0000863c 002877 <4>%-16s(%4d[%-16s]) : Warning : uz is not initialized
+
+0000885c 0028c6 M
+00008860 0028af %d%sB aligned %s count
+00008864 0028c8 K
+00008868 0028ca 
+0000886c 0028cb %s
+00008870 0028ce  (dropped)
+00008874 0028d9 %-42s : %u
+
+00008a44 002919 AL_NAND_COMMON
+00008a4c 0028e5 <0>%-16s(%4d[%-16s]) : Emergency : dumping S/G ...
+
+00008a50 002956 sg
+00008a54 002928 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %p
+
+00008a58 002987 sg->dir
+00008a5c 002959 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %d
+
+00008a60 00298f sg->num
+00008a64 002997 sg->max
+00008a68 00299f sg->skip_map
+00008a6c 0029ac sg->is_mapped
+00008a70 0029ba <0>%-16s(%4d[%-16s]) : Emergency : dumping S/G items ...
+
+00008a74 0029f4 <0>%-16s(%4d[%-16s]) : Emergency : [%4d] %p %p %08x %5d
+
+00008c6c 0028d9 %-42s : %u
+
+00008c70 002a2d total read sectors
+00008c74 002a40 total read count
+00008c78 002a51 cache hit read count
+00008c7c 002a66 read
+00008c80 002a6b total write sectors
+00008c84 002a7f total write count
+00008c88 002a91 cache hit write count
+00008c8c 002aa7 write
+00008c90 002aad total discard sectors
+00008c94 002ac3 total discard count
+00008c98 002ad7 discard
+00008f1c 002adf  [%s]
+00009714 002ae5 &((spinlock_t *)&(&handle->ts_ac_lock)->lock)->lock
+00009718 002b19 (spinlock_t *)&(&handle->ts_ac_lock)->lock
+00009df0 002b44 <3>%-16s(%4d[%-16s]) : Error : Partition type [%d] is not supported.
+
+00009df4 002b8a AL_EMMC_BLK
+00009e80 002b8a AL_EMMC_BLK
+00009e88 002b96 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_trim() failed ...[%d]
+
+0000a690 002b8a AL_EMMC_BLK
+0000a698 002bd5 <3>%-16s(%4d[%-16s]) : Error : Can not erase the decompressed partition %s
+
+0000a69c 002c21 <3>%-16s(%4d[%-16s]) : Error : Erase range is not correctly set, %s (0 - %llu sectors)
+
+0000a6a0 002c79 <3>%-16s(%4d[%-16s]) : Error : emmc_trim() failed...[%d]
+
+0000a7b4 002b8a AL_EMMC_BLK
+0000a7b8 003104 <3>%-16s(%4d[%-16s]) : Error : decompress read failed...[%d]
+
+0000a7c0 003142 <3>%-16s(%4d[%-16s]) : Error : emmc_blk_decomp_read() failed...[%d]
+
+0000a7c4 003187 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_read() failed...[%d]
+
+0000a934 0031c5 <3>%-16s(%4d[%-16s]) : Error : Unsupported write on compressed partition...[%d]
+
+0000a938 002b8a AL_EMMC_BLK
+0000a93c 003216 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_write() failed...[%d]
+
+0000ac0c 002b8a AL_EMMC_BLK
+0000ac14 003255 <3>%-16s(%4d[%-16s]) : Error : Error on emmc_read(), err = %d
+
+0000aeb4 003294 <4>%-16s(%4d[%-16s]) : Warning : AL_REQ_COUNT_ADD_READ() returns %d
+
+0000aeb8 002b8a AL_EMMC_BLK
+0000aebc 0032d9 <4>%-16s(%4d[%-16s]) : Warning : AL_REQ_COUNT_ADD_WRITE() returns %d
+
+0000aec4 00331f <3>%-16s(%4d[%-16s]) : Error : Error on read_to_buf() for Head Unit, err = %d
+
+0000aec8 00336e <3>%-16s(%4d[%-16s]) : Error : Error on read_to_buf() for Tail Unit, err = %d
+
+0000bad0 002b8a AL_EMMC_BLK
+0000bad8 0033bd <4>%-16s(%4d[%-16s]) : Warning : Not fs request. Skip...
+
+0000badc 0033f7 <3>%-16s(%4d[%-16s]) : Error : %s : emmc is not initialized
+
+0000bae0 002c79 <3>%-16s(%4d[%-16s]) : Error : emmc_trim() failed...[%d]
+
+0000bae4 003434 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_sanitize() failed...[%d]
+
+0000baf0 003476 <3>%-16s(%4d[%-16s]) : Error : emmc_erase_cmd() failed...[%d]
+
+0000baf4 0034b5 <3>%-16s(%4d[%-16s]) : Error : Error on emmc_discard(), err = %d
+
+0000bafc 0034f7 <3>%-16s(%4d[%-16s]) : Error : %s : discard request failed : cmd_flag = 0x%08x, err = %d
+
+0000bb00 003551 <3>%-16s(%4d[%-16s]) : Error : Error on add_bio_sg(), err = %d
+
+0000bb04 003294 <4>%-16s(%4d[%-16s]) : Warning : AL_REQ_COUNT_ADD_READ() returns %d
+
+0000bb0c 003255 <3>%-16s(%4d[%-16s]) : Error : Error on emmc_read(), err = %d
+
+0000bb10 0032d9 <4>%-16s(%4d[%-16s]) : Warning : AL_REQ_COUNT_ADD_WRITE() returns %d
+
+0000bb14 003591 <3>%-16s(%4d[%-16s]) : Error : Error on emmc_write(), err = %d
+
+0000bb18 0035d1 <3>%-16s(%4d[%-16s]) : Error : Error on emmc_blk_direct_transfer(), err = %d
+
+0000bb20 00361f <3>%-16s(%4d[%-16s]) : Error : Error on pre_buffered_rw(), err = %d
+
+0000bb2c 003664 <3>%-16s(%4d[%-16s]) : Error : Error on read_to_bio(), err = %d
+
+0000bb30 0036a5 <3>%-16s(%4d[%-16s]) : Error : Error on copy_bio() for Head Unit, err = %d
+
+0000bb34 0036f1 <3>%-16s(%4d[%-16s]) : Error : Error on copy_bio() for Tail Unit, err = %d
+
+0000bb3c 00373d <3>%-16s(%4d[%-16s]) : Error : Error on emmc_blk_buffered_transfer(), err = %d
+
+0000bb40 00378d <3>%-16s(%4d[%-16s]) : Error : %s : emmc_blk_transfer() failed : err = %d
+
+0000c5f4 002b8a AL_EMMC_BLK
+0000c5fc 0037d8 <0>%-16s(%4d[%-16s]) : Emergency : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+0000c600 003825 <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_blk_drv ...
+
+0000c604 003890 drv
+0000c60c 003862 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %p
+
+0000c610 003894 drv->devs
+0000c614 00389e drv->drv_params
+0000c618 0038ae <0>%-16s(%4d[%-16s]) : Emergency : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+0000c620 0038fb <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_blk_drv_params ...
+
+0000c624 00393f drv_params
+0000c628 003978 drv_params->nr_devs
+0000c62c 00394a <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %d
+
+0000c630 00398c drv_params->params
+0000c634 0039cd drv_params->major
+0000c638 00399f <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %u
+
+0000c63c 003a0d drv_params->dev_name
+0000c640 0039df <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %s
+
+0000c644 003a22 drv_params->proc_name
+0000c648 003a38 drv_params->priv
+0000c650 003a49 <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_blk_dev ...
+
+0000c654 003a86 <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_blk_dev[%d] ...
+
+0000c658 003ac7 blk_dev
+0000c65c 003acf blk_dev->drv
+0000c660 003adc blk_dev->is_emmc_init
+0000c664 003af2 blk_dev->params
+0000c668 003b02 blk_dev->is_blk_init
+0000c66c 003b17 blk_dev->que
+0000c670 003b24 blk_dev->gd
+0000c674 003b30 blk_dev->req
+0000c678 003b6c blk_dev->test_bit
+0000c67c 003b3d <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %lu
+
+0000c680 003b7e blk_dev->kthread_task
+0000c684 003b94 blk_dev->wait_queue
+0000c688 003ba8 blk_dev->sg_list
+0000c68c 003bb9 blk_dev->nr_list
+0000c690 003bca blk_dev->bufs
+0000c694 003bd8 blk_dev->nr_bufs
+0000c698 003be9 blk_dev->buf_size_sect
+0000c69c 003c00 blk_dev->req_count
+0000c6a0 003c13 blk_dev->thread_frozen
+0000c6a4 003c2a blk_dev->is_freezing
+0000c6a8 003c3f blk_dev->refresh_ctx_buf
+0000c6ac 003c58 blk_dev->refresh_ctx_buf_size
+0000c6b4 003c76 <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_blk_bounce_buffer ...
+
+0000c6b8 003cbd <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_blk_dev[%d].bufs ...
+
+0000c6bc 003d03 <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_blk_bounce_buffer[%d] ...
+
+0000c6c0 003d4e buf
+0000c6c4 003d52 buf->buf
+0000c6c8 003d5b buf->is_acquired
+0000c6cc 003d6c buf->is_valid
+0000c6d0 003d7a buf->cached_sect
+0000c6d8 003d8b <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_blk_dev_params ...
+
+0000c6dc 003dcf <0>%-16s(%4d[%-16s]) : Emergency : dumping emmc_blk_dev_params[%d] ...
+
+0000c6e0 003e17 dev_params
+0000c6e4 003e22 dev_params->dev
+0000c6e8 003e32 dev_params->drv_params
+0000c6ec 003e49 dev_params->name
+0000c6f0 003e5a dev_params->major
+0000c6f4 003e6c dev_params->first_minor
+0000c6f8 003e84 dev_params->nr_minors
+0000c6fc 003e9a dev_params->disk_name
+0000c700 003eb0 dev_params->kthread_name
+0000c704 003ef9 dev_params->blk_dev_size
+0000c708 003ec9 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %llu
+
+0000c70c 003f12 dev_params->blk_dev_offset
+0000c710 003f2d dev_params->max_discard_sectors
+0000c714 003f4d dev_params->discard_granularity
+0000c718 003f6d dev_params->discard_alignment
+0000c71c 003f8b dev_params->write_unit_size
+0000c720 003fa7 dev_params->nr_sg_items
+0000c724 003fbf dev_params->nr_sectors_per_unit
+0000c728 003fdf dev_params->reliable_write
+0000c72c 003ffa dev_params->pt
+0000c730 004009 dev_params->emmc_erase_cmd
+0000c734 004024 dev_params->hw_ops
+0000c738 004037 dev_params->part_idx
+0000c73c 00404c dev_params->ptbl_info
+0000c82c 002b8a AL_EMMC_BLK
+0000c834 004062 <3>%-16s(%4d[%-16s]) : Error : init_emmc_and_blkdev() failed...[%d]
+
+0000c83c 0040a7 <3>%-16s(%4d[%-16s]) : Error : emmc_blk_decomp_register_dev() failed...[%d]
+
+0000c950 002b8a AL_EMMC_BLK
+0000c958 002f5a <3>%-16s(%4d[%-16s]) : Error : al_req_count_set_discard_params() failed...[%d]
+
+0000ca8c 0040f4 <4>%-16s(%4d[%-16s]) : Warning : FIXME: unexpectedly an error code (%d)is returned as UDIF_ERR
+
+0000ca90 002b8a AL_EMMC_BLK
+0000cb94 004154 <3>%-16s(%4d[%-16s]) : Error : emmc_blk_plat_resume() failed...[%d]
+
+0000cb98 002b8a AL_EMMC_BLK
+0000ccf4 004199 <3>%-16s(%4d[%-16s]) : Error : emmc_blk_plat_suspend() failed...[%d]
+
+0000ccf8 002b8a AL_EMMC_BLK
+0000ce2c 0041df <3>%-16s(%4d[%-16s]) : Error : Error on emmc_blk_plat_remove_pre(), err = %d
+
+0000ce30 002b8a AL_EMMC_BLK
+0000ce44 00422d <3>%-16s(%4d[%-16s]) : Error : Error on emmc_blk_plat_remove_post(), err = %d
+
+0000cfd8 00427c <3>%-16s(%4d[%-16s]) : Error : emmc_blk_plat_probe_pre() failed...[%d]
+
+0000cfdc 002b8a AL_EMMC_BLK
+0000cfe4 0042c4 <3>%-16s(%4d[%-16s]) : Error : emmc_seq_probe() failed...[%d]
+
+0000cfec 004303 <3>%-16s(%4d[%-16s]) : Error : register_blkdev() failed...[%d]
+
+0000cff0 004062 <3>%-16s(%4d[%-16s]) : Error : init_emmc_and_blkdev() failed...[%d]
+
+0000cff4 004343 <3>%-16s(%4d[%-16s]) : Error : emmc_blk_plat_probe_post() failed...[%d]
+
+0000cff8 00422d <3>%-16s(%4d[%-16s]) : Error : Error on emmc_blk_plat_remove_post(), err = %d
+
+0000d184 002b8a AL_EMMC_BLK
+0000d18c 00438c <3>%-16s(%4d[%-16s]) : Error : emmc_blk_plat_init() failed...[%d]
+
+0000d194 0043cf <3>%-16s(%4d[%-16s]) : Error : emmc_proc_init() failed...[%d]
+
+0000d198 00440e <3>%-16s(%4d[%-16s]) : Error : emmc_blk_plat_proc_init() failed...[%d]
+
+0000d1a4 004456 <3>%-16s(%4d[%-16s]) : Error : Error on init_procfs(), err =  %d
+
+0000d27c 004498 Toshiba
+0000d280 0044b0 Hynix
+0000d284 0044a8 SanDisk
+0000d288 0044b6 Micron
+0000d28c 0044bd Unknown
+0000d290 0044a0 Samsung
+0000d548 0044c5 <3>%-16s(%4d[%-16s]) : Error : Error on set_host_params(), err = %d
+
+0000d54c 00450a AL_EMMC_SEQ
+0000d6c4 004516 <3>%-16s(%4d[%-16s]) : Error : Error on get_host_speed_mode(), err = %d
+
+0000d6c8 00450a AL_EMMC_SEQ
+0000d6cc 00455f <3>%-16s(%4d[%-16s]) : Error : Unknown host bus width : %d
+
+0000d6d0 00459b <3>%-16s(%4d[%-16s]) : Error : Error on get_host_bus_width(), err = %d
+
+0000d720 0045e3 <3>%-16s(%4d[%-16s]) : Error : Error found on device status: %08x
+
+0000d724 00450a AL_EMMC_SEQ
+0000d798 004626 <3>%-16s(%4d[%-16s]) : Error : Timed out in wait_busy_cleared(), timeout_us = %lu
+
+0000d79c 00450a AL_EMMC_SEQ
+0000d7a0 004679 <3>%-16s(%4d[%-16s]) : Error : Error on wait_busy_cleared(), err = %ld
+
+0000d7d8 00450a AL_EMMC_SEQ
+0000d7e0 0046c1 <3>%-16s(%4d[%-16s]) : Error : Tried to issue command after switching to power off setting
+
+0000d864 00450a AL_EMMC_SEQ
+0000d86c 00471d <3>%-16s(%4d[%-16s]) : Error : Unsupported partition type: %d
+
+0000d8c0 00475c <4>%-16s(%4d[%-16s]) : Warning : Overriding function to read SMART
+
+0000d8c4 00450a AL_EMMC_SEQ
+0000da38 00450a AL_EMMC_SEQ
+0000da40 0047a0 <3>%-16s(%4d[%-16s]) : Error : Invalid module descriptor :%d
+
+0000da44 0047de <3>%-16s(%4d[%-16s]) : Error : There is no such module
+
+0000da48 004816 <3>%-16s(%4d[%-16s]) : Error : This module has not been initialized!
+
+0000da4c 00485c <3>%-16s(%4d[%-16s]) : Error : Illegal call, please call prepare API first!
+
+0000da54 0048a9 <3>%-16s(%4d[%-16s]) : Error : Bad method!
+
+0000da5c 0048d5 <3>%-16s(%4d[%-16s]) : Error : Timed out, timeout_us = %lu
+
+0000da60 004911 <3>%-16s(%4d[%-16s]) : Error : Error on waiting, err = %ld
+
+0000db7c 00494d <3>%-16s(%4d[%-16s]) : Error : Bad argument!
+
+0000db80 00450a AL_EMMC_SEQ
+0000db90 0047a0 <3>%-16s(%4d[%-16s]) : Error : Invalid module descriptor :%d
+
+0000db94 0047de <3>%-16s(%4d[%-16s]) : Error : There is no such module
+
+0000db98 004816 <3>%-16s(%4d[%-16s]) : Error : This module has not been initialized!
+
+0000db9c 00485c <3>%-16s(%4d[%-16s]) : Error : Illegal call, please call prepare API first!
+
+0000de38 00450a AL_EMMC_SEQ
+0000de40 00497b <3>%-16s(%4d[%-16s]) : Error : Failed to allocate ext_csd
+
+0000df90 0049b6 %3d: 
+0000df94 0049bc %02x 
+0000df98 0049c2 
+
+0000df9c 0049c4 <0>%-16s(%4d[%-16s]) : Emergency : %s
+0000dfa0 00450a AL_EMMC_SEQ
+0000e45c 0049ea %s
+
+0000e460 0049ee Registerd Modules:
+0000e464 0049c4 <0>%-16s(%4d[%-16s]) : Emergency : %s
+0000e468 00450a AL_EMMC_SEQ
+0000e470 004a18 NAME
+0000e474 004a01 %-4s%-12s%-10s%-6s
+
+0000e478 004a1d LAST-CMD
+0000e47c 004a26 ACTIVE
+0000e480 004a15 ID
+0000e488 004a2d %-4d%-12.12s
+0000e48c 004a3a %8d
+0000e490 004a3e %8s
+0000e494 004a42 -
+0000e498 004a44 *
+0000e4a0 0049c2 
+
+0000e4a4 004a46 Unregisterd Modules:
+0000e4a8 004a5b %-12s%-8s
+
+0000e4ac 004a66 %-12.12s
+0000e524 004a6f <3>%-16s(%4d[%-16s]) : Error : Error on get_host_setting() for wait mode err = %d
+
+0000e528 00450a AL_EMMC_SEQ
+0000e5a4 004a6f <3>%-16s(%4d[%-16s]) : Error : Error on get_host_setting() for wait mode err = %d
+
+0000e5a8 00450a AL_EMMC_SEQ
+0000e72c 00450a AL_EMMC_SEQ
+0000e734 004ac2 <3>%-16s(%4d[%-16s]) : Error : There is no such mdesc: %d
+
+0000e73c 004afd <3>%-16s(%4d[%-16s]) : Error : There is no such module mdesc
+
+0000e740 004b71 <3>%-16s(%4d[%-16s]) : Error : Failed to unregister module to emmc seq
+
+0000e744 004b3b <6>[eMMC] External module: %s has been unregistered!
+
+0000e780 004bba  ERR:%5d
+0000e784 004bb9 
+0000e7c0 004bc3  ext-ID:%2d 
+0000e7c4 004bb9 
+0000ea68 004bd0 <3>%-16s(%4d[%-16s]) : Error : Invalid module name!
+
+0000ea6c 00450a AL_EMMC_SEQ
+0000ea70 004c05 <4>%-16s(%4d[%-16s]) : Warning : Module name is too long! The max name length is %d.
+
+0000ea7c 004c5b <3>%-16s(%4d[%-16s]) : Error : Emmc seq has not been initialized!
+
+0000ea84 004c9e <3>%-16s(%4d[%-16s]) : Error : %s has already been registered!
+
+0000ea8c 004cde <3>%-16s(%4d[%-16s]) : Error : Too many external modules!
+
+0000ea90 004d19 <3>%-16s(%4d[%-16s]) : Error : Failed to re-reg module to emmc seq
+
+0000eaa0 004d5d <3>%-16s(%4d[%-16s]) : Error : Failed to allocate emmc_seq_module
+
+0000eaa4 004da0 %s
+0000eaa8 004da3 <3>%-16s(%4d[%-16s]) : Error : Failed to add module to emmc seq
+
+0000eaac 004de4 <6>[eMMC] External module: %s has been registered successfully!
+
+0000ed30 00450a AL_EMMC_SEQ
+0000ed38 004e25 <4>%-16s(%4d[%-16s]) : Warning : eMMC clock is in off status, enable it before sending command!
+
+0000ed3c 004e86 <3>%-16s(%4d[%-16s]) : Error : timeout detected in handle->emmc_ops->cmd()
+
+0000ed40 004ed2 <3>%-16s(%4d[%-16s]) : Error : handle->emmc_ops->cmd() failed...[%d]
+
+0000edc0 004f18 <3>%-16s(%4d[%-16s]) : Error : check_emmc_cmd_response() returns error, err = %d
+
+0000edc4 00450a AL_EMMC_SEQ
+0000ef60 00450a AL_EMMC_SEQ
+0000ef68 0047a0 <3>%-16s(%4d[%-16s]) : Error : Invalid module descriptor :%d
+
+0000ef70 0047de <3>%-16s(%4d[%-16s]) : Error : There is no such module
+
+0000ef74 004816 <3>%-16s(%4d[%-16s]) : Error : This module has not been initialized!
+
+0000ef78 00485c <3>%-16s(%4d[%-16s]) : Error : Illegal call, please call prepare API first!
+
+0000ef80 004f6a <3>%-16s(%4d[%-16s]) : Error : Wrong command index: %d!
+
+0000ef90 004fa3 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_cmd(), err = %d
+
+0000f18c 004fe6 [%6lu.%09ld][%lu.%09ld](%6lu) CMD: %2u 0x%08x 0x%08x%s%s
+
+0000f190 005020 [%6lu.%09ld][%lu.%09ld](%6lu) CMD: %2u 0x%08x N/A%s%s
+
+0000f210 00450a AL_EMMC_SEQ
+0000f218 005057 <3>%-16s(%4d[%-16s]) : Error : Error on get_cmd_trace(), err = %d
+
+0000f21c 0049c4 <0>%-16s(%4d[%-16s]) : Emergency : %s
+0000f3cc 00450a AL_EMMC_SEQ
+0000f3d4 004e25 <4>%-16s(%4d[%-16s]) : Warning : eMMC clock is in off status, enable it before sending command!
+
+0000f3dc 00509a <3>%-16s(%4d[%-16s]) : Error : timeout detected in handle->emmc_ops->data_cmd()
+
+0000f3e0 0050eb <3>%-16s(%4d[%-16s]) : Error : handle->emmc_ops->data_cmd() failed...[%d]
+
+0000f3e4 004f18 <3>%-16s(%4d[%-16s]) : Error : check_emmc_cmd_response() returns error, err = %d
+
+0000f604 00450a AL_EMMC_SEQ
+0000f60c 0047a0 <3>%-16s(%4d[%-16s]) : Error : Invalid module descriptor :%d
+
+0000f610 0047de <3>%-16s(%4d[%-16s]) : Error : There is no such module
+
+0000f614 004816 <3>%-16s(%4d[%-16s]) : Error : This module has not been initialized!
+
+0000f618 00485c <3>%-16s(%4d[%-16s]) : Error : Illegal call, please call prepare API first!
+
+0000f620 004f6a <3>%-16s(%4d[%-16s]) : Error : Wrong command index: %d!
+
+0000f62c 005136 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_data_cmd(), err = %d
+
+0000f904 00517e <3>%-16s(%4d[%-16s]) : Error : Unsupported partition access [%d]
+
+0000f908 00450a AL_EMMC_SEQ
+0000f974 00450a AL_EMMC_SEQ
+0000f97c 0051c0 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_select_card(), err = %d
+
+0000f980 00520b <3>%-16s(%4d[%-16s]) : Error : Failed to change device state to Transfer
+
+0000fa4c 00450a AL_EMMC_SEQ
+0000fa54 005255 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_send_csd(), err = %d
+
+0000fa5c 00529d <3>%-16s(%4d[%-16s]) : Error : Error on read_csd(), err = %d
+
+0000fba8 0052db <3>%-16s(%4d[%-16s]) : Error : UDA capacity %llu must be refunit %u aligned
+
+0000fbac 00450a AL_EMMC_SEQ
+0000fbb0 005328 <3>%-16s(%4d[%-16s]) : Error : BP capacity %llu must be refunit %u aligned
+
+0000fdd0 005374 <4>%-16s(%4d[%-16s]) : Warning : The bit 'not used' in CID is not %d, which should be.
+
+0000fdd4 00450a AL_EMMC_SEQ
+0001036c 00450a AL_EMMC_SEQ
+00010374 004516 <3>%-16s(%4d[%-16s]) : Error : Error on get_host_speed_mode(), err = %d
+
+00010378 0053cc <4>%-16s(%4d[%-16s]) : Warning : Software Tuning is forbiden for non-HS200 mode
+
+0001037c 00541d <3>%-16s(%4d[%-16s]) : Error : Prepare tuning failed, err = %d
+
+00010380 00545d <3>%-16s(%4d[%-16s]) : Error : Unknown tuning block size for bus width : %d
+
+00010388 0054aa <3>%-16s(%4d[%-16s]) : Error : Error on get_host_setting(), err = %d
+
+00010394 0054f0 <3>%-16s(%4d[%-16s]) : Error : tuning ended with unknown error, end = %d, succeed = %d
+
+0001039c 005548 <3>%-16s(%4d[%-16s]) : Error : tuning failed over max retries limit : %d
+
+00010408 00450a AL_EMMC_SEQ
+00010410 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+00010414 0055c7 Tuning fail on reset
+
+000104e4 00450a AL_EMMC_SEQ
+000104ec 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+000104f0 0055dd command timed-out
+
+000104f4 0055f0 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_send_status(), err = %d
+
+00010698 004a6f <3>%-16s(%4d[%-16s]) : Error : Error on get_host_setting() for wait mode err = %d
+
+0001069c 00450a AL_EMMC_SEQ
+000106ac 00563b <4>%-16s(%4d[%-16s]) : Warning : State still not EMMC_DEV_STATE_TRAN, state = %d
+
+000106b0 00568d <3>%-16s(%4d[%-16s]) : Error : Timed out in wait_for_trans_state(), timeout_us = %lu
+
+000106b4 0056e3 <3>%-16s(%4d[%-16s]) : Error : Error on read_device_status(), err = %d
+
+00010724 00450a AL_EMMC_SEQ
+0001072c 0056e3 <3>%-16s(%4d[%-16s]) : Error : Error on read_device_status(), err = %d
+
+00010838 00572b <3>%-16s(%4d[%-16s]) : Error : Error on read_device_state(), err = %d
+
+0001083c 00450a AL_EMMC_SEQ
+00010844 0051c0 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_select_card(), err = %d
+
+00010848 005772 <3>%-16s(%4d[%-16s]) : Error : Failed to change device state to Stand-by
+
+0001084c 0057bc <3>%-16s(%4d[%-16s]) : Error : Error on put_state_from_trans_into_stby(), err = %d
+
+00010854 005810 <4>%-16s(%4d[%-16s]) : Warning : IO operation[%u] in progress
+
+00010858 00584f <3>%-16s(%4d[%-16s]) : Error : Can't handle to put device state from %u to Stand-by
+
+00010af0 0056e3 <3>%-16s(%4d[%-16s]) : Error : Error on read_device_status(), err = %d
+
+00010af4 00450a AL_EMMC_SEQ
+00010afc 0058a4 <3>%-16s(%4d[%-16s]) : Error : Tried to issue HPI in unexpected device state[%u]
+
+00010b04 0058f6 <3>%-16s(%4d[%-16s]) : Error : Timed-out on issuing HPI w/ device status = 0x%08x
+
+00010b08 005949 <3>%-16s(%4d[%-16s]) : Error : Error on issuing HPI, err = %d
+
+00010b10 005988 <3>%-16s(%4d[%-16s]) : Error : Timed out in wait_busy_cleared(), timeout_us = %lu + %u
+
+00010b14 0059e0 <4>%-16s(%4d[%-16s]) : Warning : Timeout on HPI, spec = %lu us, busy time exceeded over %ld us than device's spec
+
+00010b18 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+00010cf4 0056e3 <3>%-16s(%4d[%-16s]) : Error : Error on read_device_status(), err = %d
+
+00010cf8 00450a AL_EMMC_SEQ
+00010cfc 005a9d <4>%-16s(%4d[%-16s]) : Warning : Stopping transmission w/ device status: 0x%08x
+
+00010d04 005aee <4>%-16s(%4d[%-16s]) : Warning : Stopping current transmission...
+
+00010d08 005b31 <3>%-16s(%4d[%-16s]) : Error : Error on STOP_TRANSMISSION, err = %d, %d
+
+00010d0c 005b7a <3>%-16s(%4d[%-16s]) : Error : Error on STOP_TRANSMISSION, err = %d, status = 0x%x
+
+00010d14 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+00010d1c 005c0a <3>%-16s(%4d[%-16s]) : Error : Error on __stop_transmission(), err = %d
+
+00010d20 005bce <3>%-16s(%4d[%-16s]) : Error : Unexpected device state[%u]
+
+00010e30 005c53 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_swtich(), err = %d
+
+00010e34 00450a AL_EMMC_SEQ
+00010e8c 005c53 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_swtich(), err = %d
+
+00010e90 00450a AL_EMMC_SEQ
+00010f70 005c99 <3>%-16s(%4d[%-16s]) : Error : Unexpected value detected in PARTITION_CONFIG: 0x%x
+
+00010f74 00450a AL_EMMC_SEQ
+00010f7c 005ced <3>%-16s(%4d[%-16s]) : Error : Error on write_ext_csd_byte(), err = %d
+
+00010f80 005d35 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_busy_cleared(), err = %d
+
+00010f84 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+00010f88 005d80 PARTITION_CONFIG value is wrong: 0x%x
+
+0001102c 005ced <3>%-16s(%4d[%-16s]) : Error : Error on write_ext_csd_byte(), err = %d
+
+00011030 00450a AL_EMMC_SEQ
+00011034 005d35 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_busy_cleared(), err = %d
+
+00011038 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+000110ec 005da7 <3>%-16s(%4d[%-16s]) : Error : Error on set_hs_timing_interface(), err = %d
+
+000110f0 00450a AL_EMMC_SEQ
+000110f8 0044c5 <3>%-16s(%4d[%-16s]) : Error : Error on set_host_params(), err = %d
+
+00011234 00450a AL_EMMC_SEQ
+0001123c 005ced <3>%-16s(%4d[%-16s]) : Error : Error on write_ext_csd_byte(), err = %d
+
+00011240 005df4 <3>%-16s(%4d[%-16s]) : Error : Failed to notify device poweroff, skip reset device, err = %d
+
+00011244 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+00011248 005e52 busy status timed-out
+
+00011318 005ced <3>%-16s(%4d[%-16s]) : Error : Error on write_ext_csd_byte(), err = %d
+
+0001131c 00450a AL_EMMC_SEQ
+00011320 005d35 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_busy_cleared(), err = %d
+
+00011324 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+00011328 0044c5 <3>%-16s(%4d[%-16s]) : Error : Error on set_host_params(), err = %d
+
+00011458 00450a AL_EMMC_SEQ
+00011460 005c53 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_swtich(), err = %d
+
+00011468 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+0001146c 005e52 busy status timed-out
+
+00011628 00450a AL_EMMC_SEQ
+00011630 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+00011634 0055dd command timed-out
+
+00011638 005e69 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_send_ext_csd(), err = %d
+
+0001170c 00450a AL_EMMC_SEQ
+00011714 005eb5 <3>%-16s(%4d[%-16s]) : Error : Error on read_ext_csd(), err = %d
+
+000117a4 005ef7 <3>%-16s(%4d[%-16s]) : Error : Error on check_bkops_if_urgent(), err = %d
+
+000117a8 00450a AL_EMMC_SEQ
+000117b0 005f42 <4>%-16s(%4d[%-16s]) : Warning : BKOPS remains outstanding after complete, outstanding = %u, %u times
+
+00011a1c 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+00011a20 00450a AL_EMMC_SEQ
+00011a24 005fa9 <3>%-16s(%4d[%-16s]) : Error : Error on confirm_bkops_status_after_comp(), err = %d
+
+00011a2c 005ffe <3>%-16s(%4d[%-16s]) : Error : Error on confirm_bkops_running_state(), err = %d
+
+00011a34 006097 <3>%-16s(%4d[%-16s]) : Error : Error on wait_bkops(), err = %d
+
+00011a38 00604f <3>%-16s(%4d[%-16s]) : Error : Error on interrupt_with_hpi(), err = %d
+
+00011a40 0060d7 <3>%-16s(%4d[%-16s]) : Error : Error on stop_bkops(), err = %d
+
+00011b90 00450a AL_EMMC_SEQ
+00011b98 0047a0 <3>%-16s(%4d[%-16s]) : Error : Invalid module descriptor :%d
+
+00011b9c 0047de <3>%-16s(%4d[%-16s]) : Error : There is no such module
+
+00011ba0 004816 <3>%-16s(%4d[%-16s]) : Error : This module has not been initialized!
+
+00011ba4 006117 <3>%-16s(%4d[%-16s]) : Error : Device now in Sleep state
+
+00011d1c 005ef7 <3>%-16s(%4d[%-16s]) : Error : Error on check_bkops_if_urgent(), err = %d
+
+00011d20 00450a AL_EMMC_SEQ
+00011d24 006151 <4>%-16s(%4d[%-16s]) : Warning : Can't start BKOPS on unsupported device
+
+00011d2c 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+00011d30 0055dd command timed-out
+
+00011d34 005ced <3>%-16s(%4d[%-16s]) : Error : Error on write_ext_csd_byte(), err = %d
+
+00011d38 00619b <3>%-16s(%4d[%-16s]) : Error : Error on start_bkops(), err = %d
+
+00011ea0 00450a AL_EMMC_SEQ
+00011ea8 0047a0 <3>%-16s(%4d[%-16s]) : Error : Invalid module descriptor :%d
+
+00011eac 0047de <3>%-16s(%4d[%-16s]) : Error : There is no such module
+
+00011eb0 004816 <3>%-16s(%4d[%-16s]) : Error : This module has not been initialized!
+
+00011eb4 00485c <3>%-16s(%4d[%-16s]) : Error : Illegal call, please call prepare API first!
+
+00011ec0 0056e3 <3>%-16s(%4d[%-16s]) : Error : Error on read_device_status(), err = %d
+
+00011ec4 0061dc <3>%-16s(%4d[%-16s]) : Error : Error on start_bkops_if_needed(), err = %d
+
+000123a8 005eb5 <3>%-16s(%4d[%-16s]) : Error : Error on read_ext_csd(), err = %d
+
+000123ac 00450a AL_EMMC_SEQ
+000123b4 006227 <3>%-16s(%4d[%-16s]) : Error : Unsupported EXT_CSD revision: %u
+
+000123b8 006268 <4>%-16s(%4d[%-16s]) : Warning : Unsupported new version of device: %u
+
+000123bc 0062b0 <4>%-16s(%4d[%-16s]) : Warning : Trying to use this device as possible, but may cause some problem...
+
+000123c0 006317 <4>%-16s(%4d[%-16s]) : Warning : Speed mode is not verified
+
+000123c4 006354 <4>%-16s(%4d[%-16s]) : Warning : HS200 mode is not enabled in device controller
+
+000123cc 0063a5 <3>%-16s(%4d[%-16s]) : Error : Failed to get spec bus width
+
+000123d4 0063e2 <3>%-16s(%4d[%-16s]) : Error : Can't handle device which erase group size is not configured as an high-capacity
+
+000123d8 006453 <4>%-16s(%4d[%-16s]) : Warning : BKOPS is not supported
+
+000123dc 00648c <4>%-16s(%4d[%-16s]) : Warning : BKOPS should be enabled in a production proccess, but has not been enabled
+
+000123e0 0064f9 <4>%-16s(%4d[%-16s]) : Warning : HPI is not supported
+
+000123e4 006530 <4>%-16s(%4d[%-16s]) : Warning : Sanitize is not supported
+
+000123e8 00656c <3>%-16s(%4d[%-16s]) : Error : Unsupported device
+
+000123ec 00659f <3>%-16s(%4d[%-16s]) : Error : EXT_CSD[%u]: %u
+
+000123f0 0065cf <3>%-16s(%4d[%-16s]) : Error : Error on set_emmc_spec(), err = %d
+
+000125e8 00450a AL_EMMC_SEQ
+000125f0 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+000125f4 0055dd command timed-out
+
+000125f8 006612 <3>%-16s(%4d[%-16s]) : Error : Error on set_ext_csd_bits(), err = %d
+
+000125fc 005e52 busy status timed-out
+
+00012600 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+00012604 006658 <3>%-16s(%4d[%-16s]) : Error : Error on enable_hpi(), err = %d
+
+00012608 006698 <3>%-16s(%4d[%-16s]) : Error : read_ext_csd() failed...[%d]
+
+000126f0 006117 <3>%-16s(%4d[%-16s]) : Error : Device now in Sleep state
+
+000126f4 00450a AL_EMMC_SEQ
+000126fc 005eb5 <3>%-16s(%4d[%-16s]) : Error : Error on read_ext_csd(), err = %d
+
+00012a28 0066d5 <3>%-16s(%4d[%-16s]) : Error : Failed to alloc_ext_csd()
+
+00012a2c 00450a AL_EMMC_SEQ
+00012a34 00670f <3>%-16s(%4d[%-16s]) : Error : Error on read_ext_csd_with_sem(), err = %d
+
+00012a38 00675a %-32s[%2d] : 0x%02x
+
+00012a3c 00676f VENDOR_PROPRIETARY_HEALTH_REPORT
+00012a40 006790 %-36s : 0x%02x
+
+00012a44 0067a0 DEVICE_LIFE_TIME_EST_TYP_B
+00012a48 0067bb DEVICE_LIFE_TIME_EST_TYP_A
+00012a4c 0067d6 PRE_EOL_INFO
+00012a50 0067e3 OPTIMAL_READ_SIZE
+00012a54 0067f5 OPTIMAL_WRITE_SIZE
+00012a58 006808 OPTIMAL_TRIM_UNIT_SIZE
+00012a5c 00681f %-36s : 0x%04x
+
+00012a60 00682f DEVICE_VERSION
+00012a64 00683e %-36s : 0x%016llx
+
+00012a68 006851 FIRMWARE_VERSION
+00012e7c 006862 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_read_single_block(), err = %d
+
+00012e80 00450a AL_EMMC_SEQ
+00012e84 0068b3 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_set_block_count(), err = %d
+
+00012e88 006902 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_read_multiple_block(), err = %d
+
+00012e90 006955 <3>%-16s(%4d[%-16s]) : Error : timeout detected in wait_for_trans_state()
+
+00012e94 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+00012e98 0069a0 <3>%-16s(%4d[%-16s]) : Error : Error on stop_transmission(), err = %d
+
+00012ea0 0069e7 <3>%-16s(%4d[%-16s]) : Error : Error on read_block(), err = %d
+
+00012ea4 006a27 <3>%-16s(%4d[%-16s]) : Error : Failed to read %d/%d times...
+
+00013234 006a65 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_write_single_block(), err = %d
+
+00013238 00450a AL_EMMC_SEQ
+0001323c 0068b3 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_set_block_count(), err = %d
+
+00013240 006ab7 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_write_multiple_block(), err = %d
+
+0001324c 006b0b <3>%-16s(%4d[%-16s]) : Error : timeout detected in wait_for_busy_cleared()
+
+00013250 006955 <3>%-16s(%4d[%-16s]) : Error : timeout detected in wait_for_trans_state()
+
+00013254 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+00013258 0069a0 <3>%-16s(%4d[%-16s]) : Error : Error on stop_transmission(), err = %d
+
+00013260 006b57 <3>%-16s(%4d[%-16s]) : Error : Error on write_block(), err = %d
+
+00013264 006b98 <3>%-16s(%4d[%-16s]) : Error : Failed to write %d/%d times...
+
+00013738 006117 <3>%-16s(%4d[%-16s]) : Error : Device now in Sleep state
+
+0001373c 00450a AL_EMMC_SEQ
+00013744 006bd7 <3>%-16s(%4d[%-16s]) : Error : Failed to erase %d/%d times...
+
+00013750 006c16 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_erase_group_start(), err = %d
+
+00013754 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+00013758 0055dd command timed-out
+
+0001375c 006c67 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_erase_group_end(), err = %d
+
+00013760 006cb6 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_erase(), err = %d
+
+00013764 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+00013768 0061dc <3>%-16s(%4d[%-16s]) : Error : Error on start_bkops_if_needed(), err = %d
+
+000138a4 006117 <3>%-16s(%4d[%-16s]) : Error : Device now in Sleep state
+
+000138a8 00450a AL_EMMC_SEQ
+000138b0 006cfb <4>%-16s(%4d[%-16s]) : Warning : read_block_retry() ended failure...
+
+000138b4 0061dc <3>%-16s(%4d[%-16s]) : Error : Error on start_bkops_if_needed(), err = %d
+
+000139f8 006117 <3>%-16s(%4d[%-16s]) : Error : Device now in Sleep state
+
+000139fc 00450a AL_EMMC_SEQ
+00013a04 006d41 <4>%-16s(%4d[%-16s]) : Warning : write_block_retry() ended failure...
+
+00013a08 0061dc <3>%-16s(%4d[%-16s]) : Error : Error on start_bkops_if_needed(), err = %d
+
+00013d2c 006d88 <4>%-16s(%4d[%-16s]) : Warning : Can't run Sanitize on unsupported device
+
+00013d30 00450a AL_EMMC_SEQ
+00013d3c 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+00013d40 0055dd command timed-out
+
+00013d44 005ced <3>%-16s(%4d[%-16s]) : Error : Error on write_ext_csd_byte(), err = %d
+
+00013d50 006dd3 <3>%-16s(%4d[%-16s]) : Error : Error on stop_sanitize(), HPI is not supported, err = %d
+
+00013d54 006e2c <4>%-16s(%4d[%-16s]) : Warning : sanitize stopped by reset
+
+00013d5c 00604f <3>%-16s(%4d[%-16s]) : Error : Error on interrupt_with_hpi(), err = %d
+
+00013d60 006ebe <3>%-16s(%4d[%-16s]) : Error : Error on stop_sanitize(), err = %d
+
+00013d64 006e68 <6>Sanitize is in progress ...
+
+00013d68 005d35 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_busy_cleared(), err = %d
+
+00013d6c 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+00013d70 0061dc <3>%-16s(%4d[%-16s]) : Error : Error on start_bkops_if_needed(), err = %d
+
+00013d74 006e88 <4>%-16s(%4d[%-16s]) : Warning : Sanitize is aborted
+
+0001414c 006117 <3>%-16s(%4d[%-16s]) : Error : Device now in Sleep state
+
+00014150 00450a AL_EMMC_SEQ
+00014158 006f01 <3>%-16s(%4d[%-16s]) : Error : Error on switch_partition(), err = %d
+
+00014160 006f47 <4>%-16s(%4d[%-16s]) : Warning : Refresh read address is out of range
+
+00014164 006f8e <3>%-16s(%4d[%-16s]) : Error : Error on read_block_retry(), err = %d
+
+00014170 006fd4 <4>%-16s(%4d[%-16s]) : Warning : Refresh write address is out of range
+
+00014174 00701c <3>%-16s(%4d[%-16s]) : Error : Error on write_block_retry(), err = %d
+
+00014180 0061dc <3>%-16s(%4d[%-16s]) : Error : Error on start_bkops_if_needed(), err = %d
+
+000141dc 007063 <4>%-16s(%4d[%-16s]) : Warning : No permanent skip region set
+
+000141e0 00450a AL_EMMC_SEQ
+000142d8 0070a2 <3>%-16s(%4d[%-16s]) : Error : Failed to allocate refresh skip region
+
+000142dc 00450a AL_EMMC_SEQ
+000144c0 00450a AL_EMMC_SEQ
+000144c8 0070e9 <4>%-16s(%4d[%-16s]) : Warning : Drop invalid skip region: (%u - %u) sectors
+
+000144cc 007137 <3>%-16s(%4d[%-16s]) : Error : BP1 skip region is out of range : (%u - %u) sectors
+
+000144d0 00718b <6>Permanent BP1 skip region : (%u - %u) sectors
+
+000144d4 0071bd <3>%-16s(%4d[%-16s]) : Error : BP2 skip region is out of range : (%u - %u) sectors
+
+000144d8 007211 <6>Permanent BP2 skip region : (%u - %u) sectors
+
+000144dc 007243 <3>%-16s(%4d[%-16s]) : Error : UDA skip region is out of range : (%u - %u) sectors
+
+000144e0 007297 <6>Permanent UDA skip region : (%u - %u) sectors
+
+00014ad8 0072c9 <3>%-16s(%4d[%-16s]) : Error : Invalid refresh context size: %u
+
+00014adc 00450a AL_EMMC_SEQ
+00014ae4 00730a <3>%-16s(%4d[%-16s]) : Error : Invalid refresh context magic: %08x
+
+00014ae8 00734e <3>%-16s(%4d[%-16s]) : Error : Invalid refresh context verison: %08x
+
+00014aec 007394 <3>%-16s(%4d[%-16s]) : Error : Invalid refresh context CID: %08x%08x%08x%08x
+
+00014af4 0073e2 <3>%-16s(%4d[%-16s]) : Error : Refresh context cannot be used on different devices
+
+00014af8 007436 <3>%-16s(%4d[%-16s]) : Error : Invalid refresh context cur_refunit: %u
+
+00014e60 00747e <3>%-16s(%4d[%-16s]) : Error : No such superpage size device [%u]
+
+00014e64 00450a AL_EMMC_SEQ
+00015030 0044bd Unknown
+00015038 0074c1 %-20s : %s
+
+0001503c 0074cd vender name
+00015040 0074d9 device name
+00015044 0074e5 %-20s : %u
+
+00015048 0074f1 capacity (MiB)
+0001504c 007500 super page size (B)
+000150d8 00450a AL_EMMC_SEQ
+000150e0 005057 <3>%-16s(%4d[%-16s]) : Error : Error on get_cmd_trace(), err = %d
+
+0001518c 0066d5 <3>%-16s(%4d[%-16s]) : Error : Failed to alloc_ext_csd()
+
+00015190 00450a AL_EMMC_SEQ
+00015198 00670f <3>%-16s(%4d[%-16s]) : Error : Error on read_ext_csd_with_sem(), err = %d
+
+000151f8 007514 %08x%08x%08x%08x
+
+00015258 007514 %08x%08x%08x%08x
+
+00015588 007526 %20s: %u
+
+0001558c 007530 Read
+00015590 007535 Write
+00015594 00753b Discard
+00015598 007543 BKOPS
+0001559c 007549 HPI
+000155a0 00754d Refresh
+000155a4 007555 Refresh (read)
+000155a8 007564 Refresh (write)
+000155ac 007574 Refresh (skipped)
+000155b0 007586 Read (retry)
+000155b4 007593 Write (retry)
+000155b8 0075a1 Erase (retry)
+000155bc 0075af BKOPS not cleared
+000155c0 0075c1 HPI timeout
+000155c4 0075cd Host reset count
+000157a0 004516 <3>%-16s(%4d[%-16s]) : Error : Error on get_host_speed_mode(), err = %d
+
+000157a4 00450a AL_EMMC_SEQ
+000157ac 0044c5 <3>%-16s(%4d[%-16s]) : Error : Error on set_host_params(), err = %d
+
+000157b4 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+000157b8 0055dd command timed-out
+
+000157bc 005da7 <3>%-16s(%4d[%-16s]) : Error : Error on set_hs_timing_interface(), err = %d
+
+000157c0 0075de <3>%-16s(%4d[%-16s]) : Error : Erron on read_ext_csd(), err = %d
+
+00015824 00450a AL_EMMC_SEQ
+0001582c 006f01 <3>%-16s(%4d[%-16s]) : Error : Error on switch_partition(), err = %d
+
+000159ac 00764a <3>%-16s(%4d[%-16s]) : Error : Already Power Off Notification has been sent
+
+000159b0 00450a AL_EMMC_SEQ
+000159b8 007697 <3>%-16s(%4d[%-16s]) : Error : Error on set_pon() w/ POWERED_ON, err = %d
+
+000159bc 00762f POWER_OFF_SHORT
+000159c0 0076e2 <3>%-16s(%4d[%-16s]) : Error : Error on set_pon() w/ %s, err = %d
+
+000159c4 007620 POWER_OFF_LONG
+000159cc 007753 <3>%-16s(%4d[%-16s]) : Error : Error on set_pon_to_power_off(), err = %d
+
+000159d0 00763f Long
+000159d4 007644 Short
+000159d8 007725 <6>Power Off Notification (%s) has been sent
+
+000168f0 0077cb handle
+000168f8 00450a AL_EMMC_SEQ
+000168fc 00779d <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %p
+
+00016904 0077d2 handle->emmc_ops
+00016908 007811 handle->initialized
+0001690c 0077e3 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %d
+
+00016910 007825 handle->is_tuning_needed
+00016914 00783e handle->clock_sts
+00016918 007850 handle->tuning_interval_us
+0001691c 00786b handle->trans_data_list
+00016920 0078b1 handle->nr_list
+00016924 007883 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %u
+
+00016928 0078c1 <0>%-16s(%4d[%-16s]) : Emergency : dumping handle->trans_data_list[%d] ...
+
+0001692c 00790d trans_data
+00016930 007918 trans_data->sg
+00016934 007927 trans_data->sector
+00016938 00793a trans_data->data_type
+0001693c 007950 trans_data->priv
+00016940 007990 cnt_periodic_retune_evt
+00016944 007961 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %lu
+
+00016948 0079a8 dev
+00016950 0079ac spec
+00016958 0079e1 spec->capacity
+0001695c 0079b1 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %llu
+
+00016960 0079f0 spec->erase_grp_sects
+00016964 007a06 spec->discard_timeout_us
+00016968 007a1f spec->is_discard_supported
+0001696c 007a3a spec->is_trim_supported
+00016970 007a52 spec->hs_timing
+00016974 007a62 spec->bus_width
+00016978 007a72 spec->is_hpi_supported
+0001697c 007a89 spec->hpi_cmd_idx
+00016980 007a9b spec->hpi_timeout_us
+00016984 007ab0 spec->part_switch_timeout_us
+00016988 007acd spec->sleep_awake_timeout_us
+0001698c 007aea spec->switch_timeout_us
+00016990 007b02 spec->is_bkops_supported
+00016994 007b1b spec->bkops_timeout_us
+00016998 007b32 spec->is_pon_supported
+0001699c 007b49 spec->pon_long_timeout_us
+000169a0 007b63 spec->is_sanitize_supported
+000169a4 007b7f ext_csd
+000169ac 007b87 ext_csd->buf
+000169b0 007b94 <0>%-16s(%4d[%-16s]) : Emergency : EXT_CSD register:
+
+000169b4 007bca cid
+000169bc 007bfe cid->mid
+000169c0 007bce <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %02x
+
+000169c4 007c37 cid->cbx
+000169c8 007c07 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %01x
+
+000169cc 007c40 cid->oid
+000169d0 007c7c cid->pnm
+000169d4 007c49 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %012llx
+
+000169d8 007c85 cid->prv
+000169dc 007cbe cid->psn
+000169e0 007c8e <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %08x
+
+000169e4 007cc7 cid->mdt
+000169e8 007cd0 cid->crc
+000169ec 007cd9 cid->not_used
+000169f0 007ce7 %c%c%c%c%c%c
+000169f4 007d22 spec->cid_pnm_str
+000169f8 007cf4 <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %s
+
+000169fc 007d34 %08x%08x%08x%08x
+00016a00 007d45 spec->cid_raw
+00016a04 007d53 spec->csd.csd_raw
+00016a08 007d65 dev->ocr
+00016a0c 007d6e dev->rca
+00016a10 007d77 dev->is_sector_access
+00016a14 007d8d dev->is_sleeping
+00016a18 007d9e dev->bkops_status
+00016a1c 007db0 dev->use_bkops_wo_hpi
+00016a20 007dc6 dev->pon_status
+00016a24 007dd6 dev->pon_to_set
+00016a28 007de6 dev->read_smart
+00016a2c 007df6 seq_stat
+00016a34 007dff seq_stat->nr_read
+00016a38 007e11 seq_stat->nr_write
+00016a3c 007e24 seq_stat->nr_discard
+00016a40 007e39 seq_stat->nr_hpi
+00016a44 007e4a seq_stat->nr_bkops
+00016a48 007e5d seq_stat->nr_refresh
+00016a4c 007e72 seq_stat->nr_refresh_write
+00016a50 007e8d seq_stat->nr_refresh_read
+00016a54 007ea7 seq_stat->nr_refresh_skipped
+00016a58 007ec4 seq_stat->nr_read_retry
+00016a5c 007edc seq_stat->nr_write_retry
+00016a60 007ef5 seq_stat->nr_erase_retry
+00016a64 007f0e seq_stat->nr_bkops_not_cleared
+00016a68 007f2d seq_stat->nr_hpi_timeout
+00016a6c 007f46 seq_stat->nr_host_reset
+00016a70 007f8e timespec_to_ns(&ts_base)
+00016a78 007f5e <0>%-16s(%4d[%-16s]) : Emergency : %-32s: %lld
+
+00016a80 007fa7 ts_get_pre_cycle()
+00016a84 007fba timespec_to_ns(&handle->ts_init)
+00016a88 007fdb timespec_to_ns(&handle->last_tuned_ts)
+00016a8c 008002 refresh
+00016a94 00800a refresh->handle
+00016a98 00801a refresh->enabled
+00016a9c 00802b refresh->buf
+00016aa0 008038 refresh->buf_size
+00016aa4 00804a refresh->refunit_size
+00016aa8 008060 refresh->refunit_sectors
+00016aac 008079 refresh->bitmap
+00016ab0 008089 refresh->bitmap_size
+00016ab4 00809e refresh->bitmap_refval
+00016ab8 0080b5 refresh->cur_refunit
+00016abc 0080ca refresh->refunit_offset
+00016ac0 0080e2 refresh->nr_bp_refunit
+00016ac4 0080f9 refresh->nr_uda_refunit
+00016ac8 008111 refresh->nr_refunit
+00016acc 008125 refresh->nr_skip_refunit
+00016ad0 00813e refresh->skipped_refunit_cnt
+00016ad4 00815b refresh->skip_region
+00016ad8 008170 refresh->nr_skip_regions
+00016bd4 00572b <3>%-16s(%4d[%-16s]) : Error : Error on read_device_state(), err = %d
+
+00016bd8 00450a AL_EMMC_SEQ
+00016bdc 008189 <3>%-16s(%4d[%-16s]) : Error : device not in Transfer state state = %d
+
+00016d5c 0081d1 <3>%-16s(%4d[%-16s]) : Error : Error on read_ext_csd_for_init(), err = %d
+
+00016d60 00450a AL_EMMC_SEQ
+00016d64 00821c <3>%-16s(%4d[%-16s]) : Error : Error on init_emmc_features(), err = %d
+
+00016d68 008264 <3>%-16s(%4d[%-16s]) : Error : Error on init_emmc_active_pt(), err = %d
+
+0001701c 00450a AL_EMMC_SEQ
+00017024 0082ad <4>%-16s(%4d[%-16s]) : Warning : Device already in Sleep state
+
+00017028 0082ed <3>%-16s(%4d[%-16s]) : Error : Error on stop_bkops_if_running(), err = %d
+
+0001702c 008338 <3>%-16s(%4d[%-16s]) : Error : SLEEP_NOTIFICATION is not supported
+00017034 007697 <3>%-16s(%4d[%-16s]) : Error : Error on set_pon() w/ POWERED_ON, err = %d
+
+00017038 005592 <0>%-16s(%4d[%-16s]) : Emergency : panic at line %d
+
+0001703c 0055dd command timed-out
+
+00017040 00837b <3>%-16s(%4d[%-16s]) : Error : Error on set_pon() w/ SLEEP_NOTIFICATION, err = %d
+
+00017044 0083ce <3>%-16s(%4d[%-16s]) : Error : Error on set_pon_to_sleep_notification(), err = %d
+
+00017048 008421 <3>%-16s(%4d[%-16s]) : Error : Error on put_state_into_stby(), err = %d
+
+00017050 00846a <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_sleep_awake(), err = %d
+
+00017054 0084b5 <3>%-16s(%4d[%-16s]) : Error : Failed to change device state to Sleep
+
+00017058 005e52 busy status timed-out
+
+000170c0 0084fc <3>%-16s(%4d[%-16s]) : Error : Error on __emmc_seq_sleep(), err = %d
+
+000170c4 00450a AL_EMMC_SEQ
+00017230 00450a AL_EMMC_SEQ
+00017238 008542 <4>%-16s(%4d[%-16s]) : Warning : Device not in Sleep state
+
+00017240 00846a <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_sleep_awake(), err = %d
+
+00017244 005772 <3>%-16s(%4d[%-16s]) : Error : Failed to change device state to Stand-by
+
+00017248 00857e <3>%-16s(%4d[%-16s]) : Error : Error on put_state_from_stby_into_trans(), err = %d
+
+0001724c 0056e3 <3>%-16s(%4d[%-16s]) : Error : Error on read_device_status(), err = %d
+
+00017250 0061dc <3>%-16s(%4d[%-16s]) : Error : Error on start_bkops_if_needed(), err = %d
+
+000172b8 0085d2 <3>%-16s(%4d[%-16s]) : Error : Error on __emmc_seq_awake(), err = %d
+
+000172bc 00450a AL_EMMC_SEQ
+00017308 008618 <4>%-16s(%4d[%-16s]) : Warning : Device not in Sleep state previously
+
+0001730c 00450a AL_EMMC_SEQ
+000173c8 0082ed <3>%-16s(%4d[%-16s]) : Error : Error on stop_bkops_if_running(), err = %d
+
+000173cc 00450a AL_EMMC_SEQ
+000178e8 00450a AL_EMMC_SEQ
+000178ec 00865f <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_go_idle_state(), err = %d
+
+000178f4 0086ac <3>%-16s(%4d[%-16s]) : Error : Error on put_state_into_idle(), err = %d
+
+00017904 0086f5 <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_send_op_cond(), err = %d
+
+0001790c 008741 <3>%-16s(%4d[%-16s]) : Error : Error on put_state_into_ready(), err = %d
+
+00017914 00878b <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_all_send_cid(), err = %d
+
+0001791c 0087d7 <3>%-16s(%4d[%-16s]) : Error : Error on put_state_into_identification(), err = %d
+
+00017924 00882a <3>%-16s(%4d[%-16s]) : Error : Error on exec_emmc_set_rca(), err = %d
+
+0001792c 008871 <3>%-16s(%4d[%-16s]) : Error : Error on set_relative_addr(), err = %d
+
+00017930 0088b8 <3>%-16s(%4d[%-16s]) : Error : Error on read_csd_for_init(), err = %d
+
+00017934 00857e <3>%-16s(%4d[%-16s]) : Error : Error on put_state_from_stby_into_trans(), err = %d
+
+00017938 0088ff <3>%-16s(%4d[%-16s]) : Error : Error on switch_bus_width(), err = %d
+
+0001793c 008945 <3>%-16s(%4d[%-16s]) : Error : Error on switch_timing_mode(), err = %d
+
+00017944 00898d <3>%-16s(%4d[%-16s]) : Error : Error on execute_tuning(), err = %d
+
+0001794c 0089d1 <4>%-16s(%4d[%-16s]) : Warning : Unsupported to select erase group unit size
+
+00017950 005ced <3>%-16s(%4d[%-16s]) : Error : Error on write_ext_csd_byte(), err = %d
+
+00017954 005d35 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_busy_cleared(), err = %d
+
+00017958 005a53 <3>%-16s(%4d[%-16s]) : Error : Error on wait_for_trans_state(), err = %d
+
+0001795c 008a64 <3>%-16s(%4d[%-16s]) : Error : Error on switch_erase_group_def(), err = %d
+
+00017960 0081d1 <3>%-16s(%4d[%-16s]) : Error : Error on read_ext_csd_for_init(), err = %d
+
+00017964 00821c <3>%-16s(%4d[%-16s]) : Error : Error on init_emmc_features(), err = %d
+
+00017968 006f01 <3>%-16s(%4d[%-16s]) : Error : Error on switch_partition(), err = %d
+
+0001796c 008a1f <4>%-16s(%4d[%-16s]) : Warning : Number of eMMC host reset time: %d
+
+00017b14 0054aa <3>%-16s(%4d[%-16s]) : Error : Error on get_host_setting(), err = %d
+
+00017b18 00450a AL_EMMC_SEQ
+00017c48 0090e1 <4>%-16s(%4d[%-16s]) : Warning : Remove module while device in Sleep state!
+
+00017c4c 00450a AL_EMMC_SEQ
+00017f2c 00921d <3>%-16s(%4d[%-16s]) : Error : The entry (%s) already exists.
+
+00017f30 00925c AL_EMMC_PROC
+00017f34 009269 <3>%-16s(%4d[%-16s]) : Error : Failed on creating %s
+
+00017fb4 00929f %s
+
+00017fb8 0092a3 v161102p2
+00017ff4 00929f %s
+
+00017ff8 0092ad emmc
+000181f0 0092b2 driver
+000181f4 0092b9 /
+000181f8 009269 <3>%-16s(%4d[%-16s]) : Error : Failed on creating %s
+
+000181fc 00925c AL_EMMC_PROC
+00018208 0092bb <3>%-16s(%4d[%-16s]) : Error : Error on registering al_proc_entries, err = %d
+
+0001820c 00930a ext_mod
+00018218 009312 <3>%-16s(%4d[%-16s]) : Error : Failed on al_proc_register_emmc_ext_mod()
+
+00018284 00930a ext_mod
+000183d8 00925c AL_EMMC_PROC
+000183e0 009269 <3>%-16s(%4d[%-16s]) : Error : Failed on creating %s
+
+000183ec 00935c <3>%-16s(%4d[%-16s]) : Error : Failed on al_proc_register_part_dev()
+
+000183f0 0093a2 registers
+000183fc 0093ac <3>%-16s(%4d[%-16s]) : Error : Failed on al_proc_register_emmc_regs()
+
+0001844c 0093a2 registers

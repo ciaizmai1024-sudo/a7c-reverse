@@ -1,0 +1,16 @@
+  CC      arm-softmmu/hw/arm/bionz.o
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c: In function ‘cxd90045_build_atags’:
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:1017:26: error: ‘ATAG_MEM’ undeclared (first use in this function)
+ 1017 |         *p++ = 4; *p++ = ATAG_MEM; *p++ = 0x00000000; *p++ = 0x40000000;
+      |                          ^~~~~~~~
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:1017:26: note: each undeclared identifier is reported only once for each function it appears in
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c: At top level:
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:1072:13: warning: ‘cxd90045_load_wbi’ defined but not used [-Wunused-function]
+ 1072 | static void cxd90045_load_wbi(BlockBackend *blk)
+      |             ^~~~~~~~~~~~~~~~~
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:996:13: warning: ‘cxd90045_write_cmdline_mem’ defined but not used [-Wunused-function]
+  996 | static void cxd90045_write_cmdline_mem(const char *cl, hwaddr base)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: *** [/home/wubin/qemu-a7c/qemu-sony/rules.mak:69: hw/arm/bionz.o] Error 1
+make: *** [Makefile:527: arm-softmmu/all] Error 2
+BUILD_RC=2

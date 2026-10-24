@@ -1,0 +1,34 @@
+MSC 0x0d2a 鉴权…
+Traceback (most recent call last):
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/driver/generic/libusb.py", line 81, in read
+    return self.dev.read(ep, length, timeout).tobytes()
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/core.py", line 1043, in read
+    ret = fn(
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/backend/libusb1.py", line 850, in bulk_read
+    return self.__read(self.lib.libusb_bulk_transfer,
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/backend/libusb1.py", line 958, in __read
+    _check(retval)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/backend/libusb1.py", line 604, in _check
+    raise USBError(_strerror(ret), ret, _libusb_errno[ret])
+usb.core.USBError: [Errno 32] Pipe error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wubin/pi-cwd/sony/a7creverse/tools/jiritsu_send.py", line 742, in <module>
+    main()
+  File "/Users/wubin/pi-cwd/sony/a7creverse/tools/jiritsu_send.py", line 738, in main
+    args.fn(args)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/tools/jiritsu_send.py", line 438, in cmd_mount
+    j = connect(args)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/tools/jiritsu_send.py", line 343, in connect
+    auth.authenticate()
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/sony.py", line 920, in authenticate
+    ret, data = self._sendAuthPacket(1)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/sony.py", line 914, in _sendAuthPacket
+    response = self.AuthPacket.unpack(self.driver.read(self.AuthPacket.size))
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/driver/generic/__init__.py", line 94, in read
+    return self.backend.read(self.epIn[ep], length, timeout)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/driver/generic/libusb.py", line 83, in read
+    raise GenericUsbException()
+pmca.usb.driver.generic.GenericUsbException

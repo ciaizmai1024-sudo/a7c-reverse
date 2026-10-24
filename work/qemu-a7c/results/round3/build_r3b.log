@@ -1,0 +1,33 @@
+  CC      arm-softmmu/hw/arm/bionz.o
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c: In function ‘a7c_uart_write’:
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:1165:9: error: too few arguments to function ‘qemu_chr_write’
+ 1165 |         qemu_chr_write(s->chr, &c, 1);
+      |         ^~~~~~~~~~~~~~
+In file included from /home/wubin/qemu-a7c/qemu-sony/include/chardev/char-fe.h:4,
+                 from /home/wubin/qemu-a7c/qemu-sony/include/hw/char/pl011.h:20,
+                 from /home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:8:
+/home/wubin/qemu-a7c/qemu-sony/include/chardev/char.h:224:5: note: declared here
+  224 | int qemu_chr_write(Chardev *s, const uint8_t *buf, int len, bool write_all);
+      |     ^~~~~~~~~~~~~~
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c: In function ‘cxd90045_init’:
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:1306:82: error: incompatible type for argument 3 of ‘memory_region_add_subregion’
+ 1306 |         memory_region_add_subregion(get_system_memory(), CXD90045_UART_BASE(i), u->io);
+      |                                                                                 ~^~~~
+      |                                                                                  |
+      |                                                                                  MemoryRegion
+In file included from /home/wubin/qemu-a7c/qemu-sony/include/exec/cpu-all.h:23,
+                 from /home/wubin/qemu-a7c/qemu-sony/target/arm/cpu.h:3189,
+                 from /home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:4:
+/home/wubin/qemu-a7c/qemu-sony/include/exec/memory.h:1786:48: note: expected ‘MemoryRegion *’ but argument is of type ‘MemoryRegion’
+ 1786 |                                  MemoryRegion *subregion);
+      |                                  ~~~~~~~~~~~~~~^~~~~~~~~
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c: At top level:
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:1074:13: warning: ‘cxd90045_load_wbi’ defined but not used [-Wunused-function]
+ 1074 | static void cxd90045_load_wbi(BlockBackend *blk)
+      |             ^~~~~~~~~~~~~~~~~
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:998:13: warning: ‘cxd90045_write_cmdline_mem’ defined but not used [-Wunused-function]
+  998 | static void cxd90045_write_cmdline_mem(const char *cl, hwaddr base)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: *** [/home/wubin/qemu-a7c/qemu-sony/rules.mak:69: hw/arm/bionz.o] Error 1
+make: *** [Makefile:527: arm-softmmu/all] Error 2
+BUILD_RC=2

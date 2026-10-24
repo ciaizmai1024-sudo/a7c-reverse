@@ -1,0 +1,40 @@
+MSC 0x0d29 鉴权…
+Traceback (most recent call last):
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/driver/generic/libusb.py", line 87, in write
+    self.dev.write(ep, data)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/core.py", line 1000, in write
+    intf, ep = self._ctx.setup_request(self, endpoint)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/core.py", line 113, in wrapper
+    return f(self, *args, **kwargs)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/core.py", line 234, in setup_request
+    self.managed_claim_interface(device, intf)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/core.py", line 113, in wrapper
+    return f(self, *args, **kwargs)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/core.py", line 180, in managed_claim_interface
+    self.backend.claim_interface(self.handle, i)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/backend/libusb1.py", line 833, in claim_interface
+    _check(self.lib.libusb_claim_interface(dev_handle.handle, intf))
+  File "/Users/wubin/pi-cwd/sony/a7creverse/.venv-jir/lib/python3.9/site-packages/usb/backend/libusb1.py", line 604, in _check
+    raise USBError(_strerror(ret), ret, _libusb_errno[ret])
+usb.core.USBError: [Errno 13] Access denied (insufficient permissions)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wubin/pi-cwd/sony/a7creverse/tools/jiritsu_send.py", line 742, in <module>
+    main()
+  File "/Users/wubin/pi-cwd/sony/a7creverse/tools/jiritsu_send.py", line 738, in main
+    args.fn(args)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/tools/jiritsu_send.py", line 438, in cmd_mount
+    j = connect(args)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/tools/jiritsu_send.py", line 343, in connect
+    auth.authenticate()
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/sony.py", line 920, in authenticate
+    ret, data = self._sendAuthPacket(1)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/sony.py", line 913, in _sendAuthPacket
+    self.driver.write(self.AuthPacket.pack(cmd=~cmd & 0xffff, salt=0, data=data))
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/driver/generic/__init__.py", line 97, in write
+    self.backend.write(self.epOut[ep], data)
+  File "/Users/wubin/pi-cwd/sony/a7creverse/refs/Sony-PMCA-RE/pmca/usb/driver/generic/libusb.py", line 89, in write
+    raise GenericUsbException()
+pmca.usb.driver.generic.GenericUsbException

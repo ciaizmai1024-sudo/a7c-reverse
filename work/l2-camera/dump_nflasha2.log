@@ -1,0 +1,11 @@
+### attempt 1
+054c:0d29
+MSC 0x0d29 鉴权…
+  服务模式 0x0336 已出现
+  服务通道鉴权 OK
+    work/l2/nflasha2.bin  20971520 B (20.0 MB) 1.4s  sha256=70945a63ae4d08625ae5fc83ed519c16  fs=MBR55AA,FAT
+    work/l2/nflasha2.bin.r1  20971520 B (20.0 MB) 1.1s  sha256=1de869dd4a47e91b6a505113e2a173bf  fs=MBR55AA,FAT
+    ✗ 两次读不一致：不能当备份！先查 USB 线/供电/口速，再重读
+  /dev/nflasha2 -> work/l2/nflasha2.bin  20971520 B  多次读一致=False
+    fs=FAT  名字命中: dat4@0x10ae0, updater@0xa60
+### rc=0

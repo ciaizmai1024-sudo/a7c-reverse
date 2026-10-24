@@ -1,0 +1,56 @@
+=== /setting/updater/mode
+  File "/home/wubin/a7c-jiritsu/refs/_pmca_pkg/pmca/usb/sony.py", line 1003, in _sendFileControlPacket
+    raise Exception('Senser file control error %d' % res)
+Exception: Senser file control error 130
+=== /setting/updater/mode1
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/mode2
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/mode3
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/mode4
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/mode5
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/mode6
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/comp
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/uincomp
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/debug
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/dat4
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/version.txt
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/kikilog.dat
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/Backup.bin
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/updater/Backup.bin
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/partinf.conf
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/mount.conf
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /setting/kemco.txt
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /usr/bin/crypter.elf
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /usr/bin/udtrbody.bin
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /usr/bin/up.sh
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /usr/bin/mf
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /usr/bin/sauu
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /tmp/jiritsu
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /tmp/jiritsu/libJit.so
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /tmp/jbusy
+看不到任何 054C 设备（线/电源/USB 模式？）
+=== /tmp/etc/nsswitch.conf
+看不到任何 054C 设备（线/电源/USB 模式？）

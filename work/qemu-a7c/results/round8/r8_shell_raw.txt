@@ -1,0 +1,138 @@
+[    0.000000] Linux version 3.0.27_nl-rt106 (wubin@ubuntu) (gcc version 6.4.0 (Buildroot 2018.02-rc2-00002-gcab6743) ) #9 SMP PREEMPT RT Sat Oct 24 05:55:10 CST 2026
+[    0.000000] CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c5387d
+[    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] cmdline override at 60103005
+[    0.000000] Machine: ARM-CXD900X0
+[    0.000000] arm_add_memory: 0 0x0 0x40000000
+[    0.000000] reserve area 0: 100000 @ 0
+[    0.000000] reserve area 1: 75E000 @ 2E68000
+[    0.000000] reserve area 2: 500000 @ 9B00000
+[    0.000000] reserve area 3: 20000000 @ 20000000
+[    0.000000] arm_add_memory: 1 0x80000000 0x3f800000
+[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+[    0.000000] L310 cache controller enabled
+[    0.000000] l2x0: 8 ways, CACHE_ID 0x410000c8, AUX_CTRL 0x02420000, Cache size: 131072 B
+[    0.000000] L2 cache controller: enabled
+[    0.000000] 	Lockdown by master
+[    0.000000] 	Ignore shared
+[    0.000000] 	Way-size = 16KB
+[    0.000000] 	8-way
+[    0.000000] 	Tag RAM latency = 000
+[    0.000000] 	Data RAM latency = 000
+[    0.000000] bootmem_init: max_low=0x784384, max_high=0x784384
+[    0.000000] Section 5 and 4 (node 0) have a circular dependency on usemap and pgdat allocations
+[    0.000000] high_memory: df800000
+[    0.000000] Zone PFN ranges:
+[    0.000000]   Normal   0x00000000 -> 0x000bf800
+[    0.000000] Movable zone start PFN for each node
+[    0.000000] early_node_map[2] active PFN ranges
+[    0.000000]     0: 0x00000000 -> 0x00040000
+[    0.000000]     1: 0x00080000 -> 0x000bf800
+[    0.062000] PERCPU: Embedded 7 pages/cpu @6056e000 s5280 r8192 d15200 u32768
+[    0.063278] Built 2 zonelists in Node order, mobility grouping on.  Total pages: 383156
+[    0.063289] Policy zone: Normal
+[    0.063562] Kernel command line:  ip=off initrd=0x00700000,0x00800000 root=/dev/ram0 rw noatime noalign init=/bin/sh    heap_profile.records=0 snsc_workqueue.kipid=130 manage.irqd=129 softirq.sirqd=128 exception.reboot=1 exception.console_option=115200n8 softlockup_panic=0 softlockup_thresh=30 wdt.timeout=500 warm.boot_drop=0 warm.ignore_drop=1 pcie.refclk=9,2 pcie.pwr1=2,18 pcie.pwr2=2,23 pcie.pwr3=2,22 pcie.ch0_enable=Y pcie.ch0_select=1 pcie.ch0_start=0 pcie.ch1_enable=Y pcie.ch1_select=1 pcie.ch1_start=0 pcie.cold_delay=0 pcie.pon_delay=0 pcie_ports=native pci=ecrc=on,hpiosize=0,hpprefsize=0 pciehp.pciehp_force=Y pcie_aspm.policy=performance error.led=0,0 cfg.poff=0,10 console=ttyAM0,115200n8 amba2.console=1 xrstreq=0 wdt.mode=0 stack_usage=y cxd90014.bam=Y cfg.uart=15 tmonitor.addr=0x1A00000 tmonitor.size=0x500000 tmonitor.mask=0 wbi_memclr=0x200210e8 em_console=0x200210ec boottime=0x20000@0x03480000 klog.addr=0x034A0000 klog.size=0x20000 mem=1G@0 memrsv=1M@0 memrsv=0x75e000@0x02E68000 memrsv=0x500000@0x09b00000
+[    0.064986] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.065349] Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+[    0.066233] Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.097260] Memory: 1024MB 1016MB = 2040MB total
+[    0.097312] Memory: 1518220k/1518220k available, 570740k reserved, 0K highmem
+[    0.097397] Virtual kernel memory layout:
+[    0.097400]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.097403]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.097406]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+[    0.097409]     vmalloc : 0xb0800000 - 0xef800000   (1008 MB)
+[    0.097412]     lowmem  : 0x60000000 - 0xdf800000   (2040 MB)
+[    0.097415]     modules : 0x5f000000 - 0x60000000   (  16 MB)
+[    0.097418]       .text : 0x60108000 - 0x60478024   (3521 kB)
+[    0.097421]       .init : 0x60479000 - 0x604a54a0   ( 178 kB)
+[    0.097424]       .data : 0x604a6000 - 0x604d7180   ( 197 kB)
+[    0.097427]        .bss : 0x604d7180 - 0x60526890   ( 318 kB)
+[    0.100973] NR_IRQS:256
+[    0.104035] sched_clock: 32 bits at 2000kHz, resolution 500ns, wraps every 2147483ms
+[    0.104312] cxd4115_clocksource_init: 4194304000 23 
+[    0.158187] allocated 37601280 bytes of page_cgroup
+[    0.158210] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+[    0.158761] Calibrating delay loop... 2328.16 BogoMIPS (lpj=11640832)
+[    0.215459] pid_max: default: 4096 minimum: 301
+[    0.216483] Mount-cache hash table entries: 512
+[    0.222032] Initializing cgroup subsys memory
+[    0.222764] CPU: Testing write buffer coherency: mm/memory.c:427: bad pmd 9081140e.
+[    0.223722] failed, enabling work-around
+[    0.317874] Brought up 1 CPUs
+[    0.317969] SMP: Total of 1 processors activated.
+[    0.335374] NET: Registered protocol family 16
+[    0.350645] bio: create slab <bio-0> at 0
+[    0.356422] Switching to clocksource cxd4105-freerun-timer
+[    0.359073] NET: Registered protocol family 2
+[    0.360439] IP route cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.362539] TCP established hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.364048] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes)
+[    0.366658] TCP: Hash tables configured (established 262144 bind 65536)
+[    0.366725] TCP reno registered
+[    0.367883] NET: Registered protocol family 1
+[    0.371678] Trying to unpack rootfs image as initramfs...
+[    0.375105] rootfs image is not initramfs (junk in compressed archive); looks like an initrd
+[    0.400009] Freeing initrd memory: 8192K
+[    0.400488] PMU: registered new PMU device of type 0
+[    0.402480] hwtimer cpu0 OK
+[    0.402763] hwtimer cpu1 OK
+[    0.402808] hwtimer cpu2 OK
+[    0.402842] hwtimer cpu3 OK
+[    0.402909] hwtimer jitter 0
+[    0.406505] klog: initialize logging buffer: 0x00020000@0x034a0000, magic wrong nbit: 20(0x00000000)
+[    0.409266] console [klog0] enabled
+[    0.411627] ashmem: initialized
+[    0.413488] fuse init (API version 7.16)
+[    0.414007] msgmni has been set to 2981
+[    0.421498] io scheduler noop registered (default)
+[    0.422063] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    0.422192] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    0.423411] uart0: ttyAM0 at MMIO 0xf2000000 (irq = 150) is a AMBA/PL011
+[    0.431464] console [ttyAM0] enabled
+[    0.432238] uart1: ttyAM1 at MMIO 0xf2001000 (irq = 151) is a AMBA/PL011
+[    0.432528] uart2: ttyAM2 at MMIO 0xf2002000 (irq = 152) is a AMBA/PL011
+[    0.432786] uart3: ttyAM3 at MMIO 0xf2003000 (irq = 120) is a AMBA/PL011
+[    0.433318] ttynull: NULL console driver $Revision: 1.1.2.1 $
+[    0.438487] brd: module loaded
+[    0.440699] loop: module loaded
+[    0.440828] CompSwap: num_devices not specified. Using default: 1
+[    0.440946] CompSwap: Creating 1 devices ...
+[    0.441535] Register CompSwap LZO compressor/decompressor
+[    0.441876] tun: Universal TUN/TAP device driver, 1.6
+[    0.441974] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    0.445131] mousedev: PS/2 mouse device common for all mice
+[    0.447007] Logger@Error can't get alog.addr & alog.size! Alloc memory by logger itself!
+[    0.447278] logger: created 256K log 'log_main'
+[    0.447449] logger: created 128K log 'log_events'
+[    0.447601] logger: created 64K log 'log_radio'
+[    0.448452] IPv4 over IPv4 tunneling driver
+[    0.449445] GRE over IPv4 demultiplexor driver
+[    0.449555] GRE over IPv4 tunneling driver
+[    0.450974] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    0.452534] TCP cubic registered
+[    0.452618] Initializing XFRM netlink socket
+[    0.453079] NET: Registered protocol family 10
+[    0.458635] Mobile IPv6
+[    0.458750] IPv6 over IPv4 tunneling driver
+[    0.460455] NET: Registered protocol family 17
+[    0.460719] NET: Registered protocol family 15
+[    0.460829] lib80211: common routines for IEEE802.11 drivers
+[    0.461665] VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+[    0.474665] sony_usb_init: CXD4132
+[    0.475382] usb_gcore_module_init: usb_gcw_register_driver()
+[    0.475520] usb_gcw_register_driver: gcore prototype for Astra
+[    0.475861] usb_gadgetcore0724: usb_gadget_register_driver()-->failed(-19)
+[    0.476173] drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+[    0.491241] RAMDISK: cramfs filesystem found at block 0
+[    0.491687] RAMDISK: Loading 4700KiB [1 disk] into ram disk... |/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/done.
+[    0.566551] VFS: Mounted root (cramfs filesystem) readonly on device 1:0.
+[    0.574764] Freeing init memory: 176K
+[    0.574929] default_nodeorder is not valid. Force it to 0.
+
+
+BusyBox v1.29.3 (2018-12-07 16:14:33 JST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/bin/sh: can't access tty; job control turned off
+/ # 

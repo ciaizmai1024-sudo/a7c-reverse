@@ -1,0 +1,12 @@
+### attempt 1
+  found 0x0d29
+054c:0d29
+MSC 0x0d29 鉴权…
+  服务模式 0x0336 已出现
+  服务通道鉴权 OK
+    work/l2/nflasha23.bin  2097152 B (2.0 MB) 0.2s  sha256=494152495afdfbfb437e42cc13040674  fs=MBR55AA
+    work/l2/nflasha23.bin.r1  2097152 B (2.0 MB) 0.1s  sha256=494152495afdfbfb437e42cc13040674  fs=MBR55AA
+    ✓ 两次读 sha256 一致 —— 可以当备份基准
+  /dev/nflasha23 -> work/l2/nflasha23.bin  2097152 B  多次读一致=True
+    fs=非-FAT  名字命中: 无
+### rc=0

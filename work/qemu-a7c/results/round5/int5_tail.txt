@@ -1,0 +1,12 @@
+Taking exception 3 [Prefetch Abort]
+...from EL1 to EL1
+...with ESR 0x21/0x8600003f
+...with IFSR 0x7 IFAR 0xffff1000
+Taking exception 3 [Prefetch Abort]
+...from EL1 to EL1
+...with ESR 0x21/0x8600003f
+...with IFSR 0x7 IFAR 0xffff1000
+Taking exception 3 [Prefetch Abort]
+...from EL1 to EL1
+...with ESR 0x21/0x8600003f
+...with IFSR 0x7 IFAR 0xffff1000

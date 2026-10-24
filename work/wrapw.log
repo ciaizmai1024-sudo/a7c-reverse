@@ -1,0 +1,246 @@
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=89182761dcc6893e… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/tmp/zzprobe 读不到/不存在（fget 非 0 或空）
+mock 模式（根 work/mock-faults；/dev/* 回退到固件包里的真镜像）
+  FileControl WRITE /tmp/zzprobe 512 B ok  [level=L2.5 白名单备注: 边界探针：/tmp(nflasha10, Work 组) 写一个 0 字节探针]
+[wrapw] 记录：/tmp/zzprobe src=512B sha=15ee3a1447509f40…  读回=505B sha=53291ddd3bd1cf4b…
+[wrapw] FAIL: 读回字节数/内容与源不符（部分写 或 读回少字节）—— 停，别自动重写
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=89182761dcc6893e… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] FAIL: /tmp/zzprobe 已存在（22 B）—— 旧 zzprobe/残留，不静默覆盖；先查明来源，fdel 或 FORCE=1
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=d8b2856af0f2440c… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/tmp/zzprobe 读不到/不存在（fget 非 0 或空）
+mock 模式（根 work/mock-faults；/dev/* 回退到固件包里的真镜像）
+  FileControl WRITE /tmp/zzprobe 512 B ok  [level=L2.5 白名单备注: 边界探针：/tmp(nflasha10, Work 组) 写一个 0 字节探针]
+[wrapw] 记录：/tmp/zzprobe src=512B sha=afe21dcee820adca…  读回=505B sha=ebf3f4b89dfee90b…
+[wrapw] FAIL: 读回字节数/内容与源不符（部分写 或 读回少字节）—— 停，别自动重写
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=d8b2856af0f2440c… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] FAIL: /tmp/zzprobe 已存在（22 B）—— 旧 zzprobe/残留，不静默覆盖；先查明来源，fdel 或 FORCE=1
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=d8b2856af0f2440c… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/tmp/zzprobe 读不到/不存在（fget 非 0 或空）
+mock 模式（根 work/mock-faults-t2；/dev/* 回退到固件包里的真镜像）
+  FileControl WRITE /tmp/zzprobe 6 B ok  [level=L2.5 白名单备注: 边界探针：/tmp(nflasha10, Work 组) 写一个 0 字节探针]
+[wrapw] 记录：/tmp/zzprobe src=6B sha=25be323556dad377…  读回=6B sha=25be323556dad377…
+[wrapw] OK: 单次写 + 读回一致
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=d8b2856af0f2440c… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/usr/lib/zzprobe 读不到/不存在（fget 非 0 或空）
+mock 模式（根 work/mock-faults-t2；/dev/* 回退到固件包里的真镜像）
+  FileControl WRITE /usr/lib/zzprobe 6 B ok  [level=L2.5 白名单备注: BOUNDARY-PROBE 只允许失败：真写成功 => 非预期，exit 4 停序列待人工确认]
+  ⚠⚠ 边界探针意外成功：/usr/lib 可写且 zzprobe 已落在里面 —— 非预期结果，停序列(exit 4)待人工确认/清理
+[wrapw] FAIL: fput 失败且【不重试】—— 先手动 fget /usr/lib/zzprobe 判状态（可能已部分落盘），再决定下一步
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=d8b2856af0f2440c… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/tmp/zzprobe 读不到/不存在（fget 非 0 或空）
+mock 模式（根 work/mock-faults；/dev/* 回退到固件包里的真镜像）
+  FileControl WRITE /tmp/zzprobe 512 B ok  [level=L2.5 白名单备注: 边界探针：/tmp(nflasha10, Work 组) 写一个 0 字节探针]
+[wrapw] 记录：/tmp/zzprobe src=512B sha=5d87853fcc1c9640…  读回=505B sha=ee224d1c99173fe8…
+[wrapw] FAIL: 读回字节数/内容与源不符（部分写 或 读回少字节）—— 停，别自动重写
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=d8b2856af0f2440c… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] FAIL: /tmp/zzprobe 已存在（22 B）—— 旧 zzprobe/残留，不静默覆盖；先查明来源，fdel 或 FORCE=1
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=d8b2856af0f2440c… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/usr/lib/zzprobe 读不到/不存在（fget 非 0 或空）
+mock 模式（根 work/mock-faults-t2；/dev/* 回退到固件包里的真镜像）
+  FileControl WRITE /usr/lib/zzprobe 6 B ok  [level=L2.5 白名单备注: BOUNDARY-PROBE 只允许失败：真写成功 => 非预期，exit 4 停序列待人工确认]
+  ⚠⚠ 边界探针意外成功：/usr/lib 可写且 zzprobe 已落在里面 —— 非预期结果，停序列(exit 4)待人工确认/清理
+[wrapw] 边界探针意外成功：/usr/lib/zzprobe 竞可写（非预期）—— 已 exit 4 停序列；尝试清理探针残留 fdel
+mock 模式（根 work/mock-faults-t2；/dev/* 回退到固件包里的真镜像）
+  FileControl DELETE /usr/lib/zzprobe ok
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=d8b2856af0f2440c… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/tmp/zzprobe 读不到/不存在（fget 非 0 或空）
+mock 模式（根 work/mock-faults；/dev/* 回退到固件包里的真镜像）
+  FileControl WRITE /tmp/zzprobe 512 B ok  [level=L2.5 白名单备注: 边界探针：/tmp(nflasha10, Work 组) 写一个 0 字节探针]
+[wrapw] 记录：/tmp/zzprobe src=512B sha=9f92a054b6a56af9…  读回=505B sha=a0abef3dd5a075cb…
+[wrapw] FAIL: 读回字节数/内容与源不符（部分写 或 读回少字节）—— 停，别自动重写
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=d8b2856af0f2440c… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] FAIL: /tmp/zzprobe 已存在（22 B）—— 旧 zzprobe/残留，不静默覆盖；先查明来源，fdel 或 FORCE=1
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=40f538e82f421b28… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/tmp/zzprobe 读不到/不存在（fget 非 0 或空）
+拒绝 fput(FileControl WRITE) /tmp/zzprobe：路径不在 --level L2.5 白名单内。
+  该级允许：/setting/updater/zzprobe1, /tmp/jiritsu/zzprobe1, /tmp/zzprobe1, /usr/lib/zzprobe1
+  要加路径就改 tools/jiritsu_send.py 的 WRITE_WHITELIST，改完重跑 preflight 与 mock_faults
+[wrapw] FAIL: fput 失败且【不重试】—— 先手动 fget /tmp/zzprobe 判状态（可能已部分落盘），再决定下一步
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=40f538e82f421b28… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] FAIL: /tmp/zzprobe 已存在（22 B）—— 旧 zzprobe/残留，不静默覆盖；先查明来源，fdel 或 FORCE=1
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=40f538e82f421b28… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/tmp/zzprobe 读不到/不存在（fget 非 0 或空）
+拒绝 fput(FileControl WRITE) /tmp/zzprobe：路径不在 --level L2.5 白名单内。
+  该级允许：/setting/updater/zzprobe1, /tmp/jiritsu/zzprobe1, /tmp/zzprobe1, /usr/lib/zzprobe1
+  要加路径就改 tools/jiritsu_send.py 的 WRITE_WHITELIST，改完重跑 preflight 与 mock_faults
+[wrapw] FAIL: fput 失败且【不重试】—— 先手动 fget /tmp/zzprobe 判状态（可能已部分落盘），再决定下一步
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=40f538e82f421b28… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] FAIL: /tmp/zzprobe 已存在（22 B）—— 旧 zzprobe/残留，不静默覆盖；先查明来源，fdel 或 FORCE=1
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=40f538e82f421b28… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] 写前状态：/tmp/zzprobe1 读不到/不存在（fget 非 0 或空）
+mock 模式（根 work/mock-faults；/dev/* 回退到固件包里的真镜像）
+  FileControl WRITE /tmp/zzprobe1 512 B ok  [level=L2.5 白名单备注: 边界探针：/tmp(nflasha10) 写探针（13 B，len%4=1）]
+[wrapw] 记录：/tmp/zzprobe1 src=512B sha=9e680fa4faba76c8…  读回=505B sha=cec59d21b3708586…
+[wrapw] FAIL: 读回字节数/内容与源不符（部分写 或 读回少字节）—— 停，别自动重写
+== preflight ==
+[1] 设备身份(mock): 054c:0d29 bcdDevice=0x0200 product='ILCE-7C'
+[2] /setting/updater/dat4 = 00 02 ✓（FW 2.00）
+[2] /setting/updater/comp = 0 B ✓
+[2] /version.txt = b'39119_05.2021111501'（旁证已读，sha256=57a441d21bef2cf7…）
+[3] 工具 sha256=40f538e82f421b28… 与 work/TOOL_HASH 一致 ✓
+[4] BACKUP_MANIFEST.tsv：11 行，LENGTH-MISMATCH=2 CONTENT-UNSTABLE=2
+[5] /setting/updater/mode* 无残留 ✓
+[6] 本次声明：RW（--allow-write，level=L2.5，白名单 4 条）
+  [4] warn: 清单里有 2 条 LENGTH-MISMATCH（多为固件包内短副本）——mock/包回退副本不可当备份
+PREFLIGHT PASS
+[wrapw] FAIL: /tmp/zzprobe1 已存在（22 B）—— 旧 zzprobe/残留，不静默覆盖；先查明来源，fdel 或 FORCE=1

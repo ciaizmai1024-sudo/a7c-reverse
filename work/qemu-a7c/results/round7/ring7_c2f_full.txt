@@ -1,0 +1,303 @@
+<5>[    0.000000] Linux version 3.0.27_nl-rt106 (wubin@ubuntu) (gcc version 6.4.0 (Buildroot 2018.02-rc2-00002-gcab6743) ) #7 SMP PREEMPT RT Sat Oct 24 05:48:46 CST 2026
+<4>[    0.000000] CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c5387d
+<4>[    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+<6>[    0.000000] cmdline override at 60103005
+<4>[    0.000000] Machine: ARM-CXD900X0
+<4>[    0.000000] arm_add_memory: 0 0x0 0x40000000
+<4>[    0.000000] reserve area 0: 100000 @ 0
+<4>[    0.000000] reserve area 1: 75E000 @ 2E68000
+<4>[    0.000000] reserve area 2: 500000 @ 9B00000
+<4>[    0.000000] reserve area 3: 20000000 @ 20000000
+<4>[    0.000000] arm_add_memory: 1 0x80000000 0x10000000
+<4>[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+<6>[    0.000000] L310 cache controller enabled
+<6>[    0.000000] l2x0: 8 ways, CACHE_ID 0x410000c8, AUX_CTRL 0x02420000, Cache size: 131072 B
+<6>[    0.000000] L2 cache controller: enabled
+<6>[    0.000000] 
+Lockdown by master
+<6>[    0.000000] 
+Ignore shared
+<6>[    0.000000] 
+Way-size = 16KB
+<6>[    0.000000] 
+8-way
+<6>[    0.000000] 
+Tag RAM latency = 000
+<6>[    0.000000] 
+Data RAM latency = 000
+<3>[    0.000000] INITRD: 0x00700000+0x00800000 overlaps in-use memory region - disabling initrd
+<4>[    0.000000] bootmem_init: max_low=0x589824, max_high=0x589824
+<6>[    0.000000] Section 7 and 4 (node 0) have a circular dependency on usemap and pgdat allocations
+<7>[    0.000000] On node 0 totalpages: 0
+<7>[    0.000000] On node 1 totalpages: 0
+<7>[    0.000000] On node 2 totalpages: 0
+<7>[    0.000000] On node 3 totalpages: 0
+<7>[    0.000000] On node 4 totalpages: 0
+<7>[    0.000000] On node 5 totalpages: 0
+<7>[    0.000000] On node 6 totalpages: 0
+<7>[    0.000000] On node 7 totalpages: 0
+<7>[    0.000000] On node 8 totalpages: 0
+<7>[    0.000000] On node 9 totalpages: 0
+<7>[    0.000000] On node 10 totalpages: 0
+<7>[    0.000000] On node 11 totalpages: 0
+<7>[    0.000000] On node 12 totalpages: 0
+<7>[    0.000000] On node 13 totalpages: 0
+<7>[    0.000000] On node 14 totalpages: 0
+<7>[    0.000000] On node 15 totalpages: 0
+<4>[    0.000000] high_memory: b0000000
+<4>[    0.000000] Zone PFN ranges:
+<4>[    0.000000]   Normal   0x00000000 -> 0x00090000
+<4>[    0.000000] Movable zone start PFN for each node
+<4>[    0.000000] early_node_map[2] active PFN ranges
+<4>[    0.000000]     0: 0x00000000 -> 0x00040000
+<4>[    0.000000]     1: 0x00080000 -> 0x00090000
+<7>[    0.000000] On node 0 totalpages: 127650
+<7>[    0.000000]   Normal zone: 2304 pages used for memmap
+<7>[    0.000000]   Normal zone: 0 pages reserved
+<7>[    0.000000]   Normal zone: 125346 pages, LIFO batch:31
+<7>[    0.000000] On node 1 totalpages: 65536
+<7>[    0.000000]   Normal zone: 576 pages used for memmap
+<7>[    0.000000]   Normal zone: 0 pages reserved
+<7>[    0.000000]   Normal zone: 64960 pages, LIFO batch:15
+<6>[    0.071381] PERCPU: Embedded 7 pages/cpu @61284000 s5280 r8192 d15200 u32768
+<7>[    0.071815] pcpu-alloc: s5280 r8192 d15200 u32768 alloc=8*4096
+<7>[    0.071892] pcpu-alloc: [0] 0 
+<4>[    0.072764] Built 2 zonelists in Node order, mobility grouping on.  Total pages: 190306
+<4>[    0.072785] Policy zone: Normal
+<5>[    0.073041] Kernel command line:  ip=off initrd=0x00700000,0x00800000 root=/dev/ram0 rw noatime noalign init=/sbin/init heap_profile.records=0 snsc_workqueue.kipid=130 manage.irqd=129 softirq.sirqd=128 exception.reboot=1 exception.console_option=115200n8 softlockup_panic=0 softlockup_thresh=30 wdt.timeout=500 warm.boot_drop=0 warm.ignore_drop=1 pcie.refclk=9,2 pcie.pwr1=2,18 pcie.pwr2=2,23 pcie.pwr3=2,22 pcie.ch0_enable=Y pcie.ch0_select=1 pcie.ch0_start=0 pcie.ch1_enable=Y pcie.ch1_select=1 pcie.ch1_start=0 pcie.cold_delay=0 pcie.pon_delay=0 pcie_ports=native pci=ecrc=on,hpiosize=0,hpprefsize=0 pciehp.pciehp_force=Y pcie_aspm.policy=performance error.led=0,0 cfg.poff=0,10 console=ttyAM0,115200n8 amba2.console=0 xrstreq=0 wdt.mode=0 stack_usage=y cxd90014.bam=Y cfg.uart=15 tmonitor.addr=0x1A00000 tmonitor.size=0x500000 tmonitor.mask=0 wbi_memclr=0x200210e8 em_console=0x200210ec boottime=0x20000@0x03480000 klog.addr=0x034A0000 klog.size=0x20000 mem=1G@0 memrsv=1M@0 memrsv=0x75e000@0x02E68000 memrsv=0x500000@0x09b00000
+<6>[    0.074515] PID hash table entries: 4096 (order: 2, 16384 bytes)
+<6>[    0.074827] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+<6>[    0.075449] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+<6>[    0.100743] Memory: 1024MB 256MB = 1280MB total
+<5>[    0.100801] Memory: 753876k/753876k available, 556844k reserved, 0K highmem
+<5>[    0.100883] Virtual kernel memory layout:
+<5>[    0.100887]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+<5>[    0.100892]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+<5>[    0.100896]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+<5>[    0.100900]     vmalloc : 0xb0800000 - 0xef800000   (1008 MB)
+<5>[    0.100905]     lowmem  : 0x60000000 - 0xb0000000   (1280 MB)
+<5>[    0.100909]     modules : 0x5f000000 - 0x60000000   (  16 MB)
+<5>[    0.100914]       .text : 0x60108000 - 0x60478024   (3521 kB)
+<5>[    0.100918]       .init : 0x60479000 - 0x604a54a0   ( 178 kB)
+<5>[    0.100924]       .data : 0x604a6000 - 0x604d7180   ( 197 kB)
+<5>[    0.100929]        .bss : 0x604d7180 - 0x60706890   (2238 kB)
+<6>[    0.104483] NR_IRQS:256
+<6>[    0.108073] sched_clock: 32 bits at 2000kHz, resolution 500ns, wraps every 2147483ms
+<4>[    0.108405] cxd4115_clocksource_init: 4194304000 23 
+<6>[    0.165718] allocated 23592960 bytes of page_cgroup
+<6>[    0.165746] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+<6>[    0.166414] Calibrating delay loop... 1646.59 BogoMIPS (lpj=8232960)
+<6>[    0.199812] pid_max: default: 4096 minimum: 301
+<6>[    0.201257] Mount-cache hash table entries: 512
+<6>[    0.207479] Initializing cgroup subsys memory
+<6>[    0.208273] CPU: Testing write buffer coherency: ok
+<7>[    0.291267] Synthetic TSC timer will fire each 131104 jiffies.
+<6>[    0.293064] Brought up 1 CPUs
+<6>[    0.293092] SMP: Total of 1 processors activated.
+<6>[    0.314042] NET: Registered protocol family 16
+<6>[    0.337615] bio: create slab <bio-0> at 0
+<6>[    0.344329] Switching to clocksource cxd4105-freerun-timer
+<6>[    0.347466] NET: Registered protocol family 2
+<6>[    0.348811] IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+<6>[    0.351701] TCP established hash table entries: 131072 (order: 8, 1048576 bytes)
+<6>[    0.353032] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes)
+<6>[    0.357475] TCP: Hash tables configured (established 131072 bind 65536)
+<6>[    0.357543] TCP reno registered
+<6>[    0.358951] NET: Registered protocol family 1
+<7>[    0.359184] PCI: CLS 0 bytes, default 32
+<6>[    0.363487] PMU: registered new PMU device of type 0
+<4>[    0.365830] hwtimer cpu0 OK
+<4>[    0.366153] hwtimer cpu1 OK
+<4>[    0.366204] hwtimer cpu2 OK
+<4>[    0.366258] hwtimer cpu3 OK
+<4>[    0.366362] hwtimer jitter 0
+<6>[    0.371041] klog: initialize logging buffer: 0x00020000@0x034a0000, magic wrong nbit: 20(0x00000000)
+<6>[    0.375483] console [klog0] enabled
+<6>[    0.379534] ashmem: initialized
+<6>[    0.382477] fuse init (API version 7.16)
+<6>[    0.383339] msgmni has been set to 1472
+<6>[    0.393422] io scheduler noop registered (default)
+<6>[    0.394081] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+<6>[    0.394245] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+<6>[    0.395886] uart0: ttyAM0 at MMIO 0xf2000000 (irq = 150) is a AMBA/PL011
+<6>[    0.396803] console [ttyAM0] enabled
+<6>[    0.397831] uart1: ttyAM1 at MMIO 0xf2001000 (irq = 151) is a AMBA/PL011
+<6>[    0.398146] uart2: ttyAM2 at MMIO 0xf2002000 (irq = 152) is a AMBA/PL011
+<6>[    0.398567] uart3: ttyAM3 at MMIO 0xf2003000 (irq = 120) is a AMBA/PL011
+<4>[    0.399952] ttynull: NULL console driver $Revision: 1.1.2.1 $
+<6>[    0.409059] brd: module loaded
+<6>[    0.413987] loop: module loaded
+<6>[    0.414322] CompSwap: num_devices not specified. Using default: 1
+<6>[    0.414391] CompSwap: Creating 1 devices ...
+<4>[    0.415354] Register CompSwap LZO compressor/decompressor
+<6>[    0.415600] tun: Universal TUN/TAP device driver, 1.6
+<6>[    0.415643] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+<6>[    0.421043] mousedev: PS/2 mouse device common for all mice
+<3>[    0.423606] Logger@Error can't get alog.addr & alog.size! Alloc memory by logger itself!
+<6>[    0.423864] logger: created 256K log 'log_main'
+<6>[    0.424079] logger: created 128K log 'log_events'
+<6>[    0.424253] logger: created 64K log 'log_radio'
+<6>[    0.425302] IPv4 over IPv4 tunneling driver
+<6>[    0.426696] GRE over IPv4 demultiplexor driver
+<6>[    0.426785] GRE over IPv4 tunneling driver
+<6>[    0.428590] ip_tables: (C) 2000-2006 Netfilter Core Team
+<6>[    0.430993] TCP cubic registered
+<6>[    0.431079] Initializing XFRM netlink socket
+<6>[    0.431753] NET: Registered protocol family 10
+<6>[    0.438014] Mobile IPv6
+<6>[    0.438095] IPv6 over IPv4 tunneling driver
+<6>[    0.442317] NET: Registered protocol family 17
+<6>[    0.442621] NET: Registered protocol family 15
+<6>[    0.442685] lib80211: common routines for IEEE802.11 drivers
+<7>[    0.442819] lib80211_crypt: registered algorithm 'NULL'
+<6>[    0.443621] VFP support v0.3: implementor 41 architecture 2 part 30 variant 5 rev 1
+<6>[    0.456735] sony_usb_init: CXD4132
+<6>[    0.457430] usb_gcore_module_init: usb_gcw_register_driver()
+<6>[    0.457498] usb_gcw_register_driver: gcore prototype for Astra
+<3>[    0.457860] usb_gadgetcore0724: usb_gadget_register_driver()-->failed(-19)
+<3>[    0.458076] drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+<4>[    0.489121] List of all partitions:
+<4>[    0.489702] No filesystem could mount root, tried:  ext2 cramfs vfat fuseblk
+<0>[    0.489895] Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(1,0)
+<4>[    0.490078] Backtrace: 
+<4>[    0.490633] [<60110d5c>] (dump_backtrace+0x0/0x104) from [<603b2dd8>] (dump_stack+0x18/0x1c)
+<4>[    0.490764]  r7:6049d0f8 r6:604328bc r5:7dc0ff3c r4:604e29a8
+<4>[    0.490847] [<603b2dc0>] (dump_stack+0x0/0x1c) from [<603b2f74>] (panic+0x7c/0x1a4)
+<4>[    0.490958] [<603b2ef8>] (panic+0x0/0x1a4) from [<60479e78>] (mount_block_root+0x21c/0x274)
+<4>[    0.491043]  r3:00000000 r2:80000000 r1:7dc0ff58 r0:60432854
+<4>[    0.491126]  r7:6049d0f8
+<4>[    0.491160] [<60479c5c>] (mount_block_root+0x0/0x274) from [<6047a00c>] (mount_root+0x54/0x68)
+<4>[    0.491231] [<60479fb8>] (mount_root+0x0/0x68) from [<6047a1b8>] (prepare_namespace+0x198/0x1e4)
+<4>[    0.491297]  r5:604d71e0 r4:6049d0f8
+<4>[    0.491348] [<6047a020>] (prepare_namespace+0x0/0x1e4) from [<60479a6c>] (kernel_init+0x120/0x184)
+<4>[    0.491440]  r6:601334bc r5:604a2e28 r4:604d7180
+<4>[    0.491529] [<6047994c>] (kernel_init+0x0/0x184) from [<601334bc>] (do_exit+0x0/0x74c)
+<2>[    0.491634] kernel BUG at kernel/panic.c:106!
+<1>[    0.491946] Unable to handle kernel NULL pointer dereference at virtual address 00000000
+<1>[    0.492103] pgd = 60104000
+<1>[    0.492155] [00000000] *pgd=00000000
+<0>[    0.492313] Internal error: Oops: 805 [#1] PREEMPT SMP
+<4>[    0.492400] Modules linked in:
+<4>[    0.492618] CPU: 0    Not tainted  (3.0.27_nl-rt106 #7)
+<4>[    0.492725] PC is at __bug+0x20/0x2c
+<4>[    0.492770] LR is at vprintk+0x1dc/0x3dc
+<4>[    0.492820] pc : [<60110c0c>]    lr : [<6012ff50>]    psr: 00000013
+<4>[    0.492827] sp : 7dc0fef0  ip : 7dc0fe48  fp : 7dc0fefc
+<4>[    0.492950] r10: 604328b8  r9 : 00008400  r8 : 604b366c
+<4>[    0.493030] r7 : 6049d0f8  r6 : 604328bc  r5 : 7dc0ff3c  r4 : 604e29a8
+<4>[    0.493089] r3 : 00000000  r2 : 604c5bf8  r1 : 60000013  r0 : 00000037
+<4>[    0.493167] Flags: nzcv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment kernel
+<4>[    0.493235] Control: 10c5387d  Table: 0010406a  DAC: 00000015
+<0>[    0.493293] Process swapper/0 (pid: 1, stack limit = 0x7dc0e128)
+<0>[    0.493361] Stack: (0x7dc0fef0 to 0x7dc10000)
+<0>[    0.493469] fee0:                                     7dc0ff34 7dc0ff00 60111818 60110bf8
+<0>[    0.493575] ff00: 7dc0ffe4 e92dd800 604c5bf8 00000001 7dc0fe08 603b2f78 601fed04 7dc0ff3c
+<0>[    0.493643] ff20: 6044343c 6049d0f8 7dc0ffa4 7dc0ff48 60479e78 603b2f08 60432854 7dc0ff58
+<0>[    0.493725] ff40: 80000000 00000000 00000000 63485af0 00000000 00000000 6e6b6e75 2d6e776f
+<0>[    0.493821] ff60: 636f6c62 2c31286b 60002930 00000080 7dc0ff8c 7dc0ff8c 00000000 00000000
+<0>[    0.493885] ff80: 604328b8 601334bc 00000013 00000000 00000000 00000000 7dc0ffbc 7dc0ffa8
+<0>[    0.493950] ffa0: 6047a00c 60479c68 6049d0f8 604d71e0 7dc0ffe4 7dc0ffc0 6047a1b8 60479fc4
+<0>[    0.494017] ffc0: 604a2e28 601334bc 00000013 604d7180 604a2e28 601334bc 7dc0fff4 7dc0ffe8
+<0>[    0.494110] ffe0: 60479a6c 6047a02c 00000000 7dc0fff8 601334bc 60479958 00000000 00000000
+<4>[    0.494215] Backtrace: 
+<4>[    0.494301] [<60110bec>] (__bug+0x0/0x2c) from [<60111818>] (__bug_noarg+0xc/0x10)
+<4>[    0.494389] [<603b2ef8>] (panic+0x0/0x1a4) from [<60479e78>] (mount_block_root+0x21c/0x274)
+<4>[    0.494482]  r3:00000000 r2:80000000 r1:7dc0ff58 r0:60432854
+<4>[    0.494560]  r7:6049d0f8
+<4>[    0.494592] [<60479c5c>] (mount_block_root+0x0/0x274) from [<6047a00c>] (mount_root+0x54/0x68)
+<4>[    0.494662] [<60479fb8>] (mount_root+0x0/0x68) from [<6047a1b8>] (prepare_namespace+0x198/0x1e4)
+<4>[    0.494725]  r5:604d71e0 r4:6049d0f8
+<4>[    0.494769] [<6047a020>] (prepare_namespace+0x0/0x1e4) from [<60479a6c>] (kernel_init+0x120/0x184)
+<4>[    0.494867]  r6:601334bc r5:604a2e28 r4:604d7180
+<4>[    0.494969] [<6047994c>] (kernel_init+0x0/0x184) from [<601334bc>] (do_exit+0x0/0x74c)
+<0>[    0.495179] Code: e1a01000 e59f000c eb0a8924 e3a03000 (e5833000) 
+8cM`
+h4n`h4n`
+5n`$5n`$5n`,5n`,5n`45n`45n`<5n`<5n`D5n`D5n`L5n`L5n`T5n`T5n`\5n`\5n`d5n`d5n`l5n`l5n`t5n`t5n`|5n`|5n`
+6n`$6n`$6n`,6n`,6n`46n`46n`<6n`<6n`D6n`D6n`L6n`L6n`T6n`T6n`\6n`\6n`d6n`d6n`l6n`l6n`t6n`t6n`|6n`|6n`
+6n`,`n`,`n`
+7n`HI(a
+I(a<
+7n`$7n`$7n`,7n`,7n`47n`47n`<7n`<7n`D7n`D7n`L7n`L7n``$M`
+KM`\7n`\7n`d7n`d7n`l7n`l7n`
+?p`|7n`|7n`
+~;~dAp`lcp`
+7M`,8n`,8n`48n`48n`<8n`<8n`D8n`D8n`L8n`L8n`T8n`T8n`\8n`\8n`d8n`d8n`l8n`l8n`t8n`t8n`|8n`|8n`
+`X=~`X=~
+a4n` 3
+`4n`
+S;`<
+S;`<
+S;`<
+@Z~~ V=~
+`*L`
+`*L`
+$@n`$@n`
+4@n`4@n`
+H@n`H@n`
+X@n`X@n`
+l@n`l@n`
+|@n`|@n`
+ An` An`
+0An`0An`
+DAn`DAn`
+TAn`TAn`
+hAn`hAn`
+xAn`xAn`
+,Hn`,Hn`4Hn`4Hn`
+Hn`$Hn`DZn`DZn`
+,In`,In`
+Yn`PZn`PZn`
+Hn`$Hn`
+Yn``Y=~
+ Y;~
+Exception> 
+to exit.
+mands.
+===============================================
+(`115200n8
+L`P_n`
+(_n`
+h_n`h_n`
+P_n`
+?~`W<~`S=~
+6n`.
+`4n`(
+ T0~
+L`P&K`0yJ`
+~lR=~
+Xen`
+Lan`
+0ZD~
+ ]g~
+[g~@WB~
+@[g~
+ _=~
+T<~@U~~
+R~~ 
+r~`S~~
+8Vo`8Vo`
+t~`_
+wo`$xo`$xo`
+txo`txo`
+0OL`
+|(L`P
+Pyo`Pyo`
+,zo`,zo`
+pLL`
+9+(H*
+g:h8
+v@/XR
+s?YL
+be30Z
+w^jV
+8W>T
+>$>:
+vT"g
+"9s9
++V_Y
+EzC6
+wU%_
+`W=~ W=~@
+L`8V
+L`XT

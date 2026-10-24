@@ -1,0 +1,145 @@
+nth vaddr      bind   type   lib name
+-------------------------------------
+3   0x0000a97c GLOBAL FUNC       pthread_cond_init
+4   0x0000a9a0 GLOBAL FUNC       sym.imp.operator new(unsigned int)
+5   0x0000a9ac GLOBAL FUNC       pthread_mutex_lock
+6   0x0000a9b8 GLOBAL FUNC       pthread_mutex_init
+7   0x0000a9d0 GLOBAL FUNC       sym.imp.Updater::MountPoint::~MountPoint()
+8   0x0000a9dc GLOBAL FUNC       sym.imp.Updater::FileHandler::WriteAll(unsigned char const*, unsigned int, unsigned int*)
+9   0x0000aa00 GLOBAL FUNC       __aeabi_atexit
+10  0x0000aa0c GLOBAL FUNC       sym.imp.Updater::DllHandler::GetSymbol(char const*)
+11  0x0000aa24 GLOBAL FUNC       sym.imp.Updater::DllHandler::Open(char const*, int)
+12  0x0000aa3c GLOBAL FUNC       pthread_cond_destroy
+13  0x0000aa78 GLOBAL FUNC       sym.imp.Updater::FsysFileHandler::Seek(long)
+14  0x0000f91c GLOBAL OBJ        sym.imp.vtable for Updater::BaseFlagFile
+15  0x0000aacc GLOBAL FUNC       sym.imp.Updater::BaseFlagFile::Delete()
+16  0x0000aaf0 GLOBAL FUNC       sym.imp.Updater::DllHandler::DllHandler()
+17  0x0000ab2c GLOBAL FUNC       strncmp
+18  0x0000ab38 GLOBAL FUNC       __cxa_begin_catch
+19  0x0000ab44 GLOBAL FUNC       pthread_join
+20  0x0000ab50 GLOBAL FUNC       sym.imp.Updater::FsysFileHandler::Open(char const*, unsigned int)
+21  0x0000aba4 GLOBAL FUNC       __cxa_allocate_exception
+22  0x0000abb0 GLOBAL FUNC       sym.imp.std::string::begin()
+23  0x0000abd4 GLOBAL FUNC       sym.imp.Updater::BaseFirmwareInformationFile::GetValue() const
+24  0x0000abe0 GLOBAL FUNC       SHA1_Final
+25  0x0000ac10 GLOBAL FUNC       printf
+26  0x0000ac1c GLOBAL NOTYPE     Fsys_Unmount
+27  0x0000ac64 GLOBAL FUNC       sym.imp.Updater::MountPoint::Mount(char const*, unsigned long)
+28  0x0000ac70 GLOBAL FUNC       SKData_Init
+29  0x0000ac7c GLOBAL FUNC       puts
+30  0x0000ac94 GLOBAL FUNC       sym.imp.std::string::basic_string(std::string const&)
+31  0x0000aca0 GLOBAL NOTYPE     Fsys_Exit
+32  0x0000ff60 GLOBAL OBJ        sym.imp.vtable for Updater::VersionFile
+33  0x0000ad00 GLOBAL FUNC       memset
+34  0x0001177c GLOBAL OBJ        sym.imp.vtable for __cxxabiv1::__class_type_info
+35  0x0000ad0c GLOBAL FUNC       RSA_verify
+36  0x0000ad18 GLOBAL FUNC       remove
+37  0x0000ad48 GLOBAL NOTYPE     osal_valloc_msg_wait
+38  0x0000ad78 GLOBAL FUNC       snprintf
+39  0x0000ad9c GLOBAL FUNC       sym.imp.std::string::reserve(unsigned int)
+40  0x0000ada8 GLOBAL FUNC       close
+41  0x0000adcc GLOBAL FUNC       pthread_cond_broadcast
+42  0x0000add8 GLOBAL FUNC       fopen
+43  0x0000ade4 GLOBAL FUNC       sym.imp.Updater::MountPoint::Initialize(char const*)
+44  0x0000adfc GLOBAL FUNC       sym.imp.operator new[](unsigned int)
+45  0x0000ae14 GLOBAL FUNC       read
+46  0x0000ae44 GLOBAL FUNC       sym.imp.Updater::FsysFileHandler::Close()
+47  0x0000ae50 GLOBAL FUNC       sym.imp.Updater::StringHandler::GetCharString() const
+48  0x0000ae5c GLOBAL FUNC       sym.imp.Updater::MountPoint::MountPoint()
+49  0x0000ae68 GLOBAL FUNC       memmove
+50  0x0000aea4 GLOBAL FUNC       unlink
+51  0x0000aeb0 GLOBAL FUNC       sym.imp.Updater::BaseFlagFile::IsValid()
+52  0x0000aec8 GLOBAL FUNC       sym.imp.std::string::end()
+53  0x0000aee0 GLOBAL FUNC       sym.imp.Updater::CompleteFlagFile::CompleteFlagFile(char const*)
+54  0x0000aeec GLOBAL FUNC       ioctl
+55  0x0000af10 GLOBAL FUNC       sym.imp.std::string::basic_string()
+56  0x0000af1c GLOBAL FUNC       mmap
+57  0x0000af28 GLOBAL FUNC       SKData_Exit
+58  ---------- GLOBAL OBJ        sym.imp.typeinfo for Updater::BaseFlagFile
+59  0x0000af34 GLOBAL FUNC       sym.imp.operator delete(void*)
+60  0x0000af4c GLOBAL NOTYPE     Fsys_Init
+61  0x0000af58 GLOBAL FUNC       __assert_fail
+62  0x0000af70 GLOBAL NOTYPE     Fsys_FindFirst
+63  0x0000af88 GLOBAL FUNC       sym.imp.std::string::find(char const*, unsigned int, unsigned int) const
+64  0x0000afac GLOBAL FUNC       sym.imp.Updater::ModelFile::ModelFile(char const*)
+65  0x0000afb8 GLOBAL FUNC       open
+66  0x0000aff4 GLOBAL FUNC       sym.imp.Updater::FileHandler::Close()
+67  0x0000b000 GLOBAL FUNC       sym.imp.Updater::DllHandler::~DllHandler()
+68  0x0000b00c GLOBAL FUNC       pthread_mutex_destroy
+69  0x0000b018 GLOBAL FUNC       sym.imp.Updater::Mode3FlagFile::Mode3FlagFile(char const*)
+70  0x0000b024 GLOBAL FUNC       sym.imp.Updater::Mode6FlagFile::Mode6FlagFile(char const*)
+71  0x0000b048 GLOBAL FUNC       sym.imp.Updater::DirectoryHandler::Create(Updater::StringHandler const&)
+72  0x0000b054 GLOBAL FUNC       sym.imp.std::string::append(std::string const&)
+73  0x0000b078 GLOBAL FUNC       SHA1_Init
+74  0x0000b09c GLOBAL FUNC       __cxa_end_cleanup
+75  0x0000b0a8 GLOBAL FUNC       sym.imp.std::string::append(char const*, unsigned int)
+76  0x0000b0b4 GLOBAL NOTYPE     mcmn_init
+77  0x0000b0cc GLOBAL FUNC       sym.imp.std::string::basic_string(char const*, std::allocator<char> const&)
+78  0x0000b0d8 GLOBAL FUNC       sym.imp.Updater::Mode5FlagFile::Mode5FlagFile(char const*)
+79  ---------- WEAK   NOTYPE     _Jv_RegisterClasses
+80  0x0000b120 GLOBAL NOTYPE     Fsys_Mount
+81  0x0000b144 GLOBAL FUNC       sym.imp.Updater::FileHandler::Open(char const*, int, unsigned int)
+82  0x0000b180 GLOBAL FUNC       sym.imp.Updater::FsysFileHandler::~FsysFileHandler()
+83  0x0000b198 GLOBAL FUNC       __cxa_call_unexpected
+84  0x0000b1a4 GLOBAL FUNC       sym.imp.operator delete[](void*)
+85  0x0001165c GLOBAL OBJ        sym.imp.vtable for __cxxabiv1::__si_class_type_info
+86  0x0000b1bc GLOBAL FUNC       sym.imp.std::string::assign(std::string const&)
+87  0x0000fffc GLOBAL OBJ        sym.imp.vtable for Updater::RegionFile
+88  0x0000b204 GLOBAL FUNC       pthread_cancel
+89  0x0000b21c GLOBAL FUNC       sleep
+90  0x0000b228 GLOBAL FUNC       lseek
+91  0x0000b234 GLOBAL FUNC       sym.imp.Updater::RegionFile::RegionFile(char const*)
+92  0x0000b240 GLOBAL FUNC       pthread_cond_wait
+93  0x0000b270 GLOBAL FUNC       sym.imp.Updater::FsysFileHandler::Read(void*, unsigned int)
+94  0x0000b294 GLOBAL FUNC       sym.imp.std::string::c_str() const
+95  0x0000b2a0 GLOBAL FUNC       sysconf
+96  0x0000b2ac GLOBAL FUNC       Dec_ScrambleInit
+97  0x0000b2b8 GLOBAL FUNC       sym.imp.Updater::MountPoint::Umount()
+98  0x0000b2dc GLOBAL FUNC       sym.imp.Updater::StringHandler::SetString(char const*)
+99  0x0000b300 GLOBAL FUNC       sym.imp.Updater::FsysFileHandler::FsysFileHandler()
+100 0x0000b30c GLOBAL FUNC       umount
+101 0x0000b318 GLOBAL FUNC       sym.imp.Updater::ExternalCommand::Execute(char* const*, char* const*)
+102 0x0000b348 GLOBAL FUNC       SHA256
+103 0x0000b354 GLOBAL FUNC       memcpy
+104 0x0000b360 GLOBAL FUNC       sym.imp.Updater::FileHandler::ReadAll(unsigned char*, unsigned int, unsigned int*)
+105 0x0000ffd0 GLOBAL OBJ        sym.imp.vtable for Updater::ModelFile
+106 0x0000b39c GLOBAL FUNC       strlen
+107 0x0000b3c0 GLOBAL FUNC       munmap
+108 0x0000b3cc GLOBAL FUNC       pthread_testcancel
+109 0x0000b3d8 GLOBAL FUNC       sym.imp.Updater::StringHandler::StringHandler()
+110 0x0000b3f0 GLOBAL FUNC       fclose
+111 0x0000b3fc GLOBAL FUNC       sym.imp.std::string::~basic_string()
+112 0x0000b408 GLOBAL FUNC       write
+113 0x0000b414 GLOBAL FUNC       sym.imp.Updater::ModeFlagFile::ModeFlagFile(char const*)
+114 ---------- GLOBAL FUNC       __aeabi_unwind_cpp_pr1
+115 0x0000b438 GLOBAL FUNC       __xstat
+116 0x0000b45c GLOBAL FUNC       sym.imp.std::string::size() const
+117 0x0000b468 GLOBAL FUNC       __cxa_end_catch
+118 0x0000b474 GLOBAL FUNC       sym.imp.Updater::RingBuffer::RingBuffer()
+119 0x0000b48c GLOBAL FUNC       __gxx_personality_v0
+120 0x0000b4bc GLOBAL FUNC       pthread_create
+121 0x0000b4c8 GLOBAL FUNC       sym.imp.Updater::FileHandler::FileHandler()
+122 0x0000b4f8 GLOBAL FUNC       __cxa_throw
+123 0x0000b528 GLOBAL FUNC       __errno_location
+124 0x0000b540 GLOBAL FUNC       mount
+125 0x0000b558 GLOBAL FUNC       strncpy
+126 0x0000b564 GLOBAL FUNC       sym.imp.Updater::StringHandler::~StringHandler()
+127 0x0000b570 GLOBAL NOTYPE     osal_snd_sync_msg
+128 0x0001b520 GLOBAL OBJ        sym.imp.vtable for __cxxabiv1::__vmi_class_type_info
+129 0x0000b57c GLOBAL FUNC       Dec_Scramble
+130 0x0000b5a0 GLOBAL FUNC       memcmp
+131 0x0000ff34 GLOBAL OBJ        sym.imp.vtable for Updater::BaseFirmwareInformationFile
+132 ---------- GLOBAL FUNC       __aeabi_unwind_cpp_pr0
+133 0x0000b5b8 GLOBAL FUNC       sym.imp.Updater::BaseFlagFile::Create()
+134 0x0000b5d0 GLOBAL FUNC       sym.imp.Updater::FileHandler::~FileHandler()
+135 0x0000b60c GLOBAL FUNC       RSA_free
+136 0x0000b618 GLOBAL FUNC       sym.imp.Updater::VersionFile::VersionFile(char const*)
+137 0x0000b630 GLOBAL FUNC       sym.imp.Updater::DllHandler::Close()
+138 0x0000b63c WEAK   NOTYPE     __gmon_start__
+139 0x0000b648 GLOBAL FUNC       __cxa_pure_virtual
+140 0x0000b654 WEAK   FUNC       __cxa_finalize
+141 0x0000b660 GLOBAL NOTYPE     osal_free_msg
+142 0x0000b66c GLOBAL FUNC       SHA1_Update
+143 0x0000b678 GLOBAL FUNC       pthread_mutex_unlock
+144 0x0000b684 GLOBAL FUNC       sym.imp.Updater::FileHandler::Open(char const*, int)
+145 0x0000b6a8 GLOBAL FUNC       PEM_read_RSA_PUBKEY

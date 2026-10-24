@@ -1,0 +1,8 @@
+usage: jiritsu_send.py [-h] [-v] [--msc-pid MSC_PID] [--svc-pid SVC_PID]
+                       [--usb-timeout USB_TIMEOUT]
+                       [--wait-service WAIT_SERVICE] [--allow-danger] [--mock]
+                       [--mock-dir MOCK_DIR]
+                       {scan,frames,jir,mount,ls,get,put,del,fget,fput,fdel,dump,l1,raw}
+                       ...
+jiritsu_send.py: error: argument cmd: invalid choice: 'info' (choose from 'scan', 'frames', 'jir', 'mount', 'ls', 'get', 'put', 'del', 'fget', 'fput', 'fdel', 'dump', 'l1', 'raw')
+  054C:0D29  bus=2 addr=3  A7C 实测当前模式（产品串 ILCE-7C）

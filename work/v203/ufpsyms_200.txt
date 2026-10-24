@@ -1,0 +1,325 @@
+== 段表 ==
+idx name             type   flags  vaddr      off      size     entsz
+  0                  NULL   00000000 0x00000000 0x000000 0x000000     0
+  1 .gnu.hash        0x6ffffff6 00000002 0x000000d4 0x0000d4 0x000104     4
+  2 .dynsym          0xb    00000002 0x000001d8 0x0001d8 0x0004f0    16
+  3 .dynstr          STRTAB 00000002 0x000006c8 0x0006c8 0x000434     0
+  4 .gnu.version     VERSYM 00000002 0x00000afc 0x000afc 0x00009e     2
+  5 .gnu.version_r   HASH   00000002 0x00000b9c 0x000b9c 0x000060     0
+  6 .rel.dyn         0x9    00000002 0x00000bfc 0x000bfc 0x000128     8
+  7 .rel.plt         0x9    00000002 0x00000d24 0x000d24 0x000168     8
+  8 .init            PROGBITS 00000006 0x00000e8c 0x000e8c 0x00000a     0
+  9 .plt             PROGBITS 00000006 0x00000e98 0x000e98 0x000234     4
+ 10 .text            PROGBITS 00000006 0x000010cc 0x0010cc 0x0016de     0
+ 11 .fini            PROGBITS 00000006 0x000027ac 0x0027ac 0x000006     0
+ 12 .rodata          PROGBITS 00000002 0x000027b4 0x0027b4 0x00012a     0
+ 13 .ARM.extab       PROGBITS 00000002 0x000028e0 0x0028e0 0x0000a8     0
+ 14 .ARM.exidx       ARM_EXIDX 00000082 0x00002988 0x002988 0x000100     0
+ 15 .init_array      DYNAMIC 00000003 0x0000aa88 0x002a88 0x000004     0
+ 16 .fini_array      0xf    00000003 0x0000aa8c 0x002a8c 0x000004     0
+ 17 .jcr             PROGBITS 00000003 0x0000aa90 0x002a90 0x000004     0
+ 18 .data.rel.ro     PROGBITS 00000003 0x0000aa94 0x002a94 0x000054     0
+ 19 .dynamic         REL    00000003 0x0000aae8 0x002ae8 0x000128     8
+ 20 .got             PROGBITS 00000003 0x0000ac10 0x002c10 0x000110     4
+ 21 .data            PROGBITS 00000003 0x0000ad20 0x002d20 0x000004     0
+ 22 .bss             0x8    00000003 0x0000ad24 0x002d24 0x01009c     0
+ 23 .ARM.attributes  ARM_ATTR 00000000 0x00000000 0x002d24 0x000033     0
+ 24 .comment         PROGBITS 00000030 0x00000000 0x002d57 0x00003f     1
+ 25 .shstrtab        STRTAB 00000000 0x00000000 0x002d96 0x0000df     0
+
+== 程序头 ==
+0x70000001 0x2988 0x2988 0x2988 0x100 0x100 0x4 0x4
+0x1 0x0 0x0 0x0 0x2a88 0x2a88 0x5 0x8000
+0x1 0x2a88 0xaa88 0xaa88 0x29c 0x10338 0x6 0x8000
+0x2 0x2ae8 0xaae8 0xaae8 0x128 0x128 0x6 0x4
+0x6474e551 0x0 0x0 0x0 0x0 0x0 0x6 0x4
+
+== .dynsym ==
+idx name bind type shndx value size
+  0                            bind= 0 type= 0 shndx=   0 value=0x00000000 size=0x000000
+  1                            bind= 0 type= 3 shndx=   0 value=0x00000e8c size=0x000000
+  2                            bind= 0 type= 3 shndx=   0 value=0x0000aa90 size=0x000000
+  3 open                       bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+  4 mmap                       bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+  5 __aeabi_unwind_cpp_pr0     bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+  6 Backup_read                bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+  7 __gmon_start__             bind= 2 type= 0 shndx=   0 value=0x00000000 size=0x000000
+  8 _Jv_RegisterClasses        bind= 2 type= 0 shndx=   0 value=0x00000000 size=0x000000
+  9 osal_reg_sync_msg_queue_cb bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 10 Backup_sync_subsystem      bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 11 memset                     bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 12 udtr_get_media_path        bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 13 usleep                     bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 14 umount                     bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 15 read                       bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 16 write                      bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 17 Fsys_Open                  bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 18 osal_rcv_msg_tmo           bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 19 osal_valloc_msg_wait       bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 20 memcpy                     bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 21 osal_unreg_msg_queue_cb    bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 22 Dec_ScrambleInit           bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 23 Backup_write               bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 24 osal_snd_msg               bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 25 osal_create_waitable_thread bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 26 close                      bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 27 mount                      bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 28 Fsys_Close                 bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 29 stm_system                 bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 30 Fsys_Read                  bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 31 lseek                      bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 32 munmap                     bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 33 Fsys_Seek                  bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 34 snprintf                   bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 35 strncmp                    bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 36 __aeabi_unwind_cpp_pr1     bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 37 Dec_Scramble               bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 38 exit                       bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 39 __errno_location           bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 40 __cxa_finalize             bind= 2 type= 2 shndx=   0 value=0x00000000 size=0x000000
+ 41 osal_snd_sync_msg          bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 42 osal_free_msg              bind= 1 type= 0 shndx=   0 value=0x00000000 size=0x000000
+ 43 ac_flag                    bind= 1 type= 1 shndx=   0 value=0x0000ad60 size=0x000004
+ 44 _bss_end__                 bind= 1 type= 0 shndx= 255 value=0x0001adc0 size=0x000000
+ 45 thread                     bind= 1 type= 1 shndx=   0 value=0x0001adbc size=0x000004
+ 46 udtr_conv_stat2err         bind= 1 type= 2 shndx=   0 value=0x0000274d size=0x00005e
+ 47 _fini                      bind= 1 type= 2 shndx=   0 value=0x000027ad size=0x000000
+ 48 udtr_ufp_init              bind= 1 type= 2 shndx=   0 value=0x000020e9 size=0x0001a4
+ 49 verskip                    bind= 1 type= 1 shndx=   0 value=0x0000ad4c size=0x000004
+ 50 __bss_start__              bind= 1 type= 0 shndx= 255 value=0x0000ad24 size=0x000000
+ 51 _init                      bind= 1 type= 2 shndx=   0 value=0x00000e8d size=0x000000
+ 52 udtr_cmd_search_chank      bind= 1 type= 2 shndx=   0 value=0x00002541 size=0x00009c
+ 53 udtr_alloc_dmm             bind= 1 type= 2 shndx=   0 value=0x0000242d size=0x0000a4
+ 54 __bss_start                bind= 1 type= 0 shndx= 255 value=0x0000ad24 size=0x000000
+ 55 acsy_flag                  bind= 1 type= 1 shndx=   0 value=0x0000ad2c size=0x000004
+ 56 fd_ramdisk                 bind= 1 type= 1 shndx=   0 value=0x0000ad54 size=0x000004
+ 57 udtr_get_firm_info_inmedia bind= 1 type= 2 shndx=   0 value=0x000025dd size=0x00008a
+ 58 tinfo                      bind= 1 type= 1 shndx=   0 value=0x0000ad6c size=0x000018
+ 59 __end__                    bind= 1 type= 0 shndx= 255 value=0x0001adc0 size=0x000000
+ 60 _end                       bind= 1 type= 0 shndx= 255 value=0x0001adc0 size=0x000000
+ 61 _NextRecvDataSize          bind= 1 type= 1 shndx=   0 value=0x0000ad84 size=0x000004
+ 62 udtr_get_file_size         bind= 1 type= 2 shndx=   0 value=0x00002405 size=0x000026
+ 63 set_region                 bind= 1 type= 1 shndx=   0 value=0x0000ad88 size=0x000004
+ 64 fd_firm                    bind= 1 type= 1 shndx=   0 value=0x0000ad5c size=0x000004
+ 65 udtr_write_firm_from_media bind= 1 type= 2 shndx=   0 value=0x00002669 size=0x0000e4
+ 66 _edata                     bind= 1 type= 0 shndx= 255 value=0x0000ad24 size=0x000000
+ 67 extcmdsvc_hndl             bind= 1 type= 1 shndx=   0 value=0x0001adb8 size=0x000004
+ 68 off_flag                   bind= 1 type= 1 shndx=   0 value=0x0000ad48 size=0x000004
+ 69 udtr_copy2dmm              bind= 1 type= 2 shndx=   0 value=0x00002359 size=0x0000ac
+ 70 udtr_free_dmm              bind= 1 type= 2 shndx=   0 value=0x000024d1 size=0x000070
+ 71 set_model                  bind= 1 type= 1 shndx=   0 value=0x0000ad68 size=0x000004
+ 72 set_version                bind= 1 type= 1 shndx=   0 value=0x0000ad94 size=0x000002
+ 73 firm_region                bind= 1 type= 1 shndx=   0 value=0x0000ad64 size=0x000004
+ 74 __bss_end__                bind= 1 type= 0 shndx= 255 value=0x0001adc0 size=0x000000
+ 75 packet                     bind= 1 type= 1 shndx=   0 value=0x0000ad98 size=0x010020
+ 76 firm_model                 bind= 1 type= 1 shndx=   0 value=0x0000ad8c size=0x000004
+ 77 udtr_ufp_exit              bind= 1 type= 2 shndx=   0 value=0x0000228d size=0x0000bc
+ 78 firm_version               bind= 1 type= 1 shndx=   0 value=0x0000ad90 size=0x000004
+
+== .rel.plt  (顺序 = PLT 桩顺序, 桩 = .plt+0x14+12*i) ==
+  0 GOT槽=0x00ac1c 桩=0x000eac sym=udtr_cmd_search_chank      type=22
+  1 GOT槽=0x00ac20 桩=0x000eb8 sym=open                       type=22
+  2 GOT槽=0x00ac24 桩=0x000ec4 sym=mmap                       type=22
+  3 GOT槽=0x00ac28 桩=0x000ed0 sym=udtr_conv_stat2err         type=22
+  4 GOT槽=0x00ac2c 桩=0x000edc sym=Backup_read                type=22
+  5 GOT槽=0x00ac30 桩=0x000ee8 sym=__gmon_start__             type=22
+  6 GOT槽=0x00ac34 桩=0x000ef4 sym=osal_reg_sync_msg_queue_cb type=22
+  7 GOT槽=0x00ac38 桩=0x000f00 sym=Backup_sync_subsystem      type=22
+  8 GOT槽=0x00ac3c 桩=0x000f0c sym=memset                     type=22
+  9 GOT槽=0x00ac40 桩=0x000f18 sym=udtr_get_media_path        type=22
+ 10 GOT槽=0x00ac44 桩=0x000f24 sym=usleep                     type=22
+ 11 GOT槽=0x00ac48 桩=0x000f30 sym=umount                     type=22
+ 12 GOT槽=0x00ac4c 桩=0x000f3c sym=read                       type=22
+ 13 GOT槽=0x00ac50 桩=0x000f48 sym=write                      type=22
+ 14 GOT槽=0x00ac54 桩=0x000f54 sym=Fsys_Open                  type=22
+ 15 GOT槽=0x00ac58 桩=0x000f60 sym=osal_rcv_msg_tmo           type=22
+ 16 GOT槽=0x00ac5c 桩=0x000f6c sym=osal_valloc_msg_wait       type=22
+ 17 GOT槽=0x00ac60 桩=0x000f78 sym=memcpy                     type=22
+ 18 GOT槽=0x00ac64 桩=0x000f84 sym=osal_unreg_msg_queue_cb    type=22
+ 19 GOT槽=0x00ac68 桩=0x000f90 sym=Dec_ScrambleInit           type=22
+ 20 GOT槽=0x00ac6c 桩=0x000f9c sym=Backup_write               type=22
+ 21 GOT槽=0x00ac70 桩=0x000fa8 sym=osal_snd_msg               type=22
+ 22 GOT槽=0x00ac74 桩=0x000fb4 sym=osal_create_waitable_thread type=22
+ 23 GOT槽=0x00ac78 桩=0x000fc0 sym=udtr_get_file_size         type=22
+ 24 GOT槽=0x00ac7c 桩=0x000fcc sym=udtr_alloc_dmm             type=22
+ 25 GOT槽=0x00ac80 桩=0x000fd8 sym=close                      type=22
+ 26 GOT槽=0x00ac84 桩=0x000fe4 sym=udtr_free_dmm              type=22
+ 27 GOT槽=0x00ac88 桩=0x000ff0 sym=mount                      type=22
+ 28 GOT槽=0x00ac8c 桩=0x000ffc sym=Fsys_Close                 type=22
+ 29 GOT槽=0x00ac90 桩=0x001008 sym=stm_system                 type=22
+ 30 GOT槽=0x00ac94 桩=0x001014 sym=Fsys_Read                  type=22
+ 31 GOT槽=0x00ac98 桩=0x001020 sym=udtr_copy2dmm              type=22
+ 32 GOT槽=0x00ac9c 桩=0x00102c sym=udtr_write_firm_from_media type=22
+ 33 GOT槽=0x00aca0 桩=0x001038 sym=lseek                      type=22
+ 34 GOT槽=0x00aca4 桩=0x001044 sym=munmap                     type=22
+ 35 GOT槽=0x00aca8 桩=0x001050 sym=Fsys_Seek                  type=22
+ 36 GOT槽=0x00acac 桩=0x00105c sym=snprintf                   type=22
+ 37 GOT槽=0x00acb0 桩=0x001068 sym=strncmp                    type=22
+ 38 GOT槽=0x00acb4 桩=0x001074 sym=Dec_Scramble               type=22
+ 39 GOT槽=0x00acb8 桩=0x001080 sym=exit                       type=22
+ 40 GOT槽=0x00acbc 桩=0x00108c sym=__errno_location           type=22
+ 41 GOT槽=0x00acc0 桩=0x001098 sym=__cxa_finalize             type=22
+ 42 GOT槽=0x00acc4 桩=0x0010a4 sym=udtr_get_firm_info_inmedia type=22
+ 43 GOT槽=0x00acc8 桩=0x0010b0 sym=osal_snd_sync_msg          type=22
+ 44 GOT槽=0x00accc 桩=0x0010bc sym=osal_free_msg              type=22
+
+== .rel.dyn ==
+  0 位置=0x00aa88 sym=                           type=23 现值=0x00001125
+  1 位置=0x00aa8c sym=                           type=23 现值=0x000010e5
+  2 位置=0x00aa94 sym=                           type=23 现值=0x0000288c
+  3 位置=0x00aa98 sym=                           type=23 现值=0x0000289b
+  4 位置=0x00aaa0 sym=                           type=23 现值=0x0000288c
+  5 位置=0x00aaa4 sym=                           type=23 现值=0x0000289b
+  6 位置=0x00aaac sym=                           type=23 现值=0x000028a7
+  7 位置=0x00aab0 sym=                           type=23 现值=0x00002834
+  8 位置=0x00aab8 sym=                           type=23 现值=0x000028a7
+  9 位置=0x00aabc sym=                           type=23 现值=0x00002834
+ 10 位置=0x00aac4 sym=                           type=23 现值=0x0000288c
+ 11 位置=0x00aac8 sym=                           type=23 现值=0x000028a0
+ 12 位置=0x00aad0 sym=                           type=23 现值=0x0000288c
+ 13 位置=0x00aad4 sym=                           type=23 现值=0x000028a4
+ 14 位置=0x00aadc sym=                           type=23 现值=0x0000288c
+ 15 位置=0x00aae0 sym=                           type=23 现值=0x000028a0
+ 16 位置=0x00ad20 sym=                           type=23 现值=0x0000ad20
+ 17 位置=0x00acd0 sym=firm_region                type=21 现值=0x00000000
+ 18 位置=0x00acd4 sym=verskip                    type=21 现值=0x00000000
+ 19 位置=0x00acd8 sym=__gmon_start__             type=21 现值=0x00000000
+ 20 位置=0x00acdc sym=_Jv_RegisterClasses        type=21 现值=0x00000000
+ 21 位置=0x00ace0 sym=off_flag                   type=21 现值=0x00000000
+ 22 位置=0x00ace4 sym=fd_firm                    type=21 现值=0x00000000
+ 23 位置=0x00ace8 sym=set_model                  type=21 现值=0x00000000
+ 24 位置=0x00acec sym=tinfo                      type=21 现值=0x00000000
+ 25 位置=0x00acf0 sym=_NextRecvDataSize          type=21 现值=0x00000000
+ 26 位置=0x00acf4 sym=ac_flag                    type=21 现值=0x00000000
+ 27 位置=0x00acf8 sym=set_region                 type=21 现值=0x00000000
+ 28 位置=0x00acfc sym=acsy_flag                  type=21 现值=0x00000000
+ 29 位置=0x00ad00 sym=firm_model                 type=21 现值=0x00000000
+ 30 位置=0x00ad04 sym=firm_version               type=21 现值=0x00000000
+ 31 位置=0x00ad08 sym=fd_ramdisk                 type=21 现值=0x00000000
+ 32 位置=0x00ad0c sym=set_version                type=21 现值=0x00000000
+ 33 位置=0x00ad10 sym=packet                     type=21 现值=0x00000000
+ 34 位置=0x00ad14 sym=extcmdsvc_hndl             type=21 现值=0x00000000
+ 35 位置=0x00ad18 sym=thread                     type=21 现值=0x00000000
+ 36 位置=0x00ad1c sym=__cxa_finalize             type=21 现值=0x00000000
+
+== .got 内容 ==
+0x00ac10: 0x0000aae8
+0x00ac14: 0x00000000
+0x00ac18: 0x00000000
+0x00ac1c: 0x00000e98
+0x00ac20: 0x00000e98
+0x00ac24: 0x00000e98
+0x00ac28: 0x00000e98
+0x00ac2c: 0x00000e98
+0x00ac30: 0x00000e98
+0x00ac34: 0x00000e98
+0x00ac38: 0x00000e98
+0x00ac3c: 0x00000e98
+0x00ac40: 0x00000e98
+0x00ac44: 0x00000e98
+0x00ac48: 0x00000e98
+0x00ac4c: 0x00000e98
+0x00ac50: 0x00000e98
+0x00ac54: 0x00000e98
+0x00ac58: 0x00000e98
+0x00ac5c: 0x00000e98
+0x00ac60: 0x00000e98
+0x00ac64: 0x00000e98
+0x00ac68: 0x00000e98
+0x00ac6c: 0x00000e98
+0x00ac70: 0x00000e98
+0x00ac74: 0x00000e98
+0x00ac78: 0x00000e98
+0x00ac7c: 0x00000e98
+0x00ac80: 0x00000e98
+0x00ac84: 0x00000e98
+0x00ac88: 0x00000e98
+0x00ac8c: 0x00000e98
+0x00ac90: 0x00000e98
+0x00ac94: 0x00000e98
+0x00ac98: 0x00000e98
+0x00ac9c: 0x00000e98
+0x00aca0: 0x00000e98
+0x00aca4: 0x00000e98
+0x00aca8: 0x00000e98
+0x00acac: 0x00000e98
+0x00acb0: 0x00000e98
+0x00acb4: 0x00000e98
+0x00acb8: 0x00000e98
+0x00acbc: 0x00000e98
+0x00acc0: 0x00000e98
+0x00acc4: 0x00000e98
+0x00acc8: 0x00000e98
+0x00accc: 0x00000e98
+0x00acd0: 0x00000000
+0x00acd4: 0x00000000
+0x00acd8: 0x00000000
+0x00acdc: 0x00000000
+0x00ace0: 0x00000000
+0x00ace4: 0x00000000
+0x00ace8: 0x00000000
+0x00acec: 0x00000000
+0x00acf0: 0x00000000
+0x00acf4: 0x00000000
+0x00acf8: 0x00000000
+0x00acfc: 0x00000000
+0x00ad00: 0x00000000
+0x00ad04: 0x00000000
+0x00ad08: 0x00000000
+0x00ad0c: 0x00000000
+0x00ad10: 0x00000000
+0x00ad14: 0x00000000
+0x00ad18: 0x00000000
+0x00ad1c: 0x00000000
+
+== .rodata 字符串 (含偏移) ==
+0x0027b4: b'/setting/updater/dat4'
+0x0027ca: b'%s/%s'
+0x0027d0: b'BODYDATA.DAT'
+0x0027dd: b'LENSDATA.DAT'
+0x0027ea: b'/tmp_updater/updater/update/accsy/ACCYFIRM.BIN'
+0x002819: b'/tmp_updater'
+0x002826: b'tmpfs'
+0x00282c: b'size=5M'
+0x002834: b'/tmp_updater/Firm.dat'
+0x00284a: b'ufp_reboot'
+0x002855: b'/dev/nflasha1'
+0x002863: b'/mnt'
+0x002868: b'vfat'
+0x00286d: b'posix_attr'
+0x002878: b'/mnt/dat2'
+0x002882: b'/mnt/dat3'
+0x00288c: b'/usr/bin/up.sh'
+0x00289b: b'user'
+0x0028a0: b'ver'
+0x0028a4: b'ms'
+0x0028a7: b'/usr/bin/crypter.elf'
+0x0028c0: b'\x01'
+0x0028d0: b'/dev/mem'
+0x0028d9: b'FDAT'
+
+== .data / .init_array / .fini_array ==
+.data 0x00ad20: 0x0000ad20
+.init_array 0x00aa88: 0x00001125
+.fini_array 0x00aa8c: 0x000010e5
+.data.rel.ro 0x00aa94: 0x0000288c
+.data.rel.ro 0x00aa98: 0x0000289b
+.data.rel.ro 0x00aa9c: 0x00000000
+.data.rel.ro 0x00aaa0: 0x0000288c
+.data.rel.ro 0x00aaa4: 0x0000289b
+.data.rel.ro 0x00aaa8: 0x00000000
+.data.rel.ro 0x00aaac: 0x000028a7
+.data.rel.ro 0x00aab0: 0x00002834
+.data.rel.ro 0x00aab4: 0x00000000
+.data.rel.ro 0x00aab8: 0x000028a7
+.data.rel.ro 0x00aabc: 0x00002834
+.data.rel.ro 0x00aac0: 0x00000000
+.data.rel.ro 0x00aac4: 0x0000288c
+.data.rel.ro 0x00aac8: 0x000028a0
+.data.rel.ro 0x00aacc: 0x00000000
+.data.rel.ro 0x00aad0: 0x0000288c
+.data.rel.ro 0x00aad4: 0x000028a4
+.data.rel.ro 0x00aad8: 0x00000000
+.data.rel.ro 0x00aadc: 0x0000288c
+.data.rel.ro 0x00aae0: 0x000028a0
+.data.rel.ro 0x00aae4: 0x00000000

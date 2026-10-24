@@ -1,0 +1,24 @@
+# BACKUP_MANIFEST.tsv — A7C(054c:0d29, FW2.00) 机身 dump 备份清单
+# 列：分区	期望字节数(partinf 0300_partconf/partinf.conf)	sha256(本机主副本)	本机副本路径	第二副本位置	状态/备注
+# 期望值来源：firmware.tar_unpacked/0300_partconf/partinf.conf（权威）。长度与 partinf 不符的副本一律标 LENGTH-MISMATCH，不可当备份基准。
+# 生成：2025-10-23（本机离线生成；两次读 r1 的 sha 已逐条核对，见状态列）。
+分区	期望字节数	sha256	本机副本路径	第二副本位置	状态/备注
+nflasha1	0x007F0000 (8323072)	82e1b199a8e80531730b220899ff1a1ba9ba91a60d3de7d49a67546959b79a1a	work/l1-camera/nflasha1.bin	PENDING（同机另有 nflasha1.bin.r1 同 sha；work/l2-camera/nflasha1.bin 亦同 sha——三副本同机，未做机外第二副本）	OK：两次读一致；长度=partinf；8MB 包里没得，只有机身有
+nflasha2	0x01400000 (20971520)	70945a63ae4d08625ae5fc83ed519c160dc272d878280b41131bcff4e1c937ce	work/l2-camera/nflasha2.bin	PENDING（同机 nflasha2.bin.r1 sha=1de869dd… 与主副本【不一致】）	CONTENT-UNSTABLE：a2 是活的 FAT(setting)，相机自己在写；两次读 sha 不同(见 work/l2-camera/dump_nflasha2.log)，nflasha2_r2 重读 5b4810e1…/r1 b5edce93… 也不同——当“某时刻快照”用，别当稳定备份
+nflasha2_r2	0x01400000 (20971520)	5b4810e16f710200e026482e856f4d297c3b23a4de6bb983ebb14892f58b9aff	work/l2-camera/nflasha2_r2.bin	PENDING（同机 nflasha2_r2.bin.r1 sha=b5edce93… 不一致）	CONTENT-UNSTABLE：同上，a2 活分区
+nflasha4	0x00C00000 (12582912)	ec36067f37243713106d6cd620edb525a755cab35f7c902cf5a1780648751d56	work/l2-camera/nflasha4.bin	PENDING（同机 .r1 同 sha）	OK：两次读一致；长度=partinf
+nflasha6	0x01000000 (16777216)	b9d759a7a09f210f28df1380c7f7758c08d456b6e0cf3ac8f7eccc52875187e8	work/l2-camera/nflasha6.bin	PENDING（同机 .r1 同 sha；work/l1-camera/nflasha6.bin 亦同 sha）	OK：两次读一致；长度=partinf；Jiritsu 区
+nflasha7	0x00800000 (8388608)	c2b7af2f9f02e57319201af13362e0682c96e3520229a388a5293621d6da6107	work/l1-camera/nflasha7.bin	PENDING（同机 .r1 同 sha；work/l2-camera/nflasha6/1 系列互备见各行）	LENGTH-MISMATCH(仅指包内回退副本)：机身 dump 8388608B=partinf ✓；但固件包内 firmware.tar_unpacked/0700_part_image/dev/nflasha7 只有 4992000B——--mock 的 /dev/nflasha7 回退用它，短 3.4MB，mock 里 dump a7 必判失败
+nflasha10	0x00C00000 (12582912)	43c88729c098e513c32a7b8c76709490203be33ef89fb5a5e3696646968c12d5	work/l2-camera/nflasha10.bin	PENDING（同机 .r1 同 sha）	OK：两次读一致；长度=partinf；/tmp 就是它，写探针 /tmp/zzprobe 落在上面（只有 12MB）
+nflasha13	0x00400000 (4194304)	0413532a0fdeafc2b5c5844afe720ec63333920c5082ff75b9977cfe615c4ebe	work/l2-camera/nflasha13.bin	PENDING（同机 .r1 同 sha）	OK：两次读一致；长度=partinf；UpdaterWork——写 /setting/updater 探针前先确认没人在跑更新
+nflasha15	0x12C00000 (314572800)	fc0b6fcf3c87c10fa5cf85b2a1ef567df9f8defbfb13729557d74aca1be26296	work/l2-camera/nflasha15.bin	PENDING（同机 .r1 同 sha——核对过：两次读都是整 314572800B 且 sha 相同）	OK(机身 dump)：314572800 vs partinf 0x12C00000=314572800 已核对相符；LENGTH-MISMATCH(仅指包内回退副本)：包内 dev/nflasha15=239982592B，比 partinf 短——mock /dev/nflasha15 回退不可当完整读
+nflasha23	0x00200000 (2097152)	494152495afdfbfb437e42cc13040674b6d5a974a855f5cbfd3f530a3c29d971	work/l2-camera/nflasha23.bin	PENDING（同机 .r1 同 sha）	OK：两次读一致；长度=partinf；PMBP 校准区——写/删它是另一级阶梯，不在 L2.5
+# MISSING(尚无机身 dump，进 L2 前先补)：nflasha3(机身;包内 dev/nflasha3=30290944B vs partinf 0x03000000=50331648B, LENGTH-MISMATCH, 只能当部分参照)
+# MISSING：nflasha11(500MB Log) nflasha12(40MB Network) nflasha16(140MB Android system) nflasha17(100MB Android data) nflasha18(20MB LensData) nflasha24(0MB Storage, size=0——先确认是不是真不存在)
+# MISSING：eMMC boot 区（partinf 起点之前的头区：boot0/CBD/PPA? 现无任何 dump）
+# ★目标已明确（2025-10-24）：机身两个根文件系统里都有静态节点 **/dev/nflashaB0 与 /dev/nflashaB1**（见 work/l1-camera/a7_ext2_tree.txt 与 work/l1-camera/a1_initrd/dev/）
+#   ⇒ 几乎肯定就是 eMMC BOOT1/BOOT2 硬件区（EXBL 所在）。下一步用与 a1..a23 完全相同的只读通道尝试 dump 它们；候选还有 /dev/mmca, mmcaa/mmcab/mmcac/mmcad(+1..4), /dev/mcmn。
+#   ★补充（Round 9 已确证）：nflasha 分区表在 **USER 字节偏移 0（USER LBA 0）**，即 partinf 之前 64 KiB 头区的第一 sector；表格式 = hdr{magic"8246",ver"1.00",n<=30} + 条目@+0x20, 16B{start,size,type,flag}。
+#   所以头区要用**裸节点 `/dev/nflasha`（252:0=整块 USER 区）**读：`dd if=/dev/nflasha` 取前 64 KiB（先 64 KiB、再放大）。表不属于任何 nflashaN 分区。
+#   用途：拿到 EXBL 以回答「p1chksum 是纯 MD5 清单还是被签名固定」——`p1chksum` 在 initrd 与 a15(/usr) 里 **0 处引用** ⇒ 读它的只有 EXBL。这一条决定「改 a1 里的 sauu」路线的风险等级。
+# MISSING（次要，仍要补）：nflasha8/nflasha9/nflasha19..22/nflasha25..31（partinf 里存在但从未 dump 过 body 的编号）

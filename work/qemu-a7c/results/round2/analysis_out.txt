@@ -1,0 +1,61 @@
+./analyze_round2.sh: line 9: 16#0x60000000: value too great for base (error token is "16#0x60000000")
+./analyze_round2.sh: line 9: 16#0x00000000: value too great for base (error token is "16#0x00000000")
+./analyze_round2.sh: line 9: 16#0x01000000: value too great for base (error token is "16#0x01000000")
+./analyze_round2.sh: line 9: 16#0x20000000: value too great for base (error token is "16#0x20000000")
+./analyze_round2.sh: line 9: 16#0x60439880: value too great for base (error token is "16#0x60439880")
+./analyze_round2.sh: line 9: 16#0x60363fe8: value too great for base (error token is "16#0x60363fe8")
+
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: invalid literal for int() with base 10: '0x60439880'
+==== FORENSICS SUMMARY ====
+SP=0x60439980 PC=0x603643BC LR=0x603643E8
+pmemsave fwdump/kern.bin 0x60000000 +1200000 -> ''
+pmemsave fwdump/lo.bin 0x0 +1000000 -> ''
+pmemsave fwdump/ddra.bin 0x1000000 +8000000 -> ''
+pmemsave fwdump/sram2.bin 0x20000000 +100000 -> ''
+pmemsave stack.bin 0x60439880 +1000 -> ''
+pmemsave lrarea.bin 0x60363FE8 +800 -> ''
+==== LAST 80 KERNEL-AREA STRINGS ====
+==== HITS SAMPLE ====
+566 fwdump/analysis/hits.txt
+0x02480068 0: vfs_caches_init_early()
+0x00366028 Linux version 3.0.27_nl-rt106 (9004041779@dic-9004041779-u16) (gcc version 4.5.1 (20181205 (Sony CE Linux 8.2.6.0)) ) #1 SMP PREEMPT RT Thu May 14 16:22:50 JST 2020
+0x0036CDF1 fs/notify/vfsmount_mark.c
+0x003D8514 vfs_caches_init_early()
+0x003D8777 <6>VFS: Mounted root (%s filesystem)%s on device %u:%u.
+0x003D87C6 VFS: Cannot open root device "%s" or %s
+0x003D8840 VFS: Unable to mount root fs on %s
+0x003D88AE <5>VFS: Insert %s and press ENTER
+0x003D88D1 <3>VFS: Unable to mount root fs via NFS, trying floppy.
+0x003D97E5 arm_add_memory: %d 0x%lx 0x%lx
+0x003D98BC kemco
+0x003DAC8B <1>Unable to handle kernel %s at virtual address %08lx
+0x003DB127 high_memory: %p
+0x003DB138 <6>Memory:
+0x003DB15A <5>Memory: %luk/%luk available, %luk reserved, %luK highmem
+0x003DB355 <6>Freeing %s memory: %dK
+0x003DC299 Freeing memory: 
+0x003DDEDE <3>cmpr: vfs_stat error: %s
+0x003DE627 <0>Kernel panic - not syncing: %s
+0x003DF3B9 vfs_cache_pressure
+0x003E28A8 Out of memory: %s panic_on_oom is enabled
+0x003E5B77 <6>memory: usage %llukB, limit %llukB, failcnt %llu
+0x003E60AD <3>VFS: Close: file count is 0
+0x003E611C <6>VFS: file-max limit %lu reached
+0x003E6155 VFS: Busy inodes after unmount of %s. Self-destruct in 5 seconds.  Have a nice day...
+0x003E61B7 <3>VFS:Filesystem thaw failed
+0x003E61D6 <3>VFS:Filesystem freeze failed
+0x003E626B &(&s->s_vfs_rename_mutex)->lock
+0x003E628B &s->s_vfs_rename_mutex
+0x003E66A7 <4>VFS: moving negative dcache entry
+0x003E6CDF <3>VFS: brelse: Trying to free free buffer
+0x003E6F1D <4>VFS: busy inodes on changed media or resized disk %s
+0x003ED8C2 <4>%s: VFS is out of sync with lock manager!
+0x003EE0D9 lockd: VFS unblock notification for block %p
+0x003EE2B1 lockd: vfs_lock_file returned %d
+0x003EF120 <5>%s: get_vfs_caps_from_disk returned %d for %s
+0x0040EA86 vfs_writev
+0x0040EA91 vfs_readv
+0x0040EAA7 vfs_write
+0x0040EABF vfs_read

@@ -1,0 +1,27 @@
+=== sample t=0 ===
+R08=60439a44 R09=604399a8 R10=e92dd800 R11=60439994
+R12=60439998 R13=60439980 R14=603643e8 R15=603643bc
+PSR=200001d3 --C- A svc32
+-- pc x20 --
+unknown register
+Try "help x" for more information
+
+=== sample t=20 ===
+R08=60439a44 R09=604399a8 R10=e92dd800 R11=60439994
+R12=60439998 R13=60439980 R14=603643e8 R15=603643bc
+PSR=200001d3 --C- A svc32
+-- pc x20 --
+unknown register
+Try "help x" for more information
+
+=== sample t=40 ===
+R08=60439a44 R09=604399a8 R10=e92dd800 R11=60439994
+R12=60439998 R13=60439980 R14=603643e8 R15=603643bc
+PSR=200001d3 --C- A svc32
+-- pc x20 --
+unknown register
+Try "help x" for more information
+
+=== mtree grep ===
+address-space: memory
+  0000000000000000-ffffffffffffffff (

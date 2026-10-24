@@ -1,0 +1,622 @@
+/bin [d] size=1024     ino=11   links=2 mtime=2021-11-14 19:33:53 mode=0755
+  /bin/cp [l] size=7        ino=12   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/touch [l] size=7        ino=13   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/pwd [l] size=7        ino=14   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/login [l] size=7        ino=15   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/true [l] size=7        ino=16   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/rmdir [l] size=7        ino=17   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/mkdir [l] size=7        ino=18   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/echo [l] size=7        ino=19   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/hostname [-] size=16729    ino=20   links=1 mtime=2021-11-14 18:06:20 mode=0755
+  /bin/fgrep [l] size=7        ino=21   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/chown [l] size=7        ino=22   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/egrep [l] size=7        ino=23   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/rm [l] size=7        ino=24   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/sleep [l] size=7        ino=25   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/ps [-] size=59782    ino=26   links=1 mtime=2021-11-14 18:06:21 mode=0755
+  /bin/ln [l] size=7        ino=27   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/tar [l] size=7        ino=28   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/dmesg [l] size=7        ino=29   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/grep [l] size=7        ino=30   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/busybox [-] size=396600   ino=31   links=1 mtime=2021-11-14 18:06:20 mode=0755
+  /bin/sed [l] size=7        ino=32   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/mount [l] size=7        ino=33   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/chgrp [l] size=7        ino=34   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/mv [l] size=7        ino=35   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/ping [l] size=7        ino=36   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/zcat [l] size=7        ino=37   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/cpio [l] size=7        ino=38   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/ls [l] size=7        ino=39   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/umount [l] size=7        ino=40   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/gunzip [l] size=7        ino=41   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/dnsdomainname [-] size=16729    ino=42   links=1 mtime=2021-11-14 18:06:20 mode=0755
+  /bin/dd [l] size=7        ino=43   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/false [l] size=7        ino=44   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/gzip [l] size=7        ino=45   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/sh [l] size=7        ino=46   links=1 mtime=2021-11-14 19:33:53 mode=0777 -> busybox
+  /bin/usleep [l] size=7        ino=47   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/chattr [-] size=12429    ino=48   links=1 mtime=2021-11-14 18:06:20 mode=0755
+  /bin/compile_et [-] size=1485     ino=49   links=1 mtime=2021-11-14 18:06:20 mode=0755
+  /bin/ash [l] size=7        ino=50   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/ping6 [l] size=7        ino=51   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/mknod [l] size=7        ino=52   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/sync [l] size=7        ino=53   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/mk_cmds [-] size=1322     ino=54   links=1 mtime=2021-11-14 18:06:21 mode=0755
+  /bin/kill [l] size=7        ino=55   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/date [l] size=7        ino=56   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/uname [l] size=7        ino=57   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/cat [-] size=25172    ino=58   links=1 mtime=2021-11-14 18:07:06 mode=0755
+  /bin/pidof [l] size=7        ino=59   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+  /bin/chmod [l] size=7        ino=60   links=1 mtime=2021-11-14 18:06:20 mode=0777 -> busybox
+  /bin/lsattr [-] size=11599    ino=61   links=1 mtime=2021-11-14 18:06:21 mode=0755
+  /bin/mktemp [l] size=7        ino=62   links=1 mtime=2021-11-14 18:06:21 mode=0777 -> busybox
+/cert [d] size=1024     ino=63   links=2 mtime=2021-11-14 19:33:52 mode=0755
+/dev [d] size=6144     ino=64   links=9 mtime=2021-11-14 19:41:53 mode=0755
+  /dev/nflashaB0 [d] size=0        ino=65   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha24 [d] size=0        ino=66   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/satauhs [l] size=4        ino=67   links=1 mtime=2013-05-28 06:50:34 mode=0777 -> sata
+  /dev/ram7 [d] size=0        ino=68   links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/port [c] size=0        ino=69   links=1 mtime=2012-08-06 01:36:52 mode=0640 dev 1,4
+  /dev/satab [c] size=0        ino=70   links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 249,4
+  /dev/dnflasha14 [d] size=0        ino=71   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/tty12 [c] size=0        ino=72   links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,12
+  /dev/vcs14 [c] size=0        ino=73   links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,14
+  /dev/mmcab1 [d] size=0        ino=74   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ram13 [d] size=0        ino=75   links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/mmcda [d] size=0        ino=76   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ttyUSB5 [c] size=0        ino=77   links=1 mtime=2018-06-19 11:02:24 mode=0644 dev 188,5
+  /dev/mmccd [d] size=0        ino=78   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha23 [d] size=0        ino=79   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha20 [d] size=0        ino=80   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/core [l] size=11       ino=81   links=1 mtime=2013-05-28 06:50:34 mode=0777 -> /proc/kcore
+  /dev/nflasha16 [d] size=0        ino=82   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa8 [c] size=0        ino=83   links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,136
+  /dev/tty13 [c] size=0        ino=84   links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,13
+  /dev/nflasha21 [d] size=0        ino=85   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ttyUSB3 [c] size=0        ino=86   links=1 mtime=2017-06-07 06:55:57 mode=0644 dev 188,3
+  /dev/sio4 [c] size=0        ino=87   links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,204
+  /dev/stderr [l] size=4        ino=88   links=1 mtime=2013-05-28 06:50:34 mode=0777 -> fd/2
+  /dev/sda [d] size=0        ino=89   links=1 mtime=2013-05-28 06:35:29 mode=0644
+  /dev/vcsa5 [c] size=0        ino=90   links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,133
+  /dev/vcsa13 [c] size=0        ino=91   links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,141
+  /dev/ram3 [d] size=0        ino=92   links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/vcs7 [c] size=0        ino=93   links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,7
+  /dev/tty17 [c] size=0        ino=94   links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,17
+  /dev/nflasha4 [d] size=0        ino=95   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ram4 [d] size=0        ino=96   links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/vcsa14 [c] size=0        ino=97   links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,142
+  /dev/ram16 [d] size=0        ino=98   links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/nflasha2 [d] size=0        ino=99   links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcbc [d] size=0        ino=100  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ms6 [d] size=0        ino=101  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcba1 [d] size=0        ino=102  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs16 [c] size=0        ino=103  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,16
+  /dev/boss-t3 [c] size=0        ino=104  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,252
+  /dev/ram9 [d] size=0        ino=105  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/dnflasha3 [d] size=0        ino=106  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/backup [c] size=0        ino=107  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,208
+  /dev/mmce [d] size=0        ino=108  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha22 [d] size=0        ino=109  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/urandom [c] size=0        ino=110  links=1 mtime=2012-08-06 01:36:54 mode=0444 dev 1,9
+  /dev/mmcad [d] size=0        ino=111  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcaa1 [d] size=0        ino=112  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa0 [c] size=0        ino=113  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,128
+  /dev/dnflasha27 [d] size=0        ino=114  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcb4 [d] size=0        ino=115  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ms1 [d] size=0        ino=116  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcd [d] size=0        ino=117  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/console [c] size=0        ino=118  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 5,1
+  /dev/crash [c] size=0        ino=119  links=1 mtime=2012-08-06 01:36:22 mode=0600 dev 10,190
+  /dev/tty6 [c] size=0        ino=120  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,6
+  /dev/mmcdb [d] size=0        ino=121  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sda4 [d] size=0        ino=122  links=1 mtime=2013-10-11 03:35:07 mode=0644
+  /dev/mmcdc1 [d] size=0        ino=123  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sdb [d] size=0        ino=124  links=1 mtime=2013-05-28 06:35:30 mode=0644
+  /dev/ram12 [d] size=0        ino=125  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/dnflasha17 [d] size=0        ino=126  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ram6 [d] size=0        ino=127  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/fuse [c] size=0        ino=129  links=1 mtime=2013-05-28 06:35:39 mode=0666 dev 10,229
+  /dev/hdmi_input [c] size=0        ino=128  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,30
+  /dev/nflasha9 [d] size=0        ino=130  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcbc1 [d] size=0        ino=131  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ttyAM0 [c] size=0        ino=132  links=1 mtime=2013-05-28 06:35:24 mode=0644 dev 204,16
+  /dev/nflasha28 [d] size=0        ino=133  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sdc [d] size=0        ino=134  links=1 mtime=2013-05-28 06:35:31 mode=0644
+  /dev/ttyUSB6 [c] size=0        ino=135  links=1 mtime=2018-06-19 11:02:28 mode=0644 dev 188,6
+  /dev/mem [c] size=0        ino=136  links=1 mtime=2012-08-06 01:36:52 mode=0640 dev 1,1
+  /dev/tty15 [c] size=0        ino=137  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,15
+  /dev/net [d] size=1024     ino=138  links=2 mtime=2015-10-02 08:47:33 mode=0775
+    /dev/net/tun [c] size=0        ino=139  links=1 mtime=2015-10-02 08:47:33 mode=0664 dev 10,200
+  /dev/ms8 [d] size=0        ino=140  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/satac [c] size=0        ino=141  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 249,5
+  /dev/ttyACM2 [c] size=0        ino=142  links=1 mtime=2018-06-19 11:00:08 mode=0644 dev 166,2
+  /dev/mmcac [d] size=0        ino=143  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha7 [d] size=0        ino=144  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcbd1 [d] size=0        ino=145  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcc [d] size=0        ino=146  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ram2 [d] size=0        ino=147  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/mmcc1 [d] size=0        ino=148  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha19 [d] size=0        ino=149  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/compswap [d] size=0        ino=150  links=1 mtime=2013-08-01 03:36:04 mode=0644
+  /dev/mmcdd1 [d] size=0        ino=151  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmccd1 [d] size=0        ino=152  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/loop6 [d] size=0        ino=153  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/mmce2 [d] size=0        ino=154  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa16 [c] size=0        ino=155  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,144
+  /dev/ttyUSB4 [c] size=0        ino=156  links=1 mtime=2018-06-19 11:01:26 mode=0644 dev 188,4
+  /dev/vcs2 [c] size=0        ino=157  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,2
+  /dev/dnflasha6 [d] size=0        ino=158  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha15 [d] size=0        ino=159  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs4 [c] size=0        ino=160  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,4
+  /dev/vcs9 [c] size=0        ino=161  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,9
+  /dev/ttycons [l] size=6        ino=162  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> ttyAM0
+  /dev/ram1 [d] size=0        ino=163  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/qcqmi0 [c] size=0        ino=164  links=1 mtime=2017-06-07 07:02:17 mode=0644 dev 252,0
+  /dev/mmcb1 [d] size=0        ino=165  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmca3 [d] size=0        ino=166  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs15 [c] size=0        ino=167  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,15
+  /dev/mmcd4 [d] size=0        ino=168  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/tty16 [c] size=0        ino=169  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,16
+  /dev/sdb1 [d] size=0        ino=170  links=1 mtime=2013-07-30 09:51:17 mode=0644
+  /dev/loop4 [d] size=0        ino=171  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/dnflasha19 [d] size=0        ino=172  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/satad [c] size=0        ino=173  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 249,6
+  /dev/mmcea [d] size=0        ino=174  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ram10 [d] size=0        ino=175  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/mmcbd [d] size=0        ino=176  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dmpgles2 [c] size=0        ino=177  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,29
+  /dev/mmcd3 [d] size=0        ino=178  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/loop2 [d] size=0        ino=179  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/ppp [c] size=0        ino=180  links=1 mtime=2017-02-16 06:10:54 mode=0600 dev 108,0
+  /dev/vcs19 [c] size=0        ino=181  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,19
+  /dev/dnflasha29 [d] size=0        ino=182  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/tty19 [c] size=0        ino=183  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,19
+  /dev/mmca-char [c] size=0        ino=184  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 250,0
+  /dev/ram0 [d] size=0        ino=185  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/nflasha12 [d] size=0        ino=186  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs18 [c] size=0        ino=187  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,18
+  /dev/ttyUSB10 [c] size=0        ino=188  links=1 mtime=2018-06-19 11:02:41 mode=0644 dev 188,10
+  /dev/loop3 [d] size=0        ino=189  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/mmce4 [d] size=0        ino=190  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/satauhsb [l] size=5        ino=191  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> satab
+  /dev/vcsa [l] size=5        ino=192  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> vcsa0
+  /dev/vcs12 [c] size=0        ino=193  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,12
+  /dev/mmcb3 [d] size=0        ino=194  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ttyS3 [c] size=0        ino=195  links=1 mtime=2012-08-06 01:36:54 mode=0660 dev 4,67
+  /dev/ttyBT [l] size=6        ino=196  links=1 mtime=2021-11-14 19:41:53 mode=0777 -> ttyAM1
+  /dev/ram11 [d] size=0        ino=197  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/mmcd-char [c] size=0        ino=198  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 250,3
+  /dev/dnflasha22 [d] size=0        ino=199  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ms2 [d] size=0        ino=200  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcc3 [d] size=0        ino=201  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/full [c] size=0        ino=202  links=1 mtime=2012-08-06 01:36:52 mode=0666 dev 1,7
+  /dev/tty7 [c] size=0        ino=203  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,7
+  /dev/vcs17 [c] size=0        ino=204  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,17
+  /dev/mmccb1 [d] size=0        ino=205  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha17 [d] size=0        ino=206  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/tty0 [c] size=0        ino=207  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 4,0
+  /dev/nflasha [d] size=0        ino=208  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sda2 [d] size=0        ino=209  links=1 mtime=2013-10-11 03:34:56 mode=0644
+  /dev/hdmi [c] size=0        ino=210  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,25
+  /dev/vcsa12 [c] size=0        ino=211  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,140
+  /dev/mmcac1 [d] size=0        ino=212  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha15 [d] size=0        ino=213  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha3 [d] size=0        ino=214  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha11 [d] size=0        ino=215  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ttyUSB8 [c] size=0        ino=216  links=1 mtime=2018-06-19 11:02:34 mode=0644 dev 188,8
+  /dev/mmca4 [d] size=0        ino=217  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcec1 [d] size=0        ino=218  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs8 [c] size=0        ino=219  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,8
+  /dev/mmca2 [d] size=0        ino=220  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs0 [c] size=0        ino=221  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,0
+  /dev/ram8 [d] size=0        ino=222  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/uipc [c] size=0        ino=223  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,207
+  /dev/mmcca1 [d] size=0        ino=224  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/tty14 [c] size=0        ino=225  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,14
+  /dev/vcsa2 [c] size=0        ino=226  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,130
+  /dev/ptmx [c] size=0        ino=227  links=1 mtime=2013-05-28 06:35:26 mode=0644 dev 5,2
+  /dev/loop1 [d] size=0        ino=228  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/usb [d] size=1024     ino=229  links=2 mtime=2020-12-22 07:00:02 mode=0755
+    /dev/usb/cur [c] size=0        ino=230  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,8
+    /dev/usb/usbcore [c] size=0        ino=231  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 242,3
+    /dev/usb/sicd_core [c] size=0        ino=232  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,1
+    /dev/usb/buspwric [c] size=0        ino=233  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,12
+    /dev/usb/audio [c] size=0        ino=234  links=1 mtime=2020-12-22 06:59:51 mode=0664 dev 248,32
+    /dev/usb/otgcore [c] size=0        ino=235  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 242,2
+    /dev/usb/std [c] size=0        ino=236  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,9
+    /dev/usb/usb_extcmd [c] size=0        ino=237  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,7
+    /dev/usb/scsi [c] size=0        ino=238  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 242,4
+    /dev/usb/massstorage [c] size=0        ino=239  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,0
+    /dev/usb/kikilog [c] size=0        ino=240  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,10
+    /dev/usb/buspwr [c] size=0        ino=241  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,13
+    /dev/usb/video [c] size=0        ino=242  links=1 mtime=2020-12-22 07:00:02 mode=0664 dev 248,33
+    /dev/usb/event [c] size=0        ino=243  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 242,0
+    /dev/usb/sen [c] size=0        ino=244  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,4
+    /dev/usb/swic [c] size=0        ino=245  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,15
+    /dev/usb/sicd_event [c] size=0        ino=246  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,3
+    /dev/usb/adb [c] size=0        ino=247  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,16
+    /dev/usb/vspe [c] size=0        ino=248  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,6
+    /dev/usb/usbg_bspwr [c] size=0        ino=249  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,14
+    /dev/usb/portmon [c] size=0        ino=250  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,11
+    /dev/usb/sicd_data [c] size=0        ino=251  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,2
+    /dev/usb/ter [c] size=0        ino=252  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,5
+    /dev/usb/gadgetcore [c] size=0        ino=253  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 242,1
+  /dev/tty4 [c] size=0        ino=254  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,4
+  /dev/vcsa4 [c] size=0        ino=255  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,132
+  /dev/nflasha8 [d] size=0        ino=256  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha30 [d] size=0        ino=257  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/loop5 [d] size=0        ino=258  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/uio0 [c] size=0        ino=259  links=1 mtime=2013-05-28 06:35:37 mode=0644 dev 253,0
+  /dev/kmem [c] size=0        ino=260  links=1 mtime=2012-08-06 01:36:52 mode=0640 dev 1,2
+  /dev/rtc [c] size=0        ino=261  links=1 mtime=2012-08-06 01:36:54 mode=0660 dev 10,135
+  /dev/ttyAM3 [c] size=0        ino=262  links=1 mtime=2016-08-02 08:22:33 mode=0644 dev 204,19
+  /dev/loop0 [d] size=0        ino=263  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/ms-char [c] size=0        ino=264  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 249,0
+  /dev/nflasha30 [d] size=0        ino=265  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha7 [d] size=0        ino=266  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/stdin [l] size=4        ino=267  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> fd/0
+  /dev/ttyACM1 [c] size=0        ino=268  links=1 mtime=2018-06-19 11:00:03 mode=0644 dev 166,1
+  /dev/ttyUSB0 [c] size=0        ino=269  links=1 mtime=2017-02-16 06:11:48 mode=0644 dev 188,0
+  /dev/ram14 [d] size=0        ino=270  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/fb1 [c] size=0        ino=271  links=1 mtime=2013-05-28 06:35:20 mode=0644 dev 29,1
+  /dev/nflasha18 [d] size=0        ino=272  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ms4 [d] size=0        ino=273  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/emif [c] size=0        ino=274  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,210
+  /dev/tty11 [c] size=0        ino=275  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,11
+  /dev/fd [l] size=13       ino=276  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> /proc/self/fd
+  /dev/vcsa1 [c] size=0        ino=277  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,129
+  /dev/hdmi_external_tx [c] size=0        ino=278  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,26
+  /dev/mmccc [d] size=0        ino=279  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ttyS1 [c] size=0        ino=280  links=1 mtime=2012-08-06 01:36:54 mode=0660 dev 4,65
+  /dev/nflasha14 [d] size=0        ino=281  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sr1 [d] size=0        ino=282  links=1 mtime=2013-05-28 06:35:28 mode=0644
+  /dev/stdout [l] size=4        ino=283  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> fd/1
+  /dev/nflasha24 [d] size=0        ino=284  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ram15 [d] size=0        ino=285  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/vcsa9 [c] size=0        ino=286  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,137
+  /dev/mmce-char [c] size=0        ino=287  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 250,4
+  /dev/mmcdb1 [d] size=0        ino=288  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/stream [c] size=0        ino=289  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 249,7
+  /dev/nflasha26 [d] size=0        ino=290  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa18 [c] size=0        ino=291  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,146
+  /dev/ttyUSB1 [c] size=0        ino=292  links=1 mtime=2017-02-16 06:11:51 mode=0644 dev 188,1
+  /dev/nflasha29 [d] size=0        ino=293  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcaa [d] size=0        ino=294  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa6 [c] size=0        ino=295  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,134
+  /dev/boss-t1 [c] size=0        ino=296  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,250
+  /dev/random [c] size=0        ino=297  links=1 mtime=2012-08-06 01:36:54 mode=0444 dev 1,8
+  /dev/ttyACM0 [c] size=0        ino=298  links=1 mtime=2017-08-17 05:26:45 mode=0644 dev 166,0
+  /dev/ttyUSB11 [c] size=0        ino=299  links=1 mtime=2018-06-19 11:02:45 mode=0644 dev 188,11
+  /dev/sdd [d] size=0        ino=300  links=1 mtime=2013-05-28 06:35:32 mode=0644
+  /dev/dma330 [c] size=0        ino=301  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,209
+  /dev/rmon [c] size=0        ino=302  links=1 mtime=2012-08-06 01:36:22 mode=0600 dev 10,222
+  /dev/mmca1 [d] size=0        ino=303  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha5 [d] size=0        ino=304  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcbb1 [d] size=0        ino=305  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ms5 [d] size=0        ino=306  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/tty9 [c] size=0        ino=307  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,9
+  /dev/dnflasha4 [d] size=0        ino=308  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa11 [c] size=0        ino=309  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,139
+  /dev/sio2 [c] size=0        ino=310  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,202
+  /dev/tty10 [c] size=0        ino=311  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,10
+  /dev/mmcd1 [d] size=0        ino=312  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha10 [d] size=0        ino=313  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/tty8 [c] size=0        ino=314  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,8
+  /dev/mmcb [d] size=0        ino=315  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha27 [d] size=0        ino=316  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs11 [c] size=0        ino=317  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,11
+  /dev/zero [c] size=0        ino=318  links=1 mtime=2012-08-06 01:36:52 mode=0666 dev 1,5
+  /dev/sataa [c] size=0        ino=319  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 249,3
+  /dev/dnflasha23 [d] size=0        ino=320  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sio3 [c] size=0        ino=321  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,203
+  /dev/mmcc4 [d] size=0        ino=322  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmccc1 [d] size=0        ino=323  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/qcqmi2 [c] size=0        ino=324  links=1 mtime=2018-06-19 11:03:45 mode=0644 dev 252,2
+  /dev/nflasha25 [d] size=0        ino=325  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sata [c] size=0        ino=326  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 249,2
+  /dev/mmcb2 [d] size=0        ino=327  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/boss-t2 [c] size=0        ino=328  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,251
+  /dev/mmccb [d] size=0        ino=329  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ttyAM2 [c] size=0        ino=330  links=1 mtime=2013-05-28 06:35:25 mode=0644 dev 204,18
+  /dev/mmcdd [d] size=0        ino=331  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa15 [c] size=0        ino=332  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,143
+  /dev/mmcc2 [d] size=0        ino=333  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcb-char [c] size=0        ino=334  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 250,1
+  /dev/snd [d] size=1024     ino=335  links=2 mtime=2018-07-06 04:27:09 mode=0775
+    /dev/snd/timer [c] size=0        ino=336  links=1 mtime=2018-07-03 12:29:08 mode=0664 dev 116,33
+    /dev/snd/pcmC0D0p [c] size=0        ino=337  links=1 mtime=2018-07-06 04:26:58 mode=0664 dev 116,2
+    /dev/snd/controlC0 [c] size=0        ino=338  links=1 mtime=2018-07-06 04:26:50 mode=0664 dev 116,4
+    /dev/snd/pcmC0D0c [c] size=0        ino=339  links=1 mtime=2018-07-06 04:27:09 mode=0664 dev 116,3
+  /dev/dnflasha9 [d] size=0        ino=340  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/qcqmi1 [c] size=0        ino=341  links=1 mtime=2018-06-19 11:03:42 mode=0644 dev 252,1
+  /dev/mmce3 [d] size=0        ino=342  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa17 [c] size=0        ino=343  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,145
+  /dev/dnflasha20 [d] size=0        ino=344  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs6 [c] size=0        ino=345  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,6
+  /dev/ms7 [d] size=0        ino=346  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha5 [d] size=0        ino=347  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/bus [d] size=1024     ino=348  links=3 mtime=2017-06-07 06:50:46 mode=0755
+    /dev/bus/usb [d] size=1024     ino=349  links=2 mtime=2017-06-07 06:50:46 mode=0755
+  /dev/dnflasha11 [d] size=0        ino=350  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mcmn [c] size=0        ino=351  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 249,1
+  /dev/ca [c] size=0        ino=352  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,28
+  /dev/mmcad1 [d] size=0        ino=353  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/null [c] size=0        ino=364  links=1 mtime=2012-08-06 01:36:52 mode=0666 dev 1,3
+  /dev/ttyUSB9 [c] size=0        ino=354  links=1 mtime=2018-06-19 11:02:38 mode=0644 dev 188,9
+  /dev/nflasha13 [d] size=0        ino=355  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ttyS2 [c] size=0        ino=356  links=1 mtime=2012-08-06 01:36:54 mode=0660 dev 4,66
+  /dev/dnflasha [d] size=0        ino=357  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa10 [c] size=0        ino=358  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,138
+  /dev/dnflasha8 [d] size=0        ino=359  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs13 [c] size=0        ino=360  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,13
+  /dev/satassd [l] size=4        ino=361  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> sata
+  /dev/ttyUSB2 [c] size=0        ino=362  links=1 mtime=2017-06-07 06:55:54 mode=0644 dev 188,2
+  /dev/dnflasha18 [d] size=0        ino=363  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ioexp [c] size=0        ino=365  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,213
+  /dev/ttyUSB7 [c] size=0        ino=366  links=1 mtime=2018-06-19 11:02:31 mode=0644 dev 188,7
+  /dev/mmcab [d] size=0        ino=367  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/gpio [c] size=0        ino=368  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 240,0
+  /dev/dnflasha31 [d] size=0        ino=369  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcdc [d] size=0        ino=370  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmced1 [d] size=0        ino=371  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa7 [c] size=0        ino=372  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,135
+  /dev/ldec [c] size=0        ino=373  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,205
+  /dev/bootimg [c] size=0        ino=374  links=1 mtime=2012-08-06 01:36:22 mode=0600 dev 10,191
+  /dev/mmca [d] size=0        ino=375  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/tty3 [c] size=0        ino=376  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,3
+  /dev/tty [c] size=0        ino=377  links=1 mtime=2012-08-06 01:36:52 mode=0666 dev 5,0
+  /dev/vcs [l] size=4        ino=378  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> vcs0
+  /dev/mmcda1 [d] size=0        ino=379  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sxs_blk0 [c] size=0        ino=380  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,211
+  /dev/ram [l] size=4        ino=381  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> ram1
+  /dev/loop7 [d] size=0        ino=382  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/pts [d] size=1024     ino=383  links=2 mtime=2013-05-28 06:35:18 mode=0755
+  /dev/vcs1 [c] size=0        ino=384  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,1
+  /dev/jet [d] size=1024     ino=385  links=2 mtime=2018-02-23 11:15:08 mode=0777
+    /dev/jet/adj_drv [c] size=0        ino=386  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,23
+    /dev/jet/pcl_obex [c] size=0        ino=387  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,19
+    /dev/jet/wrapper [c] size=0        ino=388  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,24
+    /dev/jet/event [c] size=0        ino=389  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,22
+    /dev/jet/obex [c] size=0        ino=390  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,21
+    /dev/jet/scsi_tgt [c] size=0        ino=391  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,20
+    /dev/jet/pclc_ctr [c] size=0        ino=392  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,17
+    /dev/jet/TransferJet_APM2PCLCD [?] size=0        ino=393  links=1 mtime=2013-05-28 06:35:36 mode=0664
+    /dev/jet/pclc_msg [c] size=0        ino=394  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,18
+    /dev/jet/TransferJet_PCLCD2APM [?] size=0        ino=395  links=1 mtime=2013-05-28 06:35:36 mode=0664
+  /dev/mmcca [d] size=0        ino=396  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcbb [d] size=0        ino=397  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcea1 [d] size=0        ino=398  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ms9 [d] size=0        ino=399  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/cec [c] size=0        ino=400  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 248,27
+  /dev/mmced [d] size=0        ino=401  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa19 [c] size=0        ino=402  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,147
+  /dev/fb0 [c] size=0        ino=403  links=1 mtime=2013-05-28 06:35:19 mode=0644 dev 29,0
+  /dev/mmcec [d] size=0        ino=404  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha25 [d] size=0        ino=405  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmceb [d] size=0        ino=406  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/input [d] size=1024     ino=407  links=2 mtime=2013-05-28 06:35:23 mode=0755
+    /dev/input/event2 [c] size=0        ino=408  links=1 mtime=2013-05-28 06:35:23 mode=0644 dev 13,66
+    /dev/input/event1 [c] size=0        ino=409  links=1 mtime=2013-05-28 06:35:22 mode=0644 dev 13,65
+    /dev/input/event0 [c] size=0        ino=410  links=1 mtime=2013-05-28 06:35:21 mode=0644 dev 13,64
+  /dev/vcs3 [c] size=0        ino=411  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,3
+  /dev/dnflasha1 [d] size=0        ino=412  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs5 [c] size=0        ino=413  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,5
+  /dev/tty2 [c] size=0        ino=414  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,2
+  /dev/ttyAM1 [c] size=0        ino=415  links=1 mtime=2013-05-28 06:35:25 mode=0644 dev 204,17
+  /dev/uinput [c] size=0        ino=416  links=1 mtime=2013-05-28 06:35:38 mode=0644 dev 10,223
+  /dev/sda3 [d] size=0        ino=417  links=1 mtime=2013-10-11 03:35:02 mode=0644
+  /dev/dnflasha26 [d] size=0        ino=418  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ms3 [d] size=0        ino=419  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/satauhsa [l] size=5        ino=420  links=1 mtime=2013-05-28 06:50:34 mode=0777 -> sataa
+  /dev/nflasha1 [d] size=0        ino=421  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcs10 [c] size=0        ino=422  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,10
+  /dev/sr0 [d] size=0        ino=423  links=1 mtime=2013-05-28 06:35:27 mode=0644
+  /dev/mmce1 [d] size=0        ino=424  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dmac [c] size=0        ino=425  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,206
+  /dev/dnflasha16 [d] size=0        ino=426  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha31 [d] size=0        ino=427  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sdc1 [d] size=0        ino=428  links=1 mtime=2013-07-30 09:51:21 mode=0644
+  /dev/sxs_blk1 [c] size=0        ino=429  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,212
+  /dev/dnflasha13 [d] size=0        ino=430  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcba [d] size=0        ino=431  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha12 [d] size=0        ino=432  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/sio0 [c] size=0        ino=433  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,200
+  /dev/tty5 [c] size=0        ino=434  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,5
+  /dev/sio1 [c] size=0        ino=435  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 251,201
+  /dev/stream2 [c] size=0        ino=436  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 249,8
+  /dev/nflashaB1 [d] size=0        ino=437  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/mmcc-char [c] size=0        ino=438  links=1 mtime=2018-02-23 11:15:08 mode=0777 dev 250,2
+  /dev/sda1 [d] size=0        ino=439  links=1 mtime=2013-07-30 09:51:12 mode=0644
+  /dev/tty18 [c] size=0        ino=440  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,18
+  /dev/ms [d] size=0        ino=441  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/nflasha6 [d] size=0        ino=442  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/tty1 [c] size=0        ino=443  links=1 mtime=2012-08-06 01:36:53 mode=0666 dev 4,1
+  /dev/sdd1 [d] size=0        ino=444  links=1 mtime=2013-07-30 09:51:24 mode=0644
+  /dev/dnflasha2 [d] size=0        ino=445  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/ram5 [d] size=0        ino=446  links=1 mtime=2012-08-06 01:36:52 mode=0660
+  /dev/ttyS0 [c] size=0        ino=447  links=1 mtime=2012-08-06 01:36:54 mode=0660 dev 4,64
+  /dev/mmceb1 [d] size=0        ino=448  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha21 [d] size=0        ino=449  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha28 [d] size=0        ino=450  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/dnflasha10 [d] size=0        ino=451  links=1 mtime=2018-02-23 11:15:08 mode=0777
+  /dev/vcsa3 [c] size=0        ino=452  links=1 mtime=2012-08-06 01:36:53 mode=0600 dev 7,131
+  /dev/mmcd2 [d] size=0        ino=453  links=1 mtime=2018-02-23 11:15:08 mode=0777
+/etc [d] size=1024     ino=454  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/initrd [d] size=1024     ino=455  links=2 mtime=2021-11-14 19:41:53 mode=0755
+/kmod [d] size=1024     ino=456  links=2 mtime=2021-11-14 19:40:58 mode=0755
+  /kmod/nand.ko [-] size=152212   ino=457  links=1 mtime=2021-11-14 19:40:58 mode=0755
+  /kmod/lld.ko [-] size=79340    ino=458  links=1 mtime=2021-11-14 19:40:58 mode=0755
+  /kmod/dmac.ko [-] size=17096    ino=459  links=1 mtime=2021-11-14 19:40:58 mode=0755
+  /kmod/emmc.ko [-] size=214252   ino=460  links=1 mtime=2021-11-14 19:40:58 mode=0755
+  /kmod/ldec.ko [-] size=15840    ino=461  links=1 mtime=2021-11-14 19:40:58 mode=0755
+  /kmod/devno.ko [-] size=4368     ino=462  links=1 mtime=2021-11-14 19:40:58 mode=0755
+/lens [d] size=1024     ino=463  links=2 mtime=2021-11-14 19:33:53 mode=0755
+/lib [d] size=1024     ino=464  links=3 mtime=2021-11-14 19:39:25 mode=0755
+  /lib/libm-2.11.2.so [-] size=427692   ino=465  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libblkid.so.1.1.0 [-] size=140176   ino=466  links=1 mtime=2021-11-14 18:06:22 mode=0777
+  /lib/ld-linux.so.3 [l] size=12       ino=467  links=1 mtime=2021-11-14 18:06:22 mode=0777 -> ld-2.11.2.so
+  /lib/libutil.so.1 [l] size=17       ino=468  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> libutil-2.11.2.so
+  /lib/libc-2.11.2.so [-] size=984292   ino=469  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libnss_nis.so.2 [l] size=20       ino=470  links=1 mtime=2021-11-14 18:06:48 mode=0777 -> libnss_nis-2.11.2.so
+  /lib/libnss_nis-2.11.2.so [-] size=34576    ino=471  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libnsl-2.11.2.so [-] size=67600    ino=472  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libSTMcmdexecute.so [-] size=4640     ino=473  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libdl.so.2 [l] size=15       ino=474  links=1 mtime=2021-11-14 18:06:39 mode=0777 -> libdl-2.11.2.so
+  /lib/libnsl.so.1 [l] size=16       ino=475  links=1 mtime=2021-11-14 18:06:44 mode=0777 -> libnsl-2.11.2.so
+  /lib/libnss_files.so.2 [l] size=22       ino=476  links=1 mtime=2021-11-14 18:06:48 mode=0777 -> libnss_files-2.11.2.so
+  /lib/libm.so.6 [l] size=14       ino=477  links=1 mtime=2021-11-14 18:06:42 mode=0777 -> libm-2.11.2.so
+  /lib/libpthread.so.0 [l] size=20       ino=478  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> libpthread-2.11.2.so
+  /lib/libproc-3.2.7.so [-] size=40928    ino=479  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/librt-2.11.2.so [-] size=22468    ino=480  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libcrypt-2.11.2.so [-] size=38532    ino=481  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libpthread-2.11.2.so [-] size=67996    ino=482  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libcrypt.so.1 [l] size=18       ino=483  links=1 mtime=2021-11-14 18:06:37 mode=0777 -> libcrypt-2.11.2.so
+  /lib/libblkid.so.1 [l] size=17       ino=484  links=1 mtime=2021-11-14 18:06:22 mode=0777 -> libblkid.so.1.1.0
+  /lib/libutil-2.11.2.so [-] size=14008    ino=485  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libc.so.6 [l] size=14       ino=486  links=1 mtime=2021-11-14 18:06:36 mode=0777 -> libc-2.11.2.so
+  /lib/libuuid.so.1 [l] size=16       ino=487  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> libuuid.so.1.3.0
+  /lib/libnss_files-2.11.2.so [-] size=34540    ino=488  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libuuid.so.1.3.0 [-] size=36150    ino=489  links=1 mtime=2021-11-14 18:06:55 mode=0777
+  /lib/libnss_dns-2.11.2.so [-] size=22192    ino=490  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libnss_dns.so.2 [l] size=20       ino=491  links=1 mtime=2021-11-14 18:06:48 mode=0777 -> libnss_dns-2.11.2.so
+  /lib/xtables [d] size=3072     ino=492  links=2 mtime=2021-11-14 18:06:55 mode=0777
+    /lib/xtables/libxt_SECMARK.so [-] size=6809     ino=493  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_ECN.so [-] size=7425     ino=494  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_cluster.so [-] size=8692     ino=495  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_CLASSIFY.so [-] size=6621     ino=496  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_TEE.so [-] size=8317     ino=497  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_TTL.so [-] size=7171     ino=498  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_dscp.so [-] size=8010     ino=499  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_esp.so [-] size=7539     ino=500  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_addrtype.so [-] size=10377    ino=501  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_SNAT.so [-] size=8905     ino=502  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_REJECT.so [-] size=7725     ino=503  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_rt.so [-] size=10663    ino=504  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_mh.so [-] size=10032    ino=505  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_state.so [-] size=7603     ino=506  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_TCPOPTSTRIP.so [-] size=7977     ino=507  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_CONNMARK.so [-] size=11609    ino=508  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_ah.so [-] size=7615     ino=509  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_tcpmss.so [-] size=7289     ino=510  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_icmp.so [-] size=9550     ino=511  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_frag.so [-] size=8966     ino=512  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_udp.so [-] size=8296     ino=513  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_DSCP.so [-] size=7860     ino=514  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_NFLOG.so [-] size=8142     ino=515  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_ecn.so [-] size=7535     ino=516  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_recent.so [-] size=10193    ino=517  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_TPROXY.so [-] size=7510     ino=518  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_rateest.so [-] size=11860    ino=519  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_sctp.so [-] size=12659    ino=520  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_MASQUERADE.so [-] size=7214     ino=521  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_dccp.so [-] size=10177    ino=522  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_dst.so [-] size=8819     ino=523  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_NFQUEUE.so [-] size=7561     ino=524  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_TCPMSS.so [-] size=7031     ino=525  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_physdev.so [-] size=8748     ino=526  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_statistic.so [-] size=8837     ino=527  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_tos.so [-] size=9067     ino=528  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_REDIRECT.so [-] size=7360     ino=529  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_limit.so [-] size=10187    ino=530  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_cpu.so [-] size=6671     ino=531  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_mark.so [-] size=7742     ino=532  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_multiport.so [-] size=12019    ino=533  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_TOS.so [-] size=9869     ino=534  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_CT.so [-] size=9036     ino=535  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_tcp.so [-] size=10781    ino=536  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_set.so [-] size=10715    ino=537  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_hbh.so [-] size=8851     ino=538  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_hl.so [-] size=7132     ino=539  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_comment.so [-] size=6921     ino=540  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_socket.so [-] size=5000     ino=541  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_connbytes.so [-] size=8343     ino=542  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_quota.so [-] size=6345     ino=543  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_u32.so [-] size=8680     ino=544  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_MARK.so [-] size=9645     ino=545  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_string.so [-] size=10563    ino=546  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_mac.so [-] size=7254     ino=547  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_SAME.so [-] size=7935     ino=548  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_MIRROR.so [-] size=5007     ino=549  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_length.so [-] size=7423     ino=550  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_policy.so [-] size=13674    ino=551  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_ipv6header.so [-] size=9173     ino=552  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_REJECT.so [-] size=8786     ino=553  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_time.so [-] size=12255    ino=554  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_TRACE.so [-] size=5002     ino=555  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_conntrack.so [-] size=20607    ino=556  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_RATEEST.so [-] size=8996     ino=557  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_LOG.so [-] size=9925     ino=558  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_osf.so [-] size=8027     ino=559  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_eui64.so [-] size=5002     ino=560  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_hashlimit.so [-] size=18656    ino=561  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_IDLETIMER.so [-] size=7045     ino=562  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_realm.so [-] size=8640     ino=563  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_CONNSECMARK.so [-] size=6835     ino=564  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_LOG.so [-] size=9809     ino=565  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_LED.so [-] size=7862     ino=566  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_ttl.so [-] size=7324     ino=567  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_CLUSTERIP.so [-] size=9481     ino=568  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_ULOG.so [-] size=8840     ino=569  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_unclean.so [-] size=5005     ino=570  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_owner.so [-] size=11878    ino=571  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_SET.so [-] size=11268    ino=572  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_iprange.so [-] size=10676    ino=573  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_connmark.so [-] size=7802     ino=574  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_CHECKSUM.so [-] size=6372     ino=575  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_NOTRACK.so [-] size=5008     ino=576  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_DNAT.so [-] size=8905     ino=577  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_pkttype.so [-] size=7576     ino=578  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libipt_NETMAP.so [-] size=7370     ino=579  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_connlimit.so [-] size=8179     ino=580  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_ah.so [-] size=8151     ino=581  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_ipvs.so [-] size=11220    ino=582  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_HL.so [-] size=7153     ino=583  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libip6t_icmp6.so [-] size=9326     ino=584  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_helper.so [-] size=6815     ino=585  links=1 mtime=2021-11-14 18:06:55 mode=0755
+    /lib/xtables/libxt_standard.so [-] size=5285     ino=586  links=1 mtime=2021-11-14 18:06:55 mode=0755
+  /lib/ld-2.11.2.so [-] size=101736   ino=587  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libgcc_s.so.1 [-] size=252717   ino=588  links=1 mtime=2021-11-14 18:07:14 mode=0666
+  /lib/libresolv-2.11.2.so [-] size=67488    ino=589  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/librt.so.1 [l] size=15       ino=590  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> librt-2.11.2.so
+  /lib/libresolv.so.2 [l] size=19       ino=591  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> libresolv-2.11.2.so
+  /lib/libdl-2.11.2.so [-] size=13976    ino=592  links=1 mtime=2021-11-14 19:39:25 mode=0777
+  /lib/libanl.so.1 [l] size=16       ino=593  links=1 mtime=2021-11-14 18:06:22 mode=0777 -> libanl-2.11.2.so
+  /lib/libanl-2.11.2.so [-] size=14124    ino=594  links=1 mtime=2021-11-14 19:39:25 mode=0777
+/log [d] size=1024     ino=595  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/mnt [d] size=1024     ino=596  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/network [l] size=4        ino=597  links=1 mtime=2021-11-14 19:33:52 mode=0777 -> cert
+/proc [d] size=1024     ino=598  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/root [d] size=1024     ino=599  links=2 mtime=2021-11-14 19:34:46 mode=0755
+  /root/chassis [-] size=9        ino=600  links=1 mtime=2021-11-14 17:45:44 mode=0644
+  /root/common.src [-] size=2595     ino=601  links=1 mtime=2021-11-14 17:45:44 mode=0644
+/sbin [d] size=1024     ino=602  links=2 mtime=2021-11-14 19:40:57 mode=0755
+  /sbin/lsmod [l] size=14       ino=603  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/ifconfig [l] size=14       ino=604  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/freeramdisk [l] size=14       ino=605  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/route [l] size=14       ino=606  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/sysctl [-] size=8562     ino=607  links=1 mtime=2021-11-14 18:06:55 mode=0755
+  /sbin/insmod [l] size=14       ino=608  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/mkdosfs [-] size=47425    ino=609  links=1 mtime=2021-11-14 18:06:55 mode=0755
+  /sbin/getty [l] size=14       ino=610  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/halt [l] size=14       ino=611  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/rmmod [l] size=14       ino=612  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/dosfsck [-] size=64774    ino=613  links=1 mtime=2021-11-14 18:06:55 mode=0755
+  /sbin/pivot_root [l] size=14       ino=614  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/swapon [l] size=14       ino=615  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/swapoff [l] size=14       ino=616  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/poweroff [l] size=14       ino=617  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+  /sbin/init [-] size=28524    ino=618  links=1 mtime=2021-11-14 19:40:57 mode=0555
+  /sbin/reboot [l] size=14       ino=619  links=1 mtime=2021-11-14 18:06:55 mode=0777 -> ../bin/busybox
+/setting [d] size=1024     ino=620  links=2 mtime=2021-11-14 19:33:51 mode=0755
+/sys [d] size=1024     ino=621  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/system [d] size=1024     ino=622  links=2 mtime=2021-11-14 19:33:51 mode=0755
+/tmp [d] size=1024     ino=623  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/tmp_bt [d] size=1024     ino=624  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/tmp_cert [d] size=1024     ino=625  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/tmp_ipsec [d] size=1024     ino=626  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/tmp_network [d] size=1024     ino=627  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/tmp_updater [d] size=1024     ino=628  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/usr [d] size=1024     ino=629  links=3 mtime=2021-11-14 19:41:53 mode=0755
+  /usr/lib [d] size=1024     ino=630  links=2 mtime=2021-11-14 19:41:53 mode=0755
+/var [d] size=1024     ino=631  links=2 mtime=2021-11-14 19:33:52 mode=0755
+/version.txt [-] size=19       ino=632  links=1 mtime=2021-11-14 18:38:45 mode=0644

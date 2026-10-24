@@ -1,0 +1,32 @@
+kemco
+ip=off initrd=0x00700000,0x00800000 root=/dev/ram0
+rw noatime noalign
+init=/sbin/init
+heap_profile.records=0
+snsc_workqueue.kipid=130 manage.irqd=129 softirq.sirqd=128
+exception.reboot=1 exception.console_option=115200n8
+softlockup_panic=0 softlockup_thresh=30
+wdt.timeout=500
+warm.boot_drop=0
+warm.ignore_drop=1
+pcie.refclk=9,2 pcie.pwr1=2,18 pcie.pwr2=2,23 pcie.pwr3=2,22
+pcie.ch0_enable=Y pcie.ch0_select=1 pcie.ch0_start=0
+pcie.ch1_enable=Y pcie.ch1_select=1 pcie.ch1_start=0
+pcie.cold_delay=0 pcie.pon_delay=0
+pcie_ports=native pci=ecrc=on,hpiosize=0,hpprefsize=0 pciehp.pciehp_force=Y pcie_aspm.policy=performance
+error.led=0,0
+cfg.poff=0,10
+console=ttyAM0,115200n8 amba2.console=0 xrstreq=0 wdt.mode=0 stack_usage=y cxd90014.bam=Y
+cfg.uart=15
+tmonitor.addr=0x1A00000 tmonitor.size=0x500000 tmonitor.mask=0
+wbi_memclr=0x200210e8
+em_console=0x200210ec
+boottime=0x20000@0x03480000
+klog.addr=0x034A0000 klog.size=0x20000
+mem=1G@0
+memrsv=1M@0
+memrsv=0x75e000@0x02E68000
+memrsv=0x500000@0x09b00000
+memrsv=0x20000000@0x20000000:uc
+mem=1016M@0x80000000@1
+*

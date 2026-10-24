@@ -1,0 +1,2 @@
+a6d9d7695e66a1301ca8f2a29eb42aea  ./boot/vmlinux.bin
+0f00bf40c7d13f84cf9abf8c068c5f7a  ./boot/initrd.img

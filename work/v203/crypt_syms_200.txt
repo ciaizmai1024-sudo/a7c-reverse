@@ -1,0 +1,306 @@
+== 段表 ==
+idx name             type   flags  vaddr      off      size     entsz
+  0                  NULL   00000000 0x00000000 0x000000 0x000000     0
+  1 .interp          PROGBITS 00000002 0x00008134 0x000134 0x000014     0
+  2 .note.ABI-tag    0x7    00000002 0x00008148 0x000148 0x000020     0
+  3 .gnu.hash        0x6ffffff6 00000002 0x00008168 0x000168 0x00051c     4
+  4 .dynsym          0xb    00000002 0x00008684 0x000684 0x000a50    16
+  5 .dynstr          STRTAB 00000002 0x000090d4 0x0010d4 0x001105     0
+  6 .gnu.version     VERSYM 00000002 0x0000a1da 0x0021da 0x00014a     2
+  7 .gnu.version_r   HASH   00000002 0x0000a324 0x002324 0x000090     0
+  8 .rel.dyn         0x9    00000002 0x0000a3b4 0x0023b4 0x000060     8
+  9 .rel.plt         0x9    00000002 0x0000a414 0x002414 0x0002c8     8
+ 10 .init            PROGBITS 00000006 0x0000a6dc 0x0026dc 0x00000a     0
+ 11 .plt             PROGBITS 00000006 0x0000a6e8 0x0026e8 0x000454     4
+ 12 .text            PROGBITS 00000006 0x0000ab40 0x002b40 0x003c50     0
+ 13 .fini            PROGBITS 00000006 0x0000e790 0x006790 0x000006     0
+ 14 .rodata          PROGBITS 00000002 0x0000e798 0x006798 0x001044     0
+ 15 .ARM.extab       PROGBITS 00000002 0x0000f7dc 0x0077dc 0x000adc     0
+ 16 .ARM.exidx       ARM_EXIDX 00000082 0x000102b8 0x0082b8 0x0006c8     0
+ 17 .init_array      DYNAMIC 00000003 0x00019000 0x009000 0x000004     0
+ 18 .fini_array      0xf    00000003 0x00019004 0x009004 0x000004     0
+ 19 .jcr             PROGBITS 00000003 0x00019008 0x009008 0x000004     0
+ 20 .dynamic         REL    00000003 0x0001900c 0x00900c 0x000160     8
+ 21 .got             PROGBITS 00000003 0x0001916c 0x00916c 0x000178     4
+ 22 .data            PROGBITS 00000003 0x000192e4 0x0092e4 0x000008     0
+ 23 .bss             0x8    00000003 0x000192f0 0x0092ec 0x000550     0
+ 24 .ARM.attributes  ARM_ATTR 00000000 0x00000000 0x0092ec 0x000031     0
+ 25 .comment         PROGBITS 00000030 0x00000000 0x00931d 0x00003f     1
+ 26 .shstrtab        STRTAB 00000000 0x00000000 0x00935c 0x0000e8     0
+
+== 程序头 ==
+0x70000001 0x82b8 0x102b8 0x102b8 0x6c8 0x6c8 0x4 0x4
+0x6 0x34 0x8034 0x8034 0x100 0x100 0x5 0x4
+0x3 0x134 0x8134 0x8134 0x14 0x14 0x4 0x1
+0x1 0x0 0x8000 0x8000 0x8980 0x8980 0x5 0x8000
+0x1 0x9000 0x19000 0x19000 0x2ec 0x840 0x6 0x8000
+0x2 0x900c 0x1900c 0x1900c 0x160 0x160 0x6 0x4
+0x4 0x148 0x8148 0x8148 0x20 0x20 0x4 0x4
+0x6474e551 0x0 0x0 0x0 0x0 0x0 0x6 0x4
+
+== .dynsym ==
+idx name bind type shndx value size
+  0                            bind= 0 type= 0 shndx=   0 value=0x00000000 size=0x000000
+  1 _Jv_RegisterClasses        bind= 2 type= 0 shndx=   0 value=0x00000000 size=0x000000
+  2 __aeabi_unwind_cpp_pr1     bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+  3 __aeabi_unwind_cpp_pr0     bind= 1 type= 2 shndx=   0 value=0x00000000 size=0x000000
+  4 __gmon_start__             bind= 2 type= 0 shndx=   0 value=0x00000000 size=0x000000
+  5 _ZN7Updater12ApiExceptionD1Ev bind= 2 type= 2 shndx=   0 value=0x0000af4d size=0x000010
+  6 _ZTSN7Updater13Mode3FlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f526 size=0x00001a
+  7 _ZN7Updater12ApiExceptionC2EN10UpdaterAPI9ErrorCodeEh bind= 2 type= 2 shndx=   0 value=0x0000ccb9 size=0x000014
+  8 Fsys_Mount                 bind= 1 type= 2 shndx=   0 value=0x0000a944 size=0x000000
+  9 memcpy                     bind= 1 type= 2 shndx=   0 value=0x0000a9e0 size=0x000000
+ 10 abort                      bind= 1 type= 2 shndx=   0 value=0x0000a850 size=0x000000
+ 11 _ZN7Updater12BaseFlagFileD1Ev bind= 2 type= 2 shndx=   0 value=0x0000d80d size=0x000018
+ 12 _ZN7Updater13StringHandler9SetStringEPKc bind= 1 type= 2 shndx=   0 value=0x0000a9b0 size=0x000000
+ 13 _ZN7Updater15ExternalCommand7ExecuteEPKPcS3_ bind= 1 type= 2 shndx=   0 value=0x0000a9d4 size=0x000000
+ 14 _ZN7Updater10DllHandler4OpenEPKci bind= 1 type= 2 shndx=   0 value=0x0000a750 size=0x000000
+ 15 _ZN7Updater10RegionFileD0Ev bind= 2 type= 2 shndx=   0 value=0x0000df61 size=0x000014
+ 16 _Znaj                      bind= 1 type= 2 shndx=   0 value=0x0000a838 size=0x000000
+ 17 _ZN7Updater13Mode5FlagFileD2Ev bind= 2 type= 2 shndx=   0 value=0x0000db59 size=0x000018
+ 18 _ZTVN7Updater12ApiExceptionE bind= 2 type= 1 shndx=   0 value=0x0000e9e0 size=0x000010
+ 19 _init                      bind= 1 type= 2 shndx=   0 value=0x0000a6dd size=0x000000
+ 20 _ZTVN7Updater13Mode6FlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f400 size=0x00001c
+ 21 _ZTVN7Updater16CompleteFlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f3e0 size=0x00001c
+ 22 umount                     bind= 1 type= 2 shndx=   0 value=0x0000a9c8 size=0x000000
+ 23 _ZN7Updater27BaseFirmwareInformationFileD1Ev bind= 2 type= 2 shndx=   0 value=0x0000de25 size=0x000018
+ 24 _ZTVN10__cxxabiv117__class_type_infoE bind= 1 type= 1 shndx=   0 value=0x00019330 size=0x00002c
+ 25 _ZN7Updater10MountPoint5MountEPKcm bind= 1 type= 2 shndx=   0 value=0x0000a7e4 size=0x000000
+ 26 _ZN7Updater11FileHandler4OpenEPKcij bind= 1 type= 2 shndx=   0 value=0x0000a950 size=0x000000
+ 27 close                      bind= 1 type= 2 shndx=   0 value=0x0000a814 size=0x000000
+ 28 _ZN7Updater10MountPoint10InitializeEPKc bind= 1 type= 2 shndx=   0 value=0x0000a82c size=0x000000
+ 29 unlink                     bind= 1 type= 2 shndx=   0 value=0x0000a868 size=0x000000
+ 30 _ZN7Updater13Mode6FlagFileC1EPKc bind= 1 type= 2 shndx=   0 value=0x0000a904 size=0x000000
+ 31 Dec_ScrambleInit           bind= 1 type= 2 shndx=   0 value=0x0000a98c size=0x000000
+ 32 _ZN7Updater13Mode3FlagFileD2Ev bind= 2 type= 2 shndx=   0 value=0x0000dc81 size=0x000018
+ 33 _ZdlPv                     bind= 1 type= 2 shndx=   0 value=0x0000a898 size=0x000000
+ 34 _ZTVN7Updater27BaseFirmwareInformationFileE bind= 1 type= 1 shndx=   0 value=0x00019410 size=0x000020
+ 35 __cxa_throw                bind= 1 type= 2 shndx=   0 value=0x0000aa6c size=0x000000
+ 36 _ZN7Updater16CompleteFlagFileD2Ev bind= 2 type= 2 shndx=   0 value=0x0000d825 size=0x000018
+ 37 pthread_join               bind= 1 type= 2 shndx=   0 value=0x0000a7a4 size=0x000000
+ 38 fprintf                    bind= 1 type= 2 shndx=   0 value=0x0000aa04 size=0x000000
+ 39 mount                      bind= 1 type= 2 shndx=   0 value=0x0000aa84 size=0x000000
+ 40 _ZN7Updater12BaseFlagFile6DeleteEv bind= 1 type= 2 shndx=   0 value=0x0000a768 size=0x000000
+ 41 _ZN7Updater12ModeFlagFileD2Ev bind= 2 type= 2 shndx=   0 value=0x0000d959 size=0x000018
+ 42 pthread_cond_wait          bind= 1 type= 2 shndx=   0 value=0x0000a980 size=0x000000
+ 43 fputs                      bind= 1 type= 2 shndx=   0 value=0x0000aad8 size=0x000000
+ 44 _ZTIN7Updater13Mode6FlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f48c size=0x00000c
+ 45 __cxa_allocate_exception   bind= 1 type= 2 shndx=   0 value=0x0000a7b0 size=0x000000
+ 46 _ZN7Updater12BaseFlagFile7IsValidEv bind= 1 type= 2 shndx=   0 value=0x0000a874 size=0x000000
+ 47 _ZN7Updater13Mode6FlagFileD1Ev bind= 2 type= 2 shndx=   0 value=0x0000d92d size=0x000018
+ 48 _ZN7Updater9ModelFileD0Ev  bind= 2 type= 2 shndx=   0 value=0x0000ded9 size=0x000014
+ 49 Fsys_Unmount               bind= 1 type= 2 shndx=   0 value=0x0000a7d8 size=0x000000
+ 50 _ZN7Updater11FileHandler5CloseEv bind= 1 type= 2 shndx=   0 value=0x0000a8d4 size=0x000000
+ 51 _ZN7Updater11VersionFileD2Ev bind= 2 type= 2 shndx=   0 value=0x0000de51 size=0x000018
+ 52 open                       bind= 1 type= 2 shndx=   0 value=0x0000a8c8 size=0x000000
+ 53 memcmp                     bind= 1 type= 2 shndx=   0 value=0x0000aab4 size=0x000000
+ 54 printf                     bind= 1 type= 2 shndx=   0 value=0x0000a7cc size=0x000000
+ 55 _ZN7Updater13Mode3FlagFileC1EPKc bind= 1 type= 2 shndx=   0 value=0x0000a8f8 size=0x000000
+ 56 _ZTVN7Updater10RegionFileE bind= 1 type= 1 shndx=   0 value=0x000193a0 size=0x000020
+ 57 _ZN7Updater11FileHandler7ReadAllEPhjPj bind= 1 type= 2 shndx=   0 value=0x0000a9ec size=0x000000
+ 58 memset                     bind= 1 type= 2 shndx=   0 value=0x0000a7fc size=0x000000
+ 59 _ZN7Updater16CompleteFlagFileC1EPKc bind= 1 type= 2 shndx=   0 value=0x0000a880 size=0x000000
+ 60 strncpy                    bind= 1 type= 2 shndx=   0 value=0x0000aa90 size=0x000000
+ 61 pthread_mutex_lock         bind= 1 type= 2 shndx=   0 value=0x0000a714 size=0x000000
+ 62 __assert_fail              bind= 1 type= 2 shndx=   0 value=0x0000a8b0 size=0x000000
+ 63 _ZN7Updater10MountPointD1Ev bind= 1 type= 2 shndx=   0 value=0x0000a72c size=0x000000
+ 64 _ZTVN7Updater12BaseFlagFileE bind= 1 type= 1 shndx=   0 value=0x000192f0 size=0x00001c
+ 65 _ZTSN7Updater12ApiExceptionE bind= 2 type= 1 shndx=   0 value=0x0000ea18 size=0x000019
+ 66 _ZTSN7Updater13Mode6FlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f4d9 size=0x00001a
+ 67 _ZN7Updater12ApiExceptionD2Ev bind= 2 type= 2 shndx=   0 value=0x0000af4d size=0x000010
+ 68 _ZN7Updater10DllHandlerD1Ev bind= 1 type= 2 shndx=   0 value=0x0000a8e0 size=0x000000
+ 69 pthread_mutex_destroy      bind= 1 type= 2 shndx=   0 value=0x0000a8ec size=0x000000
+ 70 _ZTVN7Updater13Mode5FlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f440 size=0x00001c
+ 71 _ZN7Updater12ModeFlagFileC1EPKc bind= 1 type= 2 shndx=   0 value=0x0000aa10 size=0x000000
+ 72 _ZN7Updater12BaseFlagFileD2Ev bind= 2 type= 2 shndx=   0 value=0x0000d80d size=0x000018
+ 73 _ZN7Updater11FileHandler8WriteAllEPKhjPj bind= 1 type= 2 shndx=   0 value=0x0000a738 size=0x000000
+ 74 _ZN7Updater10RegionFileD1Ev bind= 2 type= 2 shndx=   0 value=0x0000deed size=0x000018
+ 75 stderr                     bind= 1 type= 1 shndx=   0 value=0x00019368 size=0x000004
+ 76 _ZNK7Updater27BaseFirmwareInformationFile8GetValueEv bind= 1 type= 2 shndx=   0 value=0x0000a7bc size=0x000000
+ 77 _ZTIN7Updater13Mode5FlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f4a4 size=0x00000c
+ 78 strncmp                    bind= 1 type= 2 shndx=   0 value=0x0000a78c size=0x000000
+ 79 _ZTVN7Updater12ModeFlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f420 size=0x00001c
+ 80 _ZTSN7Updater16CompleteFlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f4bc size=0x00001d
+ 81 _ZN7Updater27BaseFirmwareInformationFileD2Ev bind= 2 type= 2 shndx=   0 value=0x0000de25 size=0x000018
+ 82 __errno_location           bind= 1 type= 2 shndx=   0 value=0x0000aa78 size=0x000000
+ 83 _ZN7Updater11FileHandlerC1Ev bind= 1 type= 2 shndx=   0 value=0x0000aa60 size=0x000000
+ 84 _ZN7Updater16DirectoryHandler6CreateERKNS_13StringHandlerE bind= 1 type= 2 shndx=   0 value=0x0000a914 size=0x000000
+ 85 _ZN7Updater13Mode5FlagFileD0Ev bind= 2 type= 2 shndx=   0 value=0x0000dc6d size=0x000014
+ 86 Dec_Scramble               bind= 1 type= 2 shndx=   0 value=0x0000aaa8 size=0x000000
+ 87 __bss_start                bind= 1 type= 0 shndx= 255 value=0x000192ec size=0x000000
+ 88 pthread_mutex_unlock       bind= 1 type= 2 shndx=   0 value=0x0000ab24 size=0x000000
+ 89 _ZN7Updater10DllHandler9GetSymbolEPKc bind= 1 type= 2 shndx=   0 value=0x0000a744 size=0x000000
+ 90 _ZN7Updater13Mode6FlagFileD2Ev bind= 2 type= 2 shndx=   0 value=0x0000d92d size=0x000018
+ 91 _ZN7Updater9ModelFileD1Ev  bind= 2 type= 2 shndx=   0 value=0x0000dec1 size=0x000018
+ 92 _ZN7Updater13Mode3FlagFileD0Ev bind= 2 type= 2 shndx=   0 value=0x0000ddfd size=0x000014
+ 93 __bss_start__              bind= 1 type= 0 shndx= 255 value=0x000192ec size=0x000000
+ 94 _ZN7Updater16CompleteFlagFileD0Ev bind= 2 type= 2 shndx=   0 value=0x0000d919 size=0x000014
+ 95 _ZTSN7Updater13Mode5FlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f50c size=0x00001a
+ 96 _ZN7Updater13StringHandlerC1Ev bind= 1 type= 2 shndx=   0 value=0x0000a9f8 size=0x000000
+ 97 pthread_mutex_init         bind= 1 type= 2 shndx=   0 value=0x0000a720 size=0x000000
+ 98 _ZN7Updater11FileHandler4OpenEPKci bind= 1 type= 2 shndx=   0 value=0x0000ab30 size=0x000000
+ 99 _ZTVN7Updater11VersionFileE bind= 1 type= 1 shndx=   0 value=0x00019310 size=0x000020
+100 _ZN7Updater12ModeFlagFileD0Ev bind= 2 type= 2 shndx=   0 value=0x0000da6d size=0x000014
+101 _ZTIN7Updater12ApiExceptionE bind= 2 type= 1 shndx=   0 value=0x0000e9d8 size=0x000008
+102 Fsys_Exit                  bind= 1 type= 2 shndx=   0 value=0x0000a7f0 size=0x000000
+103 _ZN7Updater11VersionFileD0Ev bind= 2 type= 2 shndx=   0 value=0x0000dead size=0x000014
+104 _ZNK7Updater13StringHandler13GetCharStringEv bind= 1 type= 2 shndx=   0 value=0x0000a844 size=0x000000
+105 _ZTSN7Updater12ModeFlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f4f3 size=0x000019
+106 _Znwj                      bind= 1 type= 2 shndx=   0 value=0x0000a708 size=0x000000
+107 _ZN7Updater12ApiExceptionC1EN10UpdaterAPI9ErrorCodeEh bind= 2 type= 2 shndx=   0 value=0x0000ccb9 size=0x000014
+108 pthread_cond_init          bind= 1 type= 2 shndx=   0 value=0x0000a6fc size=0x000000
+109 ioctl                      bind= 1 type= 2 shndx=   0 value=0x0000a88c size=0x000000
+110 mcmn_init                  bind= 1 type= 2 shndx=   0 value=0x0000a92c size=0x000000
+111 pthread_cond_destroy       bind= 1 type= 2 shndx=   0 value=0x0000a75c size=0x000000
+112 _ZN7Updater12ApiExceptionD0Ev bind= 2 type= 2 shndx=   0 value=0x0000af77 size=0x000014
+113 _ZN7Updater10RegionFileD2Ev bind= 2 type= 2 shndx=   0 value=0x0000deed size=0x000018
+114 __cxa_call_unexpected      bind= 1 type= 2 shndx=   0 value=0x0000a95c size=0x000000
+115 _ZdaPv                     bind= 1 type= 2 shndx=   0 value=0x0000a968 size=0x000000
+116 _end                       bind= 1 type= 0 shndx= 255 value=0x00019840 size=0x000000
+117 _ZTIN7Updater16CompleteFlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f480 size=0x00000c
+118 _ZN7Updater12BaseFlagFile6CreateEv bind= 1 type= 2 shndx=   0 value=0x0000aac0 size=0x000000
+119 __end__                    bind= 1 type= 0 shndx= 255 value=0x00019840 size=0x000000
+120 __cxa_end_cleanup          bind= 1 type= 2 shndx=   0 value=0x0000a920 size=0x000000
+121 _fini                      bind= 1 type= 2 shndx=   0 value=0x0000e791 size=0x000000
+122 pthread_create             bind= 1 type= 2 shndx=   0 value=0x0000aa54 size=0x000000
+123 _ZN7Updater12BaseFlagFileD0Ev bind= 2 type= 2 shndx=   0 value=0x0000de11 size=0x000014
+124 _ZTIN7Updater12BaseFlagFileE bind= 1 type= 1 shndx=   0 value=0x00019360 size=0x000008
+125 _bss_end__                 bind= 1 type= 0 shndx= 255 value=0x00019840 size=0x000000
+126 _ZN7Updater10RegionFileC1EPKc bind= 1 type= 2 shndx=   0 value=0x0000a974 size=0x000000
+127 _ZN7Updater11FileHandler4SeekEl bind= 1 type= 2 shndx=   0 value=0x0000a998 size=0x000000
+128 _edata                     bind= 1 type= 0 shndx= 255 value=0x000192ec size=0x000000
+129 Fsys_Init                  bind= 1 type= 2 shndx=   0 value=0x0000a8a4 size=0x000000
+130 _ZN7Updater13Mode5FlagFileD1Ev bind= 2 type= 2 shndx=   0 value=0x0000db59 size=0x000018
+131 _ZN7Updater9ModelFileC1EPKc bind= 1 type= 2 shndx=   0 value=0x0000a8bc size=0x000000
+132 _ZN7Updater11FileHandlerD1Ev bind= 1 type= 2 shndx=   0 value=0x0000aacc size=0x000000
+133 _ZTVN10__cxxabiv120__si_class_type_infoE bind= 1 type= 1 shndx=   0 value=0x00019370 size=0x00002c
+134 _ZN7Updater10RingBufferC1Ev bind= 1 type= 2 shndx=   0 value=0x0000aa3c size=0x000000
+135 snprintf                   bind= 1 type= 2 shndx=   0 value=0x0000a808 size=0x000000
+136 _ZN7Updater13Mode5FlagFileC1EPKc bind= 1 type= 2 shndx=   0 value=0x0000a938 size=0x000000
+137 _ZN7Updater27BaseFirmwareInformationFileD0Ev bind= 2 type= 2 shndx=   0 value=0x0000de3d size=0x000014
+138 _ZN7Updater10MountPoint6UmountEv bind= 1 type= 2 shndx=   0 value=0x0000a9a4 size=0x000000
+139 _ZN7Updater11VersionFileC1EPKc bind= 1 type= 2 shndx=   0 value=0x0000aaf0 size=0x000000
+140 _ZN7Updater9ModelFileD2Ev  bind= 2 type= 2 shndx=   0 value=0x0000dec1 size=0x000018
+141 _ZTVN7Updater13Mode3FlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f460 size=0x00001c
+142 _ZTVN7Updater9ModelFileE   bind= 1 type= 1 shndx=   0 value=0x000193c0 size=0x000020
+143 _ZN7Updater13Mode3FlagFileD1Ev bind= 2 type= 2 shndx=   0 value=0x0000dc81 size=0x000018
+144 _ZN7Updater16CompleteFlagFileD1Ev bind= 2 type= 2 shndx=   0 value=0x0000d825 size=0x000018
+145 __xstat                    bind= 1 type= 2 shndx=   0 value=0x0000aa20 size=0x000000
+146 Fsys_Remove                bind= 1 type= 2 shndx=   0 value=0x0000a780 size=0x000000
+147 _ZN7Updater12ModeFlagFileD1Ev bind= 2 type= 2 shndx=   0 value=0x0000d959 size=0x000018
+148 _ZN7Updater11FileHandler4ReadEPhj bind= 1 type= 2 shndx=   0 value=0x0000a9bc size=0x000000
+149 _ZN7Updater13StringHandlerD1Ev bind= 1 type= 2 shndx=   0 value=0x0000aa9c size=0x000000
+150 __bss_end__                bind= 1 type= 0 shndx= 255 value=0x00019840 size=0x000000
+151 __cxa_end_catch            bind= 1 type= 2 shndx=   0 value=0x0000aa30 size=0x000000
+152 _ZN7Updater13Mode6FlagFileD0Ev bind= 2 type= 2 shndx=   0 value=0x0000d945 size=0x000014
+153 _ZTVN10__cxxabiv121__vmi_class_type_infoE bind= 1 type= 1 shndx=   0 value=0x000193e0 size=0x00002c
+154 _ZTIN7Updater13Mode3FlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f4b0 size=0x00000c
+155 _ZN7Updater11VersionFileD1Ev bind= 2 type= 2 shndx=   0 value=0x0000de51 size=0x000018
+156 __gxx_personality_v0       bind= 1 type= 2 shndx=   0 value=0x0000aa48 size=0x000000
+157 __cxa_pure_virtual         bind= 1 type= 2 shndx=   0 value=0x0000ab18 size=0x000000
+158 __cxa_begin_catch          bind= 1 type= 2 shndx=   0 value=0x0000a798 size=0x000000
+159 __libc_start_main          bind= 1 type= 2 shndx=   0 value=0x0000aae4 size=0x000000
+160 _ZN7Updater10MountPointC1Ev bind= 1 type= 2 shndx=   0 value=0x0000a85c size=0x000000
+161 pthread_cond_broadcast     bind= 1 type= 2 shndx=   0 value=0x0000a820 size=0x000000
+162 _ZTIN7Updater12ModeFlagFileE bind= 2 type= 1 shndx=   0 value=0x0000f498 size=0x00000c
+163 _ZN7Updater10DllHandlerC1Ev bind= 1 type= 2 shndx=   0 value=0x0000a774 size=0x000000
+164 _ZN7Updater10DllHandler5CloseEv bind= 1 type= 2 shndx=   0 value=0x0000aafc size=0x000000
+
+== .rel.plt  (顺序 = PLT 桩顺序, 桩 = .plt+0x14+12*i) ==
+  0 GOT槽=0x019178 桩=0x000eac sym=pthread_cond_init          type=22
+  1 GOT槽=0x01917c 桩=0x000eb8 sym=_Znwj                      type=22
+  2 GOT槽=0x019180 桩=0x000ec4 sym=pthread_mutex_lock         type=22
+  3 GOT槽=0x019184 桩=0x000ed0 sym=pthread_mutex_init         type=22
+  4 GOT槽=0x019188 桩=0x000edc sym=_ZN7Updater10MountPointD1Ev type=22
+  5 GOT槽=0x01918c 桩=0x000ee8 sym=_ZN7Updater11FileHandler8WriteAllEPKhjPj type=22
+  6 GOT槽=0x019190 桩=0x000ef4 sym=_ZN7Updater10DllHandler9GetSymbolEPKc type=22
+  7 GOT槽=0x019194 桩=0x000f00 sym=_ZN7Updater10DllHandler4OpenEPKci type=22
+  8 GOT槽=0x019198 桩=0x000f0c sym=pthread_cond_destroy       type=22
+  9 GOT槽=0x01919c 桩=0x000f18 sym=_ZN7Updater12BaseFlagFile6DeleteEv type=22
+ 10 GOT槽=0x0191a0 桩=0x000f24 sym=_ZN7Updater10DllHandlerC1Ev type=22
+ 11 GOT槽=0x0191a4 桩=0x000f30 sym=Fsys_Remove                type=22
+ 12 GOT槽=0x0191a8 桩=0x000f3c sym=strncmp                    type=22
+ 13 GOT槽=0x0191ac 桩=0x000f48 sym=__cxa_begin_catch          type=22
+ 14 GOT槽=0x0191b0 桩=0x000f54 sym=pthread_join               type=22
+ 15 GOT槽=0x0191b4 桩=0x000f60 sym=__cxa_allocate_exception   type=22
+ 16 GOT槽=0x0191b8 桩=0x000f6c sym=_ZNK7Updater27BaseFirmwareInformationFile8GetValueEv type=22
+ 17 GOT槽=0x0191bc 桩=0x000f78 sym=printf                     type=22
+ 18 GOT槽=0x0191c0 桩=0x000f84 sym=Fsys_Unmount               type=22
+ 19 GOT槽=0x0191c4 桩=0x000f90 sym=_ZN7Updater10MountPoint5MountEPKcm type=22
+ 20 GOT槽=0x0191c8 桩=0x000f9c sym=Fsys_Exit                  type=22
+ 21 GOT槽=0x0191cc 桩=0x000fa8 sym=memset                     type=22
+ 22 GOT槽=0x0191d0 桩=0x000fb4 sym=snprintf                   type=22
+ 23 GOT槽=0x0191d4 桩=0x000fc0 sym=close                      type=22
+ 24 GOT槽=0x0191d8 桩=0x000fcc sym=pthread_cond_broadcast     type=22
+ 25 GOT槽=0x0191dc 桩=0x000fd8 sym=_ZN7Updater10MountPoint10InitializeEPKc type=22
+ 26 GOT槽=0x0191e0 桩=0x000fe4 sym=_Znaj                      type=22
+ 27 GOT槽=0x0191e4 桩=0x000ff0 sym=_ZNK7Updater13StringHandler13GetCharStringEv type=22
+ 28 GOT槽=0x0191e8 桩=0x000ffc sym=abort                      type=22
+ 29 GOT槽=0x0191ec 桩=0x001008 sym=_ZN7Updater10MountPointC1Ev type=22
+ 30 GOT槽=0x0191f0 桩=0x001014 sym=unlink                     type=22
+ 31 GOT槽=0x0191f4 桩=0x001020 sym=_ZN7Updater12BaseFlagFile7IsValidEv type=22
+ 32 GOT槽=0x0191f8 桩=0x00102c sym=_ZN7Updater16CompleteFlagFileC1EPKc type=22
+ 33 GOT槽=0x0191fc 桩=0x001038 sym=ioctl                      type=22
+ 34 GOT槽=0x019200 桩=0x001044 sym=_ZdlPv                     type=22
+ 35 GOT槽=0x019204 桩=0x001050 sym=Fsys_Init                  type=22
+ 36 GOT槽=0x019208 桩=0x00105c sym=__assert_fail              type=22
+ 37 GOT槽=0x01920c 桩=0x001068 sym=_ZN7Updater9ModelFileC1EPKc type=22
+ 38 GOT槽=0x019210 桩=0x001074 sym=open                       type=22
+ 39 GOT槽=0x019214 桩=0x001080 sym=_ZN7Updater11FileHandler5CloseEv type=22
+ 40 GOT槽=0x019218 桩=0x00108c sym=_ZN7Updater10DllHandlerD1Ev type=22
+ 41 GOT槽=0x01921c 桩=0x001098 sym=pthread_mutex_destroy      type=22
+ 42 GOT槽=0x019220 桩=0x0010a4 sym=_ZN7Updater13Mode3FlagFileC1EPKc type=22
+ 43 GOT槽=0x019224 桩=0x0010b0 sym=_ZN7Updater13Mode6FlagFileC1EPKc type=22
+ 44 GOT槽=0x019228 桩=0x0010bc sym=_ZN7Updater16DirectoryHandler6CreateERKNS_13StringHandlerE type=22
+ 45 GOT槽=0x01922c 桩=0x0010c8 sym=__cxa_end_cleanup          type=22
+ 46 GOT槽=0x019230 桩=0x0010d4 sym=mcmn_init                  type=22
+ 47 GOT槽=0x019234 桩=0x0010e0 sym=_ZN7Updater13Mode5FlagFileC1EPKc type=22
+ 48 GOT槽=0x019238 桩=0x0010ec sym=Fsys_Mount                 type=22
+ 49 GOT槽=0x01923c 桩=0x0010f8 sym=_ZN7Updater11FileHandler4OpenEPKcij type=22
+ 50 GOT槽=0x019240 桩=0x001104 sym=__cxa_call_unexpected      type=22
+ 51 GOT槽=0x019244 桩=0x001110 sym=_ZdaPv                     type=22
+ 52 GOT槽=0x019248 桩=0x00111c sym=_ZN7Updater10RegionFileC1EPKc type=22
+ 53 GOT槽=0x01924c 桩=0x001128 sym=pthread_cond_wait          type=22
+ 54 GOT槽=0x019250 桩=0x001134 sym=Dec_ScrambleInit           type=22
+ 55 GOT槽=0x019254 桩=0x001140 sym=_ZN7Updater11FileHandler4SeekEl type=22
+ 56 GOT槽=0x019258 桩=0x00114c sym=_ZN7Updater10MountPoint6UmountEv type=22
+ 57 GOT槽=0x01925c 桩=0x001158 sym=_ZN7Updater13StringHandler9SetStringEPKc type=22
+ 58 GOT槽=0x019260 桩=0x001164 sym=_ZN7Updater11FileHandler4ReadEPhj type=22
+ 59 GOT槽=0x019264 桩=0x001170 sym=umount                     type=22
+ 60 GOT槽=0x019268 桩=0x00117c sym=_ZN7Updater15ExternalCommand7ExecuteEPKPcS3_ type=22
+ 61 GOT槽=0x01926c 桩=0x001188 sym=memcpy                     type=22
+ 62 GOT槽=0x019270 桩=0x001194 sym=_ZN7Updater11FileHandler7ReadAllEPhjPj type=22
+ 63 GOT槽=0x019274 桩=0x0011a0 sym=_ZN7Updater13StringHandlerC1Ev type=22
+ 64 GOT槽=0x019278 桩=0x0011ac sym=fprintf                    type=22
+ 65 GOT槽=0x01927c 桩=0x0011b8 sym=_ZN7Updater12ModeFlagFileC1EPKc type=22
+ 66 GOT槽=0x019280 桩=0x0011c4 sym=__xstat                    type=22
+ 67 GOT槽=0x019284 桩=0x0011d0 sym=__cxa_end_catch            type=22
+ 68 GOT槽=0x019288 桩=0x0011dc sym=_ZN7Updater10RingBufferC1Ev type=22
+ 69 GOT槽=0x01928c 桩=0x0011e8 sym=__gxx_personality_v0       type=22
+ 70 GOT槽=0x019290 桩=0x0011f4 sym=pthread_create             type=22
+ 71 GOT槽=0x019294 桩=0x001200 sym=_ZN7Updater11FileHandlerC1Ev type=22
+ 72 GOT槽=0x019298 桩=0x00120c sym=__cxa_throw                type=22
+ 73 GOT槽=0x01929c 桩=0x001218 sym=__errno_location           type=22
+ 74 GOT槽=0x0192a0 桩=0x001224 sym=mount                      type=22
+ 75 GOT槽=0x0192a4 桩=0x001230 sym=strncpy                    type=22
+ 76 GOT槽=0x0192a8 桩=0x00123c sym=_ZN7Updater13StringHandlerD1Ev type=22
+ 77 GOT槽=0x0192ac 桩=0x001248 sym=Dec_Scramble               type=22
+ 78 GOT槽=0x0192b0 桩=0x001254 sym=memcmp                     type=22
+ 79 GOT槽=0x0192b4 桩=0x001260 sym=_ZN7Updater12BaseFlagFile6CreateEv type=22
+ 80 GOT槽=0x0192b8 桩=0x00126c sym=_ZN7Updater11FileHandlerD1Ev type=22
+ 81 GOT槽=0x0192bc 桩=0x001278 sym=fputs                      type=22
+ 82 GOT槽=0x0192c0 桩=0x001284 sym=__libc_start_main          type=22
+ 83 GOT槽=0x0192c4 桩=0x001290 sym=_ZN7Updater11VersionFileC1EPKc type=22
+ 84 GOT槽=0x0192c8 桩=0x00129c sym=_ZN7Updater10DllHandler5CloseEv type=22
+ 85 GOT槽=0x0192cc 桩=0x0012a8 sym=__gmon_start__             type=22
+ 86 GOT槽=0x0192d0 桩=0x0012b4 sym=__cxa_pure_virtual         type=22
+ 87 GOT槽=0x0192d4 桩=0x0012c0 sym=pthread_mutex_unlock       type=22
+ 88 GOT槽=0x0192d8 桩=0x0012cc sym=_ZN7Updater11FileHandler4OpenEPKci type=22
+
+== .rel.dyn ==
+  0 位置=0x0192dc sym=_ZTIN7Updater12ApiExceptionE type=21 现值=0x00000000
+  1 位置=0x0192e0 sym=__gmon_start__             type=21 现值=0x00000000
+Traceback (most recent call last):
+  File "/Users/wubin/pi-cwd/sony/a7creverse/tools/ufpsyms.py", line 47, in <module>
+    print(f'{i:3d} 位置={off:#08x} sym={symname(info>>8):26s} type={info&0xff} 现值={e.rd(off):#010x}')
+TypeError: unsupported format string passed to NoneType.__format__

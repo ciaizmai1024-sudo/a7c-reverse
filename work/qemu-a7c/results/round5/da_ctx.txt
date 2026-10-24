@@ -1,0 +1,8 @@
+Taking exception 4 [Data Abort]
+...from EL1 to EL1
+...with ESR 0x25/0x9600003f
+...with DFSR 0x5 DFAR 0x0
+Trace 0: 0x7f14180e40c0 [00000000/ffff0010/0x2520000] 
+Trace 0: 0x7f14180e3880 [00000000/60443204/0x2520000] 
+Trace 0: 0x7f14180e3d00 [00000000/60444884/0x2520000] 
+Taking exception 4 [Data Abort]

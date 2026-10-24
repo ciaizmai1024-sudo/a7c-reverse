@@ -1,0 +1,1366 @@
+make: arm-sony-linux-gnueabi-dev-gcc: No such file or directory
+  CLEAN   .
+  CLEAN   arch/arm/kernel
+  CLEAN   kernel
+  CLEAN   usr
+  CLEAN   arch/arm/boot/compressed
+  CLEAN   arch/arm/boot
+  CLEAN   .tmp_versions
+  CLEAN   vmlinux System.map .tmp_kallsyms1.o .tmp_kallsyms1.S .tmp_kallsyms2.o .tmp_kallsyms2.S .tmp_vmlinux1 .tmp_vmlinux2 .tmp_System.map
+  CLEAN   scripts/basic
+  CLEAN   scripts/kconfig
+  CLEAN   scripts/mod
+  CLEAN   scripts
+  CLEAN   include/config include/generated arch/arm/include/generated
+  CLEAN   .config .version include/linux/version.h Module.symvers include/linux/snsc_nlver_repover.h
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/dumpconf.o
+scripts/kconfig/dumpconf.c:62:16: warning: no previous prototype for ‘push_prefix’ [-Wmissing-prototypes]
+   62 | struct prefix *push_prefix(struct prefix *prfx, const char *str)
+      |                ^~~~~~~~~~~
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/lex.zconf.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+In file included from scripts/kconfig/zconf.tab.c:2503:
+In function ‘dep_stack_insert’,
+    inlined from ‘sym_check_print_recursive’ at scripts/kconfig/symbol.c:977:3,
+    inlined from ‘sym_check_deps’ at scripts/kconfig/symbol.c:1148:3:
+scripts/kconfig/symbol.c:953:19: warning: storing the address of local variable ‘cv_stack’ in ‘check_top’ [-Wdangling-pointer=]
+  953 |         check_top = stack;
+      |         ~~~~~~~~~~^~~~~~~
+scripts/kconfig/symbol.c: In function ‘sym_check_deps’:
+scripts/kconfig/symbol.c:974:26: note: ‘cv_stack’ declared here
+  974 |         struct dep_stack cv_stack;
+      |                          ^~~~~~~~
+scripts/kconfig/symbol.c:944:4: note: ‘check_top’ declared here
+  944 | } *check_top;
+      |    ^~~~~~~~~
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+scripts/kconfig/conf --silentoldconfig Kconfig
+  CHK     include/linux/version.h
+  UPD     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  CHK     include/linux/snsc_nlver_repover.h
+  UPD     include/linux/snsc_nlver_repover.h
+  Generating include/generated/mach-types.h
+  CC      kernel/bounds.s
+  GEN     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  GEN     include/generated/asm-offsets.h
+  HOSTCC  scripts/kallsyms
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTLD  scripts/mod/modpost
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      init/do_mounts.o
+  CC      init/do_mounts_rd.o
+  CC      init/do_mounts_initrd.o
+  CC      init/initramfs.o
+  UPD     include/generated/compile.h
+  CC      init/calibrate.o
+  CC      init/version.o
+  LD      init/mounts.o
+  LD      init/built-in.o
+  HOSTCC  usr/gen_init_cpio
+usr/gen_init_cpio.c: In function ‘cpio_mkfile_line’:
+usr/gen_init_cpio.c:399:25: warning: ‘__builtin_strncpy’ output may be truncated copying 4096 bytes from a string of length 4096 [-Wstringop-truncation]
+  399 |                         strncpy(new_location, expanded, PATH_MAX);
+      |                         ^
+  GEN     usr/initramfs_data.cpio
+  AS      usr/initramfs_data.o
+  LD      usr/built-in.o
+  CC      arch/arm/vfp/vfpmodule.o
+  AS      arch/arm/vfp/entry.o
+  AS      arch/arm/vfp/vfphw.o
+  CC      arch/arm/vfp/vfpsingle.o
+  CC      arch/arm/vfp/vfpdouble.o
+  LD      arch/arm/vfp/vfp.o
+  LD      arch/arm/vfp/built-in.o
+  CC      arch/arm/kernel/elf.o
+  AS      arch/arm/kernel/entry-armv.o
+  AS      arch/arm/kernel/entry-common.o
+  CC      arch/arm/kernel/irq.o
+  CC      arch/arm/kernel/process.o
+  CC      arch/arm/kernel/ptrace.o
+  CC      arch/arm/kernel/return_address.o
+  CC      arch/arm/kernel/setup.o
+  CC      arch/arm/kernel/signal.o
+  CC      arch/arm/kernel/sys_arm.o
+  CC      arch/arm/kernel/stacktrace.o
+  CC      arch/arm/kernel/time.o
+  CC      arch/arm/kernel/traps.o
+  AS      arch/arm/kernel/bug.o
+  CC      arch/arm/kernel/armksyms.o
+  CC      arch/arm/kernel/module.o
+  AS      arch/arm/kernel/sleep.o
+  CC      arch/arm/kernel/sched_clock.o
+  CC      arch/arm/kernel/smp.o
+  CC      arch/arm/kernel/smp_tlb.o
+  CC      arch/arm/kernel/smp_scu.o
+  CC      arch/arm/kernel/pmu.o
+  CC      arch/arm/kernel/io.o
+arch/arm/kernel/smp_tlb.c:39:1: warning: ‘__on_each_cpu_mask_thread’ defined but not used [-Wunused-function]
+ __on_each_cpu_mask_thread(void (*func)(void *), void *info, int wait,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~
+  AS      arch/arm/kernel/debug.o
+  CC      arch/arm/kernel/exception.o
+  AS      arch/arm/kernel/head.o
+  CC      arch/arm/kernel/init_task.o
+  LDS     arch/arm/kernel/vmlinux.lds
+  LD      arch/arm/kernel/built-in.o
+  CC      arch/arm/mm/dma-mapping.o
+  CC      arch/arm/mm/extable.o
+  CC      arch/arm/mm/fault.o
+  CC      arch/arm/mm/init.o
+  CC      arch/arm/mm/iomap.o
+  CC      arch/arm/mm/fault-armv.o
+  CC      arch/arm/mm/flush.o
+  CC      arch/arm/mm/idmap.o
+  CC      arch/arm/mm/ioremap.o
+arch/arm/mm/dma-mapping.c: In function ‘__dma_alloc’:
+arch/arm/mm/dma-mapping.c:253:25: warning: array subscript is above array bounds [-Warray-bounds]
+     pte = consistent_pte[++idx];
+           ~~~~~~~~~~~~~~^~~~~~~
+  CC      arch/arm/mm/mmap.o
+  CC      arch/arm/mm/pgd.o
+arch/arm/mm/dma-mapping.c: In function ‘dma_free_coherent’:
+arch/arm/mm/dma-mapping.c:299:25: warning: array subscript is above array bounds [-Warray-bounds]
+    ptep = consistent_pte[++idx];
+           ~~~~~~~~~~~~~~^~~~~~~
+  CC      arch/arm/mm/mmu.o
+  CC      arch/arm/mm/vmregion.o
+  CC      arch/arm/mm/proc-syms.o
+  CC      arch/arm/mm/alignment.o
+  AS      arch/arm/mm/abort-ev7.o
+  AS      arch/arm/mm/pabort-v7.o
+  AS      arch/arm/mm/cache-v7.o
+  CC      arch/arm/mm/copypage-v6.o
+  CC      arch/arm/mm/simple_asid.o
+  AS      arch/arm/mm/tlb-v7.o
+  AS      arch/arm/mm/proc-v7.o
+  CC      arch/arm/mm/cache-l2x0.o
+  CC      arch/arm/mm/numa.o
+  LD      arch/arm/mm/built-in.o
+  CC      arch/arm/common/gic.o
+  CC      arch/arm/common/warm.o
+  CC      arch/arm/common/wbi_cmpr.o
+arch/arm/common/gic.c:75:35: warning: ‘irq_data_get_irq_chip_data’ is static but used in inline function ‘gic_irq’ which is not static
+  struct gic_chip_data *gic_data = irq_data_get_irq_chip_data(d);
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+arch/arm/common/gic.c:69:35: warning: ‘irq_data_get_irq_chip_data’ is static but used in inline function ‘gic_cpu_base’ which is not static
+  struct gic_chip_data *gic_data = irq_data_get_irq_chip_data(d);
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+arch/arm/common/gic.c:63:35: warning: ‘irq_data_get_irq_chip_data’ is static but used in inline function ‘gic_dist_base’ which is not static
+  struct gic_chip_data *gic_data = irq_data_get_irq_chip_data(d);
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  LD      arch/arm/common/built-in.o
+  AS      arch/arm/mach-cxd900x0/boot.o
+  CC      arch/arm/mach-cxd900x0/adrs_conv.o
+  CC      arch/arm/mach-cxd900x0/mmap.o
+  CC      arch/arm/mach-cxd900x0/core.o
+  CC      arch/arm/mach-cxd900x0/clock.o
+  CC      arch/arm/mach-cxd900x0/cpuid.o
+  AS      arch/arm/mach-cxd900x0/uart.o
+  CC      arch/arm/mach-cxd900x0/time.o
+  AS      arch/arm/mach-cxd900x0/timer.o
+  CC      arch/arm/mach-cxd900x0/gic.o
+In file included from arch/arm/mach-cxd900x0/include/mach/gic_export.h:24:0,
+                 from arch/arm/mach-cxd900x0/core.c:52:
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:76:21: warning: inline function ‘gic_irq’ declared but never defined
+ inline unsigned int gic_irq(struct irq_data *d);
+                     ^~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:75:14: warning: inline function ‘gic_cpu_base’ declared but never defined
+ inline void *gic_cpu_base(struct irq_data *d);
+              ^~~~~~~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:74:14: warning: inline function ‘gic_dist_base’ declared but never defined
+ inline void *gic_dist_base(struct irq_data *d);
+              ^~~~~~~~~~~~~
+  CC      arch/arm/mach-cxd900x0/cfg.o
+  CC      arch/arm/mach-cxd900x0/wdt.o
+  CC      arch/arm/mach-cxd900x0/params.o
+In file included from arch/arm/mach-cxd900x0/include/mach/gic_export.h:24:0,
+                 from arch/arm/mach-cxd900x0/gic.c:50:
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:76:21: warning: inline function ‘gic_irq’ declared but never defined
+ inline unsigned int gic_irq(struct irq_data *d);
+                     ^~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:75:14: warning: inline function ‘gic_cpu_base’ declared but never defined
+ inline void *gic_cpu_base(struct irq_data *d);
+              ^~~~~~~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:74:14: warning: inline function ‘gic_dist_base’ declared but never defined
+ inline void *gic_dist_base(struct irq_data *d);
+              ^~~~~~~~~~~~~
+  CC      arch/arm/mach-cxd900x0/adc.o
+  CC      arch/arm/mach-cxd900x0/hotplug.o
+  CC      arch/arm/mach-cxd900x0/platsmp.o
+  CC      arch/arm/mach-cxd900x0/udif/platform.o
+  CC      arch/arm/mach-cxd900x0/cxd900x0.o
+  AS      arch/arm/mach-cxd900x0/pl310.o
+In file included from arch/arm/mach-cxd900x0/platsmp.c:25:0:
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:76:21: warning: inline function ‘gic_irq’ declared but never defined
+ inline unsigned int gic_irq(struct irq_data *d);
+                     ^~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:75:14: warning: inline function ‘gic_cpu_base’ declared but never defined
+ inline void *gic_cpu_base(struct irq_data *d);
+              ^~~~~~~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:74:14: warning: inline function ‘gic_dist_base’ declared but never defined
+ inline void *gic_dist_base(struct irq_data *d);
+              ^~~~~~~~~~~~~
+  CC      arch/arm/mach-cxd900x0/localtimer.o
+  CC      arch/arm/mach-cxd900x0/oom_kill.o
+  CC      arch/arm/mach-cxd900x0/tmonitor.o
+In file included from arch/arm/mach-cxd900x0/include/mach/gic_export.h:24:0,
+                 from arch/arm/mach-cxd900x0/include/mach/uart.h:48,
+                 from arch/arm/mach-cxd900x0/cxd900x0.c:38:
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:76:21: warning: inline function ‘gic_irq’ declared but never defined
+ inline unsigned int gic_irq(struct irq_data *d);
+                     ^~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:75:14: warning: inline function ‘gic_cpu_base’ declared but never defined
+ inline void *gic_cpu_base(struct irq_data *d);
+              ^~~~~~~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:74:14: warning: inline function ‘gic_dist_base’ declared but never defined
+ inline void *gic_dist_base(struct irq_data *d);
+              ^~~~~~~~~~~~~
+  CC      arch/arm/mach-cxd900x0/error.o
+  CC      arch/arm/mach-cxd900x0/subsystem.o
+  CC      arch/arm/mach-cxd900x0/udif/devno.o
+  CC      arch/arm/mach-cxd900x0/pm.o
+  AS      arch/arm/mach-cxd900x0/sleep.o
+  CC      arch/arm/mach-cxd900x0/udif/clock.o
+  AS      arch/arm/mach-cxd900x0/resume.o
+  CC      arch/arm/mach-cxd900x0/hwtimer.o
+  CC      arch/arm/mach-cxd900x0/bam.o
+  LD      arch/arm/mach-cxd900x0/udif/built-in.o
+  CC      arch/arm/mach-cxd900x0/pmon.o
+  CC      arch/arm/mach-cxd900x0/vtp.o
+  CC      arch/arm/mach-cxd900x0/cmpr.o
+  CC      arch/arm/mach-cxd900x0/warm.o
+  CC      arch/arm/mach-cxd900x0/rmon.o
+  LD      arch/arm/mach-cxd900x0/built-in.o
+  CC      kernel/sched.o
+  CC      kernel/fork.o
+  CC      kernel/exec_domain.o
+  CC      kernel/panic.o
+  CC      kernel/printk.o
+  CC      kernel/cpu.o
+  CC      kernel/exit.o
+  CC      kernel/itimer.o
+kernel/sched.c: In function ‘pick_next_task’:
+kernel/sched.c:4749:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+kernel/sched.c:8719:26: warning: ‘sysctl_timer_migration’ defined but not used [-Wunused-const-variable=]
+ const_debug unsigned int sysctl_timer_migration = 1;
+                          ^~~~~~~~~~~~~~~~~~~~~~
+kernel/sched.c:848:26: warning: ‘sysctl_sched_nr_migrate’ defined but not used [-Wunused-const-variable=]
+ const_debug unsigned int sysctl_sched_nr_migrate = 8;
+                          ^~~~~~~~~~~~~~~~~~~~~~~
+  TIMEC   kernel/timeconst.h
+  CC      kernel/softirq.o
+  CC      kernel/resource.o
+  CC      kernel/sysctl.o
+In file included from include/linux/spinlock.h:51:0,
+                 from include/linux/seqlock.h:30,
+                 from include/linux/time.h:9,
+                 from include/linux/stat.h:61,
+                 from include/linux/module.h:11,
+                 from kernel/softirq.c:14:
+include/linux/preempt.h:28:26: warning: ‘current_thread_info’ is static but used in inline function ‘_irq_exit’ which is not static
+ #define preempt_count() (current_thread_info()->preempt_count)
+                          ^
+include/linux/preempt.h:22:38: note: in expansion of macro ‘preempt_count’
+ # define sub_preempt_count(val) do { preempt_count() -= (val); } while (0)
+                                      ^~~~~~~~~~~~~
+include/linux/preempt.h:26:29: note: in expansion of macro ‘sub_preempt_count’
+ #define dec_preempt_count() sub_preempt_count(1)
+                             ^~~~~~~~~~~~~~~~~
+include/linux/preempt.h:43:2: note: in expansion of macro ‘dec_preempt_count’
+  dec_preempt_count(); \
+  ^~~~~~~~~~~~~~~~~
+kernel/softirq.c:704:2: note: in expansion of macro ‘__preempt_enable_no_resched’
+  __preempt_enable_no_resched();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+kernel/softirq.c:696:3: warning: ‘invoke_softirq’ is static but used in inline function ‘_irq_exit’ which is not static
+   invoke_softirq();
+   ^~~~~~~~~~~~~~
+In file included from /home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardirq.h:21:0,
+                 from include/linux/hardirq.h:8,
+                 from include/linux/interrupt.h:13,
+                 from include/linux/kernel_stat.h:8,
+                 from kernel/softirq.c:15:
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/smp.h:23:33: warning: ‘current_thread_info’ is static but used in inline function ‘_irq_exit’ which is not static
+ #define raw_smp_processor_id() (current_thread_info()->cpu)
+                                 ^
+include/linux/irq_cpustat.h:21:43: note: in definition of macro ‘__IRQ_STAT’
+ #define __IRQ_STAT(cpu, member) (irq_stat[cpu].member)
+                                           ^~~
+include/linux/smp.h:170:29: note: in expansion of macro ‘raw_smp_processor_id’
+ # define smp_processor_id() raw_smp_processor_id()
+                             ^~~~~~~~~~~~~~~~~~~~
+include/linux/irq_cpustat.h:26:13: note: in expansion of macro ‘smp_processor_id’
+  __IRQ_STAT(smp_processor_id(), __softirq_pending)
+             ^~~~~~~~~~~~~~~~
+kernel/softirq.c:695:48: note: in expansion of macro ‘local_softirq_pending’
+  if (call_invoke_softirq && !in_interrupt() && local_softirq_pending())
+                                                ^~~~~~~~~~~~~~~~~~~~~
+In file included from include/linux/spinlock.h:51:0,
+                 from include/linux/seqlock.h:30,
+                 from include/linux/time.h:9,
+                 from include/linux/stat.h:61,
+                 from include/linux/module.h:11,
+                 from kernel/softirq.c:14:
+include/linux/preempt.h:28:26: warning: ‘current_thread_info’ is static but used in inline function ‘_irq_exit’ which is not static
+ #define preempt_count() (current_thread_info()->preempt_count)
+                          ^
+include/linux/hardirq.h:81:22: note: in expansion of macro ‘preempt_count’
+ #define irq_count() (preempt_count() & (HARDIRQ_MASK | SOFTIRQ_MASK \
+                      ^~~~~~~~~~~~~
+include/linux/hardirq.h:100:26: note: in expansion of macro ‘irq_count’
+ #define in_interrupt()  (irq_count())
+                          ^~~~~~~~~
+kernel/softirq.c:695:30: note: in expansion of macro ‘in_interrupt’
+  if (call_invoke_softirq && !in_interrupt() && local_softirq_pending())
+                              ^~~~~~~~~~~~
+include/linux/preempt.h:28:26: warning: ‘current_thread_info’ is static but used in inline function ‘_irq_exit’ which is not static
+ #define preempt_count() (current_thread_info()->preempt_count)
+                          ^
+include/linux/preempt.h:22:38: note: in expansion of macro ‘preempt_count’
+ # define sub_preempt_count(val) do { preempt_count() -= (val); } while (0)
+                                      ^~~~~~~~~~~~~
+kernel/softirq.c:694:2: note: in expansion of macro ‘sub_preempt_count’
+  sub_preempt_count(IRQ_EXIT_OFFSET);
+  ^~~~~~~~~~~~~~~~~
+In file included from include/linux/wait.h:27:0,
+                 from include/linux/mmzone.h:10,
+                 from include/linux/gfp.h:5,
+                 from include/linux/kmod.h:23,
+                 from include/linux/module.h:14,
+                 from kernel/softirq.c:14:
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/current.h:13:18: warning: ‘get_current’ is static but used in inline function ‘_irq_exit’ which is not static
+ #define current (get_current())
+                  ^
+kernel/softirq.c:692:23: note: in expansion of macro ‘current’
+  account_system_vtime(current);
+                       ^~~~~~~
+kernel/softirq.c:692:2: warning: ‘account_system_vtime’ is static but used in inline function ‘_irq_exit’ which is not static
+  account_system_vtime(current);
+  ^~~~~~~~~~~~~~~~~~~~
+  CC      kernel/sysctl_binary.o
+  CC      kernel/capability.o
+  CC      kernel/ptrace.o
+  CC      kernel/timer.o
+  CC      kernel/user.o
+  CC      kernel/signal.o
+  CC      kernel/sys.o
+  CC      kernel/kmod.o
+  CC      kernel/workqueue.o
+  CC      kernel/pid.o
+  CC      kernel/rcupdate.o
+  CC      kernel/extable.o
+  CC      kernel/params.o
+  CC      kernel/posix-timers.o
+  CC      kernel/kthread.o
+  CC      kernel/wait.o
+  CC      kernel/kfifo.o
+  CC      kernel/sys_ni.o
+  CC      kernel/posix-cpu-timers.o
+  CC      kernel/hrtimer.o
+  CC      kernel/rwsem.o
+  CC      kernel/nsproxy.o
+  CC      kernel/srcu.o
+  CC      kernel/semaphore.o
+  CC      kernel/notifier.o
+  CC      kernel/ksysfs.o
+  CC      kernel/pm_qos_params.o
+  CC      kernel/sched_clock.o
+  CC      kernel/cred.o
+kernel/pm_qos_params.c: In function ‘pm_qos_get_value’:
+kernel/pm_qos_params.c:146:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+  CC      kernel/async.o
+  CC      kernel/range.o
+  CC      kernel/wait-simple.o
+  CC      kernel/jump_label.o
+  CC      kernel/snsc_raw_clock.o
+  CC      kernel/rwsem_compat.o
+  CC      kernel/rcu_sony.o
+  CC      kernel/groups.o
+  CC      kernel/freezer.o
+  CC      kernel/irq/irqdesc.o
+  CC      kernel/power/main.o
+  CC      kernel/power/pm.o
+  CC      kernel/time/timekeeping.o
+  CC      kernel/time/ntp.o
+  CC      kernel/time/clocksource.o
+  CC      kernel/irq/handle.o
+  CC      kernel/power/console.o
+  CC      kernel/time/jiffies.o
+  CC      kernel/time/timer_list.o
+  CC      kernel/irq/manage.o
+  CC      kernel/power/process.o
+  CC      kernel/time/timecompare.o
+  CC      kernel/irq/spurious.o
+  CC      kernel/irq/resend.o
+  CC      kernel/irq/chip.o
+  CC      kernel/time/timeconv.o
+  CC      kernel/time/posix-clock.o
+  CC      kernel/power/suspend.o
+  CC      kernel/irq/dummychip.o
+  CC      kernel/irq/devres.o
+  CC      kernel/power/ssboot/main.o
+kernel/power/suspend.c: In function ‘suspend_prepare’:
+kernel/power/suspend.c:219:2: warning: label ‘Thaw’ defined but not used [-Wunused-label]
+  Thaw:
+  ^~~~
+  CC      kernel/power/ssboot/memmap.o
+  CC      kernel/power/ssboot/image.o
+  CC      kernel/irq/autoprobe.o
+  CC      kernel/time/clockevents.o
+  CC      kernel/power/poweroff.o
+  CC      kernel/power/ssboot/pgbmp.o
+  CC      kernel/trace/trace_clock.o
+  CC      kernel/irq/proc.o
+  CC      kernel/power/ssboot/exreg.o
+  CC      kernel/time/tick-common.o
+  CC      kernel/trace/trace-clock-32-to-64.o
+  CC      kernel/trace/trace-clock.o
+  CC      kernel/trace/trace_kmalloc.o
+  CC      kernel/time/tick-broadcast.o
+  CC      kernel/power/ssboot/proc.o
+  CC      kernel/irq/pm.o
+  CC      kernel/power/ssboot/optimizer/basic.o
+  CC      kernel/futex.o
+  LD      kernel/irq/built-in.o
+  CC      kernel/rtmutex.o
+  LD      kernel/trace/built-in.o
+  CC      kernel/rt.o
+  LD      kernel/time/built-in.o
+  CC      kernel/smp.o
+  CC      kernel/spinlock.o
+  LD      kernel/power/ssboot/optimizer/built-in.o
+  LD      kernel/power/ssboot/built-in.o
+  CC      kernel/uid16.o
+  LD      kernel/power/built-in.o
+  CC      kernel/module.o
+  CC      kernel/kallsyms.o
+  CC      kernel/cgroup.o
+  CC      kernel/res_counter.o
+  CC      kernel/stop_machine.o
+  CC      kernel/watchdog.o
+  CC      kernel/utsname_sysctl.o
+  CC      kernel/elfcore.o
+  CC      kernel/sched_cpupri.o
+  CC      kernel/snsc_workqueue.o
+  CC      kernel/console-read.o
+  CC      kernel/exception.o
+  CC      kernel/klog.o
+  CC      kernel/time.o
+  LD      kernel/built-in.o
+  CC      mm/filemap.o
+  CC      mm/mempool.o
+  CC      mm/oom_kill.o
+  CC      mm/fadvise.o
+  CC      mm/maccess.o
+  CC      mm/page_alloc.o
+  CC      mm/page-writeback.o
+  CC      mm/readahead.o
+  CC      mm/swap.o
+  CC      mm/truncate.o
+  CC      mm/vmscan.o
+  CC      mm/shmem.o
+  CC      mm/prio_tree.o
+  CC      mm/util.o
+  CC      mm/mmzone.o
+  CC      mm/vmstat.o
+  CC      mm/backing-dev.o
+  CC      mm/page_isolation.o
+mm/backing-dev.c:208:0: warning: "__ATTR_RW" redefined
+ #define __ATTR_RW(attr) __ATTR(attr, 0644, attr##_show, attr##_store)
+ 
+In file included from include/linux/kobject.h:21:0,
+                 from include/linux/module.h:17,
+                 from mm/backing-dev.c:11:
+include/linux/sysfs.h:83:0: note: this is the location of the previous definition
+ #define __ATTR_RW(_name) __ATTR(_name, (S_IWUSR | S_IRUGO),     \
+ 
+  CC      mm/mm_init.o
+  CC      mm/mmu_context.o
+  CC      mm/percpu.o
+  CC      mm/fremap.o
+  CC      mm/highmem.o
+  CC      mm/madvise.o
+  CC      mm/memory.o
+  CC      mm/mincore.o
+  CC      mm/mlock.o
+  CC      mm/mmap.o
+  CC      mm/mprotect.o
+  CC      mm/mremap.o
+  CC      mm/msync.o
+  CC      mm/rmap.o
+  CC      mm/vmalloc.o
+  CC      mm/pagewalk.o
+In file included from include/linux/stddef.h:4:0,
+                 from include/linux/posix_types.h:4,
+                 from include/linux/types.h:17,
+                 from include/linux/thread_info.h:11,
+                 from include/linux/preempt.h:10,
+                 from include/linux/spinlock.h:51,
+                 from include/linux/mmzone.h:8,
+                 from include/linux/gfp.h:5,
+                 from include/linux/mm.h:9,
+                 from mm/rmap.c:47:
+mm/rmap.c:533:15: warning: ‘is_vm_hugetlb_page’ is static but used in inline function ‘vma_address’ which is not static
+  if (unlikely(is_vm_hugetlb_page(vma)))
+               ^
+include/linux/compiler.h:147:42: note: in definition of macro ‘unlikely’
+ # define unlikely(x) __builtin_expect(!!(x), 0)
+                                          ^
+  CC      mm/pgtable-generic.o
+  CC      mm/init-mm.o
+  CC      mm/bootmem.o
+  CC      mm/memblock.o
+  CC      mm/page_io.o
+mm/bootmem.c: In function ‘mark_bootmem’:
+mm/bootmem.c:413:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+  CC      mm/swap_state.o
+  CC      mm/swapfile.o
+  CC      mm/thrash.o
+  CC      mm/dmapool.o
+  CC      mm/mempolicy.o
+  CC      mm/sparse.o
+  CC      mm/slab.o
+  CC      mm/memory_hotplug.o
+mm/mempolicy.c: In function ‘slab_node’:
+mm/mempolicy.c:1757:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+  CC      mm/migrate.o
+  CC      mm/memcontrol.o
+  CC      mm/page_cgroup.o
+  CC      mm/nodeorder.o
+mm/memcontrol.c: In function ‘mem_cgroup_read’:
+mm/memcontrol.c:4077:9: warning: ‘val’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  return val;
+         ^~~
+mm/memcontrol.c: In function ‘mem_cgroup_usage_unregister_event’:
+mm/memcontrol.c:4750:32: warning: ‘thresholds’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  thresholds->spare = thresholds->primary;
+                      ~~~~~~~~~~^~~~~~~~~
+mm/memcontrol.c: In function ‘mem_cgroup_usage_register_event’:
+mm/memcontrol.c:4667:32: warning: ‘thresholds’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  thresholds->spare = thresholds->primary;
+                      ~~~~~~~~~~^~~~~~~~~
+  LD      mm/built-in.o
+  CC      fs/open.o
+  CC      fs/read_write.o
+  CC      fs/file_table.o
+  CC      fs/super.o
+  CC      fs/char_dev.o
+  CC      fs/stat.o
+  CC      fs/exec.o
+  CC      fs/pipe.o
+  CC      fs/namei.o
+  CC      fs/fcntl.o
+  CC      fs/ioctl.o
+  CC      fs/readdir.o
+  CC      fs/select.o
+  CC      fs/fifo.o
+  CC      fs/dcache.o
+  CC      fs/inode.o
+  CC      fs/attr.o
+  CC      fs/bad_inode.o
+  CC      fs/file.o
+  CC      fs/filesystems.o
+  CC      fs/namespace.o
+  CC      fs/seq_file.o
+  CC      fs/libfs.o
+  CC      fs/fs-writeback.o
+  CC      fs/pnode.o
+  CC      fs/drop_caches.o
+  CC      fs/splice.o
+  CC      fs/sync.o
+  CC      fs/utimes.o
+  CC      fs/stack.o
+  CC      fs/fs_struct.o
+  CC      fs/statfs.o
+  CC      fs/core_raw.o
+  CC      fs/core_lz77.o
+  CC      fs/buffer.o
+  CC      fs/bio.o
+  CC      fs/block_dev.o
+  CC      fs/direct-io.o
+  CC      fs/mpage.o
+  CC      fs/ioprio.o
+  LD      fs/configfs/built-in.o
+  CC      fs/cramfs/inode.o
+  CC      fs/devpts/inode.o
+  CC      fs/ext2/balloc.o
+  CC      fs/fat/cache.o
+  CC      fs/ext2/dir.o
+  LD      fs/devpts/devpts.o
+  LD      fs/devpts/built-in.o
+  CC      fs/fuse/dev.o
+  CC      fs/cramfs/uncompress.o
+  CC      fs/fat/dir.o
+  LD      fs/cramfs/cramfs.o
+  LD      fs/cramfs/built-in.o
+  CC      fs/lockd/clntlock.o
+  CC      fs/lockd/clntproc.o
+  CC      fs/ext2/file.o
+  CC      fs/ext2/ialloc.o
+  CC      fs/nfs/client.o
+  CC      fs/nfs/dir.o
+  CC      fs/ext2/inode.o
+  CC      fs/lockd/clntxdr.o
+  CC      fs/fuse/dir.o
+  CC      fs/fat/fatent.o
+  CC      fs/fat/file.o
+  CC      fs/lockd/host.o
+  CC      fs/ext2/ioctl.o
+  CC      fs/nfs/file.o
+  CC      fs/fat/inode.o
+  CC      fs/lockd/svc.o
+  CC      fs/fuse/file.o
+  CC      fs/ext2/namei.o
+  CC      fs/lockd/svclock.o
+  CC      fs/ext2/super.o
+In file included from include/linux/mm.h:12:0,
+                 from fs/fuse/fuse_i.h:18,
+                 from fs/fuse/file.c:9:
+fs/fuse/file.c: In function ‘fuse_file_poll’:
+include/linux/rbtree.h:171:26: warning: ‘parent’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  node->rb_parent_color = (unsigned long )parent;
+                          ^~~~~~~~~~~~~~~~~~~~~~
+fs/fuse/file.c:2052:27: note: ‘parent’ was declared here
+   struct rb_node **link, *parent;
+                           ^~~~~~
+  CC      fs/ext2/symlink.o
+  CC      fs/fuse/inode.o
+  CC      fs/nfs/getroot.o
+  CC      fs/lockd/svcshare.o
+  CC      fs/fat/misc.o
+  CC      fs/nfs/inode.o
+  LD      fs/ext2/ext2.o
+  CC      fs/nfs/super.o
+  LD      fs/ext2/built-in.o
+  CC      fs/fuse/control.o
+  CC      fs/lockd/svcproc.o
+  CC      fs/fat/nfs.o
+  CC      fs/lockd/svcsubs.o
+  CC      fs/fat/namei_vfat.o
+  LD      fs/fuse/fuse.o
+  LD      fs/fuse/built-in.o
+  CC      fs/nfs/nfs2xdr.o
+  CC      fs/lockd/mon.o
+  CC      fs/lockd/xdr.o
+  CC      fs/nfs/direct.o
+  LD      fs/nfs_common/built-in.o
+  CC      fs/nfs/pagelist.o
+  CC      fs/nls/nls_base.o
+  CC      fs/lockd/grace.o
+  CC      fs/lockd/clnt4xdr.o
+  LD      fs/fat/fat.o
+  LD      fs/fat/vfat.o
+  LD      fs/fat/built-in.o
+  CC      fs/nfs/proc.o
+  CC      fs/nfs/read.o
+  CC      fs/nls/nls_cp437.o
+  CC      fs/nls/nls_ascii.o
+  CC      fs/notify/fsnotify.o
+  LD      fs/nls/built-in.o
+  CC      fs/notify/notification.o
+  CC      fs/lockd/xdr4.o
+  CC      fs/nfs/symlink.o
+  CC      fs/notify/group.o
+  CC      fs/nfs/unlink.o
+  CC      fs/partitions/check.o
+  CC      fs/notify/inode_mark.o
+  CC      fs/partitions/sdm.o
+  CC      fs/partitions/msdos.o
+  CC      fs/lockd/svc4proc.o
+  CC      fs/partitions/efi.o
+  CC      fs/notify/mark.o
+  CC      fs/nfs/write.o
+  CC      fs/nfs/namespace.o
+  CC      fs/nfs/mount_clnt.o
+  CC      fs/notify/vfsmount_mark.o
+  LD      fs/lockd/lockd.o
+  LD      fs/lockd/built-in.o
+  LD      fs/partitions/built-in.o
+  CC      fs/proc/mmu.o
+  LD      fs/quota/built-in.o
+  CC      fs/ramfs/inode.o
+  CC      fs/notify/dnotify/dnotify.o
+  CC      fs/nfs/dns_resolve.o
+  CC      fs/ramfs/file-mmu.o
+  CC      fs/proc/task_mmu.o
+  CC      fs/sysfs/inode.o
+  LD      fs/ramfs/ramfs.o
+  LD      fs/ramfs/built-in.o
+  CC      fs/sysfs/file.o
+  LD      fs/notify/dnotify/built-in.o
+  LD      fs/notify/fanotify/built-in.o
+  CC      fs/notify/inotify/inotify_fsnotify.o
+  CC      fs/notify/inotify/inotify_user.o
+  CC      fs/sysfs/dir.o
+  CC      fs/sysfs/symlink.o
+  CC      fs/nfs/cache_lib.o
+  CC      fs/proc/inode.o
+  CC      fs/proc/root.o
+  CC      fs/nfs/nfsroot.o
+  CC      fs/nfs/nfs3proc.o
+  LD      fs/notify/inotify/built-in.o
+  LD      fs/notify/built-in.o
+  CC      fs/nfs/nfs3xdr.o
+  CC      fs/proc/base.o
+  CC      fs/proc/generic.o
+  CC      fs/sysfs/mount.o
+  CC      fs/sysfs/bin.o
+fs/proc/base.c:2748:37: warning: ‘proc_child_stack_size_operations’ defined but not used [-Wunused-const-variable=]
+ static const struct file_operations proc_child_stack_size_operations;
+                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC      fs/sysfs/group.o
+  CC      fs/proc/array.o
+  CC      fs/nfs/sysctl.o
+  LD      fs/sysfs/built-in.o
+  CC      fs/proc/proc_tty.o
+  CC      fs/eventpoll.o
+  CC      fs/proc/cmdline.o
+  CC      fs/proc/consoles.o
+  LD      fs/nfs/nfs.o
+  CC      fs/proc/cpuinfo.o
+  LD      fs/nfs/built-in.o
+  CC      fs/anon_inodes.o
+  CC      fs/proc/devices.o
+  CC      fs/proc/interrupts.o
+  CC      fs/proc/loadavg.o
+  CC      fs/proc/meminfo.o
+  CC      fs/signalfd.o
+  CC      fs/proc/stat.o
+  CC      fs/timerfd.o
+  CC      fs/eventfd.o
+  CC      fs/proc/uptime.o
+  CC      fs/proc/version.o
+  CC      fs/locks.o
+  CC      fs/binfmt_script.o
+  CC      fs/binfmt_elf.o
+  CC      fs/proc/softirqs.o
+  CC      fs/proc/namespaces.o
+  CC      fs/proc/proc_sysctl.o
+  CC      fs/proc/proc_net.o
+  CC      fs/proc/kmsg.o
+  CC      fs/proc/page.o
+  CC      fs/proc/snsc_kstack.o
+  CC      fs/proc/snsc_nlver.o
+  CC      fs/proc/nodeorder.o
+  LD      fs/proc/proc.o
+  LD      fs/proc/built-in.o
+  LD      fs/built-in.o
+  CC      ipc/util.o
+  CC      ipc/msgutil.o
+  CC      ipc/msg.o
+  CC      ipc/sem.o
+  CC      ipc/shm.o
+  CC      ipc/ipcns_notifier.o
+  CC      ipc/syscall.o
+  CC      ipc/ipc_sysctl.o
+  LD      ipc/built-in.o
+  CC      security/commoncap.o
+  CC      security/min_addr.o
+  LD      security/built-in.o
+  CC      crypto/api.o
+  CC      crypto/cipher.o
+  CC      crypto/compress.o
+  CC      crypto/algapi.o
+  CC      crypto/scatterwalk.o
+  CC      crypto/proc.o
+  CC      crypto/ablkcipher.o
+  CC      crypto/blkcipher.o
+  CC      crypto/ahash.o
+  CC      crypto/shash.o
+  CC      crypto/algboss.o
+  CC      crypto/testmgr.o
+  CC      crypto/crypto_wq.o
+  CC      crypto/aead.o
+  CC      crypto/chainiv.o
+  CC      crypto/eseqiv.o
+  CC      crypto/pcompress.o
+  CC      crypto/hmac.o
+  CC      crypto/md5.o
+  CC      crypto/sha1_generic.o
+  CC      crypto/ecb.o
+  CC      crypto/cbc.o
+  CC      crypto/des_generic.o
+  CC      crypto/aes_generic.o
+  CC      crypto/arc4.o
+  CC      crypto/deflate.o
+  CC      crypto/michael_mic.o
+  CC      crypto/authenc.o
+  CC      crypto/authencesn.o
+  CC      crypto/rng.o
+  CC      crypto/krng.o
+  LD      crypto/crypto.o
+  LD      crypto/crypto_algapi.o
+  LD      crypto/crypto_blkcipher.o
+  LD      crypto/crypto_hash.o
+  LD      crypto/cryptomgr.o
+  LD      crypto/built-in.o
+  CC      block/elevator.o
+  CC      block/blk-core.o
+  CC      block/blk-tag.o
+  CC      block/blk-sysfs.o
+  CC      block/blk-flush.o
+  CC      block/blk-settings.o
+  CC      block/blk-ioc.o
+  CC      block/blk-map.o
+  CC      block/blk-exec.o
+  CC      block/blk-merge.o
+  CC      block/blk-softirq.o
+  CC      block/blk-timeout.o
+  CC      block/blk-iopoll.o
+  CC      block/blk-lib.o
+  CC      block/ioctl.o
+  CC      block/genhd.o
+  CC      block/scsi_ioctl.o
+  CC      block/noop-iosched.o
+  LD      block/built-in.o
+  LD      tools/ltt/built-in.o
+  CC      drivers/base/core.o
+  LD      drivers/auxdisplay/built-in.o
+  CC      drivers/block/brd.o
+  LD      drivers/cdrom/built-in.o
+  CC      drivers/amba/bus.o
+  CC      drivers/char/mem.o
+  CC      drivers/char/random.o
+  CC      drivers/clk/clkdev.o
+  LD      drivers/clk/built-in.o
+  LD      drivers/clocksource/built-in.o
+  LD      drivers/crypto/built-in.o
+  LD      drivers/firewire/built-in.o
+  LD      drivers/firmware/built-in.o
+  CC      drivers/gpio/gpio.o
+  LD      drivers/amba/built-in.o
+  CC      drivers/char/misc.o
+  LD      drivers/gpu/drm/i2c/built-in.o
+  LD      drivers/gpu/drm/built-in.o
+  LD      drivers/gpu/stub/built-in.o
+  LD      drivers/gpu/vga/built-in.o
+  LD      drivers/gpu/built-in.o
+  CC      drivers/block/loop.o
+  CC      drivers/char/snsc_null_console.o
+  CC      drivers/base/sys.o
+  LD      drivers/i2c/algos/built-in.o
+  LD      drivers/i2c/busses/built-in.o
+  LD      drivers/i2c/muxes/built-in.o
+  LD      drivers/i2c/built-in.o
+  LD      drivers/idle/built-in.o
+  CC      drivers/block/compswap/compswap.o
+  CC      drivers/base/bus.o
+  LD      drivers/char/built-in.o
+  LD      drivers/ieee802154/built-in.o
+  CC      drivers/input/input.o
+  LD      drivers/gpio/built-in.o
+  CC      drivers/input/serio/serio.o
+  CC      drivers/base/dd.o
+  CC      drivers/input/input-compat.o
+  CC      drivers/base/syscore.o
+  CC      drivers/input/serio/serport.o
+  CC      drivers/block/compswap/compswap_lzo.o
+  CC      drivers/input/serio/libps2.o
+  LD      drivers/leds/built-in.o
+  LD      drivers/lguest/built-in.o
+  LD      drivers/macintosh/built-in.o
+  LD      drivers/media/common/tuners/built-in.o
+  LD      drivers/media/common/built-in.o
+  LD      drivers/media/rc/keymaps/built-in.o
+  LD      drivers/media/rc/built-in.o
+  LD      drivers/media/video/davinci/built-in.o
+  LD      drivers/media/video/built-in.o
+  LD      drivers/media/built-in.o
+  CC      drivers/base/driver.o
+  CC      drivers/base/class.o
+  LD      drivers/block/compswap/built-in.o
+  LD      drivers/block/built-in.o
+  LD      drivers/mfd/built-in.o
+  LD      drivers/misc/carma/built-in.o
+  LD      drivers/misc/cb710/built-in.o
+  LD      drivers/misc/eeprom/built-in.o
+  LD      drivers/misc/lis3lv02d/built-in.o
+  LD      drivers/misc/ti-st/built-in.o
+  LD      drivers/misc/built-in.o
+  LD      drivers/mmc/built-in.o
+  LD      drivers/mmc/card/built-in.o
+  LD      drivers/mmc/core/built-in.o
+  CC      drivers/input/input-mt.o
+  LD      drivers/mmc/host/built-in.o
+  CC      drivers/net/mii.o
+  LD      drivers/input/serio/built-in.o
+  LD      drivers/nfc/built-in.o
+  LD      drivers/platform/built-in.o
+  CC      drivers/base/platform.o
+  CC      drivers/base/cpu.o
+  CC      drivers/input/ff-core.o
+  CC      drivers/base/firmware.o
+  CC      drivers/base/init.o
+  CC      drivers/input/mousedev.o
+  CC      drivers/rtc/rtc-lib.o
+  CC      drivers/rtc/hctosys.o
+  LD      drivers/net/arm/built-in.o
+  CC      drivers/net/phy/phy.o
+  CC      drivers/input/evdev.o
+  CC      drivers/input/keyboard/atkbd.o
+  CC      drivers/base/map.o
+  CC      drivers/rtc/class.o
+  CC      drivers/base/devres.o
+  CC      drivers/rtc/interface.o
+  CC      drivers/rtc/rtc-dev.o
+  CC      drivers/net/phy/phy_device.o
+  CC      drivers/net/phy/mdio_bus.o
+  CC      drivers/base/attribute_container.o
+  CC      drivers/base/transport_class.o
+  LD      drivers/input/keyboard/built-in.o
+  CC      drivers/input/misc/uinput.o
+  CC      drivers/rtc/rtc-proc.o
+  CC      drivers/rtc/rtc-sysfs.o
+  CC      drivers/net/phy/smsc.o
+  CC      drivers/base/power/sysfs.o
+  LD      drivers/scsi/arm/built-in.o
+  LD      drivers/scsi/built-in.o
+  CC      drivers/base/power/generic_ops.o
+  CC      drivers/base/power/main.o
+  CC      drivers/base/power/wakeup.o
+  LD      drivers/rtc/rtc-core.o
+  LD      drivers/rtc/built-in.o
+  CC      drivers/tty/tty_io.o
+  CC      drivers/udif/proc.o
+  LD      drivers/net/phy/libphy.o
+  LD      drivers/net/phy/built-in.o
+  CC      drivers/net/Space.o
+  LD      drivers/input/misc/built-in.o
+  LD      drivers/input/input-core.o
+  LD      drivers/input/built-in.o
+  CC      drivers/uio/uio.o
+  CC      drivers/udif/io.o
+  CC      drivers/net/loopback.o
+  CC      drivers/udif/irq.o
+  CC      drivers/udif/cdev.o
+  CC      drivers/base/power/clock_ops.o
+  CC      drivers/net/smsc911x.o
+  CC      drivers/uio/uio_pdrv.o
+  CC      drivers/udif/bdev.o
+  CC      drivers/udif/malloc.o
+  LD      drivers/base/power/built-in.o
+  CC      drivers/base/dma-mapping.o
+drivers/net/smsc911x.c:2283:3: warning: ‘saved_regs’ defined but not used [-Wunused-variable]
+ } saved_regs;
+   ^~~~~~~~~~
+  LD      drivers/uio/built-in.o
+  LD      drivers/usb/core/built-in.o
+  CC      drivers/usb/f_usb/usb_otg.o
+  CC      drivers/usb/gadget/udc-core.o
+  CC      drivers/base/dma-coherent.o
+  CC      drivers/udif/device.o
+  CC      drivers/base/firmware_class.o
+  CC      drivers/tty/n_tty.o
+  LD      drivers/usb/gadget/built-in.o
+  CC      drivers/usb/gcore/usb_init.o
+  CC      drivers/udif/driver.o
+  LD      drivers/usb/f_usb/built-in.o
+  LD      drivers/usb/host/built-in.o
+  LD      drivers/usb/htmd/built-in.o
+  CC      drivers/usb/gcore/usb_event.o
+  CC      drivers/video/fb_notify.o
+  CC      drivers/base/node.o
+  LD      drivers/video/backlight/built-in.o
+  LD      drivers/video/display/built-in.o
+  LD      drivers/net/built-in.o
+  LD      drivers/video/omap2/displays/built-in.o
+  LD      drivers/video/omap2/built-in.o
+  LD      drivers/video/built-in.o
+  CC      drivers/base/memory.o
+  LD      drivers/udif/built-in.o
+  CC      drivers/base/topology.o
+  CC      drivers/base/module.o
+  CC      drivers/usb/gcore/usb_otgcore.o
+  CC      drivers/base/section_group.o
+  CC      drivers/usb/gcore/usb_gcore_main.o
+  LD      drivers/usb/misc/built-in.o
+  LD      drivers/usb/phy/built-in.o
+  LD      drivers/usb/storage/built-in.o
+  CC      drivers/usb/usb-common.o
+  CC      drivers/usb/gcore/usb_gcore_setup.o
+drivers/usb/gcore/usb_otgcore.c: In function ‘do_get_line_state’:
+drivers/usb/gcore/usb_otgcore.c:460:83: warning: "/*" within comment [-Wcomment]
+ #elif defined(CONFIG_ARCH_CXD90014BASED) /* || defined(CONFIG_ARCH_CXD900X0BASED) /* FIXME: address and offsets */
+                                                                                    
+drivers/usb/gcore/usb_otgcore.c:427:14: warning: unused variable ‘reg_value’ [-Wunused-variable]
+     UDIF_U32 reg_value = 0;
+              ^~~~~~~~~
+drivers/usb/gcore/usb_otgcore.c: In function ‘set_phy_suspend’:
+drivers/usb/gcore/usb_otgcore.c:793:80: warning: "/*" within comment [-Wcomment]
+ #if defined(CONFIG_ARCH_CXD90014BASED) /*|| defined(CONFIG_ARCH_CXD900X0BASED) /* FIXME: address and offsets */
+                                                                                 
+drivers/usb/gcore/usb_otgcore.c: In function ‘ioctl_setPhyParam’:
+drivers/usb/gcore/usb_otgcore.c:1577:14: warning: unused variable ‘device_phy_value’ [-Wunused-variable]
+     UDIF_U32 device_phy_value = 0;
+              ^~~~~~~~~~~~~~~~
+drivers/usb/gcore/usb_otgcore.c:1576:14: warning: unused variable ‘host_phy_value’ [-Wunused-variable]
+     UDIF_U32 host_phy_value = 0;
+              ^~~~~~~~~~~~~~
+  CC      drivers/tty/tty_ioctl.o
+  CC      drivers/tty/tty_ldisc.o
+  LD      drivers/base/built-in.o
+  CC      drivers/tty/tty_buffer.o
+  CC      drivers/usb/gcore/usb_gcore_ep.o
+  CC      drivers/usb/gcore/usb_gcore_desc.o
+  CC      drivers/usb/gcore/usb_gcore_bus.o
+  CC      drivers/usb/gcore/usb_gcore_wrapper.o
+  CC      drivers/tty/tty_port.o
+  CC      drivers/tty/tty_mutex.o
+  CC      drivers/tty/pty.o
+drivers/usb/gcore/usb_gcore_desc.c:452:5: warning: conflicting types for built-in function ‘log2’
+ int log2(int var)
+     ^~~~
+  CC      drivers/tty/sysrq.o
+  LD      drivers/tty/ipwireless/built-in.o
+  CC      drivers/tty/serial/serial_core.o
+  CC      drivers/tty/serial/amba2.o
+  LD      drivers/tty/vt/built-in.o
+In file included from arch/arm/mach-cxd900x0/include/mach/gic_export.h:24:0,
+                 from arch/arm/mach-cxd900x0/include/mach/uart.h:48,
+                 from drivers/tty/serial/amba2.c:73:
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:76:21: warning: inline function ‘gic_irq’ declared but never defined
+ inline unsigned int gic_irq(struct irq_data *d);
+                     ^~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:75:14: warning: inline function ‘gic_cpu_base’ declared but never defined
+ inline void *gic_cpu_base(struct irq_data *d);
+              ^~~~~~~~~~~~
+/home/wubin/qemu-a7c/ksrc/arch/arm/include/asm/hardware/gic.h:74:14: warning: inline function ‘gic_dist_base’ declared but never defined
+ inline void *gic_dist_base(struct irq_data *d);
+              ^~~~~~~~~~~~~
+  LD      drivers/usb/gcore/usb_gadgetcore.o
+  LD      drivers/usb/gcore/built-in.o
+  LD      drivers/usb/built-in.o
+  LD      drivers/tty/serial/built-in.o
+  LD      drivers/tty/built-in.o
+  LD      drivers/built-in.o
+  LD      sound/built-in.o
+  LD      firmware/built-in.o
+  CC      net/socket.o
+  CC      net/ethernet/eth.o
+  LD      net/802/built-in.o
+  CC      net/core/sock.o
+  CC      net/ipv4/route.o
+  CC      net/ipv6/addrconf_core.o
+  CC      net/netlink/af_netlink.o
+  CC      net/ipv6/exthdrs_core.o
+  LD      net/ethernet/built-in.o
+  CC      net/packet/af_packet.o
+  LD      net/ipv6/built-in.o
+  CC      net/sched/sch_generic.o
+  CC      net/sunrpc/clnt.o
+  CC      net/netlink/genetlink.o
+  CC      net/core/request_sock.o
+  CC      net/sched/sch_mq.o
+  CC      net/core/skbuff.o
+  LD      net/sched/built-in.o
+  CC      net/ipv4/protocol.o
+  CC      net/unix/af_unix.o
+  LD      net/packet/built-in.o
+  CC      net/sysctl_net.o
+  LD      net/netlink/built-in.o
+  CC      net/ipv4/ip_input.o
+  CC      net/core/iovec.o
+  CC      net/sunrpc/xprt.o
+  CC      net/core/datagram.o
+  CC      net/core/stream.o
+  CC      net/ipv4/ip_fragment.o
+  CC      net/core/scm.o
+  CC      net/unix/garbage.o
+  CC      net/sunrpc/socklib.o
+  CC      net/unix/sysctl_net_unix.o
+  CC      net/ipv4/ip_forward.o
+  CC      net/core/gen_stats.o
+  CC      net/sunrpc/xprtsock.o
+  CC      net/sunrpc/sched.o
+  LD      net/unix/unix.o
+  LD      net/unix/built-in.o
+  CC      net/sunrpc/auth.o
+  CC      net/ipv4/ip_options.o
+  CC      net/core/gen_estimator.o
+  CC      net/ipv4/ip_output.o
+  CC      net/core/net_namespace.o
+  CC      net/sunrpc/auth_null.o
+  CC      net/ipv4/ip_sockglue.o
+  CC      net/sunrpc/auth_unix.o
+  CC      net/sunrpc/auth_generic.o
+  CC      net/core/secure_seq.o
+  CC      net/sunrpc/svc.o
+  CC      net/sunrpc/svcsock.o
+  CC      net/core/sysctl_net_core.o
+  CC      net/sunrpc/svcauth.o
+  CC      net/core/dev.o
+  CC      net/ipv4/inet_hashtables.o
+  CC      net/core/dev_addr_lists.o
+  CC      net/sunrpc/svcauth_unix.o
+net/sunrpc/svcsock.c: In function ‘svc_setup_socket’:
+net/sunrpc/svcsock.c:758:6: warning: ‘optname’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  err = kernel_setsockopt(svsk->sk_sock, level, optname,
+  ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      (char *)&one, sizeof(one));
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+net/sunrpc/svcsock.c:726:18: note: ‘optname’ was declared here
+  int err, level, optname, one = 1;
+                  ^~~~~~~
+net/sunrpc/svcsock.c:758:6: warning: ‘level’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  err = kernel_setsockopt(svsk->sk_sock, level, optname,
+  ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      (char *)&one, sizeof(one));
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+net/sunrpc/svcsock.c:726:11: note: ‘level’ was declared here
+  int err, level, optname, one = 1;
+           ^~~~~
+  CC      net/sunrpc/addr.o
+  CC      net/sunrpc/rpcb_clnt.o
+  CC      net/core/dst.o
+  CC      net/ipv4/inet_timewait_sock.o
+net/sunrpc/svcauth_unix.c: In function ‘svcauth_unix_set_client’:
+net/sunrpc/svcauth_unix.c:751:9: warning: ‘sin6’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   ipm = __ip_map_lookup(sn->ip_map_cache, rqstp->rq_server->sv_program->pg_class,
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         &sin6->sin6_addr);
+         ~~~~~~~~~~~~~~~~~
+  CC      net/ipv4/inet_connection_sock.o
+  CC      net/sunrpc/timer.o
+  CC      net/core/netevent.o
+  CC      net/sunrpc/xdr.o
+  CC      net/ipv4/tcp.o
+  CC      net/core/neighbour.o
+  CC      net/core/rtnetlink.o
+  CC      net/ipv4/tcp_input.o
+net/core/rtnetlink.c:1112:32: warning: ‘ifla_vf_policy’ defined but not used [-Wunused-const-variable=]
+ static const struct nla_policy ifla_vf_policy[IFLA_VF_MAX+1] = {
+                                ^~~~~~~~~~~~~~
+net/core/rtnetlink.c:1108:32: warning: ‘ifla_vfinfo_policy’ defined but not used [-Wunused-const-variable=]
+ static const struct nla_policy ifla_vfinfo_policy[IFLA_VF_INFO_MAX+1] = {
+                                ^~~~~~~~~~~~~~~~~~
+  CC      net/sunrpc/sunrpc_syms.o
+  CC      net/sunrpc/cache.o
+  CC      net/core/utils.o
+  CC      net/core/link_watch.o
+  CC      net/core/net-sysfs.o
+  CC      net/core/filter.o
+  CC      net/ipv4/tcp_output.o
+  CC      net/ipv4/tcp_timer.o
+net/core/net-sysfs.c:29:19: warning: ‘fmt_long_hex’ defined but not used [-Wunused-const-variable=]
+ static const char fmt_long_hex[] = "%#lx\n";
+                   ^~~~~~~~~~~~
+  CC      net/sunrpc/rpc_pipe.o
+  CC      net/sunrpc/svc_xprt.o
+  CC      net/ipv4/tcp_ipv4.o
+  LD      net/core/built-in.o
+  CC      net/ipv4/tcp_minisocks.o
+  CC      net/sunrpc/stats.o
+  CC      net/ipv4/tcp_cong.o
+  CC      net/sunrpc/sysctl.o
+  CC      net/ipv4/datagram.o
+  CC      net/ipv4/raw.o
+  CC      net/ipv4/udp.o
+  LD      net/sunrpc/sunrpc.o
+  LD      net/sunrpc/built-in.o
+  CC      net/ipv4/udplite.o
+  CC      net/ipv4/arp.o
+  CC      net/ipv4/icmp.o
+  CC      net/ipv4/devinet.o
+  CC      net/ipv4/af_inet.o
+net/ipv4/arp.c:164:31: warning: ‘arp_broken_ops’ defined but not used [-Wunused-const-variable=]
+ static const struct neigh_ops arp_broken_ops = {
+                               ^~~~~~~~~~~~~~
+  CC      net/ipv4/fib_frontend.o
+  CC      net/ipv4/fib_semantics.o
+  CC      net/ipv4/fib_trie.o
+  CC      net/ipv4/inet_fragment.o
+  CC      net/ipv4/ping.o
+  CC      net/ipv4/sysctl_net_ipv4.o
+  CC      net/ipv4/igmp.o
+  CC      net/ipv4/inetpeer.o
+  CC      net/ipv4/proc.o
+  CC      net/ipv4/ipip.o
+  CC      net/ipv4/gre.o
+  CC      net/ipv4/ip_gre.o
+  CC      net/ipv4/tunnel4.o
+  CC      net/ipv4/ipconfig.o
+  CC      net/ipv4/tcp_cubic.o
+  LD      net/ipv4/built-in.o
+  LD      net/built-in.o
+  LD      arch/arm/lib/built-in.o
+  AS      arch/arm/lib/ashldi3.o
+  AS      arch/arm/lib/ashrdi3.o
+  AS      arch/arm/lib/backtrace.o
+  AS      arch/arm/lib/changebit.o
+  AS      arch/arm/lib/clear_user.o
+  AS      arch/arm/lib/clearbit.o
+  AS      arch/arm/lib/copy_from_user.o
+  AS      arch/arm/lib/copy_page.o
+  AS      arch/arm/lib/copy_to_user.o
+  AS      arch/arm/lib/csumipv6.o
+  AS      arch/arm/lib/csumpartial.o
+  AS      arch/arm/lib/csumpartialcopy.o
+  AS      arch/arm/lib/csumpartialcopyuser.o
+  AS      arch/arm/lib/delay.o
+  AS      arch/arm/lib/div64.o
+  AS      arch/arm/lib/findbit.o
+  AS      arch/arm/lib/getuser.o
+  AS      arch/arm/lib/io-readsb.o
+  AS      arch/arm/lib/io-readsl.o
+  AS      arch/arm/lib/io-readsw-armv4.o
+  AS      arch/arm/lib/io-writesb.o
+  AS      arch/arm/lib/io-writesl.o
+  AS      arch/arm/lib/io-writesw-armv4.o
+  AS      arch/arm/lib/lib1funcs.o
+  AS      arch/arm/lib/lshrdi3.o
+  AS      arch/arm/lib/memchr.o
+  AS      arch/arm/lib/memcpy.o
+  AS      arch/arm/lib/memmove.o
+  AS      arch/arm/lib/memset.o
+  AS      arch/arm/lib/memzero.o
+  AS      arch/arm/lib/muldi3.o
+  AS      arch/arm/lib/putuser.o
+  AS      arch/arm/lib/setbit.o
+  AS      arch/arm/lib/strchr.o
+  AS      arch/arm/lib/strncpy_from_user.o
+  AS      arch/arm/lib/strnlen_user.o
+  AS      arch/arm/lib/strrchr.o
+  AS      arch/arm/lib/testchangebit.o
+  AS      arch/arm/lib/testclearbit.o
+  AS      arch/arm/lib/testsetbit.o
+  AS      arch/arm/lib/ucmpdi2.o
+  AR      arch/arm/lib/lib.a
+  CC      lib/bcd.o
+  CC      lib/div64.o
+  CC      lib/sort.o
+  CC      lib/parser.o
+  CC      lib/halfmd4.o
+  CC      lib/debug_locks.o
+  CC      lib/random32.o
+  CC      lib/bust_spinlocks.o
+  CC      lib/hexdump.o
+  CC      lib/kasprintf.o
+  CC      lib/bitmap.o
+  CC      lib/scatterlist.o
+  CC      lib/string_helpers.o
+  CC      lib/gcd.o
+  CC      lib/lcm.o
+  CC      lib/list_sort.o
+  CC      lib/uuid.o
+  CC      lib/flex_array.o
+  CC      lib/bsearch.o
+  CC      lib/find_last_bit.o
+  CC      lib/kstrtox.o
+  CC      lib/iomap_copy.o
+  CC      lib/devres.o
+  CC      lib/hweight.o
+  CC      lib/bitrev.o
+  CC      lib/crc32.o
+  CC      lib/lz77/lz77_inflate.o
+  CC      lib/lzo/lzo1x_compress.o
+  CC      lib/lzo/lzo1x_decompress_safe.o
+  CC      lib/lz77/lz77_deflate.o
+  CC      lib/zlib_deflate/deflate.o
+  CC      lib/zlib_deflate/deftree.o
+  CC      lib/zlib_deflate/deflate_syms.o
+  CC      lib/zlib_inflate/inffast.o
+  CC      lib/zlib_inflate/inflate.o
+  LD      lib/lz77/built-in.o
+  CC      lib/percpu_counter.o
+  LD      lib/lzo/lzo_compress.o
+  LD      lib/lzo/lzo_decompress.o
+  LD      lib/lzo/built-in.o
+  CC      lib/nlattr.o
+  CC      lib/zlib_inflate/infutil.o
+  CC      lib/average.o
+  CC      lib/zlib_inflate/inftrees.o
+  CC      lib/zlib_inflate/inflate_syms.o
+  CC      lib/cpu_rmap.o
+  CC      lib/snsc_boot_time.o
+  CC      lib/heap_profile.o
+  LD      lib/zlib_deflate/zlib_deflate.o
+  LD      lib/zlib_inflate/zlib_inflate.o
+  LD      lib/zlib_deflate/built-in.o
+  LD      lib/zlib_inflate/built-in.o
+  CC      lib/pgscan.o
+  CC      lib/argv_split.o
+  CC      lib/cmdline.o
+  CC      lib/cpumask.o
+  CC      lib/ctype.o
+  CC      lib/dec_and_lock.o
+  CC      lib/decompress.o
+  CC      lib/dump_stack.o
+  CC      lib/extable.o
+  CC      lib/find_next_bit.o
+  CC      lib/idr.o
+  CC      lib/int_sqrt.o
+  CC      lib/ioremap.o
+  CC      lib/irq_regs.o
+  CC      lib/is_single_threaded.o
+  CC      lib/klist.o
+  CC      lib/kobject.o
+  CC      lib/kobject_uevent.o
+  CC      lib/kref.o
+  CC      lib/md5.o
+  CC      lib/plist.o
+  CC      lib/prio_heap.o
+  CC      lib/prio_tree.o
+  CC      lib/proportions.o
+  CC      lib/radix-tree.o
+  CC      lib/ratelimit.o
+  CC      lib/rbtree.o
+  CC      lib/reciprocal_div.o
+  CC      lib/rwsem-spinlock.o
+  CC      lib/rwsem_compat.o
+  CC      lib/sha1.o
+  CC      lib/show_mem.o
+  CC      lib/string.o
+  CC      lib/timerqueue.o
+  CC      lib/vsprintf.o
+  LD      lib/built-in.o
+  AR      lib/lib.a
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+  GEN     .version
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      init/do_mounts.o
+  CC      init/do_mounts_rd.o
+  CC      init/do_mounts_initrd.o
+  CC      init/initramfs.o
+  UPD     include/generated/compile.h
+  CC      init/calibrate.o
+  CC      init/version.o
+  LD      init/mounts.o
+  LD      init/built-in.o
+  LD      .tmp_vmlinux1
+  KSYM    .tmp_kallsyms1.S
+  AS      .tmp_kallsyms1.o
+  LD      .tmp_vmlinux2
+  KSYM    .tmp_kallsyms2.S
+  AS      .tmp_kallsyms2.o
+  LD      vmlinux
+  SYSMAP  System.map
+  SYSMAP  .tmp_System.map
+  OBJCOPY arch/arm/boot/vmlinux.bin
+KBUILD_RC=0

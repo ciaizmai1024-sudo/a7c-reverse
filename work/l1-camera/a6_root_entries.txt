@@ -1,0 +1,12 @@
+# nflasha6 FAT12 root dir @0x800 (512 entries): only these 10 entries exist, ALL deleted (1st byte 0xE5).
+# FAT @0x200, 1536B (FAT12, 1022 data clusters); FAT[2..1023] all 0x000 -> no live chain, volume mounts as EMPTY.
+DEL jiritsu.hash                 SFN=åIRITS~1 .HAS  cl=3    size=16        attr=20 cdate=1980-01-01 mdate=1980-00-00 slot_hex=e5 49 52 49 54 53 7e 31 48 41 53
+DEL ramdsk_libJit(dir)           SFN=åAMDSK~1 .     cl=4    size=0         attr=10 cdate=1980-01-01 mdate=1980-00-00 slot_hex=e5 41 4d 44 53 4b 7e 31 20 20 20
+DEL libJit.so                    SFN=åIBJIT   .SO   cl=5    size=409551    attr=21 cdate=2019-12-13 mdate=2020-00-19 slot_hex=e5 49 42 4a 49 54 20 20 53 4f 20
+DEL DIAC.csv                     SFN=åIAC     .CSV  cl=119  size=89868     attr=20 cdate=2021-04-02 mdate=1980-00-00 slot_hex=e5 49 41 43 20 20 20 20 43 53 56
+DEL tmmc.jit                     SFN=åMMC     .JIT  cl=35   size=770108    attr=20 cdate=2021-04-02 mdate=2008-11-01 slot_hex=e5 4d 4d 43 20 20 20 20 4a 49 54
+DEL de_FilesCam_AdjustGui(dir)   SFN=åAM_AD~1 .     cl=83   size=0         attr=10 cdate=1980-01-01 mdate=1980-00-00 slot_hex=e5 41 4d 5f 41 44 7e 31 20 20 20
+DEL Ver.txt                      SFN=åER      .TXT  cl=118  size=454       attr=20 cdate=2021-04-02 mdate=2008-11-01 slot_hex=e5 45 52 20 20 20 20 20 54 58 54
+DEL jcount                       SFN=åCOUNT   .     cl=30   size=4         attr=20 cdate=1980-01-01 mdate=1980-00-00 slot_hex=e5 43 4f 55 4e 54 20 20 20 20 20
+DEL history.txt                  SFN=åISTORY  .TXT  cl=31   size=2158      attr=20 cdate=1980-01-01 mdate=1980-00-00 slot_hex=e5 49 53 54 4f 52 59 20 54 58 54
+DEL jit.log                      SFN=åIT      .LOG  cl=32   size=3244032   attr=20 cdate=1980-01-01 mdate=1980-00-00 slot_hex=e5 49 54 20 20 20 20 20 4c 4f 47

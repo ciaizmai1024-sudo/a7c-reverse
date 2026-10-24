@@ -1,0 +1,104 @@
+TOTAL 25238
+<4>[    6.661602]  r7:3e633c00 r6:00000005 r5:60497a88 r4:3e633c24
+<4>[    6.661621] [<603b2d9c>] (__do_kernel_fault.part.0+0x0/0x7c) from [<601165e0>] (do_page_fault+0x104/0x200)
+<4>[    6.661628]  r7:6045a0de r4:00000005
+<4>[    6.661642] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    6.661653] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    6.661660]  r7:60497a88 r6:3e633c24 r5:604b82c0 r4:00000005
+<4>[    6.661677] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    6.661684] Exception stack(0x60497a88 to 0x60497ad0)
+<4>[    6.661693] 7a80:                   60434bbd 3e633c24 604c5bf8 2045a196 3e633c24 3e633c00
+<4>[    6.661704] 7aa0: 00000005 3e633c00 3e633c00 00000005 00000000 60497aec 60497af0 60497ad0
+<4>[    6.661712] 7ac0: 603b2de8 60116390 200001d3 ffffffff
+<4>[    6.661718]  r7:60497abc r6:ffffffff r5:200001d3 r4:60116390
+<4>[    6.661736] [<60116370>] (show_pte+0x0/0xc8) from [<603b2de8>] (__do_kernel_fault.part.0+0x4c/0x7c)
+<4>[    6.661743]  r7:3e633c00 r6:00000005 r5:60497c08 r4:3e633c24
+<4>[    6.661761] [<603b2d9c>] (__do_kernel_fault.part.0+0x0/0x7c) from [<601165e0>] (do_page_fault+0x104/0x200)
+<4>[    6.661768]  r7:6045a0de r4:00000005
+<4>[    6.661782] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    6.661794] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    6.661800]  r7:60497c08 r6:3e633c24 r5:604b82c0 r4:00000005
+<4>[    6.661818] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    6.661825] Exception stack(0x60497c08 to 0x60497c50)
+<4>[    6.661834] 7c00:                   60434bbd 3e633c24 604c5bf8 2045a196 3e633c24 3e633c00
+<4>[    6.661844] 7c20: 00000005 3e633c00 3e633c00 00000005 00000000 60497c6c 60497c70 60497c50
+<4>[    6.661853] 7c40: 603b2de8 60116390 200001d3 ffffffff
+<4>[    6.661858]  r7:60497c3c r6:ffffffff r5:200001d3 r4:60116390
+<4>[    6.661877] [<60116370>] (show_pte+0x0/0xc8) from [<603b2de8>] (__do_kernel_fault.part.0+0x4c/0x7c)
+<4>[    6.661883]  r7:3e633c00 r6:00000005 r5:60497d88 r4:3e633c24
+<4>[    6.661902] [<603b2d9c>] (__do_kernel_fault.part.0+0x0/0x7c) from [<601165e0>] (do_page_fault+0x104/0x200)
+<4>[    6.661909]  r7:6045a0de r4:00000005
+<4>[    6.661923] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    6.661934] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    6.661941]  r7:60497d88 r6:3e633c24 r5:604b82c0 r4:00000005
+<4>[    6.661958] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    6.661966] Exception stack(0x60497d88 to 0x60497dd0)
+<4>[    6.661974] 7d80:                   60434bbd 000038e7 604c5bf8 2045a196 000038e7 3e633c00
+<4>[    6.661985] 7da0: 00000005 3e633c00 3e633c00 00000005 00000000 60497dec 60497df0 60497dd0
+<4>[    6.661994] 7dc0: 603b2de8 60116390 200001d3 ffffffff
+<4>[    6.661999]  r7:60497dbc r6:ffffffff r5:200001d3 r4:60116390
+<4>[    6.662018] [<60116370>] (show_pte+0x0/0xc8) from [<603b2de8>] (__do_kernel_fault.part.0+0x4c/0x7c)
+<4>[    6.662025]  r7:3e633c00 r6:00000005 r5:60497f08 r4:000038e7
+<4>[    6.662042] [<603b2d9c>] (__do_kernel_fault.part.0+0x0/0x7c) from [<601165e0>] (do_page_fault+0x104/0x200)
+<4>[    6.662050]  r7:6045a0de r4:00000005
+<4>[    6.662063] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    6.662075] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    6.662082]  r7:60497f08 r6:000038e7 r5:604b82c0 r4:00000005
+.... 1960-2015 ....
+<4>[    6.682503] [<60110bec>] (__bug+0x0/0x2c) from [<60111818>] (__bug_noarg+0xc/0x10)
+<4>[    6.682514] [<603b2eb8>] (panic+0x0/0x1a4) from [<6013355c>] (do_exit+0xa0/0x74c)
+<4>[    6.682521]  r3:00000000 r2:00000000 r1:00000000 r0:60438473
+<4>[    6.682533]  r7:0000000b
+<4>[    6.682545] [<601334bc>] (do_exit+0x0/0x74c) from [<60111118>] (die+0x1ac/0x1e4)
+<4>[    6.682551]  r7:00000000
+<4>[    6.682563] [<60110f6c>] (die+0x0/0x1e4) from [<603b2df8>] (__do_kernel_fault.part.0+0x5c/0x7c)
+<4>[    6.682569]  r8:00000000 r7:00000000 r6:00000805 r5:604a7d50 r4:00000000
+<4>[    6.682590] [<603b2d9c>] (__do_kernel_fault.part.0+0x0/0x7c) from [<601165e0>] (do_page_fault+0x104/0x200)
+<4>[    6.682597]  r7:604b6918 r4:00000805
+<4>[    6.682611] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    6.682622] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    6.682629]  r7:604a7d50 r6:00000000 r5:604b82c0 r4:00000805
+<4>[    6.682646] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    6.682653] Exception stack(0x604a7d50 to 0x604a7d98)
+<4>[    6.682661] 7d40:                                     00000037 60000153 604c5bf8 00000000
+<4>[    6.682671] 7d60: 604e29a8 604a7de4 604a6000 0000000b 00000805 410fc051 00000000 604a7da4
+<4>[    6.682681] 7d80: 604a7cf0 604a7d98 6012ff50 60110c0c 00000153 ffffffff
+<4>[    6.682687]  r7:604a7d84 r6:ffffffff r5:00000153 r4:60110c0c
+<4>[    6.682708] [<60110bec>] (__bug+0x0/0x2c) from [<60111818>] (__bug_noarg+0xc/0x10)
+<4>[    6.682719] [<603b2eb8>] (panic+0x0/0x1a4) from [<6013355c>] (do_exit+0xa0/0x74c)
+<4>[    6.682725]  r3:00000000 r2:00000000 r1:00000000 r0:60438473
+<4>[    6.682738]  r7:0000000b
+<4>[    6.682750] [<601334bc>] (do_exit+0x0/0x74c) from [<60111118>] (die+0x1ac/0x1e4)
+<4>[    6.682756]  r7:00000000
+<4>[    6.682767] [<60110f6c>] (die+0x0/0x1e4) from [<603b2df8>] (__do_kernel_fault.part.0+0x5c/0x7c)
+<4>[    6.682774]  r8:6049e304 r7:604c8dc0 r6:00000805 r5:604a7f50 r4:df800000
+<4>[    6.682795] [<603b2d9c>] (__do_kernel_fault.part.0+0x0/0x7c) from [<60116760>] (do_bad_area+0x84/0x88)
+<4>[    6.682802]  r7:604c8dc0 r4:604a7f50
+<4>[    6.682816] [<601166dc>] (do_bad_area+0x0/0x88) from [<60116820>] (do_translation_fault+0xa4/0xac)
+<4>[    6.682822]  r7:604a7f50 r6:00000000 r5:00000805 r4:60104000
+<4>[    6.682840] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    6.682847]  r7:604a7f50 r6:df800000 r5:604b82c0 r4:00000805
+<4>[    6.682864] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    6.682871] Exception stack(0x604a7f50 to 0x604a7f98)
+<4>[    6.682879] 7f40:                                     df7ffff8 ffffffff 00000004 ffffffff
+<4>[    6.682889] 7f60: 00000000 606e7d64 606e7d64 61939440 6049e304 410fc051 00000000 604a7fbc
+<4>[    6.682899] 7f80: ffffffff 604a7f9c ffffffff 6024f0d4 200001d3 ffffffff
+<4>[    6.682905]  r7:604a7f84 r6:ffffffff r5:200001d3 r4:6024f0d4
+<4>[    6.682927] [<60489a20>] (nodeorder_init+0x0/0xa8) from [<60479690>] (start_kernel+0x10c/0x3c8)
+<4>[    6.682939] [<60479584>] (start_kernel+0x0/0x3c8) from [<00108044>] (0x108044)
+<2>[    6.682946] kernel BUG at kernel/panic.c:106!
+<1>[    6.682956] Unable to handle kernel NULL pointer dereference at virtual address 00000000
+<1>[    6.682963] pgd = 60104000
+<1>[    6.682968] [00000000] *pgd=00000000
+<0>[    6.682977] Internal error: Oops: 805 [#45] PREEMPT SMP
+<4>[    6.682983] Modules linked in:
+<4>[    6.682992] CPU: 1650543616    Tainted: G      D      (3.0.27_nl-rt106 #5 )
+<4>[    6.683002] PC is at __bug+0x20/0x2c
+<4>[    6.683009] LR is at vprintk+0x1dc/0x3dc
+<4>[    6.683017] pc : [<60110c0c>]    lr : [<6012ff50>]    psr: 00000153
+<4>[    6.683021] sp : 6045c5e0  ip : 6045c538  fp : 6045c5ec
+<4>[    6.683027] r10: 00000000  r9 : 00000805  r8 : 00000805
+<4>[    6.683034] r7 : 00000000  r6 : 6c776f6c  r5 : 6045c62c  r4 : 604e29a8
+<4>[    6.683041] r3 : 00000000  r2 : 604c5bf8  r1 : 60000153  r0 : 00000037
+<4>[    6.683049] Flags: nzcv  IRQs on  FIQs off  Mode SVC_32  ISA ARM  Segment user
+<4>[    6.683057] Control: 10c5387d  Table: 0010406a  DAC: 00000015

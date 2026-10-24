@@ -1,0 +1,103 @@
+snap_0002_4e0000.bin lines=97 bytes=8094
+snap_0004_4e0000.bin lines=106 bytes=8087
+snap_0006_4e0000.bin lines=106 bytes=8087
+snap_0008_4e0000.bin lines=106 bytes=8087
+snap_0010_4e0000.bin lines=106 bytes=8087
+snap_0012_4e0000.bin lines=106 bytes=8087
+snap_0014_4e0000.bin lines=106 bytes=8087
+snap_0016_4e0000.bin lines=106 bytes=8087
+snap_0018_4e0000.bin lines=106 bytes=8087
+snap_0020_4e0000.bin lines=106 bytes=8087
+snap_0022_4e0000.bin lines=106 bytes=8087
+snap_0024_4e0000.bin lines=106 bytes=8087
+snap_0026_4e0000.bin lines=106 bytes=8087
+snap_0028_4e0000.bin lines=106 bytes=8087
+snap_0030_4e0000.bin lines=106 bytes=8087
+snap_0032_4e0000.bin lines=106 bytes=8087
+snap_0034_4e0000.bin lines=106 bytes=8087
+snap_0036_4e0000.bin lines=106 bytes=8087
+snap_0038_4e0000.bin lines=106 bytes=8087
+snap_0040_4e0000.bin lines=106 bytes=8087
+snap_0042_4e0000.bin lines=106 bytes=8087
+snap_0044_4e0000.bin lines=106 bytes=8087
+snap_0046_4e0000.bin lines=106 bytes=8087
+snap_0048_4e0000.bin lines=106 bytes=8087
+snap_0050_4e0000.bin lines=106 bytes=8087
+snap_0052_4e0000.bin lines=106 bytes=8087
+snap_0054_4e0000.bin lines=106 bytes=8087
+snap_0056_4e0000.bin lines=106 bytes=8087
+snap_0058_4e0000.bin lines=106 bytes=8087
+snap_0060_4e0000.bin lines=106 bytes=8087
+=== BEST fwdump7_c1/snap_0002_4e0000.bin
+4>[    1.999500] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    1.999507] Exception stack(0x604a2520 to 0x604a2568)
+<4>[    1.999517] 2520: 003d7535 00000005 000001d3 604a2000 00000005 003d7535 604a2668 003d7469
+<4>[    1.999528] 2540: 00000805 00000005 00000000 604a259c 604a25a0 604a2568 601167a0 60116510
+<4>[    1.999536] 2560: 000001d3 ffffffff
+<4>[    1.999541]  r7:604a2554 r6:ffffffff r5:000001d3 r4:60116510
+<4>[    1.999560] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    1.999572] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    1.999579]  r7:604a2668 r6:003d7535 r5:604b82c0 r4:00000005
+<4>[    1.999597] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    1.999604] Exception stack(0x604a2668 to 0x604a26b0)
+<4>[    1.999613] 2660:                   003d7535 00000005 000001d3 604a2000 00000005 003d7535
+<4>[    1.999624] 2680: 604a27b0 003d7469 00000805 00000005 00000000 604a26e4 604a26e8 604a26b0
+<4>[    1.999633] 26a0: 601167a0 60116510 000001d3 ffffffff
+<4>[    1.999638]  r7:604a269c r6:ffffffff r5:000001d3 r4:60116510
+<4>[    1.999658] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    1.999669] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    1.999677]  r7:604a27b0 r6:003d7535 r5:604b82c0 r4:00000005
+<4>[    1.999694] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    1.999702] Exception stack(0x604a27b0 to 0x604a27f8)
+<4>[    1.999710] 27a0:                                     003d7535 00000005 000001d3 604a2000
+<4>[    1.999721] 27c0: 00000005 003d7535 604a28f8 003d7469 00000805 00000005 00000000 604a282c
+<4>[    1.999731] 27e0: 604a2830 604a27f8 601167a0 60116510 000001d3 ffffffff
+<4>[    1.999737]  r7:604a27e4 r6:ffffffff r5:000001d3 r4:60116510
+<4>[    1.999756] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    1.999768] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    1.999775]  r7:604a28f8 r6:003d7535 r5:604b82c0 r4:00000005
+<4>[    1.999793] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    1.999800] Exception stack(0x604a28f8 to 0x604a2940)
+<4>[    1.999807] 28e0:                                                       003d7535 00000005
+<4>[    1.999823] 2900: 000001d3 604a2000 00000005 003d7535 604a2a40 003d7469 00000805 00000005
+<4>[    1.999838] 2920: 00000000 604a2974 604a2978 604a2940 601167a0 60116510 000001d3 ffffffff
+<4>[    1.999845]  r7:604a292c r6:ffffffff r5:000001d3 r4:60116510
+<4>[    1.999864] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    1.999876] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    1.999883]  r7:604a2a40 r6:003d7535 r5:604b82c0 r4:00000005
+<4>[    1.999900] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    1.999908] Exception stack(0x604a2a40 to 0x604a2a88)
+<4>[    1.999917] 2a40: 003d7535 00000005 000001d3 604a2000 00000005 003d7535 604a2b88 003d7469
+<4>[    1.999928] 2a60: 00000805 00000005 00000000 604a2abc 604a2ac0 604a2a88 601167a0 60116510
+<4>[    1.999936] 2a80: 000001d3 ffffffff
+<4>c) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    1.998901]  r7:604a1d70 r6:000000cc r5:604b82c0 r4:00000005
+<4>[    1.998918] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    1.998925] Exception stack(0x604a1d70 to 0x604a1db8)
+<4>[    1.998933] 1d60:                                     000000cc 00000005 000001d3 604a0000
+<4>[    1.998943] 1d80: 00000005 000000cc 604a1eb8 00000000 00000805 00000005 00000000 604a1dec
+<4>[    1.998953] 1da0: 604a1df0 604a1db8 601167a0 60116510 000001d3 ffffffff
+<4>[    1.998959]  r7:604a1da4 r6:ffffffff r5:000001d3 r4:60116510
+<4>[    1.998978] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    1.998990] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    1.998997]  r7:604a1eb8 r6:000000cc r5:604b82c0 r4:00000005
+<4>[    1.999014] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    1.999021] Exception stack(0x604a1eb8 to 0x604a1f00)
+<4>[    1.999028] 1ea0:                                                       003d7535 00000005
+<4>[    1.999038] 1ec0: 000001d3 604a0000 00000005 003d7535 604a2000 00000000 00000805 00000005
+<4>[    1.999049] 1ee0: 00000000 604a1f34 604a1f38 604a1f00 601167a0 60116510 000001d3 ffffffff
+<4>[    1.999056]  r7:604a1eec r6:ffffffff r5:000001d3 r4:60116510
+<4>[    1.999075] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    1.999086] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    1.999093]  r7:604a2000 r6:003d7535 r5:604b82c0 r4:00000005
+<4>[    1.999110] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    1.999118] Exception stack(0x604a2000 to 0x604a2048)
+<4>[    1.999127] 2000: 003d7535 00000005 000001d3 604a2000 00000005 003d7535 604a2148 003d7469
+<4>[    1.999138] 2020: 00000805 00000005 00000000 604a207c 604a2080 604a2048 601167a0 60116510
+<4>[    1.999146] 2040: 000001d3 ffffffff
+<4>[    1.999151]  r7:604a2034 r6:ffffffff r5:000001d3 r4:60116510
+<4>[    1.999170] [<601164dc>] (do_page_fault+0x0/0x200) from [<601167a0>] (do_translation_fault+0x24/0xac)
+<4>[    1.999181] [<6011677c>] (do_translation_fault+0x0/0xac) from [<60108564>] (do_DataAbort+0x40/0xa4)
+<4>[    1.999189]  r7:604a2148 r6:003d7535 r5:604b82c0 r4:00000005
+<4>[    1.999206] [<60108524>] (do_DataAbort+0x0/0xa4) from [<6010d618>] (__dabt_svc+0x38/0x60)
+<4>[    1.999213] Exception stack(0

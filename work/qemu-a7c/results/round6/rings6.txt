@@ -1,0 +1,296 @@
+==== c1 t=20 (1580 lines)
+/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447321]  r7:6045b860 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447335] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447341] Exception stack(0x6045b860 to 0x6045b8a8)
+<4>[    3.447349] b860: e24cb004 00000005 6045b998 200001d3 6045b998 e24cb0d4 00000005 6045b998
+<4>[    3.447359] b880: 00000805 00000005 00000000 6045b8cc 6045b8d0 6045b8a8 60146340 60146258
+<4>[    3.447365] b8a0: 200001d3 ffffffff
+<4>[    3.447369]  r7:6045b894 r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447383] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447389]  r7:6045b998 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447403] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447408]  r7:6045b998 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447422] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447428] Exception stack(0x6045b998 to 0x6045b9e0)
+<4>[    3.447434] b980:                                                       e24cb004 00000005
+<4>[    3.447443] b9a0: 6045bad0 200001d3 6045bad0 e24cb0d4 00000005 6045bad0 00000805 00000005
+<4>[    3.447452] b9c0: 00000000 6045ba04 6045ba08 6045b9e0 60146340 60146258 200001d3 ffffffff
+<4>[    3.447458]  r7:6045b9cc r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447472] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447478]  r7:6045bad0 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447492] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447498]  r7:6045bad0 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447511] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447517] Exception stack(0x6045bad0 to 0x6045bb18)
+<4>[    3.447524] bac0:                                     e24cb004 00000005 6045bc08 200001d3
+---- tail
+<4>[    3.447098] b4e0: 00000000 6045b524 6045b528 6045b500 60146340 60146258 200001d3 ffffffff
+<4>[    3.447104]  r7:6045b4ec r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447118] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447124]  r7:6045b5f0 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447138] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447144]  r7:6045b5f0 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447157] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447163] Exception stack(0x6045b5f0 to 0x6045b638)
+<4>[    3.447170] b5e0:                                     e24cb004 00000005 6045b728 200001d3
+<4>[    3.447180] b600: 6045b728 e24cb0d4 00000005 6045b728 00000805 00000005 00000000 6045b65c
+<4>[    3.447188] b620: 6045b660 6045b638 60146340 60146258 200001d3 ffffffff
+<4>[    3.447193]  r7:6045b624 r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447208] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447213]  r7:6045b728 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447227] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447233]  r7:6045b728 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447246] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447252] Exception stack(0x6045b728 to 0x6045b770)
+<4>[    3.447260] b720:                   e24cb004 00000005 6045b860 200001d3 6045b860 e24cb0d4
+<4>[    3.447270] b740: 00000005 6045b860 00000805 00000005 00000000 6045b794 6045b798 6045b770
+<4>[    3.447277] b760: 60146340 60146258 200001d3 ffffffff
+<4>[    3.447282]  r7:6045b75c r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447296] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447302]  r7:6045b860 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447315] [<6014629c>] (do_translation_fault+0x0
+==== c1 t=40 (1580 lines)
+/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447321]  r7:6045b860 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447335] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447341] Exception stack(0x6045b860 to 0x6045b8a8)
+<4>[    3.447349] b860: e24cb004 00000005 6045b998 200001d3 6045b998 e24cb0d4 00000005 6045b998
+<4>[    3.447359] b880: 00000805 00000005 00000000 6045b8cc 6045b8d0 6045b8a8 60146340 60146258
+<4>[    3.447365] b8a0: 200001d3 ffffffff
+<4>[    3.447369]  r7:6045b894 r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447383] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447389]  r7:6045b998 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447403] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447408]  r7:6045b998 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447422] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447428] Exception stack(0x6045b998 to 0x6045b9e0)
+<4>[    3.447434] b980:                                                       e24cb004 00000005
+<4>[    3.447443] b9a0: 6045bad0 200001d3 6045bad0 e24cb0d4 00000005 6045bad0 00000805 00000005
+<4>[    3.447452] b9c0: 00000000 6045ba04 6045ba08 6045b9e0 60146340 60146258 200001d3 ffffffff
+<4>[    3.447458]  r7:6045b9cc r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447472] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447478]  r7:6045bad0 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447492] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447498]  r7:6045bad0 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447511] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447517] Exception stack(0x6045bad0 to 0x6045bb18)
+<4>[    3.447524] bac0:                                     e24cb004 00000005 6045bc08 200001d3
+---- tail
+<4>[    3.447098] b4e0: 00000000 6045b524 6045b528 6045b500 60146340 60146258 200001d3 ffffffff
+<4>[    3.447104]  r7:6045b4ec r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447118] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447124]  r7:6045b5f0 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447138] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447144]  r7:6045b5f0 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447157] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447163] Exception stack(0x6045b5f0 to 0x6045b638)
+<4>[    3.447170] b5e0:                                     e24cb004 00000005 6045b728 200001d3
+<4>[    3.447180] b600: 6045b728 e24cb0d4 00000005 6045b728 00000805 00000005 00000000 6045b65c
+<4>[    3.447188] b620: 6045b660 6045b638 60146340 60146258 200001d3 ffffffff
+<4>[    3.447193]  r7:6045b624 r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447208] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447213]  r7:6045b728 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447227] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    3.447233]  r7:6045b728 r6:e24cb0d4 r5:60476960 r4:00000005
+<4>[    3.447246] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    3.447252] Exception stack(0x6045b728 to 0x6045b770)
+<4>[    3.447260] b720:                   e24cb004 00000005 6045b860 200001d3 6045b860 e24cb0d4
+<4>[    3.447270] b740: 00000005 6045b860 00000805 00000005 00000000 6045b794 6045b798 6045b770
+<4>[    3.447277] b760: 60146340 60146258 200001d3 ffffffff
+<4>[    3.447282]  r7:6045b75c r6:ffffffff r5:200001d3 r4:60146258
+<4>[    3.447296] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    3.447302]  r7:6045b860 r6:00000000 r5:00000005 r4:60134000
+<4>[    3.447315] [<6014629c>] (do_translation_fault+0x0
+==== c2 t=20 (1585 lines)
+<4>[    0.574437]  r3:00000000 r2:00000000 r1:00000000 r0:6040283b
+<4>[    0.574449]  r7:0000000b
+<4>[    0.574459] [<601630e4>] (do_exit+0x0/0x74c) from [<60141248>] (die+0x1ac/0x1e4)
+<4>[    0.574465]  r7:00000000
+<4>[    0.574475] [<6014109c>] (die+0x0/0x1e4) from [<6038b990>] (__do_kernel_fault.part.0+0x5c/0x7c)
+<4>[    0.574482]  r8:00000000 r7:00000000 r6:00000805 r5:604666a0 r4:00000000
+<4>[    0.574501] [<6038b934>] (__do_kernel_fault.part.0+0x0/0x7c) from [<60146100>] (do_page_fault+0x104/0x200)
+<4>[    0.574508]  r7:604750c0 r4:00000805
+<4>[    0.574520] [<60145ffc>] (do_page_fault+0x0/0x200) from [<601462c0>] (do_translation_fault+0x24/0xac)
+<4>[    0.574530] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    0.574537]  r7:604666a0 r6:00000000 r5:60476960 r4:00000805
+<4>[    0.574553] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    0.574560] Exception stack(0x604666a0 to 0x604666e8)
+<4>[    0.574569] 66a0: 00000037 60000153 604843f8 00000000 6049f588 60466734 60466000 0000000b
+<4>[    0.574580] 66c0: 00000805 00000805 00000000 604666f4 60466640 604666e8 6015fb70 60140d3c
+<4>[    0.574588] 66e0: 00000153 ffffffff
+<4>[    0.574592]  r7:604666d4 r6:ffffffff r5:00000153 r4:60140d3c
+<4>[    0.574609] [<60140d1c>] (__bug+0x0/0x2c) from [<60141948>] (__bug_noarg+0xc/0x10)
+<4>[    0.574619] [<6038ba50>] (panic+0x0/0x1ac) from [<60163184>] (do_exit+0xa0/0x74c)
+<4>[    0.574625]  r3:00000000 r2:00000000 r1:00000000 r0:6040283b
+<4>[    0.574637]  r7:0000000b
+<4>[    0.574646] [<601630e4>] (do_exit+0x0/0x74c) from [<60141248>] (die+0x1ac/0x1e4)
+<4>[    0.574652]  r7:00000000
+<4>[    0.574661] [<6014109c>] (die+0x0/0x1e4) from [<6038b990>] (__do_kernel_fault.part.0+0x5c/0x7c)
+<4>[    0.574668]  r8:00000000 r7:00000000 r6:00000805 r5:604668b0 r4:00000000
+---- tail
+<4>[    0.574182]  r8:6045dcdc r7:60487648 r6:00000805 r5:60467f50 r4:b000000c
+<4>[    0.574201] [<6038b934>] (__do_kernel_fault.part.0+0x0/0x7c) from [<60146280>] (do_bad_area+0x84/0x88)
+<4>[    0.574208]  r7:60487648 r4:60467f50
+<4>[    0.574220] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    0.574227]  r7:60467f50 r6:00000000 r5:00000805 r4:60134000
+<4>[    0.574243] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    0.574250]  r7:60467f50 r6:b000000c r5:60476960 r4:00000805
+<4>[    0.574266] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    0.574273] Exception stack(0x60467f50 to 0x60467f98)
+<4>[    0.574281] 7f40:                                     b000000c ffffffff 00000004 ffffffff
+<4>[    0.574291] 7f60: 00000000 604c4918 604c4918 605347c0 6045dcdc 410fc051 00000000 60467fbc
+<4>[    0.574300] 7f80: ffffffff 60467f9c ffffffff 60298f8c 200001d3 ffffffff
+<4>[    0.574306]  r7:60467f84 r6:ffffffff r5:200001d3 r4:60298f8c
+<4>[    0.574324] [<6044eab0>] (nodeorder_init+0x0/0xa8) from [<6043e690>] (start_kernel+0x10c/0x3c8)
+<4>[    0.574331]  r7:605347c0 r6:604730a0 r5:60466000 r4:60493d80
+<4>[    0.574347] [<6043e584>] (start_kernel+0x0/0x3c8) from [<00138044>] (0x138044)
+<4>[    0.574353]  r8:0013406a r7:6047620c r6:6045dcd8 r5:60473138 r4:10c5387d
+<0>[    0.574372] Code: e1a01000 e59f000c eb092bb0 e3a03000 (e5833000) 
+<4>[    0.574378] ---[ end trace 000000000000000d ]---
+<0>[    0.574383] Kernel panic - not syncing: Attempted to kill the idle task!
+<4>[    0.574388] Backtrace: 
+<4>[    0.574398] [<60140e8c>] (dump_backtrace+0x0/0x104) from [<6038b930>] (dump_stack+0x18/0x1c)
+<4>[    0.574404]  r7:0000000b r6:60466000 r5:60466524 r4:6049f588
+<4>[    0.574421] [<6038b918>] (dump_stack+0x0/0x1c) from [<6038bacc>] (panic+0x7c/0x1ac)
+<4>[    0.574431] [<6038ba50>] (panic+0x0/0x1ac) from [<60163184>] (do_exit+0xa0/0x74c
+==== c2 t=40 (1585 lines)
+<4>[    0.574437]  r3:00000000 r2:00000000 r1:00000000 r0:6040283b
+<4>[    0.574449]  r7:0000000b
+<4>[    0.574459] [<601630e4>] (do_exit+0x0/0x74c) from [<60141248>] (die+0x1ac/0x1e4)
+<4>[    0.574465]  r7:00000000
+<4>[    0.574475] [<6014109c>] (die+0x0/0x1e4) from [<6038b990>] (__do_kernel_fault.part.0+0x5c/0x7c)
+<4>[    0.574482]  r8:00000000 r7:00000000 r6:00000805 r5:604666a0 r4:00000000
+<4>[    0.574501] [<6038b934>] (__do_kernel_fault.part.0+0x0/0x7c) from [<60146100>] (do_page_fault+0x104/0x200)
+<4>[    0.574508]  r7:604750c0 r4:00000805
+<4>[    0.574520] [<60145ffc>] (do_page_fault+0x0/0x200) from [<601462c0>] (do_translation_fault+0x24/0xac)
+<4>[    0.574530] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    0.574537]  r7:604666a0 r6:00000000 r5:60476960 r4:00000805
+<4>[    0.574553] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    0.574560] Exception stack(0x604666a0 to 0x604666e8)
+<4>[    0.574569] 66a0: 00000037 60000153 604843f8 00000000 6049f588 60466734 60466000 0000000b
+<4>[    0.574580] 66c0: 00000805 00000805 00000000 604666f4 60466640 604666e8 6015fb70 60140d3c
+<4>[    0.574588] 66e0: 00000153 ffffffff
+<4>[    0.574592]  r7:604666d4 r6:ffffffff r5:00000153 r4:60140d3c
+<4>[    0.574609] [<60140d1c>] (__bug+0x0/0x2c) from [<60141948>] (__bug_noarg+0xc/0x10)
+<4>[    0.574619] [<6038ba50>] (panic+0x0/0x1ac) from [<60163184>] (do_exit+0xa0/0x74c)
+<4>[    0.574625]  r3:00000000 r2:00000000 r1:00000000 r0:6040283b
+<4>[    0.574637]  r7:0000000b
+<4>[    0.574646] [<601630e4>] (do_exit+0x0/0x74c) from [<60141248>] (die+0x1ac/0x1e4)
+<4>[    0.574652]  r7:00000000
+<4>[    0.574661] [<6014109c>] (die+0x0/0x1e4) from [<6038b990>] (__do_kernel_fault.part.0+0x5c/0x7c)
+<4>[    0.574668]  r8:00000000 r7:00000000 r6:00000805 r5:604668b0 r4:00000000
+---- tail
+<4>[    0.574182]  r8:6045dcdc r7:60487648 r6:00000805 r5:60467f50 r4:b000000c
+<4>[    0.574201] [<6038b934>] (__do_kernel_fault.part.0+0x0/0x7c) from [<60146280>] (do_bad_area+0x84/0x88)
+<4>[    0.574208]  r7:60487648 r4:60467f50
+<4>[    0.574220] [<601461fc>] (do_bad_area+0x0/0x88) from [<60146340>] (do_translation_fault+0xa4/0xac)
+<4>[    0.574227]  r7:60467f50 r6:00000000 r5:00000805 r4:60134000
+<4>[    0.574243] [<6014629c>] (do_translation_fault+0x0/0xac) from [<60138564>] (do_DataAbort+0x40/0xa4)
+<4>[    0.574250]  r7:60467f50 r6:b000000c r5:60476960 r4:00000805
+<4>[    0.574266] [<60138524>] (do_DataAbort+0x0/0xa4) from [<6013d758>] (__dabt_svc+0x38/0x60)
+<4>[    0.574273] Exception stack(0x60467f50 to 0x60467f98)
+<4>[    0.574281] 7f40:                                     b000000c ffffffff 00000004 ffffffff
+<4>[    0.574291] 7f60: 00000000 604c4918 604c4918 605347c0 6045dcdc 410fc051 00000000 60467fbc
+<4>[    0.574300] 7f80: ffffffff 60467f9c ffffffff 60298f8c 200001d3 ffffffff
+<4>[    0.574306]  r7:60467f84 r6:ffffffff r5:200001d3 r4:60298f8c
+<4>[    0.574324] [<6044eab0>] (nodeorder_init+0x0/0xa8) from [<6043e690>] (start_kernel+0x10c/0x3c8)
+<4>[    0.574331]  r7:605347c0 r6:604730a0 r5:60466000 r4:60493d80
+<4>[    0.574347] [<6043e584>] (start_kernel+0x0/0x3c8) from [<00138044>] (0x138044)
+<4>[    0.574353]  r8:0013406a r7:6047620c r6:6045dcd8 r5:60473138 r4:10c5387d
+<0>[    0.574372] Code: e1a01000 e59f000c eb092bb0 e3a03000 (e5833000) 
+<4>[    0.574378] ---[ end trace 000000000000000d ]---
+<0>[    0.574383] Kernel panic - not syncing: Attempted to kill the idle task!
+<4>[    0.574388] Backtrace: 
+<4>[    0.574398] [<60140e8c>] (dump_backtrace+0x0/0x104) from [<6038b930>] (dump_stack+0x18/0x1c)
+<4>[    0.574404]  r7:0000000b r6:60466000 r5:60466524 r4:6049f588
+<4>[    0.574421] [<6038b918>] (dump_stack+0x0/0x1c) from [<6038bacc>] (panic+0x7c/0x1ac)
+<4>[    0.574431] [<6038ba50>] (panic+0x0/0x1ac) from [<60163184>] (do_exit+0xa0/0x74c
+==== c3 t=20 (21 lines)
+<5>[    0.000000] Linux version 3.0.27_nl-rt106 (wubin@ubuntu) (gcc version 6.4.0 (Buildroot 2018.02-rc2-00002-gcab6743) ) #1 SMP PREEMPT RT Sat Oct 2
+<4>[    0.000000] CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c5387d
+<4>[    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+<6>[    0.000000] cmdline override at 60133005
+<4>[    0.000000] Machine: ARM-CXD900X0
+<4>[    0.000000] arm_add_memory: 0 0x0 0x20000000
+<4>[    0.000000] reserve area 0: 100000 @ 0
+<4>[    0.000000] reserve area 1: 75E000 @ 2E68000
+<4>[    0.000000] reserve area 2: 500000 @ 9B00000
+<4>[    0.000000] arm_add_memory: 1 0x80000000 0x3f800000
+<4>[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+<6>[    0.000000] L310 cache controller enabled
+<6>[    0.000000] l2x0: 8 ways, CACHE_ID 0x410000c8, AUX_CTRL 0x02420000, Cache size: 131072 B
+<6>[    0.000000] L2 cache controller: enabled
+<6>[    0.000000] 	Lockdown by master
+<6>[    0.000000] 	Ignore shared
+<6>[    0.000000] 	Way-size = 16KB
+<6>[    0.000000] 	8-way
+<6>[    0.000000] 	Tag RAM latency = 000
+<6>[    0.000000] 	Data RAM latency = 000
+<4>[    0.000000] bootmem_init: max_low=0x784384, max_high=0x784384
+---- tail
+<5>[    0.000000] Linux version 3.0.27_nl-rt106 (wubin@ubuntu) (gcc version 6.4.0 (Buildroot 2018.02-rc2-00002-gcab6743) ) #1 SMP PREEMPT RT Sat Oct 2
+<4>[    0.000000] CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c5387d
+<4>[    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+<6>[    0.000000] cmdline override at 60133005
+<4>[    0.000000] Machine: ARM-CXD900X0
+<4>[    0.000000] arm_add_memory: 0 0x0 0x20000000
+<4>[    0.000000] reserve area 0: 100000 @ 0
+<4>[    0.000000] reserve area 1: 75E000 @ 2E68000
+<4>[    0.000000] reserve area 2: 500000 @ 9B00000
+<4>[    0.000000] arm_add_memory: 1 0x80000000 0x3f800000
+<4>[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+<6>[    0.000000] L310 cache controller enabled
+<6>[    0.000000] l2x0: 8 ways, CACHE_ID 0x410000c8, AUX_CTRL 0x02420000, Cache size: 131072 B
+<6>[    0.000000] L2 cache controller: enabled
+<6>[    0.000000] 	Lockdown by master
+<6>[    0.000000] 	Ignore shared
+<6>[    0.000000] 	Way-size = 16KB
+<6>[    0.000000] 	8-way
+<6>[    0.000000] 	Tag RAM latency = 000
+<6>[    0.000000] 	Data RAM latency = 000
+<4>[    0.000000] bootmem_init: max_low=0x784384, max_high=0x784384
+==== c3 t=40 (21 lines)
+<5>[    0.000000] Linux version 3.0.27_nl-rt106 (wubin@ubuntu) (gcc version 6.4.0 (Buildroot 2018.02-rc2-00002-gcab6743) ) #1 SMP PREEMPT RT Sat Oct 2
+<4>[    0.000000] CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c5387d
+<4>[    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+<6>[    0.000000] cmdline override at 60133005
+<4>[    0.000000] Machine: ARM-CXD900X0
+<4>[    0.000000] arm_add_memory: 0 0x0 0x20000000
+<4>[    0.000000] reserve area 0: 100000 @ 0
+<4>[    0.000000] reserve area 1: 75E000 @ 2E68000
+<4>[    0.000000] reserve area 2: 500000 @ 9B00000
+<4>[    0.000000] arm_add_memory: 1 0x80000000 0x3f800000
+<4>[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+<6>[    0.000000] L310 cache controller enabled
+<6>[    0.000000] l2x0: 8 ways, CACHE_ID 0x410000c8, AUX_CTRL 0x02420000, Cache size: 131072 B
+<6>[    0.000000] L2 cache controller: enabled
+<6>[    0.000000] 	Lockdown by master
+<6>[    0.000000] 	Ignore shared
+<6>[    0.000000] 	Way-size = 16KB
+<6>[    0.000000] 	8-way
+<6>[    0.000000] 	Tag RAM latency = 000
+<6>[    0.000000] 	Data RAM latency = 000
+<4>[    0.000000] bootmem_init: max_low=0x784384, max_high=0x784384
+---- tail
+<5>[    0.000000] Linux version 3.0.27_nl-rt106 (wubin@ubuntu) (gcc version 6.4.0 (Buildroot 2018.02-rc2-00002-gcab6743) ) #1 SMP PREEMPT RT Sat Oct 2
+<4>[    0.000000] CPU: ARMv7 Processor [410fc051] revision 1 (ARMv7), cr=10c5387d
+<4>[    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+<6>[    0.000000] cmdline override at 60133005
+<4>[    0.000000] Machine: ARM-CXD900X0
+<4>[    0.000000] arm_add_memory: 0 0x0 0x20000000
+<4>[    0.000000] reserve area 0: 100000 @ 0
+<4>[    0.000000] reserve area 1: 75E000 @ 2E68000
+<4>[    0.000000] reserve area 2: 500000 @ 9B00000
+<4>[    0.000000] arm_add_memory: 1 0x80000000 0x3f800000
+<4>[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+<6>[    0.000000] L310 cache controller enabled
+<6>[    0.000000] l2x0: 8 ways, CACHE_ID 0x410000c8, AUX_CTRL 0x02420000, Cache size: 131072 B
+<6>[    0.000000] L2 cache controller: enabled
+<6>[    0.000000] 	Lockdown by master
+<6>[    0.000000] 	Ignore shared
+<6>[    0.000000] 	Way-size = 16KB
+<6>[    0.000000] 	8-way
+<6>[    0.000000] 	Tag RAM latency = 000
+<6>[    0.000000] 	Data RAM latency = 000
+<4>[    0.000000] bootmem_init: max_low=0x784384, max_high=0x784384

@@ -1,0 +1,104 @@
+# ---------------------------------------------------------------------------
+# 提交策略：这个仓库只提交 **我自己写的东西**
+#   - 分析文档（*.md）
+#   - 我自己写的脚本 / 工具源码（*.py, *.sh, *.c, *.h, Makefile）
+#   - 小型文本证据（配置、清单、日志片段）
+#
+# 默认忽略一切，再按类型放行；固件与其衍生内容一律不重分发（见 README）。
+# ---------------------------------------------------------------------------
+
+*
+!*/
+!.gitignore
+!LICENSE
+
+# 放行的文本/源码类型
+!*.md
+!*.py
+!*.sh
+!*.c
+!*.h
+!*.mk
+!Makefile
+!*.yaml
+!*.yml
+!*.json
+!*.tsv
+!*.conf
+!*.log
+!*.txt
+
+# --- 第三方仓库 / 环境（各自上游保有自己的权利，见 README 的 clone 命令）---
+refs/
+dist/
+.venv-jir/
+venv/
+work/sony-src/
+work/qemu-a7c/qemu-sony/
+work/qemu-a7c/qemu-sony.tar.gz
+
+# --- Sony 固件与容器（专有二进制，不重分发）---
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.dat
+*.fdat
+*.img
+*.bin
+nflasha*
+*.so
+*.o
+*.ko
+*.elf
+*.uxc
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# --- 从 Sony 包里解出来的「原件」（脚本 / 配置 / LICENSE / 内建数据）一律不重分发
+firmware.tar_unpacked/
+updater.img_unpacked/
+ZVE10/
+work/l1-camera/a1_initrd/
+work/l1-camera/a1_extracted*/
+work/l1-camera/a6_extracted/
+work/l1-camera/a7_extracted/
+work/l1-camera/cfg__*
+work/v203/a1_initrd/
+work/v203/body20*/
+work/v203/n15/
+work/v203/u203/
+work/mock/fs/
+work/mock-faults/fs/
+work/mock_l1/cfg__*
+
+# --- 反汇编 / 字符串 / 内存转储（Sony 代码的衍生内容，体积大，可本地重跑生成）---
+*.asm
+*.S
+*.s
+*.out
+*.err
+*.hdr
+*.decode
+*.objs
+**/strings*.txt
+**/s_all.txt
+**/hits.txt
+work/modes/*.json
+work/cmdlines/
+work/qemu-a7c/results/**/analysis/
+work/qemu-a7c/results/**/fwdump*/
+work/qemu-a7c/results/**/snap_*.txt
+work/qemu-a7c/results/round4/ring_*.txt
+work/qemu-a7c/results/round8/emmc_*.txt
+work/qemu-a7c/results/build.log
+
+# --- 临时/杂项 ---
+.DS_Store
+*.part
+wrapw-before.*
+__pycache__/
+*.pyc
+*.swp

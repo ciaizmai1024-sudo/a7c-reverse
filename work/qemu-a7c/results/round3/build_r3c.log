@@ -1,0 +1,9 @@
+  CC      arm-softmmu/hw/arm/bionz.o
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:1074:13: warning: ‘cxd90045_load_wbi’ defined but not used [-Wunused-function]
+ 1074 | static void cxd90045_load_wbi(BlockBackend *blk)
+      |             ^~~~~~~~~~~~~~~~~
+/home/wubin/qemu-a7c/qemu-sony/hw/arm/bionz.c:998:13: warning: ‘cxd90045_write_cmdline_mem’ defined but not used [-Wunused-function]
+  998 | static void cxd90045_write_cmdline_mem(const char *cl, hwaddr base)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  LINK    arm-softmmu/qemu-system-arm
+BUILD_RC=0
