@@ -94,3 +94,5 @@ Round 17 抓到 `verifyKey` 的比对是 `SHA1(整只 /etc/VerificationKey.pem �
 ## 5. 只能靠真机补的东西（当前所有硬缺口的共同答案）
 `nflashaB0/B1`（EXBL 是否验 a1）、USER `0x0–0x10000`（真分区表 / FixedArea）、RAM `0x02e80000` 活副本、
 官方更新卡 `BODYDATA.DAT`（真 FDAT 头 + 尾 256 B 签名）、以及 **L2.6 真机 raw 节点写**验证（见 `TEST_LADDER.md`）。
+
+- ★低风险入口 1（TELN→root shell）：**改 a2 里 `/setting/ulogio.bin` 偏移 `0x9c` 一个字节 `00`→`01` + 重启 ⇒ `0.0.0.0:23` 无认证 root shell（2.00）**；a2 是 FAT12、更新不写它、文件可备份还原 ⇒ **R1**。拿到 shell 后 `dk/mu/mb/mw` 可直接读写物理内存 ⇒ 顺手解决 OTP 窗（`0xF340F000`/`0xFFFF5000`）、Backup RAM（`0x02E80000`）、LOGB 日志（`0x03085000`）。详见 `notes/ulogio-telnet-shell.md`。注意 2.03 的实现不同（不是 shell）；跑过 `ulogio telnet up` 会生成 `filter.bin` 覆盖该开关。

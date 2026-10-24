@@ -1,0 +1,31 @@
+FAT12 image: nflasha2.bin
+  bytes-per-sector=512  sectors-per-cluster=32  cluster-size=16384
+  reserved=1  fats=1  sectors-per-fat=4  root-entries=512  total-sectors=40960  media=0xf8
+  fat1-offset=0x200  root-offset=0xa00  data-offset=0x4a00 (sector 37)  clusters=1278
+  cluster N byte offset = 0x4a00 + (N-2)*16384
+
+- DmmConfig.bin                            clu=3     off=0x8a00(35328)      size=78284    md5=0963cecccf9069d3d6a97ea985bbe256  [LFN: DmmConfig.bin; 8.3: DMMCON~1.BIN]
+d updater                                  clu=5     off=0x10a00(68096)     size=-        md5=-  [LFN: updater; 8.3: UPDATER]
+  - comp                                     clu=0     off=-                  size=0        md5=d41d8cd98f00b204e9800998ecf8427e  [LFN: comp; 8.3: COMP]
+  - dat4                                     clu=438   off=0x6d4a00(7162368)  size=2        md5=7209a1ce16f85bd1cbd287134ff5cbb6  [LFN: dat4; 8.3: DAT4]
+- .hasp                                    clu=384   off=0x5fca00(6277632)  size=88       md5=39b88192551c9d8dff7784980a0a034e  [LFN: .hasp; 8.3: HASP~1]
+- Backup.bin                               clu=91    off=0x168a00(1477120)  size=1210408  md5=7a549d0600ae452a7c8ca3b2a56b58f4  [LFN: Backup.bin; 8.3: BACKUP.BIN]
+- facedmy.bin                              clu=85    off=0x150a00(1378816)  size=51200    md5=5ae9f4294ae4681defff69bea50edd4b  [LFN: facedmy.bin; 8.3: FACEDMY.BIN]
+d appfw_infra                              clu=86    off=0x154a00(1395200)  size=-        md5=-  [LFN: appfw_infra; 8.3: APPFW_~1]
+- kemco.txt                                clu=90    off=0x164a00(1460736)  size=1905     md5=ef072ecece9be77813e2acae703000b2  [LFN: kemco.txt; 8.3: KEMCO.TXT]
+- facerec0.bin                             clu=7     off=0x18a00(100864)    size=57888    md5=5a37bf611e4ac0191f386b75daa51818  [LFN: facerec0.bin; 8.3: FACEREC0.BIN]
+- psd.bin                                  clu=92    off=0x16ca00(1493504)  size=4427776  md5=621cdfc97786618c63113faf6642aaa2  [LFN: psd.bin; 8.3: PSD.BIN]
+- ulogio.bin                               clu=363   off=0x5a8a00(5933568)  size=3772     md5=ceb0e7f1fa66acdbabefd68008eaae08  [LFN: ulogio.bin; 8.3: ULOGIO.BIN]
+- Backup.bak                               clu=514   off=0x804a00(8407552)  size=1210408  md5=4a30fe19441079b30a072a56b2ef7213  [LFN: Backup.bak; 8.3: BACKUP.BAK]
+d mode                                     clu=440   off=0x6dca00(7195136)  size=-        md5=-  [LFN: mode; 8.3: MODE]
+d gps                                      clu=4     off=0xca00(51712)      size=-        md5=-  [LFN: gps; 8.3: GPS]
+- .etools                                  clu=386   off=0x604a00(6310400)  size=4096     md5=814ed264343edddac2b7520b0c9ccfa9  [LFN: .etools; 8.3: ETOOLS~1]
+- facerec1.bin                             clu=11    off=0x28a00(166400)    size=57888    md5=07d168c6ea885f9df1c4354a6de48d11  [LFN: facerec1.bin; 8.3: FACEREC1.BIN]
+- facerec2.bin                             clu=15    off=0x38a00(231936)    size=57888    md5=07d168c6ea885f9df1c4354a6de48d11  [LFN: facerec2.bin; 8.3: FACEREC2.BIN]
+- facerec3.bin                             clu=19    off=0x48a00(297472)    size=57888    md5=07d168c6ea885f9df1c4354a6de48d11  [LFN: facerec3.bin; 8.3: FACEREC3.BIN]
+- facerec4.bin                             clu=23    off=0x58a00(363008)    size=57888    md5=07d168c6ea885f9df1c4354a6de48d11  [LFN: facerec4.bin; 8.3: FACEREC4.BIN]
+- facerec5.bin                             clu=27    off=0x68a00(428544)    size=57888    md5=07d168c6ea885f9df1c4354a6de48d11  [LFN: facerec5.bin; 8.3: FACEREC5.BIN]
+- facerec6.bin                             clu=31    off=0x78a00(494080)    size=57888    md5=07d168c6ea885f9df1c4354a6de48d11  [LFN: facerec6.bin; 8.3: FACEREC6.BIN]
+- facerec7.bin                             clu=35    off=0x88a00(559616)    size=57888    md5=07d168c6ea885f9df1c4354a6de48d11  [LFN: facerec7.bin; 8.3: FACEREC7.BIN]
+
+files=19 dirs=4 total_bytes=7451043

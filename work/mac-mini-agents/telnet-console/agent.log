@@ -1,0 +1,7 @@
+README 已经写好：`/Users/wubin/a7c-tasks/telnet-console/README.md`。
+
+核心结论：
+- `nflasha15.bin` 是 **ext2**（不是 FAT）；a2 才是 FAT12，`/setting/ulogio.bin` 就是启动时 `insmod ulogio_initfile=` 读的那份。
+- 2.00 的 TELN=1 会起 **TCP 23**（0.0.0.0、无认证、单会话），连上直接是 `pty + /bin/ash --login` 的 **root shell**，不是只吐日志；服务端在 `libosal_ulogio.so`，busybox 里确实没有 telnetd。
+- 改 0x9c 一个字节即可；`ulogio telnet up` 也会写 `/setting/filter.bin` 且必须重启，之后 filter.bin 会覆盖 ulogio.bin 的 TELN。
+- **重要差异**：2.03 更新包的 `libosal_ulogio.so` 没有 socket/bind/listen 和 pty/execl，telnet 改成终端/日志复用，不能按 2.00 的证据断言会得到 shell——README §6 有说明。

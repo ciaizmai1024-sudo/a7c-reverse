@@ -53,3 +53,7 @@ debugfs -R 'dump <path> out' work/l2-camera/nflasha15.bin   # 取 wifi-scripts /
 python3 work/net-tools/dfls.py work/l2-camera/nflasha15.bin > work/net-tools/a15_tree_full.tsv
 python3 work/net-tools/bbapplets.py work/l1-camera/nflasha7.bin   # busybox applet 表（静态提取）
 ```
+
+> 更正（已复核）：`/setting` 里**有** `ulogio.bin`（3,772 B，md5 `ceb0e7f1…`；2.03 包内是 3,796 B）；`a15` 是 **ext2** 不是 FAT；
+> 2.00 的 telnet 会话是 **pty + `/bin/ash --login`（root shell）**，不是只看日志；`ulogio telnet up` 还会写 `/setting/filter.bin` 且必须重启。
+> 详见 `notes/ulogio-telnet-shell.md`。
