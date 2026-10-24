@@ -1,0 +1,101 @@
+
+######## 2.00: /tmp/dec200.bin ########
+obj2(tar) off=143872 len=344709632 nobj=2 objs=[(0, b'U\x00\x00\x00', 512, 143360), (1, b'P\x00\x00\x00', 512, 0)]
+  bytes@0x200: 45 3d cd 28 00 30 02 00 03 00 00 00 00 00 00 00  bytes@0x23200: 30 31 30 30 5f 63 6f 6e 66 69 67 2f 00 00 00 00
+  obj0(cramfs) 明文范围 [0x200,0x23200) cramfs-magic=45 3d cd 28 cramfs-signature@0x210=b'Compressed ROMFS'
+  tar members: 163 (base 143872)
+    @144896(+0x23600) size=17 type=0 0100_config/big_backup.conf
+    @145920(+0x23a00) size=1253 type=0 0100_config/mount.conf
+    @148480(+0x24400) size=155 type=0 0101_config_sum/config.sum
+    @31649280(+0x1e2ee00) size=2965 type=0 0111_backup_sum/backup.sum
+    @31653376(+0x1e2fe00) size=4017 type=0 0300_partconf/partinf.conf
+    @31658496(+0x1e31200) size=77 type=0 0301_partconf_sum/partconf.sum
+    @31889920(+0x1e69a00) size=80 type=0 0641_darwin_sum/darwin.sum
+    @32846336(+0x1f53200) size=1984 type=0 0651_prfile_sum/prfile.sum
+    @32849920(+0x1f54000) size=239982592 type=0 0700_part_image/dev/nflasha15
+    @272833024(+0x10431a00) size=30290944 type=0 0700_part_image/dev/nflasha3
+    @303124480(+0x12115000) size=32577024 type=0 0700_part_image/dev/nflasha5
+    @335702016(+0x14026800) size=4992000 type=0 0700_part_image/dev/nflasha7
+    @340695040(+0x144e9800) size=377 type=0 0701_part_image_sum/part_image.sum
+    @344817664(+0x148d8000) size=261 type=0 0800_appli/tmp/nsswitch.conf
+    @344844800(+0x148dea00) size=6517 type=0 0801_appli_sum/appli.sum
+  -- 对齐真机 dump --
+    nflasha1(l1) (8323072 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+-0x1; mid@dump+0x3f8000->plain+-0x1
+    nflasha1(l2) (8323072 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+-0x1; mid@dump+0x3f8000->plain+-0x1
+    nflasha2 (20971520 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+0xacf18; +8MiB@dump+0x800000->plain+-0x1
+    nflasha3 (30290944 B): head512@dump+0x0->plain+0x10431a00; +1KiB@dump+0x400->plain+0x10431e00; +1MiB@dump+0x100000->plain+0x10531a00; +8MiB@dump+0x800000->plain+0x10c31a00
+    nflasha4 (12582912 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +4KiB@dump+0x1000->plain+-0x1
+    nflasha6 (16777216 B): head512@dump+0x0->plain+-0x1; +1MiB@dump+0x100000->plain+-0x1
+    nflasha7 (8388608 B): +1KiB@dump+0x400->plain+0x14026c00; +1MiB@dump+0x100000->plain+0x14126800; mid@dump+0x400000->plain+0x116a9400
+    nflasha10 (12582912 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+0x14649400
+    nflasha13 (4194304 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1
+    nflasha15 (314572800 B): +1KiB@dump+0x400->plain+0x1f54400; +4KiB@dump+0x1000->plain+0x1f55000; +1MiB@dump+0x100000->plain+0x2054000; +8MiB@dump+0x800000->plain+0x2754000; mid@dump+0x9600000->plain+0xac00570
+    nflasha23 (2097152 B): +1KiB@dump+0x400->plain+-0x1; +4KiB@dump+0x1000->plain+-0x1; +1MiB@dump+0x100000->plain+0xacf18; mid@dump+0x100000->plain+0xacf18
+    a1_203(tar) (8323072 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+-0x1; mid@dump+0x3f8000->plain+-0x1
+    AV-CAM.BIN (17394576 B): head512@dump+0x0->plain+0x10441c00; +4KiB@dump+0x1000->plain+0x10442c00; +1MiB@dump+0x100000->plain+0x10541c00; +8MiB@dump+0x800000->plain+0x10c41c00; mid@dump+0x84b400->plain+0x10c8d000
+  -- 压缩 magic -- {b'$Cram': (0, None), b'$Crom': (0, None), b'7zXZ': (1, 337739255), b'\xfd7zXZ': (1, 337739254), b'$Bfr': (0, None)}
+  -- 6157/664 组合模式（全明文） --
+    LE32 6157: 0x2550868, 0x3171360, 0x48c587c, 0x6a28ef8, 0x74cd268
+    BE32 6157: 0x228e4b6, 0x248edae, 0x25ea872, 0x26309ae, 0x264306e
+    LE32 664: 0xa0d41, 0xa0fbd, 0x1c8941, 0x1c8bbd, 0x2f0541
+    BE32 664: 0x2e18992, 0x2e9d2b2, 0x2ecae12, 0x2ff4b5a, 0x30256ee
+  -- 帧索引: 2 帧, 明文总长 2452 (文件 344853504) --
+    plain@0x0 -> frame 0 (帧内偏移 4, FDAT payload off 4) ciphertext(dat文件) off 216 回读验证=False
+    plain@0x200 -> frame 0 (帧内偏移 516, FDAT payload off 516) ciphertext(dat文件) off 728 回读验证=False
+    plain@0x1000 -> frame 1 (帧内偏移 2687, FDAT payload off 3711) ciphertext(dat文件) off 3923 回读验证=False
+    plain@0x23200 -> frame 1 (帧内偏移 142463, FDAT payload off 143487) ciphertext(dat文件) off 143699 回读验证=False
+    plain@0x3b8a0 -> frame 1 (帧内偏移 242463, FDAT payload off 243487) ciphertext(dat文件) off 243699 回读验证=False
+    plain@0x148e0b9c -> frame 1 (帧内偏移 344851995, FDAT payload off 344853019) ciphertext(dat文件) off 344853231 回读验证=False
+    plain@0x148e0bc0 -> frame 1 (帧内偏移 344852031, FDAT payload off 344853055) ciphertext(dat文件) off 344853267 回读验证=False
+
+######## 2.03: /tmp/dec203.bin ########
+obj2(tar) off=147968 len=361630720 nobj=2 objs=[(0, b'U\x00\x00\x00', 512, 147456), (1, b'P\x00\x00\x00', 512, 0)]
+  bytes@0x200: 45 3d cd 28 00 40 02 00 03 00 00 00 00 00 00 00  bytes@0x24200: 30 31 30 30 5f 63 6f 6e 66 69 67 2f 00 00 00 00
+  obj0(cramfs) 明文范围 [0x200,0x24200) cramfs-magic=45 3d cd 28 cramfs-signature@0x210=b'Compressed ROMFS'
+  tar members: 171 (base 147968)
+    @148992(+0x24600) size=17 type=0 0100_config/big_backup.conf
+    @150016(+0x24a00) size=1253 type=0 0100_config/mount.conf
+    @152576(+0x25400) size=155 type=0 0101_config_sum/config.sum
+    @31693312(+0x1e39a00) size=2965 type=0 0111_backup_sum/backup.sum
+    @31697408(+0x1e3aa00) size=4017 type=0 0300_partconf/partinf.conf
+    @31702528(+0x1e3be00) size=77 type=0 0301_partconf_sum/partconf.sum
+    @31704576(+0x1e3c600) size=8323072 type=0 0400_updater/dev/nflasha1
+    @40028672(+0x262ca00) size=145 type=0 0401_updater_sum/updater.sum
+    @40260096(+0x2665200) size=80 type=0 0641_darwin_sum/darwin.sum
+    @41225216(+0x2750c00) size=2075 type=0 0651_prfile_sum/prfile.sum
+    @41229312(+0x2751c00) size=243140608 type=0 0700_part_image/dev/nflasha15
+    @284370432(+0x10f32600) size=30292992 type=0 0700_part_image/dev/nflasha3
+    @314663936(+0x12c16400) size=35709920 type=0 0700_part_image/dev/nflasha5
+    @350374400(+0x14e24a00) size=5132288 type=0 0700_part_image/dev/nflasha7
+    @355507712(+0x15309e00) size=377 type=0 0701_part_image_sum/part_image.sum
+    @361742336(+0x158fc000) size=261 type=0 0800_appli/tmp/nsswitch.conf
+    @361769472(+0x15902a00) size=6680 type=0 0801_appli_sum/appli.sum
+  -- 对齐真机 dump --
+    nflasha1(l1) (8323072 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+0x1f3c668; mid@dump+0x3f8000->plain+-0x1
+    nflasha1(l2) (8323072 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+0x1f3c668; mid@dump+0x3f8000->plain+-0x1
+    nflasha2 (20971520 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+0xae178; +8MiB@dump+0x800000->plain+-0x1
+    nflasha3 (30290944 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+0x10f36800; +1MiB@dump+0x100000->plain+-0x1; +8MiB@dump+0x800000->plain+-0x1
+    nflasha4 (12582912 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +4KiB@dump+0x1000->plain+-0x1
+    nflasha6 (16777216 B): head512@dump+0x0->plain+-0x1; +1MiB@dump+0x100000->plain+-0x1
+    nflasha7 (8388608 B): +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+0x151a1200; mid@dump+0x400000->plain+-0x1
+    nflasha10 (12582912 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1; +1MiB@dump+0x100000->plain+0x1546ac00
+    nflasha13 (4194304 B): head512@dump+0x0->plain+-0x1; +1KiB@dump+0x400->plain+-0x1
+    nflasha15 (314572800 B): +1KiB@dump+0x400->plain+-0x1; +4KiB@dump+0x1000->plain+0x2752c00; +1MiB@dump+0x100000->plain+-0x1; +8MiB@dump+0x800000->plain+-0x1; mid@dump+0x9600000->plain+0x628c970
+    nflasha23 (2097152 B): +1KiB@dump+0x400->plain+-0x1; +4KiB@dump+0x1000->plain+-0x1; +1MiB@dump+0x100000->plain+0xae178; mid@dump+0x100000->plain+0xae178
+    a1_203(tar) (8323072 B): head512@dump+0x0->plain+0x1e3c600; +1KiB@dump+0x400->plain+0x1e3ca00; +1MiB@dump+0x100000->plain+0x1f3c600; mid@dump+0x3f8000->plain+0x2234600
+    AV-CAM.BIN (17394576 B): head512@dump+0x0->plain+-0x1; +4KiB@dump+0x1000->plain+-0x1; +1MiB@dump+0x100000->plain+-0x1; +8MiB@dump+0x800000->plain+-0x1; mid@dump+0x84b400->plain+-0x1
+  -- 压缩 magic -- {b'$Cram': (0, None), b'$Crom': (0, None), b'7zXZ': (1, 355109410), b'\xfd7zXZ': (1, 355109409), b'$Bfr': (0, None)}
+  -- 6157/664 组合模式（全明文） --
+    LE16 6157|LE16 664: 0x13a0f1c5
+    LE32 6157: 0x283e6f8, 0x2987e44, 0x2d21738, 0x41e99c9, 0x41f5a29
+    BE32 6157: 0x2e0612e, 0x30c387e, 0x32e0776, 0x32f1bae, 0x33f54de
+    LE32 664: 0xa1fa1, 0xa221d, 0x1ca1a1, 0x1ca41d, 0x2f23a1
+    BE32 664: 0x2a02516, 0x4d335ea, 0x5b6287e, 0xad9bab2, 0xadc9622
+  -- 帧索引: 4 帧, 明文总长 6585 (文件 361778688) --
+    plain@0x0 -> frame 0 (帧内偏移 4, FDAT payload off 4) ciphertext(dat文件) off 216 回读验证=False
+    plain@0x200 -> frame 0 (帧内偏移 516, FDAT payload off 516) ciphertext(dat文件) off 728 回读验证=False
+    plain@0x1000 -> frame 2 (帧内偏移 1042, FDAT payload off 3090) ciphertext(dat文件) off 3302 回读验证=False
+    plain@0x24200 -> frame 3 (帧内偏移 142383, FDAT payload off 145455) ciphertext(dat文件) off 145667 回读验证=False
+    plain@0x3c8a0 -> frame 3 (帧内偏移 242383, FDAT payload off 245455) ciphertext(dat文件) off 245667 回读验证=False
+    plain@0x15904d9c -> frame 3 (帧内偏移 361773003, FDAT payload off 361776075) ciphertext(dat文件) off 361776287 回读验证=False
+    plain@0x15904dc0 -> frame 3 (帧内偏移 361773039, FDAT payload off 361776111) ciphertext(dat文件) off 361776323 回读验证=False

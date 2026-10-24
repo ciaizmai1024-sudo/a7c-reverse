@@ -1,0 +1,66 @@
+== FS 头/引导区/超级块 u16/u32 LE+BE 扫描 6157/664 ==
+  a1 (work/l1-camera/nflasha1.bin): 无
+  a2 (work/l2-camera/nflasha2.bin): 无
+  a3 (work/l1_v/nflasha3.bin): 无
+  a4 (work/l2-camera/nflasha4.bin): 无
+  a6 (work/l2-camera/nflasha6.bin): 无
+  a7 (work/l1-camera/nflasha7.bin): 无
+  a10 (work/l2-camera/nflasha10.bin): 无
+  a13 (work/l2-camera/nflasha13.bin): 无
+  a15 (work/l2-camera/nflasha15.bin): 无
+  a23 (work/l2-camera/nflasha23.bin): 无
+  a1_203 (work/v203/nflasha1_203.bin): 无
+
+== AV-CAM.BIN 定位（FAT 目录项 -> 簇 -> 明文偏移）==
+  2.00: a3 member@0x10431a00 BPB={'bs': 512, 'spc': 32, 'resv': 1, 'nfat': 2, 'rootent': 512, 'tot': 59162, 'spf': 32, 'root_dir': 272866304, 'data': 272882688, 'free16': 1, 'hdsec': 0, 'med': 248, 'volid': '180c4168', 'label': '4e4f204e414d4520202020', 'fsid': '46415431322020200e1fbe5b7cac'}
+    目录项@0x10439c20 起始簇=3 大小=17394576 -> AV-CAM.BIN 数据 @plain 0x10441c00 (a3 成员+0x10200) 头16B=0a 00 00 ea 4f 52 49 4c 04 00 00 00 44 60 5c 63
+  2.03: a3 member@0x10f32600 BPB={'bs': 512, 'spc': 32, 'resv': 32, 'nfat': 2, 'rootent': 512, 'tot': 59166, 'spf': 32, 'root_dir': 284419584, 'data': 284435968, 'free16': 32, 'hdsec': 0, 'med': 248, 'volid': '1f165c0f', 'label': '4e4f204e414d4520202020', 'fsid': '46415431322020200e1fbe5b7cac'}
+    目录项@0x10f3e620 起始簇=3 大小=17398676 -> AV-CAM.BIN 数据 @plain 0x10f46600 (a3 成员+0x14000) 头16B=0a 00 00 ea 4f 52 49 4c 04 00 00 00 44 60 5c 63
+  两版文件大小不同: 17394576 vs 17398676；数据偏移 0x10441c00 vs 0x10f46600
+  AV-CAM 两版公共前缀=0 B (差异起点 0x0)
+  窗口 AV-CAM(2.00)+0x100000 -> 2.03 a3 内 未命中
+  窗口 AV-CAM(2.00)+0x400000 -> 2.03 a3 内 未命中
+  窗口 AV-CAM(2.00)+0x800000 -> 2.03 a3 内 未命中
+  窗口 AV-CAM(2.00)+0x84b400 -> 2.03 a3 内 未命中
+  窗口 AV-CAM(2.00)+0x100 -> 2.03 a3 内 命中 0x10f326bf (差 -0x14041)
+  窗口 AV-CAM(2.00)+0x2000 -> 2.03 a3 内 未命中
+
+== tar 顶层段区间（明文偏移）==
+  -- 2.00 --
+    0100_config              plain [0x000023600 .. 0x000023ee5)  = [0x23600+0x8e5]
+    0101_config_sum          plain [0x000024400 .. 0x00002449b)  = [0x24400+0x9b]
+    0110_backup              plain [0x000024a00 .. 0x001e2e828)  = [0x24a00+0x1e09e28]
+    0111_backup_sum          plain [0x001e2ee00 .. 0x001e2f995)  = [0x1e2ee00+0xb95]
+    0300_partconf            plain [0x001e2fe00 .. 0x001e30db1)  = [0x1e2fe00+0xfb1]
+    0301_partconf_sum        plain [0x001e31200 .. 0x001e3124d)  = [0x1e31200+0x4d]
+    0640_darwin              plain [0x001e32000 .. 0x001e69478)  = [0x1e32000+0x37478]
+    0641_darwin_sum          plain [0x001e69a00 .. 0x001e69a50)  = [0x1e69a00+0x50]
+    0650_prfile              plain [0x001e6a600 .. 0x001f52dfb)  = [0x1e6a600+0xe87fb]
+    0651_prfile_sum          plain [0x001f53200 .. 0x001f539c0)  = [0x1f53200+0x7c0]
+    0700_part_image          plain [0x001f54000 .. 0x0144e9400)  = [0x1f54000+0x12595400]
+    0701_part_image_sum      plain [0x0144e9800 .. 0x0144e9979)  = [0x144e9800+0x179]
+    0800_appli               plain [0x0144ea000 .. 0x0148de469)  = [0x144ea000+0x3f4469]
+    0801_appli_sum           plain [0x0148dea00 .. 0x0148e0375)  = [0x148dea00+0x1975]
+  -- 2.03 --
+    0100_config              plain [0x000024600 .. 0x000024ee5)  = [0x24600+0x8e5]
+    0101_config_sum          plain [0x000025400 .. 0x00002549b)  = [0x25400+0x9b]
+    0110_backup              plain [0x000025a00 .. 0x001e39418)  = [0x25a00+0x1e13a18]
+    0111_backup_sum          plain [0x001e39a00 .. 0x001e3a595)  = [0x1e39a00+0xb95]
+    0300_partconf            plain [0x001e3aa00 .. 0x001e3b9b1)  = [0x1e3aa00+0xfb1]
+    0301_partconf_sum        plain [0x001e3be00 .. 0x001e3be4d)  = [0x1e3be00+0x4d]
+    0400_updater             plain [0x001e3c600 .. 0x00262c600)  = [0x1e3c600+0x7f0000]
+    0401_updater_sum         plain [0x00262ca00 .. 0x00262ca91)  = [0x262ca00+0x91]
+    0640_darwin              plain [0x00262d800 .. 0x002664c8c)  = [0x262d800+0x3748c]
+    0641_darwin_sum          plain [0x002665200 .. 0x002665250)  = [0x2665200+0x50]
+    0650_prfile              plain [0x002665e00 .. 0x0027507fb)  = [0x2665e00+0xea9fb]
+    0651_prfile_sum          plain [0x002750c00 .. 0x00275141b)  = [0x2750c00+0x81b]
+    0700_part_image          plain [0x002751c00 .. 0x015309a00)  = [0x2751c00+0x12bb7e00]
+    0701_part_image_sum      plain [0x015309e00 .. 0x015309f79)  = [0x15309e00+0x179]
+    0800_appli               plain [0x01530a600 .. 0x015902469)  = [0x1530a600+0x5f7e69]
+    0801_appli_sum           plain [0x015902a00 .. 0x015904418)  = [0x15902a00+0x1a18]
+
+== a10 内容（kikilog 等）与 0800_appli 成员对齐 ==
+  2.03 0800_appli/setting/ulogio.bin @0x15375c00 len=3796
+  2.03 0800_appli/tmp/kikilog.dat @0x1571dc00 len=1957888
+  kikilog.dat 成员头512B 在 a10 dump 偏移: 0x47fe40  (即 a10+0x47fe40 ↔ plain+0x1571dc00)
+  a10+0x100000 窗口在 2.00 明文: 0x14649400

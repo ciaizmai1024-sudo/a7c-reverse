@@ -265,3 +265,17 @@ python3 tools/sig_probe_fdat.py <同一个 .dat> --dec work/v203/full_dec_200.bi
 - **Route A′**：改 a1 里的验签器（NOP/放行）。
 - **Route A″（更干净）**：**把 Backup 里的钥匙指纹改成"我们自己那把公钥 PEM 的 SHA1"**（同时把 `/etc/VerificationKey.pem` 换成我们的公钥）⇒ **自签的 `.dat` 就能过**，不需要 Sony 私钥。
 （另注：UUD 版本门要求 `.dat` 头版本 **严格大于**相机当前版本，见 `notes/qemu.md` Round 16 §④。）
+
+---
+## FDAT 明文侧的确切格式（离线，`tools/fdat_aescbc.py`，可复跑）
+FDAT payload = **N 个 1024 B 加密帧 + 272 B 尾部**；帧明文 = `[u16le 校验和][u16le len|bit15=末块][负载][0xFF 填充到 1020]`，校验和 = `sum(帧[2:2+1022] 按 u16le) & 0xffff`。
+加解密（两把 key 都是公开的）：
+- **块 0 的前 512 B**：`AES-128-ECB`，`KEY_AES = e3b0c44298fc1c149afbf4c8996fb924`（= `SHA256("")` 前 16 B，也 = `libupdatertalk.so` 的 `KeyArray[0:16]`）
+- **块 0 的后 512 B 起（含块 1..N）**：`AES-256-CBC`，`KEY_90045 = c1aa8f7c46341ffed15589fc8170a6bb5925e85f6282d7f95ba3fdf5d303e06b`，**IV = 尾部前 16 B**
+实测（2024 本机跑）：
+| 版本 | FDAT 数据 | 帧数 | **帧校验和** | 明文流 | 明文开头 | IV |
+|---|---|---|---|---|---|---|
+| 2.00 | 346,206,480 | 338,092 | **通过 338,092 / 失败 0** | 344,853,504 | `UDTRFIRM` | `13efb6a39e3f0cf8345933679c7ed222` |
+| 2.03 | 363,197,712 | 354,685 | **通过 354,685 / 失败 0** | 361,778,688 | `UDTRFIRM` | `65813b8bd0d327fc282ea8265432f0d7` |
+`UDTRFIRM` 头（明文 `0..0x200`）里就有 UUD 门要读的字段：两版都含 `Model 0x91030019`（LE `19 00 03 91`）、Region 0；版本字段 2.00 = `00 02 00 00`、2.03 = `03 02 00 00`（对应 Round 16 的 `Old 2.0 / New 2.3`）。
+**含义**：离线解密与帧校验和**全部自洽**，而相机在 `DecryptorModule.cpp:112` 报 `"6157:664"`（`0x30002`/Error 42）⇒ **相机侧的解密输入（key/iv 或期望的计数/长度）与离线不同**；结合 `verifyKey` 那条 Backup 条目是**全零**，最可疑的来源就是 Backup/参数条目。明文全件（344/361 MB）已可本地生成：`python3 tools/fdat_aescbc.py <in.dat> /tmp/decXXX.bin`（反向重打包用 `--pack`）。

@@ -1,0 +1,573 @@
+
+######## 2.00 ########
+帧数=338092 末帧明文起点=344852820 明文总长=344853504 (文件 344853504) FDAT payload=346206480 B, 帧区=346206208, 尾=272
+  往返 plain[0x0,+64) -> 帧0 帧内4 FDATpayload 0x4 -> .dat 0xe0 : ✓
+  往返 plain[0x1ff,+64) -> 帧0 帧内515 FDATpayload 0x203 -> .dat 0x2df : ✓
+  往返 plain[0x200,+64) -> 帧0 帧内516 FDATpayload 0x204 -> .dat 0x2e0 : ✓
+  往返 plain[0x400,+64) -> 帧1 帧内8 FDATpayload 0x408 -> .dat 0x4e4 : ✓
+  往返 plain[0x1234,+64) -> 帧4 帧内584 FDATpayload 0x1248 -> .dat 0x1324 : ✓
+  往返 plain[0x186a0,+64) -> 帧98 帧内44 FDATpayload 0x1882c -> .dat 0x18908 : ✓
+  往返 plain[0x148e0bc0,+64) -> 帧338091 帧内624 FDATpayload 0x14a2ae70 -> .dat 0x14a2af4c : ✓
+  --- 0101_config_sum/config.sum (155 B) ---
+    0,efd65ea6,000004e5,000001a4,00000000,000003e8,root,root,-1,-1,mount.conf,
+      成员 0100_config/mount.conf @0x23a00 实测 crc32=efd65ea6 ✓ (sum 存 efd65ea6) size=1253
+    0,a7bb789e,00000011,000001a4,00000000,000003e8,root,root,-1,-1,big_backup.conf,
+      成员 0100_config/big_backup.conf @0x23600 实测 crc32=a7bb789e ✓ (sum 存 a7bb789e) size=17
+  --- 0111_backup_sum/backup.sum (2965 B) ---
+    0,2dc03638,00000021,000001a4,00000000,000003e8,root,root,-1,-1,MainDest.txt,
+      成员 0110_backup/MainDest.txt @0x24a00 实测 crc32=2dc03638 ✓ (sum 存 2dc03638) size=33
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR,
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB,
+    0,de2c6e2d,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_E38.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_E38.bin @0x14ce00 实测 crc32=de2c6e2d ✓ (sum 存 de2c6e2d) size=1210408
+    0,bc8d3c56,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_CEC.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_CEC.bin @0x963200 实测 crc32=bc8d3c56 ✓ (sum 存 bc8d3c56) size=1210408
+    0,e6c03016,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_AP2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_AP2.bin @0x83b600 实测 crc32=e6c03016 ✓ (sum 存 e6c03016) size=1210408
+    0,3a7b3e48,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_JE3.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_JE3.bin @0xe02200 实测 crc32=3a7b3e48 ✓ (sum 存 3a7b3e48) size=1210408
+    0,bd437fd2,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_ALLLANG.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_ALLLANG.bin @0x713a00 实测 crc32=bd437fd2 ✓ (sum 存 bd437fd2) size=1210408
+    0,b1b17a10,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_CN1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_CN1.bin @0xa8ae00 实测 crc32=b1b17a10 ✓ (sum 存 b1b17a10) size=1210408
+    0,15315565,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_UC2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_UC2.bin @0x4c4200 实测 crc32=15315565 ✓ (sum 存 15315565) size=1210408
+    0,e72ed665,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_AF1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_AF1.bin @0x5ebe00 实测 crc32=e72ed665 ✓ (sum 存 e72ed665) size=1210408
+    0,5cbcece9,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_KR2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_KR2.bin @0x39c600 实测 crc32=5cbcece9 ✓ (sum 存 5cbcece9) size=1210408
+    0,c8d0d94c,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_J1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_J1.bin @0x274a00 实测 crc32=c8d0d94c ✓ (sum 存 c8d0d94c) size=1210408
+    0,236f38a0,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_CN2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_CN2.bin @0xbb2a00 实测 crc32=236f38a0 ✓ (sum 存 236f38a0) size=1210408
+    0,8e4b4568,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_IN5.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_IN5.bin @0xcda600 实测 crc32=8e4b4568 ✓ (sum 存 8e4b4568) size=1210408
+    0,9c331c4c,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_ALLLANG.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_ALLLANG.bin @0x25200 实测 crc32=9c331c4c ✓ (sum 存 9c331c4c) size=1210408
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2,
+    0,4cc6037c,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_KR2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_KR2.bin @0x12a1400 实测 crc32=4cc6037c ✓ (sum 存 4cc6037c) size=1210408
+    0,3d15a6f5,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CN1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CN1.bin @0x198fc00 实测 crc32=3d15a6f5 ✓ (sum 存 3d15a6f5) size=1210408
+    0,1097c0a9,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_ALLLANG.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_ALLLANG.bin @0xf2a000 实测 crc32=1097c0a9 ✓ (sum 存 1097c0a9) size=1210408
+    0,84bcca3d,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CEC.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CEC.bin @0x1868000 实测 crc32=84bcca3d ✓ (sum 存 84bcca3d) size=1210408
+    0,29afedd2,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_ALLLANG.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_ALLLANG.bin @0x1618800 实测 crc32=29afedd2 ✓ (sum 存 29afedd2) size=1210408
+    0,37cfff31,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_E38.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_E38.bin @0x1051c00 实测 crc32=37cfff31 ✓ (sum 存 37cfff31) size=1210408
+    0,1924a51e,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_UC2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_UC2.bin @0x13c9000 实测 crc32=1924a51e ✓ (sum 存 1924a51e) size=1210408
+    0,048ef726,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_IN5.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_IN5.bin @0x1bdf400 实测 crc32=048ef726 ✓ (sum 存 048ef726) size=1210408
+    0,055d3af8,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_J1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_J1.bin @0x1179800 实测 crc32=055d3af8 ✓ (sum 存 055d3af8) size=1210408
+    0,8cf7e499,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_AP2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_AP2.bin @0x1740400 实测 crc32=8cf7e499 ✓ (sum 存 8cf7e499) size=1210408
+    0,ec61e627,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_AF1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_AF1.bin @0x14f0c00 实测 crc32=ec61e627 ✓ (sum 存 ec61e627) size=1210408
+    0,65650bd4,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CN2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CN2.bin @0x1ab7800 实测 crc32=65650bd4 ✓ (sum 存 65650bd4) size=1210408
+    0,781cb03c,00127828,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_JE3.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_JE3.bin @0x1d07000 实测 crc32=781cb03c ✓ (sum 存 781cb03c) size=1210408
+  --- 0301_partconf_sum/partconf.sum (77 B) ---
+    0,23edf4ed,00000fb1,000001a4,00000000,000003e8,root,root,-1,-1,partinf.conf,
+      成员 0300_partconf/partinf.conf @0x1e2fe00 实测 crc32=23edf4ed ✓ (sum 存 23edf4ed) size=4017
+  --- 0641_darwin_sum/darwin.sum (80 B) ---
+    0,3f5c2dba,00037478,000001a4,00000000,000003e8,root,root,-1,-1,darwin_core.bin,
+      成员 0640_darwin/darwin_core.bin @0x1e32000 实测 crc32=3f5c2dba ✓ (sum 存 3f5c2dba) size=226424
+  --- 0651_prfile_sum/prfile.sum (1984 B) ---
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,PMBP,
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE,
+    0,36797c40,000005fb,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/zlib.txt,
+      成员 0650_prfile/PMBP/LICENSE/zlib.txt @0x1f52800 实测 crc32=36797c40 ✓ (sum 存 36797c40) size=1531
+    0,4de67b16,00000c6e,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/pcre.txt,
+      成员 0650_prfile/PMBP/LICENSE/pcre.txt @0x1f51200 实测 crc32=4de67b16 ✓ (sum 存 4de67b16) size=3182
+    0,23fe4cbd,00000440,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/libcurl.txt,
+      成员 0650_prfile/PMBP/LICENSE/libcurl.txt @0x1f4c800 实测 crc32=23fe4cbd ✓ (sum 存 23fe4cbd) size=1088
+    0,0121ea14,00000369,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/libpcap.txt,
+      成员 0650_prfile/PMBP/LICENSE/libpcap.txt @0x1f4e000 实测 crc32=0121ea14 ✓ (sum 存 0121ea14) size=873
+    0,56701269,000017f0,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/openssl.txt,
+      成员 0650_prfile/PMBP/LICENSE/openssl.txt @0x1f4f800 实测 crc32=56701269 ✓ (sum 存 56701269) size=6128
+    0,56e82b90,0000aabf,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/GPL_LGPL.txt,
+      成员 0650_prfile/PMBP/LICENSE/GPL_LGPL.txt @0x1f35800 实测 crc32=56e82b90 ✓ (sum 存 56e82b90) size=43711
+    0,5622583e,000067a2,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/LIBNL3.txt,
+      成员 0650_prfile/PMBP/LICENSE/LIBNL3.txt @0x1f40c00 实测 crc32=5622583e ✓ (sum 存 5622583e) size=26530
+    0,45b97083,0000041a,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/dhcp.txt,
+      成员 0650_prfile/PMBP/LICENSE/dhcp.txt @0x1f48200 实测 crc32=45b97083 ✓ (sum 存 45b97083) size=1050
+    0,db46ac04,000005a6,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/ncurses.txt,
+      成员 0650_prfile/PMBP/LICENSE/ncurses.txt @0x1f4f000 实测 crc32=db46ac04 ✓ (sum 存 db46ac04) size=1446
+    0,f7e10735,00004905,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/CFG80211.txt,
+      成员 0650_prfile/PMBP/LICENSE/CFG80211.txt @0x1e6a600 实测 crc32=f7e10735 ✓ (sum 存 f7e10735) size=18693
+    0,038bfbb6,00000478,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/expat.txt,
+      成员 0650_prfile/PMBP/LICENSE/expat.txt @0x1f48a00 实测 crc32=038bfbb6 ✓ (sum 存 038bfbb6) size=1144
+    0,2c7a5fbe,00000ce8,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/libevent.txt,
+      成员 0650_prfile/PMBP/LICENSE/libevent.txt @0x1f4d000 实测 crc32=2c7a5fbe ✓ (sum 存 2c7a5fbe) size=3304
+    0,4b808e97,000008cb,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/WPASUBCM.txt,
+      成员 0650_prfile/PMBP/LICENSE/WPASUBCM.txt @0x1f47600 实测 crc32=4b808e97 ✓ (sum 存 4b808e97) size=2251
+    0,054ed4fb,000006a7,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/jemalloc.txt,
+      成员 0650_prfile/PMBP/LICENSE/jemalloc.txt @0x1f4be00 实测 crc32=054ed4fb ✓ (sum 存 054ed4fb) size=1703
+    0,fab27222,0003bd03,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/CLibrary.txt,
+      成员 0650_prfile/PMBP/LICENSE/CLibrary.txt @0x1e6f200 实测 crc32=fab27222 ✓ (sum 存 fab27222) size=244995
+    0,6fc4726b,0008a2eb,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/EULA.pdf,
+      成员 0650_prfile/PMBP/LICENSE/EULA.pdf @0x1eab200 实测 crc32=6fc4726b ✓ (sum 存 6fc4726b) size=565995
+    0,acff19c4,0000075e,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/libssh2.txt,
+      成员 0650_prfile/PMBP/LICENSE/libssh2.txt @0x1f4e600 实测 crc32=acff19c4 ✓ (sum 存 acff19c4) size=1886
+    0,0121ea14,00000369,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/tcpdump.txt,
+      成员 0650_prfile/PMBP/LICENSE/tcpdump.txt @0x1f52200 实测 crc32=0121ea14 ✓ (sum 存 0121ea14) size=873
+    0,c92ca21d,000029e8,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/glibc.txt,
+      成员 0650_prfile/PMBP/LICENSE/glibc.txt @0x1f49200 实测 crc32=c92ca21d ✓ (sum 存 c92ca21d) size=10728
+    0,fe08f801,00000351,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/IW.txt,
+      成员 0650_prfile/PMBP/LICENSE/IW.txt @0x1f40600 实测 crc32=fe08f801 ✓ (sum 存 fe08f801) size=849
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,PMBP/INFO,
+  --- 0701_part_image_sum/part_image.sum (377 B) ---
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,dev,
+    0,5c81afb8,01f11600,000001a4,00000000,000003e8,root,root,-1,-1,dev/nflasha5,
+      成员 0700_part_image/dev/nflasha5 @0x12115000 实测 crc32=5c81afb8 ✓ (sum 存 5c81afb8) size=32577024
+    0,41a319cd,0e4dd800,000001a4,00000000,000003e8,root,root,-1,-1,dev/nflasha15,
+      成员 0700_part_image/dev/nflasha15 @0x1f54000 实测 crc32=41a319cd ✓ (sum 存 41a319cd) size=239982592
+    0,a27a70d9,004c2c00,000001a4,00000000,000003e8,root,root,-1,-1,dev/nflasha7,
+      成员 0700_part_image/dev/nflasha7 @0x14026800 实测 crc32=a27a70d9 ✓ (sum 存 a27a70d9) size=4992000
+    0,b8139fd8,01ce3400,000001a4,00000000,000003e8,root,root,-1,-1,dev/nflasha3,
+      成员 0700_part_image/dev/nflasha3 @0x10431a00 实测 crc32=b8139fd8 ✓ (sum 存 b8139fd8) size=30290944
+  --- 0801_appli_sum/appli.sum (6517 B) ---
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,lens,
+    0,b2b3f6aa,0000085c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9108_lensfile.bin,
+      成员 0800_appli/lens/VX9108_lensfile.bin @0x14518600 实测 crc32=b2b3f6aa ✓ (sum 存 b2b3f6aa) size=2140
+    0,53446fa0,00001ad0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8913_lensfile.bin,
+      成员 0800_appli/lens/VX8913_lensfile.bin @0x144f6400 实测 crc32=53446fa0 ✓ (sum 存 53446fa0) size=6864
+    0,86ace6bf,000018b0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8948_lensfile.bin,
+      成员 0800_appli/lens/VX8948_lensfile.bin @0x1450b400 实测 crc32=86ace6bf ✓ (sum 存 86ace6bf) size=6320
+    0,2dbe75b3,00001a04,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9109_lensfile.bin,
+      成员 0800_appli/lens/VX9109_lensfile.bin @0x14519200 实测 crc32=2dbe75b3 ✓ (sum 存 2dbe75b3) size=6660
+    0,85117b83,00000738,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8943_lensfile.bin,
+      成员 0800_appli/lens/VX8943_lensfile.bin @0x14507600 实测 crc32=85117b83 ✓ (sum 存 85117b83) size=1848
+    0,e083dd98,00000f58,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89138925_lensfile.bin,
+      成员 0800_appli/lens/VX89138925_lensfile.bin @0x144f5200 实测 crc32=e083dd98 ✓ (sum 存 e083dd98) size=3928
+    0,e95f1909,000004c8,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89438925_lensfile.bin,
+      成员 0800_appli/lens/VX89438925_lensfile.bin @0x14506e00 实测 crc32=e95f1909 ✓ (sum 存 e95f1909) size=1224
+    0,7465c9c1,000009d4,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8945_lensfile.bin,
+      成员 0800_appli/lens/VX8945_lensfile.bin @0x14508e00 实测 crc32=7465c9c1 ✓ (sum 存 7465c9c1) size=2516
+    0,0e62f40b,00002fa8,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9116_lensfile.bin,
+      成员 0800_appli/lens/VX9116_lensfile.bin @0x14521600 实测 crc32=0e62f40b ✓ (sum 存 0e62f40b) size=12200
+    0,3c099221,000005fc,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89438924_lensfile.bin,
+      成员 0800_appli/lens/VX89438924_lensfile.bin @0x14506600 实测 crc32=3c099221 ✓ (sum 存 3c099221) size=1532
+    0,cb3959f2,00001248,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8922_lensfile.bin,
+      成员 0800_appli/lens/VX8922_lensfile.bin @0x144fb400 实测 crc32=cb3959f2 ✓ (sum 存 cb3959f2) size=4680
+    0,4eed050d,0000339c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9103_lensfile.bin,
+      成员 0800_appli/lens/VX9103_lensfile.bin @0x14511000 实测 crc32=4eed050d ✓ (sum 存 4eed050d) size=13212
+    0,b6b34496,00000a18,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9124_lensfile.bin,
+      成员 0800_appli/lens/VX9124_lensfile.bin @0x14527e00 实测 crc32=b6b34496 ✓ (sum 存 b6b34496) size=2584
+    0,48123a35,000012ec,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8928_lensfile.bin,
+      成员 0800_appli/lens/VX8928_lensfile.bin @0x144fdc00 实测 crc32=48123a35 ✓ (sum 存 48123a35) size=4844
+    0,8053f1b0,0000086c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8916_lensfile.bin,
+      成员 0800_appli/lens/VX8916_lensfile.bin @0x144fa800 实测 crc32=8053f1b0 ✓ (sum 存 8053f1b0) size=2156
+    0,54b4aa07,0000339c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9123_lensfile.bin,
+      成员 0800_appli/lens/VX9123_lensfile.bin @0x14524800 实测 crc32=54b4aa07 ✓ (sum 存 54b4aa07) size=13212
+    0,21f6a3d9,00000870,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89168924_lensfile.bin,
+      成员 0800_appli/lens/VX89168924_lensfile.bin @0x144f9000 实测 crc32=21f6a3d9 ✓ (sum 存 21f6a3d9) size=2160
+    0,777f83b5,00000b10,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8915_lensfile.bin,
+      成员 0800_appli/lens/VX8915_lensfile.bin @0x144f8200 实测 crc32=777f83b5 ✓ (sum 存 777f83b5) size=2832
+    0,bd0718d1,00000fa0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX92018925_lensfile.bin,
+      成员 0800_appli/lens/VX92018925_lensfile.bin @0x1452fc00 实测 crc32=bd0718d1 ✓ (sum 存 bd0718d1) size=4000
+    0,6a21b57b,00000a64,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8902_lensfile.bin,
+      成员 0800_appli/lens/VX8902_lensfile.bin @0x144ec000 实测 crc32=6a21b57b ✓ (sum 存 6a21b57b) size=2660
+    0,f6658f0a,0000174c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8903_lensfile.bin,
+      成员 0800_appli/lens/VX8903_lensfile.bin @0x144ece00 实测 crc32=f6658f0a ✓ (sum 存 f6658f0a) size=5964
+    0,8454f383,00000c88,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89058924_lensfile.bin,
+      成员 0800_appli/lens/VX89058924_lensfile.bin @0x144efc00 实测 crc32=8454f383 ✓ (sum 存 8454f383) size=3208
+    0,dcd6a7b9,00001378,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9102_lensfile.bin,
+      成员 0800_appli/lens/VX9102_lensfile.bin @0x1450fa00 实测 crc32=dcd6a7b9 ✓ (sum 存 dcd6a7b9) size=4984
+    0,2c3a21af,00000b40,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8944_lensfile.bin,
+      成员 0800_appli/lens/VX8944_lensfile.bin @0x14508000 实测 crc32=2c3a21af ✓ (sum 存 2c3a21af) size=2880
+    0,313657a8,00000600,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX92028925_lensfile.bin,
+      成员 0800_appli/lens/VX92028925_lensfile.bin @0x14533600 实测 crc32=313657a8 ✓ (sum 存 313657a8) size=1536
+    0,d24e2a40,00000810,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9104_lensfile.bin,
+      成员 0800_appli/lens/VX9104_lensfile.bin @0x14514600 实测 crc32=d24e2a40 ✓ (sum 存 d24e2a40) size=2064
+    0,07f1c58d,00000f78,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8923_lensfile.bin,
+      成员 0800_appli/lens/VX8923_lensfile.bin @0x144fca00 实测 crc32=07f1c58d ✓ (sum 存 07f1c58d) size=3960
+    0,0e186241,000009e0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8935_lensfile.bin,
+      成员 0800_appli/lens/VX8935_lensfile.bin @0x144ffe00 实测 crc32=0e186241 ✓ (sum 存 0e186241) size=2528
+    0,130700ef,000009ac,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8932_lensfile.bin,
+      成员 0800_appli/lens/VX8932_lensfile.bin @0x144ff200 实测 crc32=130700ef ✓ (sum 存 130700ef) size=2476
+    0,2372e3c5,00001744,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9111_lensfile.bin,
+      成员 0800_appli/lens/VX9111_lensfile.bin @0x1451bc00 实测 crc32=2372e3c5 ✓ (sum 存 2372e3c5) size=5956
+    0,387e38ab,00000c40,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8937_lensfile.bin,
+      成员 0800_appli/lens/VX8937_lensfile.bin @0x14502c00 实测 crc32=387e38ab ✓ (sum 存 387e38ab) size=3136
+    0,c8fa1cb5,00001120,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8904_lensfile.bin,
+      成员 0800_appli/lens/VX8904_lensfile.bin @0x144ee800 实测 crc32=c8fa1cb5 ✓ (sum 存 c8fa1cb5) size=4384
+    0,a06af9af,00001120,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89138924_lensfile.bin,
+      成员 0800_appli/lens/VX89138924_lensfile.bin @0x144f3e00 实测 crc32=a06af9af ✓ (sum 存 a06af9af) size=4384
+    0,88f4306f,00001bec,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9201_lensfile.bin,
+      成员 0800_appli/lens/VX9201_lensfile.bin @0x14530e00 实测 crc32=88f4306f ✓ (sum 存 88f4306f) size=7148
+    0,1349082d,00000be0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8949_lensfile.bin,
+      成员 0800_appli/lens/VX8949_lensfile.bin @0x1450d000 实测 crc32=1349082d ✓ (sum 存 1349082d) size=3040
+    0,8f755143,00002344,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9113_lensfile.bin,
+      成员 0800_appli/lens/VX9113_lensfile.bin @0x1451d600 实测 crc32=8f755143 ✓ (sum 存 8f755143) size=9028
+    0,dd82f1da,0000244c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9200_lensfile.bin,
+      成员 0800_appli/lens/VX9200_lensfile.bin @0x1452be00 实测 crc32=dd82f1da ✓ (sum 存 dd82f1da) size=9292
+    0,8c2b6996,00001580,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9107_lensfile.bin,
+      成员 0800_appli/lens/VX9107_lensfile.bin @0x14516e00 实测 crc32=8c2b6996 ✓ (sum 存 8c2b6996) size=5504
+    0,8a9fe01d,00001948,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8906_lensfile.bin,
+      成员 0800_appli/lens/VX8906_lensfile.bin @0x144f2200 实测 crc32=8a9fe01d ✓ (sum 存 8a9fe01d) size=6472
+    0,e3667806,00001730,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8946_lensfile.bin,
+      成员 0800_appli/lens/VX8946_lensfile.bin @0x14509a00 实测 crc32=e3667806 ✓ (sum 存 e3667806) size=5936
+    0,937025cb,00000c80,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8900_lensfile.bin,
+      成员 0800_appli/lens/VX8900_lensfile.bin @0x144ea000 实测 crc32=937025cb ✓ (sum 存 937025cb) size=3200
+    0,f91afe92,00000a10,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9115_lensfile.bin,
+      成员 0800_appli/lens/VX9115_lensfile.bin @0x14520800 实测 crc32=f91afe92 ✓ (sum 存 f91afe92) size=2576
+    0,644079b5,00001ee0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8936_lensfile.bin,
+      成员 0800_appli/lens/VX8936_lensfile.bin @0x14500a00 实测 crc32=644079b5 ✓ (sum 存 644079b5) size=7904
+    0,23b99808,00000c44,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8901_lensfile.bin,
+      成员 0800_appli/lens/VX8901_lensfile.bin @0x144eb000 实测 crc32=23b99808 ✓ (sum 存 23b99808) size=3140
+    0,237d3d52,00000a40,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8938_lensfile.bin,
+      成员 0800_appli/lens/VX8938_lensfile.bin @0x14503c00 实测 crc32=237d3d52 ✓ (sum 存 237d3d52) size=2624
+    0,2235b8c3,00000870,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9110_lensfile.bin,
+      成员 0800_appli/lens/VX9110_lensfile.bin @0x1451b000 实测 crc32=2235b8c3 ✓ (sum 存 2235b8c3) size=2160
+    0,a8ae6fac,0000086c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9202_lensfile.bin,
+      成员 0800_appli/lens/VX9202_lensfile.bin @0x14533e00 实测 crc32=a8ae6fac ✓ (sum 存 a8ae6fac) size=2156
+    0,893d6a90,00001348,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8905_lensfile.bin,
+      成员 0800_appli/lens/VX8905_lensfile.bin @0x144f0c00 实测 crc32=893d6a90 ✓ (sum 存 893d6a90) size=4936
+    0,7e8a9add,00002e84,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9129_lensfile.bin,
+      成员 0800_appli/lens/VX9129_lensfile.bin @0x14528c00 实测 crc32=7e8a9add ✓ (sum 存 7e8a9add) size=11908
+    0,beec4d0e,00000874,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9114_lensfile.bin,
+      成员 0800_appli/lens/VX9114_lensfile.bin @0x1451fc00 实测 crc32=beec4d0e ✓ (sum 存 beec4d0e) size=2164
+    0,6d4eda5f,00001824,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9101_lensfile.bin,
+      成员 0800_appli/lens/VX9101_lensfile.bin @0x1450de00 实测 crc32=6d4eda5f ✓ (sum 存 6d4eda5f) size=6180
+    0,c30ebc05,00000738,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX92028924_lensfile.bin,
+      成员 0800_appli/lens/VX92028924_lensfile.bin @0x14532c00 实测 crc32=c30ebc05 ✓ (sum 存 c30ebc05) size=1848
+    0,db66d4ed,00000870,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89168925_lensfile.bin,
+      成员 0800_appli/lens/VX89168925_lensfile.bin @0x144f9c00 实测 crc32=db66d4ed ✓ (sum 存 db66d4ed) size=2160
+    0,a3a28e88,00000a28,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9105_lensfile.bin,
+      成员 0800_appli/lens/VX9105_lensfile.bin @0x14515200 实测 crc32=a3a28e88 ✓ (sum 存 a3a28e88) size=2600
+    0,8664433f,00001894,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8942_lensfile.bin,
+      成员 0800_appli/lens/VX8942_lensfile.bin @0x14504a00 实测 crc32=8664433f ✓ (sum 存 8664433f) size=6292
+    0,0e1bc089,00001210,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX92018924_lensfile.bin,
+      成员 0800_appli/lens/VX92018924_lensfile.bin @0x1452e600 实测 crc32=0e1bc089 ✓ (sum 存 0e1bc089) size=4624
+    0,be5d81a5,00000bcc,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9106_lensfile.bin,
+      成员 0800_appli/lens/VX9106_lensfile.bin @0x14516000 实测 crc32=be5d81a5 ✓ (sum 存 be5d81a5) size=3020
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,setting,
+    0,089963ff,000131cc,000001a4,00000000,000003e8,root,root,-1,-1,setting/DmmConfig.bin,
+      成员 0800_appli/setting/DmmConfig.bin @0x14534c00 实测 crc32=089963ff ✓ (sum 存 089963ff) size=78284
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,setting/appfw_infra,
+    0,84ad5844,0000c800,000001a4,00000000,000003e8,root,root,-1,-1,setting/facedmy.bin,
+      成员 0800_appli/setting/facedmy.bin @0x14548200 实测 crc32=84ad5844 ✓ (sum 存 84ad5844) size=51200
+    0,158c87cc,00000771,000001a4,00000000,000003e8,root,root,-1,-1,setting/kemco.txt,
+      成员 0800_appli/setting/kemco.txt @0x14554c00 实测 crc32=158c87cc ✓ (sum 存 158c87cc) size=1905
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,tmp,
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,tmp/images,
+    0,b1c2c86b,0008a634,000001a4,00000000,000003e8,root,root,-1,-1,tmp/images/Sony_DI_Icons.ttf,
+      成员 0800_appli/tmp/images/Sony_DI_Icons.ttf @0x1484d400 实测 crc32=b1c2c86b ✓ (sum 存 b1c2c86b) size=566836
+    0,3e97d1db,00118f14,000001a4,00000000,000003e8,root,root,-1,-1,tmp/images/MYingHeiC-Big5-SJ_wIcon.ltt,
+      成员 0800_appli/tmp/images/MYingHeiC-Big5-SJ_wIcon.ltt @0x14555c00 实测 crc32=3e97d1db ✓ (sum 存 3e97d1db) size=1150740
+    0,9eaa9f8a,001de220,000001a4,00000000,000003e8,root,root,-1,-1,tmp/images/MYingHeiC-GB18030-SJ_wIcon.ltt,
+      成员 0800_appli/tmp/images/MYingHeiC-GB18030-SJ_wIcon.ltt @0x1466ee00 实测 crc32=9eaa9f8a ✓ (sum 存 9eaa9f8a) size=1958432
+    0,c4ef8b0a,00000105,000001a4,00000000,000003e8,root,root,-1,-1,tmp/nsswitch.conf,
+      成员 0800_appli/tmp/nsswitch.conf @0x148d8000 实测 crc32=c4ef8b0a ✓ (sum 存 c4ef8b0a) size=261
+    0,3546ad55,00004cd2,000001a4,00000000,000003e8,root,root,-1,-1,tmp/services,
+      成员 0800_appli/tmp/services @0x148d9200 实测 crc32=3546ad55 ✓ (sum 存 3546ad55) size=19666
+    0,00000000,00000000,000001a4,00000000,000003e8,root,root,-1,-1,tmp/config.spec,
+      成员 0800_appli/tmp/config.spec @0x14555800 实测 crc32=00000000 ✓ (sum 存 00000000) size=0
+    0,3f3db50e,00000b2b,000001a4,00000000,000003e8,root,root,-1,-1,tmp/protocols,
+      成员 0800_appli/tmp/protocols @0x148d8400 实测 crc32=3f3db50e ✓ (sum 存 3f3db50e) size=2859
+    0,a84b995e,00000269,000001ed,00000000,000003e8,root,root,-1,-1,tmp/toprc,
+      成员 0800_appli/tmp/toprc @0x148de200 实测 crc32=a84b995e ✓ (sum 存 a84b995e) size=617
+    2,ffffffff,00000000,000001ff,00000000,000003e8,root,root,-1,-1,tmp/mtab,../proc/mounts
+  对齐 0700_part_image/dev/nflasha15 @0x1f54000 len=239982592 vs work/l2-camera/nflasha15.bin: 前缀相同 239982592 B, 首个差异 @None
+  对齐 0700_part_image/dev/nflasha3 @0x10431a00 len=30290944 vs work/l1_v/nflasha3.bin: 前缀相同 30290944 B, 首个差异 @None
+  对齐 0700_part_image/dev/nflasha7 @0x14026800 len=4992000 vs work/l1-camera/nflasha7.bin: 前缀相同 4992000 B, 首个差异 @None
+  $Cromfs@-1 $Cramfs@-1  (cramfs 外显 magic: 明文里 0x200 处 = 453dcd28 b'Compressed ROMFS'; a1 initrd cramfs magic 45 3d cd 28 出现次数=7+  位置样例 ['0x200', '0x9d99800', '0x118e65a4', '0x118e6dc0', '0x11b654e4', '0x121d7e80', '0x14328aec']
+  目录项 AV-CAM.BIN @plain 0x10439c20: entry=00 6e 00 00 00 00 00 ff ff ff ff 41 56 2d 43 41 4d 20 20 42 49 4e 20 00 00 3c 9d 6e 53 6e 53 00
+
+######## 2.03 ########
+帧数=354685 末帧明文起点=361777680 明文总长=361778688 (文件 361778688) FDAT payload=363197712 B, 帧区=363197440, 尾=272
+  往返 plain[0x0,+64) -> 帧0 帧内4 FDATpayload 0x4 -> .dat 0xe0 : ✓
+  往返 plain[0x1ff,+64) -> 帧0 帧内515 FDATpayload 0x203 -> .dat 0x2df : ✓
+  往返 plain[0x200,+64) -> 帧0 帧内516 FDATpayload 0x204 -> .dat 0x2e0 : ✓
+  往返 plain[0x400,+64) -> 帧1 帧内8 FDATpayload 0x408 -> .dat 0x4e4 : ✓
+  往返 plain[0x1234,+64) -> 帧4 帧内584 FDATpayload 0x1248 -> .dat 0x1324 : ✓
+  往返 plain[0x186a0,+64) -> 帧98 帧内44 FDATpayload 0x1882c -> .dat 0x18908 : ✓
+  往返 plain[0x15904dc0,+64) -> 帧354684 帧内948 FDATpayload 0x15a5f3b4 -> .dat 0x15a5f490 : ✓
+  --- 0101_config_sum/config.sum (155 B) ---
+    0,efd65ea6,000004e5,000001a4,00000000,000003e8,root,root,-1,-1,mount.conf,
+      成员 0100_config/mount.conf @0x24a00 实测 crc32=efd65ea6 ✓ (sum 存 efd65ea6) size=1253
+    0,a7bb789e,00000011,000001a4,00000000,000003e8,root,root,-1,-1,big_backup.conf,
+      成员 0100_config/big_backup.conf @0x24600 实测 crc32=a7bb789e ✓ (sum 存 a7bb789e) size=17
+  --- 0111_backup_sum/backup.sum (2965 B) ---
+    0,2dc03638,00000021,000001a4,00000000,000003e8,root,root,-1,-1,MainDest.txt,
+      成员 0110_backup/MainDest.txt @0x25a00 实测 crc32=2dc03638 ✓ (sum 存 2dc03638) size=33
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR,
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB,
+    0,494fc10e,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_E38.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_E38.bin @0x14e400 实测 crc32=494fc10e ✓ (sum 存 494fc10e) size=1211928
+    0,42065e17,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_CEC.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_CEC.bin @0x967200 实测 crc32=42065e17 ✓ (sum 存 42065e17) size=1211928
+    0,e420343e,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_AP2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_AP2.bin @0x83f000 实测 crc32=e420343e ✓ (sum 存 e420343e) size=1211928
+    0,a15ca97a,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_JE3.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_JE3.bin @0xe07a00 实测 crc32=a15ca97a ✓ (sum 存 a15ca97a) size=1211928
+    0,872577e7,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_ALLLANG.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_ALLLANG.bin @0x716e00 实测 crc32=872577e7 ✓ (sum 存 872577e7) size=1211928
+    0,89f3f3b1,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_CN1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_CN1.bin @0xa8f400 实测 crc32=89f3f3b1 ✓ (sum 存 89f3f3b1) size=1211928
+    0,534ba00f,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_UC2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_UC2.bin @0x4c6a00 实测 crc32=534ba00f ✓ (sum 存 534ba00f) size=1211928
+    0,21ba87ba,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_AF1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_AF1.bin @0x5eec00 实测 crc32=21ba87ba ✓ (sum 存 21ba87ba) size=1211928
+    0,80a5c000,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_KR2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_KR2.bin @0x39e800 实测 crc32=80a5c000 ✓ (sum 存 80a5c000) size=1211928
+    0,38d589ac,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_J1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_J1.bin @0x276600 实测 crc32=38d589ac ✓ (sum 存 38d589ac) size=1211928
+    0,3624d69c,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_CN2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_CN2.bin @0xbb7600 实测 crc32=3624d69c ✓ (sum 存 3624d69c) size=1211928
+    0,a399e4ee,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88601_IN5.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88601_IN5.bin @0xcdf800 实测 crc32=a399e4ee ✓ (sum 存 a399e4ee) size=1211928
+    0,97bdb76a,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB/CX88600_ALLLANG.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB/CX88600_ALLLANG.bin @0x26200 实测 crc32=97bdb76a ✓ (sum 存 97bdb76a) size=1211928
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2,
+    0,76da8016,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_KR2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_KR2.bin @0x12a8400 实测 crc32=76da8016 ✓ (sum 存 76da8016) size=1211928
+    0,dee92429,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CN1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CN1.bin @0x1999000 实测 crc32=dee92429 ✓ (sum 存 dee92429) size=1211928
+    0,3ab3f590,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_ALLLANG.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_ALLLANG.bin @0xf2fe00 实测 crc32=3ab3f590 ✓ (sum 存 3ab3f590) size=1211928
+    0,b4791e01,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CEC.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CEC.bin @0x1870e00 实测 crc32=b4791e01 ✓ (sum 存 b4791e01) size=1211928
+    0,ad9a1f0e,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_ALLLANG.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_ALLLANG.bin @0x1620a00 实测 crc32=ad9a1f0e ✓ (sum 存 ad9a1f0e) size=1211928
+    0,f42c4d64,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_E38.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_E38.bin @0x1058000 实测 crc32=f42c4d64 ✓ (sum 存 f42c4d64) size=1211928
+    0,97de0170,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_UC2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_UC2.bin @0x13d0600 实测 crc32=97de0170 ✓ (sum 存 97de0170) size=1211928
+    0,6f83444e,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_IN5.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_IN5.bin @0x1be9400 实测 crc32=6f83444e ✓ (sum 存 6f83444e) size=1211928
+    0,16f219ec,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88600_J1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88600_J1.bin @0x1180200 实测 crc32=16f219ec ✓ (sum 存 16f219ec) size=1211928
+    0,86a87350,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_AP2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_AP2.bin @0x1748c00 实测 crc32=86a87350 ✓ (sum 存 86a87350) size=1211928
+    0,ee379bc1,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_AF1.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_AF1.bin @0x14f8800 实测 crc32=ee379bc1 ✓ (sum 存 ee379bc1) size=1211928
+    0,eb98291b,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CN2.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_CN2.bin @0x1ac1200 实测 crc32=eb98291b ✓ (sum 存 eb98291b) size=1211928
+    0,61c42a44,00127e18,000001a4,00000000,000003e8,root,root,-1,-1,SYSASTRA-DSLR/NB_HIBIKI2/CH88601_JE3.bin,
+      成员 0110_backup/SYSASTRA-DSLR/NB_HIBIKI2/CH88601_JE3.bin @0x1d11600 实测 crc32=61c42a44 ✓ (sum 存 61c42a44) size=1211928
+  --- 0301_partconf_sum/partconf.sum (77 B) ---
+    0,23edf4ed,00000fb1,000001a4,00000000,000003e8,root,root,-1,-1,partinf.conf,
+      成员 0300_partconf/partinf.conf @0x1e3aa00 实测 crc32=23edf4ed ✓ (sum 存 23edf4ed) size=4017
+  --- 0401_updater_sum/updater.sum (145 B) ---
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,dev,
+    0,3a26ae82,007f0000,000001a4,00000000,000003e8,root,root,-1,-1,dev/nflasha1,
+      成员 0400_updater/dev/nflasha1 @0x1e3c600 实测 crc32=3a26ae82 ✓ (sum 存 3a26ae82) size=8323072
+  --- 0641_darwin_sum/darwin.sum (80 B) ---
+    0,51eebccb,0003748c,000001a4,00000000,000003e8,root,root,-1,-1,darwin_core.bin,
+      成员 0640_darwin/darwin_core.bin @0x262d800 实测 crc32=51eebccb ✓ (sum 存 51eebccb) size=226444
+  --- 0651_prfile_sum/prfile.sum (2075 B) ---
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,PMBP,
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE,
+    0,36797c40,000005fb,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/zlib.txt,
+      成员 0650_prfile/PMBP/LICENSE/zlib.txt @0x2750200 实测 crc32=36797c40 ✓ (sum 存 36797c40) size=1531
+    0,4de67b16,00000c6e,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/pcre.txt,
+      成员 0650_prfile/PMBP/LICENSE/pcre.txt @0x274ec00 实测 crc32=4de67b16 ✓ (sum 存 4de67b16) size=3182
+    0,36730655,00000440,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/libcurl.txt,
+      成员 0650_prfile/PMBP/LICENSE/libcurl.txt @0x2748800 实测 crc32=36730655 ✓ (sum 存 36730655) size=1088
+    0,0121ea14,00000369,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/libpcap.txt,
+      成员 0650_prfile/PMBP/LICENSE/libpcap.txt @0x274a000 实测 crc32=0121ea14 ✓ (sum 存 0121ea14) size=873
+    0,6bc136ad,000027bf,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/openssl.txt,
+      成员 0650_prfile/PMBP/LICENSE/openssl.txt @0x274b800 实测 crc32=6bc136ad ✓ (sum 存 6bc136ad) size=10175
+    0,56e82b90,0000aabf,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/GPL_LGPL.txt,
+      成员 0650_prfile/PMBP/LICENSE/GPL_LGPL.txt @0x2731000 实测 crc32=56e82b90 ✓ (sum 存 56e82b90) size=43711
+    0,5622583e,000067a2,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/LIBNL3.txt,
+      成员 0650_prfile/PMBP/LICENSE/LIBNL3.txt @0x273be00 实测 crc32=5622583e ✓ (sum 存 5622583e) size=26530
+    0,4a282d6e,00000788,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/opus.txt,
+      成员 0650_prfile/PMBP/LICENSE/opus.txt @0x274e200 实测 crc32=4a282d6e ✓ (sum 存 4a282d6e) size=1928
+    0,45b97083,0000041a,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/dhcp.txt,
+      成员 0650_prfile/PMBP/LICENSE/dhcp.txt @0x2743400 实测 crc32=45b97083 ✓ (sum 存 45b97083) size=1050
+    0,db46ac04,000005a6,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/ncurses.txt,
+      成员 0650_prfile/PMBP/LICENSE/ncurses.txt @0x274b000 实测 crc32=db46ac04 ✓ (sum 存 db46ac04) size=1446
+    0,c14c3d67,00000aa3,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/jsoncpp.txt,
+      成员 0650_prfile/PMBP/LICENSE/jsoncpp.txt @0x2747a00 实测 crc32=c14c3d67 ✓ (sum 存 c14c3d67) size=2723
+    0,f7e10735,00004905,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/CFG80211.txt,
+      成员 0650_prfile/PMBP/LICENSE/CFG80211.txt @0x2665e00 实测 crc32=f7e10735 ✓ (sum 存 f7e10735) size=18693
+    0,038bfbb6,00000478,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/expat.txt,
+      成员 0650_prfile/PMBP/LICENSE/expat.txt @0x2743c00 实测 crc32=038bfbb6 ✓ (sum 存 038bfbb6) size=1144
+    0,2c7a5fbe,00000ce8,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/libevent.txt,
+      成员 0650_prfile/PMBP/LICENSE/libevent.txt @0x2749000 实测 crc32=2c7a5fbe ✓ (sum 存 2c7a5fbe) size=3304
+    0,4b808e97,000008cb,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/WPASUBCM.txt,
+      成员 0650_prfile/PMBP/LICENSE/WPASUBCM.txt @0x2742800 实测 crc32=4b808e97 ✓ (sum 存 4b808e97) size=2251
+    0,054ed4fb,000006a7,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/jemalloc.txt,
+      成员 0650_prfile/PMBP/LICENSE/jemalloc.txt @0x2747000 实测 crc32=054ed4fb ✓ (sum 存 054ed4fb) size=1703
+    0,fab27222,0003bd03,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/CLibrary.txt,
+      成员 0650_prfile/PMBP/LICENSE/CLibrary.txt @0x266aa00 实测 crc32=fab27222 ✓ (sum 存 fab27222) size=244995
+    0,6fc4726b,0008a2eb,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/EULA.pdf,
+      成员 0650_prfile/PMBP/LICENSE/EULA.pdf @0x26a6a00 实测 crc32=6fc4726b ✓ (sum 存 6fc4726b) size=565995
+    0,3de8553a,000007a8,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/libssh2.txt,
+      成员 0650_prfile/PMBP/LICENSE/libssh2.txt @0x274a600 实测 crc32=3de8553a ✓ (sum 存 3de8553a) size=1960
+    0,0121ea14,00000369,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/tcpdump.txt,
+      成员 0650_prfile/PMBP/LICENSE/tcpdump.txt @0x274fc00 实测 crc32=0121ea14 ✓ (sum 存 0121ea14) size=873
+    0,c92ca21d,000029e8,000001a4,00000000,000003e8,root,root,-1,-1,PMBP/LICENSE/glibc.txt,
+      成员 0650_prfile/PMBP/LICENSE/glibc.txt @0x2744400 实测 crc32=c92ca21d ✓ (sum 存 c92ca21d) size=10728
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,PMBP/INFO,
+  --- 0701_part_image_sum/part_image.sum (377 B) ---
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,dev,
+    0,1427fef4,0220e3e0,000001a4,00000000,000003e8,root,root,-1,-1,dev/nflasha5,
+      成员 0700_part_image/dev/nflasha5 @0x12c16400 实测 crc32=1427fef4 ✓ (sum 存 1427fef4) size=35709920
+    0,91d3f627,0e7e0800,000001a4,00000000,000003e8,root,root,-1,-1,dev/nflasha15,
+      成员 0700_part_image/dev/nflasha15 @0x2751c00 实测 crc32=91d3f627 ✓ (sum 存 91d3f627) size=243140608
+    0,0bbc4d6c,004e5000,000001a4,00000000,000003e8,root,root,-1,-1,dev/nflasha7,
+      成员 0700_part_image/dev/nflasha7 @0x14e24a00 实测 crc32=0bbc4d6c ✓ (sum 存 0bbc4d6c) size=5132288
+    0,3d8371e9,01ce3c00,000001a4,00000000,000003e8,root,root,-1,-1,dev/nflasha3,
+      成员 0700_part_image/dev/nflasha3 @0x10f32600 实测 crc32=3d8371e9 ✓ (sum 存 3d8371e9) size=30292992
+  --- 0801_appli_sum/appli.sum (6680 B) ---
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,lens,
+    0,b2b3f6aa,0000085c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9108_lensfile.bin,
+      成员 0800_appli/lens/VX9108_lensfile.bin @0x15338c00 实测 crc32=b2b3f6aa ✓ (sum 存 b2b3f6aa) size=2140
+    0,53446fa0,00001ad0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8913_lensfile.bin,
+      成员 0800_appli/lens/VX8913_lensfile.bin @0x15316a00 实测 crc32=53446fa0 ✓ (sum 存 53446fa0) size=6864
+    0,86ace6bf,000018b0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8948_lensfile.bin,
+      成员 0800_appli/lens/VX8948_lensfile.bin @0x1532ba00 实测 crc32=86ace6bf ✓ (sum 存 86ace6bf) size=6320
+    0,2dbe75b3,00001a04,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9109_lensfile.bin,
+      成员 0800_appli/lens/VX9109_lensfile.bin @0x15339800 实测 crc32=2dbe75b3 ✓ (sum 存 2dbe75b3) size=6660
+    0,85117b83,00000738,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8943_lensfile.bin,
+      成员 0800_appli/lens/VX8943_lensfile.bin @0x15327c00 实测 crc32=85117b83 ✓ (sum 存 85117b83) size=1848
+    0,e083dd98,00000f58,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89138925_lensfile.bin,
+      成员 0800_appli/lens/VX89138925_lensfile.bin @0x15315800 实测 crc32=e083dd98 ✓ (sum 存 e083dd98) size=3928
+    0,e95f1909,000004c8,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89438925_lensfile.bin,
+      成员 0800_appli/lens/VX89438925_lensfile.bin @0x15327400 实测 crc32=e95f1909 ✓ (sum 存 e95f1909) size=1224
+    0,7465c9c1,000009d4,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8945_lensfile.bin,
+      成员 0800_appli/lens/VX8945_lensfile.bin @0x15329400 实测 crc32=7465c9c1 ✓ (sum 存 7465c9c1) size=2516
+    0,0e62f40b,00002fa8,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9116_lensfile.bin,
+      成员 0800_appli/lens/VX9116_lensfile.bin @0x15341c00 实测 crc32=0e62f40b ✓ (sum 存 0e62f40b) size=12200
+    0,3c099221,000005fc,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89438924_lensfile.bin,
+      成员 0800_appli/lens/VX89438924_lensfile.bin @0x15326c00 实测 crc32=3c099221 ✓ (sum 存 3c099221) size=1532
+    0,cb3959f2,00001248,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8922_lensfile.bin,
+      成员 0800_appli/lens/VX8922_lensfile.bin @0x1531ba00 实测 crc32=cb3959f2 ✓ (sum 存 cb3959f2) size=4680
+    0,4eed050d,0000339c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9103_lensfile.bin,
+      成员 0800_appli/lens/VX9103_lensfile.bin @0x15331600 实测 crc32=4eed050d ✓ (sum 存 4eed050d) size=13212
+    0,b6b34496,00000a18,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9124_lensfile.bin,
+      成员 0800_appli/lens/VX9124_lensfile.bin @0x15348400 实测 crc32=b6b34496 ✓ (sum 存 b6b34496) size=2584
+    0,48123a35,000012ec,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8928_lensfile.bin,
+      成员 0800_appli/lens/VX8928_lensfile.bin @0x1531e200 实测 crc32=48123a35 ✓ (sum 存 48123a35) size=4844
+    0,8053f1b0,0000086c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8916_lensfile.bin,
+      成员 0800_appli/lens/VX8916_lensfile.bin @0x1531ae00 实测 crc32=8053f1b0 ✓ (sum 存 8053f1b0) size=2156
+    0,54b4aa07,0000339c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9123_lensfile.bin,
+      成员 0800_appli/lens/VX9123_lensfile.bin @0x15344e00 实测 crc32=54b4aa07 ✓ (sum 存 54b4aa07) size=13212
+    0,21f6a3d9,00000870,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89168924_lensfile.bin,
+      成员 0800_appli/lens/VX89168924_lensfile.bin @0x15319600 实测 crc32=21f6a3d9 ✓ (sum 存 21f6a3d9) size=2160
+    0,777f83b5,00000b10,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8915_lensfile.bin,
+      成员 0800_appli/lens/VX8915_lensfile.bin @0x15318800 实测 crc32=777f83b5 ✓ (sum 存 777f83b5) size=2832
+    0,bd0718d1,00000fa0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX92018925_lensfile.bin,
+      成员 0800_appli/lens/VX92018925_lensfile.bin @0x15350200 实测 crc32=bd0718d1 ✓ (sum 存 bd0718d1) size=4000
+    0,6a21b57b,00000a64,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8902_lensfile.bin,
+      成员 0800_appli/lens/VX8902_lensfile.bin @0x1530c600 实测 crc32=6a21b57b ✓ (sum 存 6a21b57b) size=2660
+    0,f6658f0a,0000174c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8903_lensfile.bin,
+      成员 0800_appli/lens/VX8903_lensfile.bin @0x1530d400 实测 crc32=f6658f0a ✓ (sum 存 f6658f0a) size=5964
+    0,8454f383,00000c88,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89058924_lensfile.bin,
+      成员 0800_appli/lens/VX89058924_lensfile.bin @0x15310200 实测 crc32=8454f383 ✓ (sum 存 8454f383) size=3208
+    0,dcd6a7b9,00001378,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9102_lensfile.bin,
+      成员 0800_appli/lens/VX9102_lensfile.bin @0x15330000 实测 crc32=dcd6a7b9 ✓ (sum 存 dcd6a7b9) size=4984
+    0,2c3a21af,00000b40,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8944_lensfile.bin,
+      成员 0800_appli/lens/VX8944_lensfile.bin @0x15328600 实测 crc32=2c3a21af ✓ (sum 存 2c3a21af) size=2880
+    0,313657a8,00000600,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX92028925_lensfile.bin,
+      成员 0800_appli/lens/VX92028925_lensfile.bin @0x15353c00 实测 crc32=313657a8 ✓ (sum 存 313657a8) size=1536
+    0,d24e2a40,00000810,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9104_lensfile.bin,
+      成员 0800_appli/lens/VX9104_lensfile.bin @0x15334c00 实测 crc32=d24e2a40 ✓ (sum 存 d24e2a40) size=2064
+    0,07f1c58d,00000f78,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8923_lensfile.bin,
+      成员 0800_appli/lens/VX8923_lensfile.bin @0x1531d000 实测 crc32=07f1c58d ✓ (sum 存 07f1c58d) size=3960
+    0,0e186241,000009e0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8935_lensfile.bin,
+      成员 0800_appli/lens/VX8935_lensfile.bin @0x15320400 实测 crc32=0e186241 ✓ (sum 存 0e186241) size=2528
+    0,130700ef,000009ac,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8932_lensfile.bin,
+      成员 0800_appli/lens/VX8932_lensfile.bin @0x1531f800 实测 crc32=130700ef ✓ (sum 存 130700ef) size=2476
+    0,2372e3c5,00001744,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9111_lensfile.bin,
+      成员 0800_appli/lens/VX9111_lensfile.bin @0x1533c200 实测 crc32=2372e3c5 ✓ (sum 存 2372e3c5) size=5956
+    0,387e38ab,00000c40,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8937_lensfile.bin,
+      成员 0800_appli/lens/VX8937_lensfile.bin @0x15323200 实测 crc32=387e38ab ✓ (sum 存 387e38ab) size=3136
+    0,c8fa1cb5,00001120,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8904_lensfile.bin,
+      成员 0800_appli/lens/VX8904_lensfile.bin @0x1530ee00 实测 crc32=c8fa1cb5 ✓ (sum 存 c8fa1cb5) size=4384
+    0,a06af9af,00001120,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89138924_lensfile.bin,
+      成员 0800_appli/lens/VX89138924_lensfile.bin @0x15314400 实测 crc32=a06af9af ✓ (sum 存 a06af9af) size=4384
+    0,88f4306f,00001bec,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9201_lensfile.bin,
+      成员 0800_appli/lens/VX9201_lensfile.bin @0x15351400 实测 crc32=88f4306f ✓ (sum 存 88f4306f) size=7148
+    0,1349082d,00000be0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8949_lensfile.bin,
+      成员 0800_appli/lens/VX8949_lensfile.bin @0x1532d600 实测 crc32=1349082d ✓ (sum 存 1349082d) size=3040
+    0,8f755143,00002344,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9113_lensfile.bin,
+      成员 0800_appli/lens/VX9113_lensfile.bin @0x1533dc00 实测 crc32=8f755143 ✓ (sum 存 8f755143) size=9028
+    0,dd82f1da,0000244c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9200_lensfile.bin,
+      成员 0800_appli/lens/VX9200_lensfile.bin @0x1534c400 实测 crc32=dd82f1da ✓ (sum 存 dd82f1da) size=9292
+    0,8c2b6996,00001580,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9107_lensfile.bin,
+      成员 0800_appli/lens/VX9107_lensfile.bin @0x15337400 实测 crc32=8c2b6996 ✓ (sum 存 8c2b6996) size=5504
+    0,8a9fe01d,00001948,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8906_lensfile.bin,
+      成员 0800_appli/lens/VX8906_lensfile.bin @0x15312800 实测 crc32=8a9fe01d ✓ (sum 存 8a9fe01d) size=6472
+    0,e3667806,00001730,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8946_lensfile.bin,
+      成员 0800_appli/lens/VX8946_lensfile.bin @0x1532a000 实测 crc32=e3667806 ✓ (sum 存 e3667806) size=5936
+    0,937025cb,00000c80,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8900_lensfile.bin,
+      成员 0800_appli/lens/VX8900_lensfile.bin @0x1530a600 实测 crc32=937025cb ✓ (sum 存 937025cb) size=3200
+    0,f91afe92,00000a10,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9115_lensfile.bin,
+      成员 0800_appli/lens/VX9115_lensfile.bin @0x15340e00 实测 crc32=f91afe92 ✓ (sum 存 f91afe92) size=2576
+    0,644079b5,00001ee0,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8936_lensfile.bin,
+      成员 0800_appli/lens/VX8936_lensfile.bin @0x15321000 实测 crc32=644079b5 ✓ (sum 存 644079b5) size=7904
+    0,23b99808,00000c44,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8901_lensfile.bin,
+      成员 0800_appli/lens/VX8901_lensfile.bin @0x1530b600 实测 crc32=23b99808 ✓ (sum 存 23b99808) size=3140
+    0,237d3d52,00000a40,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8938_lensfile.bin,
+      成员 0800_appli/lens/VX8938_lensfile.bin @0x15324200 实测 crc32=237d3d52 ✓ (sum 存 237d3d52) size=2624
+    0,2235b8c3,00000870,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9110_lensfile.bin,
+      成员 0800_appli/lens/VX9110_lensfile.bin @0x1533b600 实测 crc32=2235b8c3 ✓ (sum 存 2235b8c3) size=2160
+    0,a8ae6fac,0000086c,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9202_lensfile.bin,
+      成员 0800_appli/lens/VX9202_lensfile.bin @0x15354400 实测 crc32=a8ae6fac ✓ (sum 存 a8ae6fac) size=2156
+    0,893d6a90,00001348,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8905_lensfile.bin,
+      成员 0800_appli/lens/VX8905_lensfile.bin @0x15311200 实测 crc32=893d6a90 ✓ (sum 存 893d6a90) size=4936
+    0,7e8a9add,00002e84,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9129_lensfile.bin,
+      成员 0800_appli/lens/VX9129_lensfile.bin @0x15349200 实测 crc32=7e8a9add ✓ (sum 存 7e8a9add) size=11908
+    0,beec4d0e,00000874,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9114_lensfile.bin,
+      成员 0800_appli/lens/VX9114_lensfile.bin @0x15340200 实测 crc32=beec4d0e ✓ (sum 存 beec4d0e) size=2164
+    0,6d4eda5f,00001824,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9101_lensfile.bin,
+      成员 0800_appli/lens/VX9101_lensfile.bin @0x1532e400 实测 crc32=6d4eda5f ✓ (sum 存 6d4eda5f) size=6180
+    0,c30ebc05,00000738,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX92028924_lensfile.bin,
+      成员 0800_appli/lens/VX92028924_lensfile.bin @0x15353200 实测 crc32=c30ebc05 ✓ (sum 存 c30ebc05) size=1848
+    0,db66d4ed,00000870,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX89168925_lensfile.bin,
+      成员 0800_appli/lens/VX89168925_lensfile.bin @0x1531a200 实测 crc32=db66d4ed ✓ (sum 存 db66d4ed) size=2160
+    0,a3a28e88,00000a28,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9105_lensfile.bin,
+      成员 0800_appli/lens/VX9105_lensfile.bin @0x15335800 实测 crc32=a3a28e88 ✓ (sum 存 a3a28e88) size=2600
+    0,8664433f,00001894,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX8942_lensfile.bin,
+      成员 0800_appli/lens/VX8942_lensfile.bin @0x15325000 实测 crc32=8664433f ✓ (sum 存 8664433f) size=6292
+    0,0e1bc089,00001210,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX92018924_lensfile.bin,
+      成员 0800_appli/lens/VX92018924_lensfile.bin @0x1534ec00 实测 crc32=0e1bc089 ✓ (sum 存 0e1bc089) size=4624
+    0,be5d81a5,00000bcc,000001a4,00000000,000003e8,root,root,-1,-1,lens/VX9106_lensfile.bin,
+      成员 0800_appli/lens/VX9106_lensfile.bin @0x15336600 实测 crc32=be5d81a5 ✓ (sum 存 be5d81a5) size=3020
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,setting,
+    0,089963ff,000131cc,000001a4,00000000,000003e8,root,root,-1,-1,setting/DmmConfig.bin,
+      成员 0800_appli/setting/DmmConfig.bin @0x15355200 实测 crc32=089963ff ✓ (sum 存 089963ff) size=78284
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,setting/appfw_infra,
+    0,d72fec59,00000ed4,000001a4,00000000,000003e8,root,root,-1,-1,setting/ulogio.bin,
+      成员 0800_appli/setting/ulogio.bin @0x15375c00 实测 crc32=d72fec59 ✓ (sum 存 d72fec59) size=3796
+    0,84ad5844,0000c800,000001a4,00000000,000003e8,root,root,-1,-1,setting/facedmy.bin,
+      成员 0800_appli/setting/facedmy.bin @0x15368800 实测 crc32=84ad5844 ✓ (sum 存 84ad5844) size=51200
+    0,158c87cc,00000771,000001a4,00000000,000003e8,root,root,-1,-1,setting/kemco.txt,
+      成员 0800_appli/setting/kemco.txt @0x15375200 实测 crc32=158c87cc ✓ (sum 存 158c87cc) size=1905
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,tmp,
+    5,ffffffff,00000000,000001ed,00000000,000003e8,root,root,-1,-1,tmp/images,
+    0,a8b3bc33,00097490,000001a4,00000000,000003e8,root,root,-1,-1,tmp/images/Sony_DI_Icons.ttf,
+      成员 0800_appli/tmp/images/Sony_DI_Icons.ttf @0x15686400 实测 crc32=a8b3bc33 ✓ (sum 存 a8b3bc33) size=619664
+    0,8e846d5e,00118f14,000001a4,00000000,000003e8,root,root,-1,-1,tmp/images/MYingHeiC-Big5-SJ_wIcon.ltt,
+      成员 0800_appli/tmp/images/MYingHeiC-Big5-SJ_wIcon.ltt @0x15377400 实测 crc32=8e846d5e ✓ (sum 存 8e846d5e) size=1150740
+    0,39f42a0a,001f5a54,000001a4,00000000,000003e8,root,root,-1,-1,tmp/images/MYingHeiC-GB18030-SJ_wIcon.ltt,
+      成员 0800_appli/tmp/images/MYingHeiC-GB18030-SJ_wIcon.ltt @0x15490600 实测 crc32=39f42a0a ✓ (sum 存 39f42a0a) size=2054740
+    0,c4ef8b0a,00000105,000001a4,00000000,000003e8,root,root,-1,-1,tmp/nsswitch.conf,
+      成员 0800_appli/tmp/nsswitch.conf @0x158fc000 实测 crc32=c4ef8b0a ✓ (sum 存 c4ef8b0a) size=261
+    0,3546ad55,00004cd2,000001a4,00000000,000003e8,root,root,-1,-1,tmp/services,
+      成员 0800_appli/tmp/services @0x158fd200 实测 crc32=3546ad55 ✓ (sum 存 3546ad55) size=19666
+    0,00000000,00000000,000001a4,00000000,000003e8,root,root,-1,-1,tmp/config.spec,
+      成员 0800_appli/tmp/config.spec @0x15377000 实测 crc32=00000000 ✓ (sum 存 00000000) size=0
+    0,0969c61a,001de000,000001a4,00000000,000003e8,root,root,-1,-1,tmp/kikilog.dat,
+      成员 0800_appli/tmp/kikilog.dat @0x1571dc00 实测 crc32=0969c61a ✓ (sum 存 0969c61a) size=1957888
+    0,3f3db50e,00000b2b,000001a4,00000000,000003e8,root,root,-1,-1,tmp/protocols,
+      成员 0800_appli/tmp/protocols @0x158fc400 实测 crc32=3f3db50e ✓ (sum 存 3f3db50e) size=2859
+    0,a84b995e,00000269,000001ed,00000000,000003e8,root,root,-1,-1,tmp/toprc,
+      成员 0800_appli/tmp/toprc @0x15902200 实测 crc32=a84b995e ✓ (sum 存 a84b995e) size=617
+    2,ffffffff,00000000,000001ff,00000000,000003e8,root,root,-1,-1,tmp/mtab,../proc/mounts
+  对齐 0400_updater/dev/nflasha1 @0x1e3c600 len=8323072 vs work/l1-camera/nflasha1.bin: 前缀相同 0 B, 首个差异 @0x27
+  对齐 0700_part_image/dev/nflasha15 @0x2751c00 len=243140608 vs work/l2-camera/nflasha15.bin: 前缀相同 0 B, 首个差异 @0x400
+  对齐 0700_part_image/dev/nflasha3 @0x10f32600 len=30292992 vs work/l1_v/nflasha3.bin: 前缀相同 0 B, 首个差异 @0xe
+  对齐 0700_part_image/dev/nflasha7 @0x14e24a00 len=5132288 vs work/l1-camera/nflasha7.bin: 前缀相同 0 B, 首个差异 @0x400
+  $Cromfs@-1 $Cramfs@-1  (cramfs 外显 magic: 明文里 0x200 处 = 453dcd28 b'Compressed ROMFS'; a1 initrd cramfs magic 45 3d cd 28 出现次数=8+  位置样例 ['0x200', '0x1e50800', '0xfc79c00', '0x123eb2fc', '0x123ebb18', '0x12669ee4', '0x12cd9406', '0x14f180ec']
+  目录项 AV-CAM.BIN @plain 0x10f3e620: entry=00 6e 00 00 00 00 00 ff ff ff ff 41 56 2d 43 41 4d 20 20 42 49 4e 20 00 bb ac 98 3e 5c 3e 5c 00

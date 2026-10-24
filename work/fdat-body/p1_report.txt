@@ -1,0 +1,118 @@
+== UFU 记录 2.00 (346206712 B) ==
+  rec@0x8 type=DATV len=4
+  rec@0x14 type=PROV len=4
+  rec@0x20 type=UDID len=172
+  rec@0xd4 type=FDAT len=346206480
+  rec@0x14a2b1ec type=DEND len=4
+  DEND stored=0xaaaa81b8 calc crc32(B[:dend_off+12-4])=0x44ac8701
+  DATV payload: 01 00 00 00
+  PROV payload: 01 00 00 00
+  UDID len=172 be32count=21 payload hex (172 B):
+    0x00  00 00 00 15 04 48 05 4c 01 00 00 00 04 7d 05 4c 01 00 00 00 0b fe 05 4c 01 00 00 00 0b ff 05 4c
+    0x20  01 00 00 00 0c 01 05 4c 01 00 00 00 0c 02 05 4c 01 00 00 00 0c a7 05 4c 01 00 00 00 0c a8 05 4c
+    0x40  01 00 00 00 0b ee 05 4c 01 00 00 00 0b ef 05 4c 01 00 00 00 0c c9 05 4c 01 00 00 00 0c ca 05 4c
+    0x60  01 00 00 00 0c 13 05 4c 01 00 00 00 0c 14 05 4c 01 00 00 00 0d 0d 05 4c 01 00 00 00 0d 0e 05 4c
+    0x80  01 00 00 00 0d 11 05 4c 01 00 00 00 0d 12 05 4c 01 00 00 00 0d 28 05 4c 01 00 00 00 0d 29 05 4c
+    0xa0  01 00 00 00 03 e2 05 4c 02 00 00 00
+  UDID tail: 0d 12 05 4c 01 00 00 00 0d 28 05 4c 01 00 00 00 0d 29 05 4c 01 00 00 00 03 e2 05 4c 02 00 00 00
+  FDAT: head 0x40 9d 88 82 d1 31 14 a3 62 21 e4 f7 83 1f 66 68 69 44 8c 52 6a d9 be a7 60 9e 94 e1 dd c0 36 90 ae f8 61 21 7a 54 cd 3b b7 7c 51 03 a6 1d aa bd 19 61 16 80 39 fd 5b 08 f0 6a 8e fb 4a df 4c c0 8a
+  FDAT tail 0x110 first 0x20: 13 ef b6 a3 9e 3f 0c f8 34 59 33 67 9c 7e d2 22 08 b7 3f 29 b1 cd d4 be 39 73 b5 17 98 6d ea eb
+  FDAT last 256 B (signature?): 08 b7 3f 29 b1 cd d4 be 39 73 b5 17 98 6d ea eb 2d e4 8a 4c 43 e9 a4 b1 7f d5 ce d9 27 fc f6 dc 64 86 3f f3 96 e3 f9 d5 07 62 ba 2a 3f 8d aa 8c...
+  FDAT msg[0:24] sha? (skip) sig[0:8]=08 b7 3f 29 b1 cd d4 be
+
+== UFU 记录 2.03 (363197944 B) ==
+  rec@0x8 type=DATV len=4
+  rec@0x14 type=PROV len=4
+  rec@0x20 type=UDID len=172
+  rec@0xd4 type=FDAT len=363197712
+  rec@0x15a5f5ec type=DEND len=4
+  DEND stored=0x53cabfbb calc crc32(B[:dend_off+12-4])=0x7faf639b
+  DATV payload: 01 00 00 00
+  PROV payload: 01 00 00 00
+  UDID len=172 be32count=21 payload hex (172 B):
+    0x00  00 00 00 15 04 48 05 4c 01 00 00 00 04 7d 05 4c 01 00 00 00 0b fe 05 4c 01 00 00 00 0b ff 05 4c
+    0x20  01 00 00 00 0c 01 05 4c 01 00 00 00 0c 02 05 4c 01 00 00 00 0c a7 05 4c 01 00 00 00 0c a8 05 4c
+    0x40  01 00 00 00 0b ee 05 4c 01 00 00 00 0b ef 05 4c 01 00 00 00 0c c9 05 4c 01 00 00 00 0c ca 05 4c
+    0x60  01 00 00 00 0c 13 05 4c 01 00 00 00 0c 14 05 4c 01 00 00 00 0d 0d 05 4c 01 00 00 00 0d 0e 05 4c
+    0x80  01 00 00 00 0d 11 05 4c 01 00 00 00 0d 12 05 4c 01 00 00 00 0d 28 05 4c 01 00 00 00 0d 29 05 4c
+    0xa0  01 00 00 00 03 e2 05 4c 02 00 00 00
+  UDID tail: 0d 12 05 4c 01 00 00 00 0d 28 05 4c 01 00 00 00 0d 29 05 4c 01 00 00 00 03 e2 05 4c 02 00 00 00
+  FDAT: head 0x40 82 1d 3c 1f 62 71 44 d7 3e e3 17 59 2b 01 e5 af 44 8c 52 6a d9 be a7 60 9e 94 e1 dd c0 36 90 ae 86 0f e3 44 1c f8 ec 83 5c e9 51 d5 60 ca 4e ea 5d 5c 62 31 a8 0c cf e2 d5 88 7d e4 8f 02 d2 30
+  FDAT tail 0x110 first 0x20: 65 81 3b 8b d0 d3 27 fc 28 2e a8 26 54 32 f0 d7 b4 f4 ad e4 78 4d 92 96 2c ad 21 7c 31 69 41 6c
+  FDAT last 256 B (signature?): b4 f4 ad e4 78 4d 92 96 2c ad 21 7c 31 69 41 6c 58 a4 e5 c7 36 8b e5 3c 78 c5 76 c2 fc ab dd 2a b5 76 7b bc ca 34 61 ce c2 ee 4b a3 d2 e1 13 58...
+  FDAT msg[0:24] sha? (skip) sig[0:8]=b4 f4 ad e4 78 4d 92 96
+
+== UDTRFIRM 头字段对照 (0..0x200) ==
+  magic: 2.00=b'UDTRFIRM'  | 2.03=b'UDTRFIRM'
+  hdr_crc32@8(BE?): 2.00=3611097293  | 2.03=500141311   <<< DIFF
+  stored_le: 2.00=3455597783  | 2.03=4287418141   <<< DIFF
+  fmt@12: 2.00=b'0100'  | 2.03=b'0100'
+  modeType@16: 2.00=b'U\x00\x00\x00'  | 2.03=b'U\x00\x00\x00'
+  u32@20: 2.00=78  | 2.03=78
+  bytes@24..31: 2.00=00 00 00 00 00 00 00 00  | 2.03=00 00 00 00 00 00 00 00
+  ver@32: 2.00=00 02 00 00  | 2.03=03 02 00 00   <<< DIFF
+  model@36: 2.00=0x91030019  | 2.03=0x91030019
+  region@40: 2.00=0  | 2.03=0
+  u32@44: 2.00=0  | 2.03=0
+  obj2_off@48: 2.00=143872  | 2.03=147968   <<< DIFF
+  obj2_len@52: 2.00=344709632  | 2.03=361630720   <<< DIFF
+  nobj@56: 2.00=2  | 2.03=2
+  obj0@64: 2.00=(b'U\x00\x00\x00', 512, 143360, 0)  | 2.03=(b'U\x00\x00\x00', 512, 147456, 0)   <<< DIFF
+  obj1@80: 2.00=(b'P\x00\x00\x00', 512, 0, 0)  | 2.03=(b'P\x00\x00\x00', 512, 0, 0)
+  obj2@96: 2.00=(b'\x00\x00\x00\x00', 0, 0, 0)  | 2.03=(b'\x00\x00\x00\x00', 0, 0, 0)
+  obj3@112: 2.00=(b'\x00\x00\x00\x00', 0, 0, 0)  | 2.03=(b'\x00\x00\x00\x00', 0, 0, 0)
+  hdr_crc32_calc crc32(h[12:512]): 2.00=0xcdf83cd7  | 2.03=0xff8ccf1d   <<< DIFF
+
+== 0x1C0..0x210 raw ==
+  2.00:
+    0x1c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    0x1e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    0x200  45 3d cd 28 00 30 02 00 03 00 00 00 00 00 00 00 43 6f 6d 70 72 65 73 73 65 64 20 52 4f 4d 46 53
+  2.03:
+    0x1c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    0x1e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    0x200  45 3d cd 28 00 40 02 00 03 00 00 00 00 00 00 00 43 6f 6d 70 72 65 73 73 65 64 20 52 4f 4d 46 53
+
+== 6157(0x180D)/664(0x0298) 搜索 ==
+  2.00 FDAT rec@0xd4 +0x90b1 (37041): LE16 6157 ctx=0d 7f 2f 31 b6 14 50 72 63 1a 02 65 0d 18 f5 9a f2 b7 25 54 18 50 24 64 db 3d 17 a6 94 1a e0 8b
+  2.00 FDAT rec@0xd4 +0xb204 (45572): LE16 6157 ctx=86 f8 92 a4 52 6d c5 20 87 a3 69 99 0d 18 01 83 b4 d2 f5 ac 82 78 2b ed 04 87 07 0a 66 2f 8d ce
+  2.00 FDAT rec@0xd4 +0x20bb3 (134067): LE16 6157 ctx=f6 7a b5 96 5e 80 b7 5c fe 96 cf 39 0d 18 3c bb a9 14 2c 11 bf ed 6f 1d 57 85 61 e6 ea 5c cb be
+  2.00 FDAT rec@0xd4 +0x3053d (197949): LE16 6157 ctx=3c a2 e5 3b d0 25 20 ff e7 c1 05 dd 0d 18 92 82 38 04 be ac 40 c8 18 a5 45 cb d8 c9 0d 42 a5 62
+  2.00 FDAT rec@0xd4 +0x22e2e (142894): BE16 6157 ctx=5c d0 7f fd 56 19 88 56 0a bb 02 12 18 0d 4c 7d ac 19 d8 7b 6e 94 8e b4 a1 7f f9 97 17 21 9e ff
+  2.00 FDAT rec@0xd4 +0x4660b (288267): BE16 6157 ctx=16 c9 da 87 92 25 9b c2 5e 77 a0 19 18 0d 63 66 8d 82 4f 8d 35 d0 d1 82 a0 b3 aa 6f 2d d3 cf 51
+  2.00 FDAT rec@0xd4 +0x774f4 (488692): BE16 6157 ctx=3f 53 53 07 7b ac 93 b7 27 17 34 9e 18 0d 52 4e 75 5b 5c af 6c 72 9a 5e 0e e9 c3 f0 64 57 e7 3c
+  2.00 FDAT rec@0xd4 +0x7ae8c (503436): BE16 6157 ctx=4d d8 7e 93 c0 7a e1 7e 34 0f 70 81 18 0d 94 6d 2d a8 fd 2b 83 6c c7 ad a3 69 fa ce 54 ca 14 e9
+  2.00 FDAT rec@0xd4 +0x8c57 (35927): LE16 664 ctx=fe f9 4a 5d f1 c4 ef e9 cc 22 42 c5 98 02 46 46 1f 98 07 1e 61 bd 80 ba 74 82 87 4c 04 1d 9c 0b
+  2.00 FDAT rec@0xd4 +0x16c37 (93239): LE16 664 ctx=62 81 29 77 c9 c8 fe 1f 01 44 b3 a4 98 02 9a af c8 3f 3a 42 ae df ec c1 23 8d 32 ef 5c d6 bd 4a
+  2.00 FDAT rec@0xd4 +0x1c839 (116793): LE16 664 ctx=56 35 11 19 6c 37 06 e1 a4 84 c2 3b 98 02 ab 97 06 ca 49 e5 38 bd c8 73 81 62 72 83 46 f8 24 98
+  2.00 FDAT rec@0xd4 +0x1f4de (128222): LE16 664 ctx=36 4c 62 a7 09 32 d7 f1 d3 ab 81 0c 98 02 4f d1 77 d0 14 23 f3 5c 74 53 a2 db fc 7f 1d 24 fd 80
+  2.00 FDAT rec@0xd4 +0x631 (1585): BE16 664 ctx=8b dd d6 c7 2a bb 4b 04 b9 90 4d be 02 98 bf d4 23 e6 08 43 40 82 c5 be 06 e1 86 e0 3b 16 bd b6
+  2.00 FDAT rec@0xd4 +0xcbf (3263): BE16 664 ctx=ef 99 cd a1 db 1e 79 54 b2 2e e9 5c 02 98 5c 69 16 a0 11 ef 24 c1 09 7e c2 93 0d ab 1d f6 ee ff
+  2.00 FDAT rec@0xd4 +0x97bd (38845): BE16 664 ctx=a8 f6 17 77 64 ae c9 d2 ec 70 44 a4 02 98 f9 d3 d9 a8 f9 6b 1e 3f 18 38 da d4 78 e6 82 35 c9 5b
+  2.00 FDAT rec@0xd4 +0x1ab6c (109420): BE16 664 ctx=35 e1 8d 5a 98 06 56 1d 88 94 ca 03 02 98 5b 94 5b 99 1a 3c 13 9a 5a 7d 5f 2c 22 42 8d 08 94 b1
+  2.00 FDAT rec@0xd4 +0x45e75ec (73299436): ascii 664 ctx=89 c6 f9 50 51 c5 c2 7e 07 fa cf ef 36 36 34 b0 9d 74 ef 50 24 80 e1 d1 48 9f 2d 69 a1 6a cf 60
+  2.00 FDAT rec@0xd4 +0x5c6aca4 (96906404): ascii 664 ctx=a0 3c cf 61 30 45 d6 1b fe a1 ea 6d 36 36 34 d0 f3 5f e6 90 1e 39 8f bf d9 6f 36 19 de 17 8b b3
+  2.00 FDAT rec@0xd4 +0x651c089 (106021001): ascii 664 ctx=d2 e8 63 dc 01 d9 ec 28 b5 0a d1 f7 36 36 34 f2 95 1a d1 78 a8 ac e2 13 99 72 74 f9 40 a7 07 ef
+  2.00 FDAT rec@0xd4 +0xcb74cdf (213339359): ascii 664 ctx=4f d5 3e c5 7d b7 71 78 de 18 97 7e 36 36 34 01 d9 a1 b9 fe 44 1c 99 13 0e 00 87 d4 37 04 98 43
+  2.00 PLAIN-head +0x161b: BE16 6157 ctx=dc b9 77 8c df 01 3a ea 9c 5a 47 b1 18 0d d6 ba 33 d2 9e 09 2b e6 4d 76 90 b6 4d 70 f0 f2 0d 4f
+  2.03 FDAT rec@0xd4 +0xbaa8 (47784): LE16 6157 ctx=26 46 37 b9 c7 0c 3e 23 89 31 3c 0a 0d 18 51 13 8c 12 bd e4 a0 3e b3 34 6c f5 23 90 35 a8 cb 1d
+  2.03 FDAT rec@0xd4 +0x1db82 (121730): LE16 6157 ctx=ff fd 0a bb a7 8c 81 8f bf 39 cd 95 0d 18 a6 47 0d bd 8f 49 56 38 86 d3 b7 b4 ca 25 72 53 c7 bd
+  2.03 FDAT rec@0xd4 +0x22fc4 (143300): LE16 6157 ctx=a5 cd ae da ec 3f 44 59 9b b8 f0 9c 0d 18 3f c8 3d 10 3a ec e2 c3 aa 45 25 23 17 bb e1 a5 16 46
+  2.03 FDAT rec@0xd4 +0x26e5a (159322): LE16 6157 ctx=57 02 20 35 69 29 8e 90 d0 5e 28 84 0d 18 37 0d 38 92 a7 39 25 6c a8 47 20 11 4e b3 29 59 3a 4c
+  2.03 FDAT rec@0xd4 +0x69ae (27054): BE16 6157 ctx=a6 9e 79 03 59 f8 a3 76 20 ed 57 d9 18 0d 80 c9 e8 cf 89 c0 48 be 61 9c 3d ea 6f 6e 05 c2 17 48
+  2.03 FDAT rec@0xd4 +0x927e (37502): BE16 6157 ctx=81 b1 c7 30 b1 83 26 b9 a8 71 4c 31 18 0d 34 dd 8f ae 2f 0a a0 74 43 cd 34 85 d1 5f 1f 4f ce 37
+  2.03 FDAT rec@0xd4 +0xf889 (63625): BE16 6157 ctx=04 b3 9e ee 7e 8c 81 bf 47 21 e7 c7 18 0d 6f d6 29 93 e3 62 f9 4e 94 c3 13 3d 8f 2d 5e 3b 53 97
+  2.03 FDAT rec@0xd4 +0x229a9 (141737): BE16 6157 ctx=d4 c6 fd e0 83 8d 94 c5 61 c3 7e 95 18 0d 8a de 93 5d ce a4 d5 87 52 04 66 82 c9 16 86 27 d6 cb
+  2.03 FDAT rec@0xd4 +0x10c04 (68612): LE16 664 ctx=ef 72 b9 19 d4 21 9d 41 58 c4 34 da 98 02 9b d8 b7 7e a0 53 b2 21 51 99 7b 54 cf 92 cf 94 5b df
+  2.03 FDAT rec@0xd4 +0x18a33 (100915): LE16 664 ctx=24 68 e8 8d 92 34 63 5e f4 fe e5 15 98 02 e4 34 54 48 e1 f8 94 95 bf d2 a6 d9 6f 8f 05 35 b8 03
+  2.03 FDAT rec@0xd4 +0x2e1c3 (188867): LE16 664 ctx=02 63 c2 a0 f5 8d b5 0b 21 4e 41 65 98 02 12 9a 2e 3d 82 7a 1c 13 b6 86 12 70 97 ba ff cf dc cf
+  2.03 FDAT rec@0xd4 +0x39de7 (237031): LE16 664 ctx=b6 f9 7b a2 b5 81 63 6e e2 fb c7 0f 98 02 d0 d2 3e 36 c0 39 ab 8a a6 27 cb 0d 64 41 67 c2 e7 01
+  2.03 FDAT rec@0xd4 +0x5739 (22329): BE16 664 ctx=ab 1f 21 d1 91 bf 23 0e 01 88 1f e5 02 98 5c db 92 07 75 5f 9c a8 bd 71 f4 5d 7f 5a 09 ed 65 81
+  2.03 FDAT rec@0xd4 +0x18aef (101103): BE16 664 ctx=71 e5 f8 56 b3 20 36 11 e2 24 da 7c 02 98 06 30 da 2e ec e6 e8 25 4f b1 1a 2d 7d e8 ec d9 f3 4f
+  2.03 FDAT rec@0xd4 +0x19659 (104025): BE16 664 ctx=66 fe 93 0a 53 86 b5 dd 47 68 14 01 02 98 9c 3c 30 ed c4 3e 5b 02 49 fd 69 78 bc 0f e3 7b 56 d1
+  2.03 FDAT rec@0xd4 +0x19ce8 (105704): BE16 664 ctx=23 38 32 a7 a6 44 16 02 75 50 07 dd 02 98 30 72 10 43 f6 3a 59 eb f4 58 e9 a4 12 14 4d b1 ab a3
+  2.03 FDAT rec@0xd4 +0x889519 (8951065): ascii 664 ctx=85 3f ea cf ad 13 48 b1 bc 60 40 2f 36 36 34 a9 d5 e7 d8 ff b1 bd 73 f4 e9 cc a3 cd 45 0d 96 f8
+  2.03 FDAT rec@0xd4 +0x1643006 (23343110): ascii 664 ctx=11 aa 2a 8a 60 51 e7 de 1e 35 4b b0 36 36 34 f4 a4 99 37 d5 09 54 c0 75 70 a2 e6 62 9b fb 07 06
+  2.03 FDAT rec@0xd4 +0x3d99bbd (64592829): ascii 664 ctx=59 e2 dc 6a 6f 19 25 f7 2f a6 45 7a 36 36 34 8a 7f cc e6 e2 97 93 4f 71 83 1c ed e1 83 8f e2 e1
+  2.03 FDAT rec@0xd4 +0x6824fb0 (109203376): ascii 664 ctx=4c 8a 4d aa 83 6d 95 fb b3 b1 81 a6 36 36 34 f4 95 0b 2a dc 3f ac 36 2d 9d a7 ea 39 9c 0e c6 38
+  2.03 PLAIN-head +0x163f: BE16 6157 ctx=dc b9 77 8c df 01 3a ea 9c 5a 47 b1 18 0d d6 ba 33 d2 9e 09 2b e6 4d 76 90 b6 4d 70 f0 f2 0d 4f
