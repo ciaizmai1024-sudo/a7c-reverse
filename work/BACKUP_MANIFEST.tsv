@@ -35,3 +35,5 @@ nflasha23	0x00200000 (2097152)	494152495afdfbfb437e42cc13040674b6d5a974a855f5cbf
 #   注意：0x635c6000 是 DSP 地址，不在 ARM mem= 窗口内（/dev/mem 读它会挂死 USB）；平铺镜像 VA−base==文件偏移，改文件即可。
 # ★新 USB 状态：退出服务 0336 会短暂出现 054c:0994（期间 StartSenser 无效，等 ~30 s 回 0d29）。
 # ★Jiritsu 前置：出厂没有 /tmp/jiritsu，mount nflasha6 返 0x10000004；用 select("/mnt/../tmp/jiritsu/.keep")+set_file2(mode=1) 触发 sys_dir_create2 逐级建目录。
+QEMU	card-index10-host-offset	0xbc00000	卡切片在宿主镜像里的偏移（rel 0xb800000 + 0x400000）；不是 0xc000000	Round 15
+QEMU	neg-card-first-diff	file-off 0xffcc0dc (de->c3)	落在 FDAT 签名消息区内（签名区 0x14a2b0ec..0x14a2b1ec）⇒ 运行时应 FAIL	Round 15
