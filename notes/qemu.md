@@ -251,3 +251,22 @@ initrd `/dev` 里 **66 个 nflash 节点**（`nflasha1..30` + `dnflasha1..30` + 
 
 ### ⑤ 未竟
 过 `verifyKey`（要么搞清楚 Backup 指纹该是什么、要么在我们自己的 QEMU 副本里把它对上/把代码打点）→ 然后才有 `RSA_verify` 的正/负向与**固件分区写序列**。
+
+---
+## Round 17：★签名门的运行时证明拿到；`verifyKey` 的指纹条目在我们镜像里是**全零**
+产物：远端 `~/qemu-a7c/results_round17/`（含 `MANIFEST_r17.md`、`FINDINGS_r17_P1.md`、`FINDINGS_r17_P3.md`、`initrd_r17{log,pass}.img = 103f86f7…/20f2c11f…`、`r17fshim_r17{log,pass}.so = c87fc640…/f2b3fa01…`、`a7c_emmc_r17{pos3,negB,negC}.img`、4 份 ser、`run_r17.sh`）。基线 `a7c_emmc_pt4.img = 8587674613…` 复核未动；Round 10–16 产物未覆盖；QEMU/`bionz.c`/`sd.c` 一字未改。
+
+### ① `verifyKey` 的机制（运行时 interpose `strncmp` 直接抓包）
+- 抓到的比对：**`n=20`，`a = 184bbeff…`（= `SHA1(整只 /etc/VerificationKey.pem，含尾换行)`，与 `sha1sum` 一致），`b = 00000000…`（20×00）**。
+- 链路：lib 里 `SHA1(mmap 全文件)` → **uIPC `osal_snd_sync_msg`**（`ioctl 0x800503e`，常量 **`0x6bedecd`**）→ 内核 **`backup.ko:func_cb_sync`** 按 **BackupID** 从 **Backup RAM**（`0x02e80000`，我们预填的内容 md5 `7a549d06` = **`a2:/Backup.bin`**）应答。
+- **该条目在我们的镜像里 = 全零（出厂就没写）**；把整块 eMMC 里所有 PEM 摘要的归一化形式（raw / hex 大小写 / DER / base64）都搜过 ⇒ **没有任何命中** ⇒ **不是 lib 里硬编码**（`.rodata` 无摘要、也没有 `uudkey` 一类串）。
+- **推论（可被真机一击判定）**：如果我们这份来自 a2 的 `Backup.bin` 就是出厂内容，那么**真机走 mode5 也会卡在 `verifyKey`**；否则说明**真机 RAM 里的 blob（`0x02e80000`）与 a2 上的文件不同**（由 BodyLoader/主系统在运行时组装/补写）。⇒ **读真机 `0x02e80000` 的 RAM blob 并与 `a2:/Backup.bin` 逐字节比对**，这一条的优先级现在非常高（它同时决定：我们的 Route A″ 该改哪个字节、以及官方 SD 更新在真机上为什么能过）。
+### ② 改法（本轮用 C，零指令改写）
+`LD_PRELOAD` shim（`r15fshim` + **忠实实现 `strncmp` 的 interpose**；`FORCE0` 版对 `n==20` 返回 0）⇒ 只放行 `verifyKey`，不碰代码段。
+### ③ 正向（官方 2.03 `.dat` 未改一字）
+`verifyKey` 放行后 **`SignatureVerification.cpp:41/46/51/65` 全无报错 ⇒ 运行时 `RSA_verify` OK**（与我们离线 E1 的结论一致）。随后进入解密（`InitialVector` + `Dec start`）**死在新门**：**`DecryptorModule.cpp:112,"6157:664"` / `ApiException 0x30002` / Error 42**。
+### ④ 负向（关键判据）
+`negB`（`+0x2000000` 翻 1 bit）与 `negC`（`+0x14000000` 翻 1 bit）都报 **`SignatureVerification.cpp:65,"signature"` / UdrAPI `196610` / `0x30002` / Error 42** ⇒ **失败点从 `cpp:117` 挪到 `cpp:65`，且与翻位位置无关**。
+⇒ **签名门（消息 = 整块密文体、签名 = 尾 256 B）在相机自己的代码里得到运行时证明**，与离线验签（E1）完全吻合。
+### ⑤ 仍未拿到
+三跑都没出现**固件分区写**（`ZZSDWRITE` 各 11 条 = a2 vfat `0x800200/800a00/810a00` + 卡 vfat `0xb82e000-0xb82ee00`）——burn 被 ③ 的解密守卫挡住；`reboot` 读回未做；`6157:664` 语义、指纹条目在 blob 里的精确偏移、dat2/3/4 是否还需要，都未竟。

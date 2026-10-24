@@ -67,6 +67,13 @@ ssh wubin@172.22.22.131 'bash ~/a7c-jiritsu/bootarea_run.sh'    # = 本地 tools
 - **`ulogio` = 自带内核级控制台**：`telnet up|down`（**端口 23 写死**，需重启）；子命令含 `db/dw/dl`、`mb/mw/ml/mf/mu`、`lsnap/lstart/lstop`、`crash/timetag/uipc`。
 - 要做交互 shell：我们的 ARM32 worker 里 `socket()+connect()+dup2` ⇒ 笔记本 `nc -l` 反向 shell（零新二进制），或带一个静态 ARM32 dropbear。
 
+## 4c. ★真机现在最该读的一处 RAM（Round 17 新增，优先级最高）
+读真机 **`0x02e80000` 的 Backup RAM blob**（长度取 `Backup.bin` 的 1,210,408 B），与我们手上 `a2:/Backup.bin`（md5 `7a549d06…`）逐字节比对。
+Round 17 抓到 `verifyKey` 的比对是 `SHA1(整只 /etc/VerificationKey.pem 含尾换行)` vs **Backup 里按 BackupID 取的 20 字节指纹**，而我们镜像里那个条目是**全零（出厂未写）**。
+⇒ 若真机 RAM blob 也是零 ⇒ 真机走 mode5 也会卡 `verifyKey`（那官方 SD 更新必有别的入口写这个条目）；
+⇒ 若真机 blob ≠ a2 文件（BodyLoader 运行时补写）⇒ 我们的 Route A″ 要改的是**运行时 blob**（或让 BodyLoader 那份对上）。
+顺带把 `nflashaB0/B1`（EXBL）与 USER 头/分区表一起读。
+
 ## 5. 只能靠真机补的东西（当前所有硬缺口的共同答案）
 `nflashaB0/B1`（EXBL 是否验 a1）、USER `0x0–0x10000`（真分区表 / FixedArea）、RAM `0x02e80000` 活副本、
 官方更新卡 `BODYDATA.DAT`（真 FDAT 头 + 尾 256 B 签名）、以及 **L2.6 真机 raw 节点写**验证（见 `TEST_LADDER.md`）。
