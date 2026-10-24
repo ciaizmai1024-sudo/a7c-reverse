@@ -201,3 +201,25 @@ initrd `/dev` 里 **66 个 nflash 节点**（`nflasha1..30` + `dnflasha1..30` + 
 - **C 闭环**：R12 的 hook 在这棵 QEMU 树触发 `qapi_enum_lookup` assert（本树枚举无 host-reset）⇒ 改成 `shutdown_request(GUEST_SHUTDOWN)` → exit 0 → wrapper 同镜像重拉；guest 里 `reboot` 的 writel 要挪到 `arch_reset_core` **之前**（`pm_machine_reset` 不回返）。结果：**boot1 写 a23 → guest 自己重启 → boot2 读回同一 md5 `ef59d910…` 打 `REREAD-OK-AFTER-GUEST-REBOOT`**（两组复现；boot2 里 backup 正常分支仍 RC=0/38）。⇒ **R1 更强了：写 + guest 内重启 + 重启后重读，全程离线**。
 - **D（mode5）**：`/setting/updater/mode5` → `[DETAIL] MODE=5` → `insmodMediaDriver` 两模块 RC=0 → `exec sdfileinput.elf` → 内核 `MMC:Failed mcmnd_api_getbkupinfo_bus_connect_type` ⇒ **`[FIRMUP NG] Error 77`**（**77 不在 `common.src` 错误表里**，来自 mcmn/sdfileinput 层；a15 里该串旁边是 `Force Local bus` ⇒ **卡槽总线类型来自 Backup/serial-cfg 信息**）。合成 vfat 卡（`BODYDATA.DAT` = 猜壳 FDAT + 官方包 `udtrbody.bin`）放在 a10。**验签没到**，但机制钉死（E1）：`VerifySignature = SHA256(body−0x100)` + `RSA_verify(NID_sha256)`，公钥 = initrd `/etc/VerificationKey.pem`(RSA-2048)，卡上头带 256 B 签名。
 - md5 记录：`bionz.c 32dbbd76…`（R12 源码备份 `.r12.bak`；R12 版是 `139a86cb…`）、QEMU 二进制 `e3ae292c…`、新内核 `vmlinux.bin 5ad80118…`、initrd r13a/c/d/g = `72494113/6ac3d395/d3c67bb8/22ddef6b`、卡 `ce716b69`、`BODYDATA.DAT 4e6f45fa`、实验盘 `a7c_emmc_r13{,_m5}.img = c84208c9/d526e5f0`；**基线 pt4 `85876746…` 未动**。
+
+---
+## Round 15 结果：mode5 现在真的在流读官方 `.dat`（桩的两个真 bug 修掉了）
+产物：`work/qemu-a7c/results/round15/{FINDINGS.md,R15_POSTMORTEM.md,r15_p5_boot1.ser}`；远端 `~/qemu-a7c/results_round15/`、`results_round16/R15_POSTMORTEM.md`。
+新 md5：`r15fshim.c 6276f75f…`、`r15fshim_r15e.so b95ba49e…`、`initrd_r15e.img 34a654e2…`、卡镜像 `a7c_emmc_r15v203.img c95b9ac0…`、负样 `a7c_emmc_r15neg.img a0696f90…`；基线 `a7c_emmc_pt4.img 85876746…` ✓ 未动；本轮 QEMU/`bionz.c`/`sd.c` 一字未改。
+
+**桩的三个坑（都已实测修正，写下来免得再踩）**
+1. `r14fshim_*.so` 是**宿主 gcc 编的、带 `GLIBC_2.34`** ⇒ guest（3.0.27 glibc）拒载。要交叉编到相机那套 glibc/ABI。
+2. **`Fsys_FindFirst` 真签名是 3 参**，且**必须把找到的路径写回第 1 个参数的缓冲区**；按 2 参写会 page fault（`@0x80`）。
+3. **`Fsys_Seek` 第三参不是 `SEEK_CUR/END`**：实测传参 `(1,20,20)` ⇒ 按**绝对 SET** 实现才对。改对之后：`42 → 86 → found FDAT`。
+
+**Error 42 / 86 的出处（不在 shell 错误表里，是 `LEDErrorConverter::Convert(ApiException 0x3000x)` 映射出来的用户码；打印点 `common.src:74`）**
+- **42** = `SDUUDConditionChecker.cpp:130` **"Firm size is larger than buffer size"**（chunk 长度是垃圾）
+- **86** = `SDFileInputUpdaterManager.cpp:178` **"not meet UUD conditions"**
+⇒ 两者都属**条件检查阶段**，与读文件/摘要/签名/写分区无关。
+
+**mode5 的写表（512 B/条，去重后只有 11 条）**：全部落在 **index1=`a2 /setting`**（`rel 0x800200/0x800a00/0xc10a00`，宿主 `+0x400000`）= vfat 引导/FAT/目录（我们注入 `mode5` 旗标 + `comp` 触发 `rm -rf mode*`），其余 8 条在 **index10（`rel 0xb800000` → `/dev/nflasha11`，宿主 `0xbc00000`，注意不是 `0xc000000`）** 的卡切片里（`0x2e000` = vfat 根目录项，`open()` 的副作用）。
+⇒ **mode5 至今没写过任何固件分区**（a1/a3/a10/a15/a23·PMBP 全 0 写）；**出厂 `comp` 会删 `mode*` ⇒ 旗标每轮必须重注入**。
+
+**p6 = 卡上换成官方 2.03 `.dat`（未改一字）后**：UUD 门**通过**（`Old 2.0 / New 2.3 / Model 0x91030019 / Region 0x0000`），第二次走链后 **`ZZSDREAD` 涨到 639,925 条 ≈ 327 MB = 整个 `FDAT` 正在流进来**（写仍只有 3 条 a2）。⇒ **读卡+解容器+条件检查这半条链已经真跑通**；验签与写分区是下一问。
+
+**负样准备**：卡切片只有 2 个扇区与正样不同（`0xbc2e000` 目录项=跑脏，须排除；`0x1bc00000`），挂载后逐字节对文件 ⇒ 首个不同**文件偏移 `0xffcc0dc`（268,222,684）**，`de→c3`，落在 **FDAT payload 的签名消息区（密文体）内**、不在签名区（签名 `0x14a2b0ec..0x14a2b1ec`）✓ ⇒ 运行时应当 **FAIL**，这是 L3 的关键判据。
