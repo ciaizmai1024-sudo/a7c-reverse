@@ -96,3 +96,5 @@ Round 17 抓到 `verifyKey` 的比对是 `SHA1(整只 /etc/VerificationKey.pem �
 官方更新卡 `BODYDATA.DAT`（真 FDAT 头 + 尾 256 B 签名）、以及 **L2.6 真机 raw 节点写**验证（见 `TEST_LADDER.md`）。
 
 - ★低风险入口 1（TELN→root shell）：**改 a2 里 `/setting/ulogio.bin` 偏移 `0x9c` 一个字节 `00`→`01` + 重启 ⇒ `0.0.0.0:23` 无认证 root shell（2.00）**；a2 是 FAT12、更新不写它、文件可备份还原 ⇒ **R1**。拿到 shell 后 `dk/mu/mb/mw` 可直接读写物理内存 ⇒ 顺手解决 OTP 窗（`0xF340F000`/`0xFFFF5000`）、Backup RAM（`0x02E80000`）、LOGB 日志（`0x03085000`）。详见 `notes/ulogio-telnet-shell.md`。注意 2.03 的实现不同（不是 shell）；跑过 `ulogio telnet up` 会生成 `filter.bin` 覆盖该开关。
+
+- ★低风险入口 2（/setting 旗标 + env.txt）：主系统 initrd(a3 的 `initrd.img`，**ext2**) 的 `/sbin/init`(28,524 B) 里确认存在 `/setting/mode/dmode`、`/setting/sen/smode`、`/setting/env.txt`(有 `parse_and_set_env`/`putenv`)、`/proc/udm/upm_bootmode`，且 init 自带 `LD_PRELOAD=/usr/tool/{libkmcsup.so.2.0.0,libsonyefence.so,libduma.so}`；那颗 initrd 里还有 `dosfsck` ⇒ a2 的 FAT 能自愈。⇒ **建文件即可试，默认都不存在，R0–R1**；各旗标触发什么正在追（`notes/injection-points.md`）。另：**官方更新会重写 /setting/ulogio.bin 与 kemco.txt**（补丁会被覆盖，也是改坏时的兜底）。

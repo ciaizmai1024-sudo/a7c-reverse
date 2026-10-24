@@ -1,0 +1,15 @@
+已完成。结论和脚本都在 `/Users/wubin/a7c-tasks/setting-files/`。
+
+**产出文件**
+- `README.md` — 按“路径 → 读取模块+地址 → 能改什么 → 改坏怎么救”整理，含恢复难度排序、KEMCO 专项、0800_appli 写入/回读表、未证实项。
+- `kernel_params.py` — 新增；从裸 `vmlinux.bin` 可复现地抽参数名、KEMCO 补丁地址和 4096 B 上限（`--disasm` 可看反汇编）。
+- `ext2_walk.py`、`scan_strings.py`、`a15_hits.tsv`、`a1_initrd_200/203_hits.tsv`、`a3_initrd_hits.tsv` — 原有证据保留。
+
+**关键结论**
+1. **前提修正**：a15 是 ext2（magic `0xEF53`），不是 FAT16，挂载点是 `/usr`，不存在 `/usr/upper`。
+2. **KEMCO.TXT**：由闭源 loader 放到物理 `0x103000`，主内核 `setup_arch()` 补丁在 VA `0x60499bf4` / 文件 `0x391bf4` 解析；magic 必须是 `kemco`，换行变空格，单独一行 `*` 截断，最多 4096 B，**没有长度/CRC/版本字段**。`console=`、`init=`、`root=`、`rdinit=`、`initrd=` 都有效；**`single` 不是参数**（内核里只有同名函数）。magic 不对时内核沿用空 cmdline，直接开不了机——loader 侧是否还有校验未证实。
+3. **启动期真正读 `/setting` 的模块**：`kemco.txt`（loader/内核）、`DmmConfig.bin`（`dmm.ko`，init VA `0xb048`）、`ulogio.bin`（`osal_ulogio.ko`，VA `0xaf2b`）、`mode/dmode`（init `0x93b0`）、`mode/preload`（bootin）、`env.txt`（init `0x98b0`）。`backup.ko` 以 `Backup_load=0` 加载，开机不恢复备份。
+4. **0800_appli**：2.00 写 `/setting` 4 项（DmmConfig.bin、facedmy.bin、kemco.txt、appfw_infra/）+ `/tmp` 10 项；2.03 增加 `ulogio.bin` 和 `kikilog.dat`，并换大字体。下次启动回读映射见 README §4.2。
+5. **恢复难度**：A（删掉/重写即可：dmode、preload、cmode、smode、env.txt、updater 开关）；B（包内有正确字节但改错可能不开机：kemco.txt、DmmConfig.bin、ulogio.bin、facedmy.bin、a10 文件）；C（设备独有、只能整盘 dump：Backup.bin/.bak、.hasp、.etools、psd.bin、facerec0..7）。
+
+最需要小心的两点：改 `kemco.txt` 前先整盘备份 a2；`mode/preload`、`env.txt`、`dmode` 虽然默认不存在，但都是最强的任意代码/调试注入点。
