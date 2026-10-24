@@ -105,3 +105,7 @@ wrapw-before.*
 __pycache__/
 *.pyc
 *.swp
+
+# --- 从官方包解出的原件（含 tar 成员、Backup 标准件）不重分发 ---
+work/fdat-body/extract*/
+work/fdat-body/backup*/

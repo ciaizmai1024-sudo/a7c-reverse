@@ -74,6 +74,14 @@ Round 17 抓到 `verifyKey` 的比对是 `SHA1(整只 /etc/VerificationKey.pem �
 ⇒ 若真机 blob ≠ a2 文件（BodyLoader 运行时补写）⇒ 我们的 Route A″ 要改的是**运行时 blob**（或让 BodyLoader 那份对上）。
 顺带把 `nflashaB0/B1`（EXBL）与 USER 头/分区表一起读。
 
+## 4d. 官方包侧的"可写清单"与风险判定（E3，见 `notes/official_package.md`）
+- **一次官方更新会写：`a15 + a3 + a5 + a7`（2.03 还写 `a1`）+ Backup 里被 `MainDest.txt` 选中的那一份 blob + `0800_appli` 若干文件 + `partinf.conf/darwin/prfile/config`**；**不写** `a2/a4/a6/a10 本体/a13/a23`。⇒ 半刷风险面里多了一个之前没想到的：**`a5 = Warm Boot Image` 不同步**（warm-boot 会恢复旧状态）。
+- **`a4` 开头是 `CMMeX` 结构 ⇒ a4 不是 a1 的镜像副本** ⇒ "刷坏 a1 有 a4 兜底"**不成立** ⇒ **刷 a1 仍是 R0**；先拿 `a10`（/tmp，可弃）做 L2.6。
+- ⇒ **L2.6 的定位升级：从"自救工具"变成"信任根 bootstrap"**——先 raw 写改过的 a1（绕过签名门），之后自制签名包才能接管 a15/a3/a5/a7（因为 `RSA_verify` 用的就是已装的那把 PEM，换 PEM 又需要刷 a1 ⇒ 鸡生蛋只能靠 raw 写破）。
+- **包内 `partinf.conf`：名字/大小可信（`a15`=usr 300MB、`a3`=Main 48MB、`a5`=Warm Boot 60MB、`a6`=Jiritsu、`a4`=MPR Flash Backup），地址不可信**（它给 `a15@0x2D800000`、`a11=Log@0x0B800000`；机身 USER 表为准）。
+- **机身 `/setting/Backup.bin` 与包内 26 份标准 Backup 都差 9 万多字节（2203 个 run）** ⇒ Backup 里有大量设备专属内容（序列号/校准/锁）⇒ **任何"整份覆盖 Backup"的写都要先把机身那份备份下来**（`a2` 里 `psd.bin` 命中情况：0xca210）。`0100_config/big_backup.conf` 的内容正是 `/setting/psd.bin` ⇒ **官方流程会在更新前把旧 Backup 存到那里**（是个恢复点）。
+- 26 份标准 Backup（BK4，条目数 2.00=750 / 2.03=819）里**都没有 `SHA1(VerificationKey.pem)`** ⇒ `verifyKey` 的指纹不是包内提供 ⇒ §4c 的真机 RAM 比对仍是决定性的。
+
 ## 5. 只能靠真机补的东西（当前所有硬缺口的共同答案）
 `nflashaB0/B1`（EXBL 是否验 a1）、USER `0x0–0x10000`（真分区表 / FixedArea）、RAM `0x02e80000` 活副本、
 官方更新卡 `BODYDATA.DAT`（真 FDAT 头 + 尾 256 B 签名）、以及 **L2.6 真机 raw 节点写**验证（见 `TEST_LADDER.md`）。
