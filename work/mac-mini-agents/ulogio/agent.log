@@ -1,0 +1,69 @@
+结论和脚本都在 `/Users/wubin/a7c-tasks/ulogio/`：`ULOGIO-FORMAT.md`、`ulogio_cfg.py`。
+
+## 核心结构
+
+整份文件就是一条条 TLV 记录，没有文件头、记录数、校验和或尾部标记，一直读到 EOF：
+
+```text
++0x00  uint32 LE  total_len   ← 包含这 4 字节自身
++0x04  char[4]    tag         ← 4 字节 ASCII，无 NUL
++0x08  uint8[]    payload     ← 长度 = total_len - 8
+```
+
+- `total_len` 一定 4 字节对齐，payload 用 NUL 补齐到 4 字节边界。
+- `FBOX` 是容器，payload 本身又是一串记录；`SFLT`、`CFLT` 真正嵌套在它里面。
+- 字符串就是 `ASCII + NUL + 补零`，没有独立字符串长度字段。
+- 两份文件都能“解析 → 重新编码”逐字节还原，外层结构已确认。
+
+## TELN 开关
+
+你看到的 152 (`0x98`) 是 tag 的 `'T'`，不是值：
+
+```text
+0x0094  total_len = 12
+0x0098  "TELN"        ← 152
+0x009C  00 00 00 00   ← 开关字节在 156 (0x9C)
+```
+
+两份样本都是 0。同族字段 `RECO/DBGL/TERM=01`、`CHAN/ISYS/FLTA/TELN=00`，所以 **`0x9C=00` 关闭、`01` 开启** 是按同构关系推断的；目前没有 TELN=1 的样本可实证。
+
+## 2.03 多的 24 字节
+
+前 3772 字节完全一致，2.03 只在 EOF 追加：
+
+```text
+0x0EBC  18 00 00 00   len=24
+0x0EC0  "SUBS"
+0x0EC4  a9 00 00 00   id=0xA9 (169)
+0x0EC8  ac 40 00 00
+0x0ECC  24 40 00 00
+0x0ED0  64 00 00 80
+```
+
+即新增一条 `SUBS id=0xA9` 的 3 参数记录。因为是追加在末尾，没有改动任何已有长度字段。
+
+## 路径归属
+
+- `FLTF` → 完整路径 `/setting/filter.bin`
+- `RCVF` → 完整路径 `/log/escapelog.bin`
+- `ALGP` → 仅目录前缀 `/log/`
+- `ALGB/ALGD/ALGK/ALGT` → 裸文件名，运行时与 `ALGP` 拼接
+
+`ALG*` 在文件里是 `ALGP` 的同级记录，不是嵌套；只有 `SFLT/CFLT` 嵌套在 `FBOX` 中。
+
+额外发现：`LOGB` 的 `base=0x03085000,size=0x00478000` 与 `PRTB` 的 `base=0x034FD000,size=0x00008000` 正好首尾相接，像两块存储区域描述符。
+
+## 脚本
+
+```bash
+./ulogio_cfg.py ulogio-203.bin list
+./ulogio_cfg.py ulogio-203.bin get TELN
+./ulogio_cfg.py ulogio-203.bin set TELN on -o telnet-on.bin
+./ulogio_cfg.py ulogio-203.bin set TELN on --in-place     # 自动 .bak
+./ulogio_cfg.py ulogio-203.bin set-string ALGT ulogio_tlog2.txt -o out.bin
+./ulogio_cfg.py ulogio-203.bin verify
+```
+
+改标量时长度不变；改字符串会重算该记录和父容器长度；`--keep-size` 可在字符串变短时保持原布局。写入前会重新解析并做往返稳定性检查，写入后再读回校验。已验证：2.00 为 128 条顶层/130 条含嵌套，2.03 为 129/131，均无损往返。
+
+SUBS 内部 4 字节条目按 `[type][u16 LE value][flag]` 解读在文档中明确标为推断；外层 TLV、TELN 位置和 2.03 的 24 字节增量是确定结论。

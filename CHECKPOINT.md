@@ -83,7 +83,11 @@ Round 17 抓到 `verifyKey` 的比对是 `SHA1(整只 /etc/VerificationKey.pem �
 - 26 份标准 Backup（BK4，条目数 2.00=750 / 2.03=819）里**都没有 `SHA1(VerificationKey.pem)`** ⇒ `verifyKey` 的指纹不是包内提供 ⇒ §4c 的真机 RAM 比对仍是决定性的。
 
 ## 4e. 机身 `/setting`(a2) 里已有三个恢复点（已实测解出，判据 md5 对得上）
-`BACKUP.BIN`(1,210,408, BK4, md5 `7a549d06…`)、**`BACKUP.BAK`(同尺寸 BK4，与 .BIN 只差 265 B/85 run)**、**`PSD.BIN`(4,427,776, 高熵 = `big_backup.conf` 指的 `/setting/psd.bin`)**；另有 `KEMCO.TXT`(与包内 kemco.txt 逐字节相同)、`ULOGIO.BIN`(2.00 也有，2.03 版仅尾部多 24 B；**`TELN` 记录在 `+152`，值 0 = 关闭**)、`MODE/` 目录。
+`BACKUP.BIN`(1,210,408, BK4, md5 `7a549d06…`)、**`BACKUP.BAK`(同尺寸 BK4，与 .BIN 只差 265 B/85 run)**、**`PSD.BIN`(4,427,776, 高熵 = `big_backup.conf` 指的 `/setting/psd.bin`)**；另有 `KEMCO.TXT`(与包内 kemco.txt 逐字节相同)、`ULOGIO.BIN`(2.00 也有，2.03 版仅尾部多 24 B；**`TELN` 记录起于 `0x94`（长度字段）、标签串在 `+152`、值 dword 在 `0x9c`=0 ⇒ 改成 1 就开 telnet**)、`MODE/` 目录。
+   - ★ulogio 段表已被 2015 MacBook 上的子代理解出（`notes/ulogio-format.md`、`tools/ulogio_cfg.py`，主会话复核通过）：
+     **`LOGB` = 物理 `0x03085000` 长 `0x478000`（4.7 MB 日志环形缓冲）、`PRTB` = `0x034FD000` 长 `0x8000`**，两者首尾相接，
+     **都落在出厂 `memrsv=0x75e000@0x02E68000` 保留窗里**（紧邻 Backup RAM `0x02E80000`）⇒ **日志文本一直在保留 RAM 里**：
+     QEMU 侧别再在 `0x6000c000` 找 ulogio 环形缓冲（Round 18 找错了），直接读 guest RAM 的 `0x03085000`；真机侧拿到内存快照后这两个窗口就是免费的启动日志。
 ⇒ 机身 Backup 与包内标准件差 **99,401 B** ⇒ 覆盖 Backup 前必须先备份这三份；三份里都没有 `SHA1(VerificationKey.pem)`。
 ⇒ 半刷/写坏的恢复素材 = `/setting/{BACKUP.BIN,BACKUP.BAK,psd.bin}` + 我们已有的 a1/a2/a3/a7/a10/a13/a15/a23 dump（写回靠 L2.6 的 raw 节点写）。
 

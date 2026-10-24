@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # 来源：100.122.234.78（2015 MacBook）上 `qoderclicn -m DeepSeek-Flash` 子代理产出，2026-10-24；主会话已复核。
 # 复核点：LOGB=0x03085000/0x478000、PRTB=0x034FD000/0x8000（首尾相接，都在出厂 memrsv=0x75e000@0x02E68000 保留窗内）、
-# TELN 标签串 0x98 / 值 dword 0x94 = 0、TERM=1；在机身 2.00 那份上跑通（128 顶层 / 130 含嵌套，往返无损）。
+# TELN 记录起于 0x94（长度字段 12）/ 标签串 0x98 / 值 dword 在 0x9c = 0，TERM 值在 0x90 = 1；在机身 2.00 那份上跑通（128 顶层 / 130 含嵌套，往返无损）。
 """Reader/editor for ulogio /setting TLV files.
 
 Record layout (little-endian):

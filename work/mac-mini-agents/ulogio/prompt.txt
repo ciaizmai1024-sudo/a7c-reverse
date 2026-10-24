@@ -1,0 +1,3 @@
+这个目录里有两份 ulogio 的配置，ulogio-200.bin 是 3,772 字节（2.00 机身的 /setting），ulogio-203.bin 是 3,796 字节（2.03 官方更新包里的）。文件里能看到一串四个字符的段名：RECO LOGB PRTB CHAN ISYS DBGL DBCL FLTA TERM TELN FBOX SFLT CFLT，后面还有 FLTF、RCVF、ALGP、ALGB、ALGD、ALGK、ALGT 这些，旁边挂着 /setting/filter.bin、/log/escapelog.bin、/log/ulogio_klog.txt 这类路径。TELN 那条在偏移 152，值是 0，我猜是 telnet 没开。
+把段表结构整个推出来：段怎么分界、长度字段在哪、名字和字符串怎么存、那些路径挂在哪一段下面。TELN 的开关字节确认到具体哪一字节，顺手说清楚 2.03 比 2.00 多出来的 24 个字节是什么。
+再写个能读能改的小脚本，改完别把长度字段弄坏，脚本和结论都留这个目录。
