@@ -223,3 +223,31 @@ initrd `/dev` 里 **66 个 nflash 节点**（`nflasha1..30` + `dnflasha1..30` + 
 **p6 = 卡上换成官方 2.03 `.dat`（未改一字）后**：UUD 门**通过**（`Old 2.0 / New 2.3 / Model 0x91030019 / Region 0x0000`），第二次走链后 **`ZZSDREAD` 涨到 639,925 条 ≈ 327 MB = 整个 `FDAT` 正在流进来**（写仍只有 3 条 a2）。⇒ **读卡+解容器+条件检查这半条链已经真跑通**；验签与写分区是下一问。
 
 **负样准备**：卡切片只有 2 个扇区与正样不同（`0xbc2e000` 目录项=跑脏，须排除；`0x1bc00000`），挂载后逐字节对文件 ⇒ 首个不同**文件偏移 `0xffcc0dc`（268,222,684）**，`de→c3`，落在 **FDAT payload 的签名消息区（密文体）内**、不在签名区（签名 `0x14a2b0ec..0x14a2b1ec`）✓ ⇒ 运行时应当 **FAIL**，这是 L3 的关键判据。
+
+---
+## Round 16：mode5 走到验签；发现**新的前置门 `verifyKey`**（+ QEMU 两个环境修法）
+产物在远端 `~/qemu-a7c/results_round16/`：`initrd_r16.img 8b06225a…`、`a7c_emmc_r16pos3.img 20a70ad1…`、`r16negB 27f4bd25…`、`r16negC 68b9b135…`、`r16negA ff8cc597…`、`run_r16.sh 44845e05…`、`FINDINGS_r16_*`、`parts/kemco_a1_r16b.txt 446c6131…`。基线 `a7c_emmc_pt4.img = 8587674613a0ffd86beea010e74fd47c` ✓ 未动；远端 QEMU `e3ae292c…`/`bionz.c 32dbbd76…`/`sd.c e13776d0…` 未改（**注意**：本地快照 `qemu-sony/hw/sd/sd.c = 6c5b4bf6…`、`hw/arm/bionz.c = 87febf2b…` 与远端不同步，以远端为准）。
+
+### ① p6 崩溃根因（确定性，两次同点）
+`boot1+boot2` 都到 `found FDAT → Waiting for Firmware Copy`，然后 **内核 memcpy oops @VA `0xb0800000`**。机制：内核线性窗顶 = vmalloc 起点 `0xB0800000`（编译期 DDR1=256M），而 cmdline 里 `memrsv=…:uc` 把 DDR0 的 512M 排除出 buddy ⇒ 大拷贝把页吃到 **DDR1 无映射区**。
+**修法（下一轮直接可用）**：cmdline 用 **`memrsv=0x10000000@0x20000000:uc`**（**必须保留 `:uc` 与 start**；整段删掉 `:uc` 会变成 dmm oops）。
+另一个环境坑：OpenSSL 在 QEMU 里跑 **NEON-SHA1 触发非法指令** ⇒ initrd 里设 **`OPENSSL_armcap=0`**（`initrd_r16.img`）。
+
+### ② 正向（卡上官方 2.03 `.dat` 未改一字）= 过 UUD 门 → 拷贝完成 → **卡在 `verifyKey`**
+- 拷贝完成：`total_data_size = 363,197,712`，`Firmware Copy Completed`；读是**一次大读**（`Read size=363,197,724` + 一条 `0`），**摘要不是流式**，**从不单独读尾 `0x100`**；读覆盖文件 `[0, 0x137D7000)` 约 90%。
+- 然后报 **`SignatureVerification.cpp:117, "signature"`**（`ApiException 0x30002`）→ **Error 42**。
+- **失败点在 `verifyKey`**：它算 **`SHA1(/etc/VerificationKey.pem)`**，经 **uIPC** 拿 **Backup 里存的钥匙指纹**做 `strncmp`；**根本没到 `RSA_verify`（`SignatureVerification.cpp:65`）**，也没有任何分区写。
+- 相机验签算法钉死：**SHA-256 + `RSA_verify`（NID 672 = `sha256WithRSAEncryption`）**，前置 **`verifyKey` = `SHA1(PEM)` vs Backup 指纹**。
+
+### ③ 负向（还没到摘要级）
+- `negA`（2.00 `.dat`，与相机同版）= **Error 86**（版本门挡住，验签不可达）。
+- `negB`（2.03，`+0x2000000` 翻 1 bit）与 `negC`（`+0x14000000` 翻 1 bit）都是 `cpp:117 "signature" → Error 42` —— **与正向同一个码、同一个点** ⇒ **这道门分不清"签名内容对不对"**。判据要往下挪到 **`cpp:65` 的摘要/RSA 门**才算。
+
+### ④ UUD 门彻底钉死（这是本轮最有用的可操作结论）
+- `isVersionOK` = **严格大于**（`major >`，或 `major ==` 且 `minor >`）。
+- `Old` 来自 **Backup / BodyLoader**；`New` 来自 **`.dat` 文件本身**（`getUpdateFirmwareInfo` 用 Fsys `Open/Seek/Read` 读 512 B 头）。
+- a2(`/setting`) 里**没有** `sdupdate` 一类文件参与。
+- ⇒ **同版本自制包刷不进去：`.dat` 头里的版本必须 > 相机当前版本**。真机刷 1.01 得 `Error 72 / ApiException 0x142` 与真机 mode5 的 86 是同一族。
+
+### ⑤ 未竟
+过 `verifyKey`（要么搞清楚 Backup 指纹该是什么、要么在我们自己的 QEMU 副本里把它对上/把代码打点）→ 然后才有 `RSA_verify` 的正/负向与**固件分区写序列**。

@@ -256,3 +256,12 @@ hdiutil attach -readonly -nobrowse -mountpoint /tmp/ilce7c200 ~/Downloads/Update
 python3 tools/sig_probe_fdat.py /tmp/ilce7c200/SystemSoftwareUpdater.app/Contents/Resources/FirmwareData_ILCE7CV200.dat --walk-only
 python3 tools/sig_probe_fdat.py <同一个 .dat> --dec work/v203/full_dec_200.bin   # 正向 OK★ + 各候选范围
 ```
+
+### ★运行时的两道门（Round 16 实测，离线 QEMU）
+`SignatureVerification.cpp` 里其实有**两步**，顺序是：
+1. **`verifyKey`（cpp:117）**：`SHA1(/etc/VerificationKey.pem)` 经 **uIPC** 与 **Backup 里存的钥匙指纹** `strncmp`；不过 → `ApiException 0x30002` → 用户码 **Error 42**。
+2. **`RSA_verify`（cpp:65，NID 672 = `sha256WithRSAEncryption`）**：消息 = `FDAT payload[0:size-0x100]`、签名 = 尾部 256 B（= 我们离线已证的结构，完全吻合）。
+⇒ **我们之前只证明了 2；相机实际先卡 1**。这也给出**第三条路**：
+- **Route A′**：改 a1 里的验签器（NOP/放行）。
+- **Route A″（更干净）**：**把 Backup 里的钥匙指纹改成"我们自己那把公钥 PEM 的 SHA1"**（同时把 `/etc/VerificationKey.pem` 换成我们的公钥）⇒ **自签的 `.dat` 就能过**，不需要 Sony 私钥。
+（另注：UUD 版本门要求 `.dat` 头版本 **严格大于**相机当前版本，见 `notes/qemu.md` Round 16 §④。）
