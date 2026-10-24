@@ -78,3 +78,24 @@ python3 tools/verify_sums.py                 # 包内 *.sum 的 crc32+size
 # 机身 Backup vs 包内标准件
 md5 work/l2-camera/probe2/_setting_Backup.bin.bin   # 7a549d06…
 ```
+
+---
+## 9. ★机身 `/setting`(a2) 的根目录 = 三个现成恢复点（FAT12 手工解出，判据已校）
+`work/l2-camera/nflasha2.bin` 是 FAT12：`bps=512, SecPerClus=32(簇 16 KiB), RsvdSecCnt=1, NumFATs=1, FATSz16=4, RootEntCnt=512`
+⇒ `fatstart=0x200`、`rootdir=0xa00`、`data=0x4a00`；**取文件：`offset = data + (cluster−2)×16384`**（我先前把它按扇区算错过一次，判据是"解出的 `BACKUP.BIN` md5 必须等于 `7a549d0600ae452a7c8ca3b2a56b58f4`"✓）。
+
+| 目录项（root dir 偏移） | 名字 | 大小 | 内容/判定 |
+|---|---|---|---|
+| `0x0ae0` | `BACKUP.BIN` (cl 91) | 1,210,408 | BK4（`+0x0c`）；md5 **`7a549d06…`** = 我们一路用的那份 Backup ✓ |
+| `0x0ca0` | `BACKUP.BAK` (cl 514) | 1,210,408 | **另一份 BK4 Backup**，与 `.BIN` 只差 **265 B / 85 run**（运行期计数差异）⇒ **第二恢复点** |
+| `0x0c20` | `PSD.BIN` (cl 92) | 4,427,776 | 高熵（非零比 0.968）、无 `BK4`；头 `50 46 90 00 50 01 00 00 00 90 43 00 …` ⇒ 就是 `big_backup.conf` 指的 **`/setting/psd.bin`**（"big backup"，比 Backup 大一档，疑压缩/加密） |
+| `0x0ba0` | `KEMCO.TXT` (cl 90) | 1,905 | **与官方包里的 `kemco.txt` 逐字节相同**（md5 `ef072ece…` ✓）⇒ 证明 `0800_appli/setting/kemco.txt` 就落在这里 |
+| `0x0c60` | `ULOGIO.BIN` (cl 363) | 3,772 | **2.00 上也有 ulogio 配置**（2.03 包里是 3,796 B）；**前 3,772 B 与 2.03 版完全相同（差异 0 字节）**，2.03 只是尾部多 24 B |
+| `0x0ce0` | `MODE`（目录, cl 440） | 0 | mode 旗标目录（`comp` 会清 `mode*` 的那个） |
+
+要点：
+- **`BACKUP.BIN` 与 `BACKUP.BAK` 与包内 `MainDest` 选中的 `CX88600_UC2.bin` 都差 99,401 B** ⇒ 机身 Backup 里 **约 10 万字节是设备专属**（序列号/校准/锁/计次）⇒ **任何"整份覆盖 Backup"的写之前，必须先把机身 `BACKUP.BIN`（和 `.BAK`、`PSD.BIN`）备份下来**；顺带：`BACKUP.BIN`/`BAK`/`PSD.BIN` 里都**没有** `SHA1(VerificationKey.pem)`（raw 与 hex 都没有）。
+- **`ulogio.bin` 的段表在 2.00/2.03 上同一布局**：`RECO LOGB PRTB CHAN ISYS DBGL DBCL FLTA TERM **TELN** FBOX SFLT CFLT` + `FLTF→/setting/filter.bin`、`RCVF→/log/escapelog.bin`、`ALGP/ALGB/ALGD/ALGK/ALGT→/log/ulogio_{blog,dlog,klog,tlog}`；
+  **`TELN` 记录在偏移 `152`，其值 = `00000000`（关闭）**，后面紧跟 `FBOX=0x20`、`SFLT=0x0c`、`CFLT=0x0c` 一类记录。
+  ⇒ **"telnet 通道在 2.00 与 2.03 都存在，只是默认关闭"**（与 `ulogio telnet up` 需要置位+重启完全吻合）；给 gh#23（2.03）：配置就在 `/setting/ulogio.bin`，`TELN` 在 `+152`。
+- 提取件存 `work/a2-setting/`（Sony 原件，已 gitignore，不重分发）。

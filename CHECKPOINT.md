@@ -82,6 +82,11 @@ Round 17 抓到 `verifyKey` 的比对是 `SHA1(整只 /etc/VerificationKey.pem �
 - **机身 `/setting/Backup.bin` 与包内 26 份标准 Backup 都差 9 万多字节（2203 个 run）** ⇒ Backup 里有大量设备专属内容（序列号/校准/锁）⇒ **任何"整份覆盖 Backup"的写都要先把机身那份备份下来**（`a2` 里 `psd.bin` 命中情况：0xca210）。`0100_config/big_backup.conf` 的内容正是 `/setting/psd.bin` ⇒ **官方流程会在更新前把旧 Backup 存到那里**（是个恢复点）。
 - 26 份标准 Backup（BK4，条目数 2.00=750 / 2.03=819）里**都没有 `SHA1(VerificationKey.pem)`** ⇒ `verifyKey` 的指纹不是包内提供 ⇒ §4c 的真机 RAM 比对仍是决定性的。
 
+## 4e. 机身 `/setting`(a2) 里已有三个恢复点（已实测解出，判据 md5 对得上）
+`BACKUP.BIN`(1,210,408, BK4, md5 `7a549d06…`)、**`BACKUP.BAK`(同尺寸 BK4，与 .BIN 只差 265 B/85 run)**、**`PSD.BIN`(4,427,776, 高熵 = `big_backup.conf` 指的 `/setting/psd.bin`)**；另有 `KEMCO.TXT`(与包内 kemco.txt 逐字节相同)、`ULOGIO.BIN`(2.00 也有，2.03 版仅尾部多 24 B；**`TELN` 记录在 `+152`，值 0 = 关闭**)、`MODE/` 目录。
+⇒ 机身 Backup 与包内标准件差 **99,401 B** ⇒ 覆盖 Backup 前必须先备份这三份；三份里都没有 `SHA1(VerificationKey.pem)`。
+⇒ 半刷/写坏的恢复素材 = `/setting/{BACKUP.BIN,BACKUP.BAK,psd.bin}` + 我们已有的 a1/a2/a3/a7/a10/a13/a15/a23 dump（写回靠 L2.6 的 raw 节点写）。
+
 ## 5. 只能靠真机补的东西（当前所有硬缺口的共同答案）
 `nflashaB0/B1`（EXBL 是否验 a1）、USER `0x0–0x10000`（真分区表 / FixedArea）、RAM `0x02e80000` 活副本、
 官方更新卡 `BODYDATA.DAT`（真 FDAT 头 + 尾 256 B 签名）、以及 **L2.6 真机 raw 节点写**验证（见 `TEST_LADDER.md`）。

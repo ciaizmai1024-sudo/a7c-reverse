@@ -270,3 +270,37 @@ initrd `/dev` 里 **66 个 nflash 节点**（`nflasha1..30` + `dnflasha1..30` + 
 ⇒ **签名门（消息 = 整块密文体、签名 = 尾 256 B）在相机自己的代码里得到运行时证明**，与离线验签（E1）完全吻合。
 ### ⑤ 仍未拿到
 三跑都没出现**固件分区写**（`ZZSDWRITE` 各 11 条 = a2 vfat `0x800200/800a00/810a00` + 卡 vfat `0xb82e000-0xb82ee00`）——burn 被 ③ 的解密守卫挡住；`reboot` 读回未做；`6157:664` 语义、指纹条目在 blob 里的精确偏移、dat2/3/4 是否还需要，都未竟。
+
+---
+## Round 18（r18，远端 `~/qemu-a7c/results_round18/`）：解密门钉死并迈过
+**① `DecryptorModule.cpp:112,"6157:664"` 的确切语义**：`Updater::DecryptorModule::verifySum()`
+（`libsdfileinputupdaterapi.so` @0x10228；同一份码在 `crypter.elf`@0xe738、`sdfileinput.elf`@0x11274）。
+`calSum()`＝对**解密后帧体 1022 B**（从 len 字段 `this+0x5a` 起，511×u16，截 16 位）累加；
+比较对象 `getHdSum()`＝`ldrh [this+0x58]`（帧头存的 u16）。打印顺序 = `[算出的] : [存好的]`，随后抛 `ApiException 0x30002`→Error 42。
+离线：官方 2.03 帧 0 明文 `98 02 fc 03 "UDTRFIRM"` ⇒ 存和 = 0x0298 = **664**，离线算 = 664（对）；相机算出 **6157**
+⇒ 相机 ECB 段正确（连 664 都读对）、**只有 CBC 段解错**。
+
+**② 运行时 key/iv（shim interpose `AES_set_*_key`/`AES_cbc_encrypt`/`AES_decrypt`/`Dec_Scramble`）**：
+ECB 128-bit key = `e3b0c44298fc1c149afbf4c8996fb924`（= `libupdatertalk.so:KeyArray`，与离线 `KEY_AES` 一致；
+`Dec_ScrambleInit`=`AES_set_decrypt_key(KeyArray,0x80)`、`Dec_Scramble`=AES 单块 ECB）；CBC **IV = `.dat` 尾部前 16 B（一致）**；
+但 **CBC 256-bit key = `7e68a34d461f1388620c91d76ac1113f78efb47fa3d5b5be6d025a40cd14fc3b` ≠ 离线 `KEY_90045` `c1aa8f7c…e06b`**。
+`7e68…` 不在整块 eMMC（raw+ASCII）、不在 Backup blob、也不是 .dat/UDID/PEM/blob 窗口的 SHA-256/SHA-1/MD5 ⇒ **运行时派生**（熵源不在我们镜像里）。
+
+**③ 过门 = 改 shim（`-DFIXKEY`：把任何 256-bit AES key 换成 `KEY_90045`）** ⇒ 112 门消失，`Dec finish`，
+进到 **`MountEntry.cpp:195 Fsys_Format(/dev/nflasha23)`**（第一次碰固件分区）。
+再打点 `Fsys_Format*`→0 ⇒ `End - Fsys_Format`；新门 = `FsysWrapper.cpp:133 196642 "/dev/nflasha23/INFO(80000010)"` → `NewFirmwareFile.cpp:626` → `Plugin.cpp:54 code99 us_darwin_firm.sh` → **Error 43**。
+`Fsys_Open` 加 O_CREAT 无效（我们的 `Fsys_Mount(/dev/nflasha23)` 打点=假挂载，FAT 驱动没有可挂载的 FAT）。
+⇒ **下一轮配方：给 a23(及 a1/a3/a10/a15) 真做 FAT（离线 mkfs.fat）并**不要**打点这些设备的 `Fsys_Mount`，让真 Fsys FAT 驱动挂载 ⇒ 才可能拿到固件分区 `ZZSDWRITE`。**
+
+**④ Backup 枚举**：shim interpose `ioctl` 对 `0x800503e` **0 命中**（uIPC 不走可 interpose 的 `ioctl`）⇒ BackupID→blob 偏移、verifyKey 条目精确偏移仍未拿到；
+下一步 interpose `syscall`/`__ioctl` 或 hook `libosal_uipc.u_osal_snd_sync_msg(msgid,cb)`（`osal_snd_sync_msg(r0=msgid,r1=cb)`→`u_osal_snd_sync_msg(r0,r1,0)`）。
+
+**⑤ 写枚度**：本轮**零固件分区写**（`ZZSDWRITE`：pospass 11 条=旧 a2/卡 vfat 元数据；fix/fixf/fix2 = 0），reboot 读回未做。
+
+**⑥ 产物（全 r18；基线 `a7c_emmc_pt4.img=8587674613a0…` 未动，Round10–17 未覆盖，QEMU/bionz.c/sd.c 未改）**：
+shim `r18log 784654d9 / r18pass 63eec92c(FORCE0) / r18fix 1a778ea3(+FIXKEY) / r18fixf 1ce89e7d(+Format 打点) / r18fix2 f58d69bd(+Open O_CREAT)`；
+initrd `initrd_r18{pass,fix,fixf,fix2}.img = 06d01c0c / bd1264c2 / 5a16a688 / 1c716094`；
+卡 `a7c_emmc_r18{pos,fix,fixf,fix2}.img = 15206aee / 87b51a22 / 4b38084a / 8e622f14`；
+`r18_{pospass,fix,fixf,fix2}_boot1.{ser,out}`、`run_r18.sh`、`FINDINGS_r18.md`、`MANIFEST_r18.md`。
+编译：`arm-linux-gnueabi-gcc -marm -nostdlib -static -shared -fPIC -O2 -fno-builtin [-DFORCE0] [-DFIXKEY]`；
+initrd 配方 = loop-mount r17pass → `cp -a` → 换 `r14bin/r17fshim_r17pass.so` 的内容 → `mkfs.cramfs`（文件名不变，脚本不用改）。
