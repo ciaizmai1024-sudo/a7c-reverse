@@ -57,3 +57,15 @@ osal_reg_sync_msg_queue_cb(...);      // 通过 uIPC 消息队列对外服务（
   就等于把 OTP 依赖搬进可写分区，后续实验全部离线可做。
 
 （`notes/crypter-decrypt-boundary.md` 记 crypter/ufp/talk 的边界与地址；本文件记 key/哈希来源。）
+
+## ★静态实读（主会话，2.00 的 `a1_initrd/usr/lib/libInfraSKD.so`，10,160 B，Thumb-2）
+**这只库自己就是解密者**：导入 `EVP_aes_256_cbc`、`EVP_CipherInit`、`EVP_CipherUpdate`、`EVP_CIPHER_CTX_new/free/set_padding`、**`SHA256`**、`snprintf`、`memcpy/memset`、`open/mmap/munmap/lseek/close`、`osal_reg_sync_msg_queue_cb/osal_unreg_msg_queue_cb`（**没有** `osal_snd_sync_msg`）。PLT 跳板 `0x7fc–0x8e0`（用 `tools/elf_imports.py` 一一对上符号）。
+rodata 里的名字：**`astra_data.c`（源文件名）**、**`AstraData_Init`**、**`__GetCommonKeyData`**、**`__GetPublicKeyHash`**、`/dev/mem`、`%04x`、`%02x`、`[ERR]… getData failed`/`failed 1`/`failed 2`、`Failed 1/2/3`、`error AstraData_Init osal_reg_sync_msg_queue_cb %d`。
+代码骨架（`tools/skd_dis2.py` 反出）：
+- `0xc04–0xd24` = init：`open(/dev/mem)`→`mmap(0x400 @ 0xFFFF5000)`(PROT_READ)→存全局→`mmap(0x20 @ 0xF340F000)`→存全局→`blx osal_reg_sync_msg_queue_cb`（失败打 `0xf6` 那条错误）。
+- `0xd28–0xd5c` = 反初始化：`munmap(…,0x400)`、`munmap(…,0x20)`。
+- `0x9ec` = **按"类型 0x00–0x13"查 `{表指针, 条数}` 跳转表**的序列化器：逐条取字段，两个来源全局分别限幅 **`0x400`（＝1 KiB，正是 `0xFFFF5000` 那个窗）** 和 **`0x1f`**；`0x980` 是它下面的取数/拼串子程序（含 `snprintf` 循环 `cmp r5,#0x10`）。
+- `0xa7c–0xbd6` = 分派器：`cmp r3,#1/2/3/4` 四种操作，里面出现 `open`(0x804 区)、`snprintf`、`memcpy`、0x20 字节缓冲、以及一次带 0x20 入/出缓冲的调用（不是 `EVP_*` 就是 uIPC/ioctl 式调用）——**key 的来源就在这条链里**。
+## 我本轮排除的（别重复劳动）
+key ≠ `0xF340F000` 那 32 字节的原值；≠ 对全零窗/1 KiB 零/空/已知 key 做 `md5/sha1/sha224/sha256/sha384/sha512/sha3/blake2s`（含二次哈希、hex 文本再哈希）；≠ `EVP_BytesToKey(MD5/SHA*,salt=NULL,cnt=1/2/1000/4096/10000)`；≠ 用 `KEY_90045`/`SHA256("")`/`pi` 常数做的 `AES-ECB/CBC/CTR` 包裹（加/解密两向）；≠ `HMAC-*(key∈{90045,SHA空,pi,零})`；≠ `sha256('0'*n)` n≤8192（含 `\n`/NUL/`0x` 前缀）与带分隔符的零 hex 文本（字段 `00/0000/00000000`，1–256 个，分隔符 空/空格/`:`/`,`/`-`/换行/制表/`0x`）。
+⇒ **说明 key 的输入不是"那两个窗的零"本身**；要么还混进了 uIPC/驱动的应答，要么整条 KDF 的输入含别的（QEMU 与真机不同的）材料。
