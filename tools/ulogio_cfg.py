@@ -1,13 +1,7 @@
 #!/usr/bin/env python3
-# # 来源：2015 MacBook(100.122.234.78) 上 qoderclicn(-m DeepSeek-Flash) 子代理产出，2026-10-24。
-# # 主会话已独立复核：LOGB=0x03085000/0x478000、PRTB=0x034FD000/0x8000（首尾相接）、
-# # TELN 标签串在 0x98、值 dword 在 0x94 为 0、TERM=1；两者都落在出厂 a1 的 memrsv=0x75e000@0x02E68000 保留窗内。
-# # 脚本在机身 2.00 的 /setting/ulogio.bin 上跑通（128 条顶层/130 条含嵌套，sha256 d51cb831caa1a4c1…）。
-#
-来源：2015 MacBook(100.122.234.78) 上 qoderclicn(-m DeepSeek-Flash) 子代理产出，2026-10-24。
-主会话已独立复核：LOGB=0x03085000/0x478000、PRTB=0x034FD000/0x8000（首尾相接）、
-TELN 标签串在 0x98、值 dword 在 0x94 为 0、TERM=1；两者都落在出厂 a1 的 memrsv=0x75e000@0x02E68000 保留窗内。
-脚本在机身 2.00 的 /setting/ulogio.bin 上跑通（128 条顶层/130 条含嵌套，sha256 d51cb831caa1a4c1…）。
+# 来源：100.122.234.78（2015 MacBook）上 `qoderclicn -m DeepSeek-Flash` 子代理产出，2026-10-24；主会话已复核。
+# 复核点：LOGB=0x03085000/0x478000、PRTB=0x034FD000/0x8000（首尾相接，都在出厂 memrsv=0x75e000@0x02E68000 保留窗内）、
+# TELN 标签串 0x98 / 值 dword 0x94 = 0、TERM=1；在机身 2.00 那份上跑通（128 顶层 / 130 含嵌套，往返无损）。
 """Reader/editor for ulogio /setting TLV files.
 
 Record layout (little-endian):
