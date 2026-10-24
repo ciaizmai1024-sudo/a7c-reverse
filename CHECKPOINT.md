@@ -60,6 +60,13 @@ ssh wubin@172.22.22.131 'bash ~/a7c-jiritsu/bootarea_run.sh'    # = 本地 tools
 - 镜像：基线 pt4 `85876746…`；Round 13 实验盘 `a7c_emmc_r13{,_m5}.img` = `c84208c9/d526e5f0`。
 - 结果目录：远端 `~/qemu-a7c/results_round{10,11,12,13}/`；本地 `work/qemu-a7c/results/round{2..13}/`。
 
+## 4b. 网络/调试通道实况（E3，见 `notes/netstack.md`）
+- Wi-Fi 真脚本在 **`/usr/wifi-scripts/`**（`network.sh` 等只是 `libIMDB.so` 的串）；只有一个 `bcmdhd.ko`（OOB 由 `dhd_irq=144` 决定）；固件 `/usr/wlan/bcm/`、nvram `/usr/share/network/nvram/*/bcm4339_*.txt`；`bss.conf` 是 **`ap_scan=0`**。
+- busybox v1.29.3（191 applet，a15 没有 busybox，借 a7 的）：**`nc/telnetd/httpd/crond/ip` ✗**；**`udhcpc/tc/logger/switch_root/ftpd/ftpget/ntpd/ssl_client` ✓** ⇒ 传大文件走 FTP。
+- **无 ssh 服务端**；客户端只有库 `libssh2.so.1.0.1`（无 CLI）；OpenSSL 2.00=1.1.1a、2.03=3.0.2；**2.03 有 `curl 4.8.0`，2.00 没有**（2.00 有 `iw/top`）。
+- **`ulogio` = 自带内核级控制台**：`telnet up|down`（**端口 23 写死**，需重启）；子命令含 `db/dw/dl`、`mb/mw/ml/mf/mu`、`lsnap/lstart/lstop`、`crash/timetag/uipc`。
+- 要做交互 shell：我们的 ARM32 worker 里 `socket()+connect()+dup2` ⇒ 笔记本 `nc -l` 反向 shell（零新二进制），或带一个静态 ARM32 dropbear。
+
 ## 5. 只能靠真机补的东西（当前所有硬缺口的共同答案）
 `nflashaB0/B1`（EXBL 是否验 a1）、USER `0x0–0x10000`（真分区表 / FixedArea）、RAM `0x02e80000` 活副本、
 官方更新卡 `BODYDATA.DAT`（真 FDAT 头 + 尾 256 B 签名）、以及 **L2.6 真机 raw 节点写**验证（见 `TEST_LADDER.md`）。

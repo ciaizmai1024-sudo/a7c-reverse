@@ -55,3 +55,12 @@
 ## a3(/system) 全清单（2.00，size/md5）
 `AV-CAM.BIN 17,394,576/8a382272…`、**`VMLINUX 4,117,632/a73bf8a7…`**、**`INITRD.IMG 2,186,240/ca8ae5d1…`**、`BONOBO 172,144/37d65ffe…`、`BT_FIRM.HCD 61,787/be8ac916…`、`DFE_DAT 65,536/8c5f3b19…`、`DFE_APP 1,956/4d6d2507…`、`LDR_DRV 7,012/7c8c16cd…`、`LIF_APP 6,716/7f4be40e…`、`WOLE_APP 10,768/265bd0fd…`；另有空子目录 `LENSBI~1`、`SABIN`。
 **★对我们的含义**：**主系统的内核与 initrd 就是 `/system` 里的普通 vfat 文件**（`VMLINUX` + `INITRD.IMG`，2.18 MB —— 注意它不是 a1 里那个 8 MB 的升级 initrd）。⇒ ①**a3 在启动链上**，改它等于改启动件；②若 EXBL 不校验它们（仍未证，靠 `nflashaB0/B1` dump 才能定），那"**改 `/system/VMLINUX` 或 `INITRD.IMG`**"可能比改 a1 的 cramfs initrd **容易得多**（vfat 文件、不涉及 updater 的 RSA 签名门）；③我们的 QEMU 未来可以直接用这份真 `VMLINUX`/`INITRD.IMG` 起主系统（离线跑 `/usr` 侧）。
+
+
+---
+## 补充：网络/调试通道的权威实况 + 我之前的两处误判（见 `notes/netstack.md`）
+- 误判更正：**`network.sh`/`WebApiLauncher.sh`/`qsi.elf` 只是 `libIMDB.so` 里的字符串引用，文件不存在**；真联网脚本在 **`/usr/wifi-scripts/`**。`bcmdhd-oob.ko/-no-oob.ko` 也不存在（只有一个 `bcmdhd.ko`，OOB 由 `dhd_irq` 决定）。脚本里写的 `/usr/bin/bcm4339.bin` 同样不存在 ⇒ 真固件 `/usr/wlan/bcm/`、nvram `/usr/share/network/nvram/*/bcm4339_*.txt`。
+- **给他的三条（可直接用）**：
+  1. **Wi-Fi bring-up 顺序**（`gpioctrl.elf w GPIO_S_4/MMC_XRST`（WL_REG_ON）→ `echo 1 > /proc/irq/144/smp_affinity` → `insmod compat,cfg80211,mmc_core,mmcioWrapper,bcmdhd firmware_path=/usr/wlan/bcm/… nvram_path=/usr/share/network/nvram/… iface_name=wlan dhd_irq=144` → `mount -t tmpfs /tmp_network` → `wpa_supplicant -Dnl80211 -i wlan0 -c /usr/lib/netconf/bss.conf`（`ap_scan=0`）→ `pump`/`udhcpc`）。
+  2. **2.03 有现成 `curl 4.8.0`**（2.00 没有）⇒ 17 MB 的 `av-cam.bin`/内存 dump **直接 curl 推到笔记本**，别再压在会超时的 Jiritsu USB 上；2.00 则用 busybox `ftpget`/`ftpd`（`nc/httpd/telnetd` 都没有）。
+  3. **`ulogio` 才是自带的内核级控制台**：`ulogio telnet up`（**端口写死 23**，`libosal_ulogio.so:ulogio_telnetd_init` 里 `htons(0x1700)`，**需重启**）；它有 `db/dw/dl` 与 `mb/mw/ml/mf/mu` 内存读写 + `lsnap/lstart/lstop` 日志快照 ⇒ 比 `dd /dev/mem` 受控。但仍要记住 **`0x635c6000` 不在 ARM `mem=` 窗口内**（那是 DSP 地址），换通道并不能让非法物理读变安全。
