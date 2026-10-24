@@ -1,0 +1,29 @@
+分析已完成，产物都在 `out/`：
+
+| 文件 | 内容 |
+|---|---|
+| `CONCLUSIONS.md` | 完整结论（中文） |
+| `tree.txt` | 目录树 + 布局 + 每文件簇/偏移/大小/MD5 |
+| `manifest.tsv` / `manifest.json` | 完整清单（15 文件 + 2 目录，含簇链） |
+| `fat12_walk.py` | FAT12/LFN/簇链解析脚本 |
+| `ssboot_inspect.py` | SSBOOT 魔数/熵/相似度/头部字段分析 |
+| `ssboot_hex.txt` / `ssboot_analysis.json` | 前 512 字节摊开 + 分析数据 |
+| `extracted/` | 15 个提取文件（MD5 已逐一复核一致） |
+
+**FAT12 校验**：BPB 为 512 B/扇区、32 扇区/簇、保留 1 扇区、2 份 FAT、每份 32 扇区、根目录 512 项；FAT1==FAT2，所有簇链长度与文件大小精确吻合，无交叉链接、无已删项，20 条 LFN 校验和全部正确。数据区 `0xC200`，簇 N 偏移 = `0xC200 + (N-2)*0x4000`。
+
+**两个 SSBOOT 的结论**：
+
+- `/sabin/ssboot.bin`：簇 1254，偏移 `0x139C200`，11,280 B，MD5 `0fb03e483e4e437111888265e1999900`。
+- `/sabin/ssboot_any.bin`：簇 1255，偏移 `0x13A0200`，9,648 B，MD5 `f8ec8bb13e1efa7d010f222570fa8ef9`。
+- 二者都是私有 **“B4” 容器**：`+0x04` 为 ASCII `42 34`，头部 0x7C/0x80 字节；`+0x2C` 恒为 `0x682`，`+0x68` 恒为浮点 1.9375，`+0x54` 起指针全部落在 `0x48000–0x49E00`，说明按基址 `0x48000` 装载。
+- **没有版本串**：ASCII/UTF-16 扫描无任何 ≥8 字符的正常字符串，也没有 Linux/Sony/version/copyright。
+- **没有压缩/加密**：熵仅 6.32/6.35（压缩流通常 >7.9），0x00 占 19%/18.6%，内部有 1,504 字节重复块（相似度 92–95%）；无 gzip/xz/lz4/zstd/cramfs/squashfs/ELF/uImage/FIT 等任何魔数。
+- 两者去头后 **94.88% 相同**（最长连续 1,444 B）；与 `/sabin/idt_cam.bin` 同一 B4 家族（共享 48 字节序列、同常量、同指针表），是同一镜像的两个变体。
+- 按常见 ISA（ARM/Thumb/MIPS/SH/M68K/Xtensa）反汇编均不成代码，判断为 SABIN 子系统的**启动配置/寄存器表/系数数据**，由驱动按 B4 协议下发。
+- **与 vmlinuz/cramfs 无关**：分区里根本没有 `vmlinuz`；`vmlinux.bin` 是原始 ARM32 Linux 3.0.27_nl-rt106+（Sony CE Linux 8.2.6.0，2021-11-15 构建）；`initrd.img` 是 ext2 而非 cramfs；分区内也没有实际 cramfs 文件系统。
+- 注意名称撞车：内核的 `kernel/power/ssboot` 是 snapshot boot，但这两个 11 KB/9.6 KB 的 B4 blob 不是内存快照。
+
+Sources:
+- [ma1co/Sony-PMCA-RE](https://github.com/ma1co/Sony-PMCA-RE)
+- [ma1co/OpenMemories-Tweak](https://github.com/ma1co/OpenMemories-Tweak)

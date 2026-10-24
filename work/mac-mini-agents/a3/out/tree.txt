@@ -1,0 +1,25 @@
+FAT12 image: nflasha3.bin
+  bytes-per-sector=512  sectors-per-cluster=32  cluster-size=16384
+  reserved=1  fats=2  sectors-per-fat=32  root-entries=512  total-sectors=59162  media=0xf8
+  fat1-offset=0x200  root-offset=0x8200  data-offset=0xc200 (sector 97)  clusters=1845
+  cluster N byte offset = 0xc200 + (N-2)*16384
+
+- av-cam.bin                               clu=3     off=0x10200(66048)     size=17394576 md5=8a3822728974abd4f7704e7f57339d4f  [LFN: av-cam.bin; 8.3: AV-CAM.BIN]
+- bonobo.bin                               clu=1065  off=0x10a8200(17465856) size=172144   md5=37d65ffefb84423d975e6406d4ac9ae8  [LFN: bonobo.bin; 8.3: BONOBO.BIN]
+- bt_firm.hcd                              clu=1076  off=0x10d4200(17646080) size=61787    md5=be8ac9166791929f152d64d5a637a93b  [LFN: bt_firm.hcd; 8.3: BT_FIRM.HCD]
+- dfe_app.bin                              clu=1080  off=0x10e4200(17711616) size=1956     md5=4d6d250734e0ad2e3ffe620de8afdf2b  [LFN: dfe_app.bin; 8.3: DFE_APP.BIN]
+- dfe_dat.bin                              clu=1081  off=0x10e8200(17728000) size=65536    md5=8c5f3b191dd124cf1ee2cb5055cec37e  [LFN: dfe_dat.bin; 8.3: DFE_DAT.BIN]
+- initrd.img                               clu=1085  off=0x10f8200(17793536) size=2186240  md5=ca8ae5d1ce551ed9794f6772e2561e73  [LFN: initrd.img; 8.3: INITRD.IMG]
+- ldr_drv.bin                              clu=1219  off=0x1310200(19988992) size=7012     md5=7c8c16cd1090978558db9a9f4176c006  [LFN: ldr_drv.bin; 8.3: LDR_DRV.BIN]
+d lensbin_lensproperty                     clu=1220  off=0x1314200(20005376) size=-        md5=-  [LFN: lensbin_lensproperty; 8.3: LENSBI~1]
+  - LensAberrationData.bin                   clu=1221  off=0x1318200(20021760) size=161766   md5=84e7f61b0e60184f8916a663ce93621c  [LFN: LensAberrationData.bin; 8.3: LENSAB~1.BIN]
+- lif_app.bin                              clu=1231  off=0x1340200(20185600) size=6716     md5=7f4be40e8dc6afe24f7d0c64ceeb74b5  [LFN: lif_app.bin; 8.3: LIF_APP.BIN]
+d sabin                                    clu=1232  off=0x1344200(20201984) size=-        md5=-  [LFN: sabin; 8.3: SABIN]
+  - idt_cam.bin                              clu=1233  off=0x1348200(20218368) size=176528   md5=c8785e6d48eaeb655afc23f69383b7b0  [LFN: idt_cam.bin; 8.3: IDT_CAM.BIN]
+  - sa_dfdet.bin                             clu=1244  off=0x1374200(20398592) size=156292   md5=553238d64f4abd1c6673e6039211413f  [LFN: sa_dfdet.bin; 8.3: SA_DFDET.BIN]
+  - ssboot.bin                               clu=1254  off=0x139c200(20562432) size=11280    md5=0fb03e483e4e437111888265e1999900  [LFN: ssboot.bin; 8.3: SSBOOT.BIN]
+  - ssboot_any.bin                           clu=1255  off=0x13a0200(20578816) size=9648     md5=f8ec8bb13e1efa7d010f222570fa8ef9  [LFN: ssboot_any.bin; 8.3: SSBOOT~1.BIN]
+- vmlinux.bin                              clu=1256  off=0x13a4200(20595200) size=4117632  md5=a73bf8a79adc71740354b73f69f62815  [LFN: vmlinux.bin; 8.3: VMLINUX.BIN]
+- wole_app.bin                             clu=1508  off=0x1794200(24723968) size=10768    md5=265bd0fd0646e86bb91649389abbf362  [LFN: wole_app.bin; 8.3: WOLE_APP.BIN]
+
+files=15 dirs=2 total_bytes=24539881

@@ -1,0 +1,36 @@
+已完成，交付物都在 `/Users/wubin/a7c-tasks/bk4`：
+
+- `bk4_find.py`：BK4 条目定位脚本。支持 `info`、`list --nonzero`、`entry N`（按条目号）、`find ascii:... / hex:...`（按内容）、`field --size 20`、`verify`。
+- `README.md`：结构结论，按“确认 / 推断 / 未解”逐项标注。
+
+核心结构是一套两级索引：
+
+```text
+0x10C 条目表      N × 6 字节  {u16 count, u24 rec_start, u8 type}
+      ↓ count 个连续记录
+0x12A0 字段数组   30064 × 6  {u16 flags, u24 target, u8 size}
+      ↓ target 绝对文件偏移
+0x2D340 内容区
+```
+
+`rec_start` 是记录下标，不是字节偏移；条目本身固定 6 字节，一个条目占用 `count × 6` 字节索引，所以不存在“20 字节的条目”，每份镜像有 27 个 `size=20` 的**字段**。
+
+20 字节结论（关键）：
+
+- 没有“机身全 0、出厂标准件有值”的 20 字节字段。
+- UC2/J1 的 16 个 20 字节字段也是全 0；其余 11 个是结构化数据，与机身逐字节相同。
+- 机身反而在 entry 87 的 4 个、entry 176 的前 3 个字段里有少量非零值。
+- 你说的“机身全 0 的这一项”最可能是独立的 entry 215（target `0xB4B38`）或 entry 658（target `0x1266FC`）——它们在出厂件里也仍然是 0。
+- 因此公钥 SHA1 不在这份 `/setting` 镜像中（至少不是以条目表 `size=20` 明文字段或 40 位 hex 文本形式）；更可能在 bootloader/安全区。
+
+名字方面：条目表里没有 id/name 字段，条目号就是数组下标；entry 1 疑似名称/UI 字符串池，但其 0x66–0x7F 编码未解。能按明文内容定位（如 `DIRECT-USE1`、`MODEL-NAME`），暂不能按编码名反查。
+
+```bash
+python3 bk4_find.py CX88600_UC2.bin info
+python3 bk4_find.py CX88600_UC2.bin entry 87
+python3 bk4_find.py BACKUP.BIN find ascii:DIRECT-USE1
+python3 bk4_find.py CX88600_UC2.bin field --size 20
+python3 bk4_find.py CX88600_UC2.bin verify
+```
+
+J1 2.03 有一处表尾异常（`sum(count)=30098` 比字段数组容量多 2，最后一条 entry 727 跨入内容区头部），README 已记录为 WARN。

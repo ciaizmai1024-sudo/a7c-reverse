@@ -1,0 +1,218 @@
+## 结论
+
+1. **`Dec_ScrambleInit` / `Dec_Scramble` 的定义不在 `libupdaterufp.so.203`，而在 `libupdatertalk.so`。** ufp 的 `.dynsym` 里这两个符号是 `UND`（idx 22 / idx 37），`DT_NEEDED` 明确写着 `libupdatertalk.so`。a15 0x5f670a 看到的是动态字符串/导入名，不是函数体。
+2. **这两个函数是 AES-128-ECB 单块解密的薄封装**：key 硬编码为 `KeyArray[0:16]`，`AES_set_decrypt_key` 的 `bits=0x80`（128 位）。**没有 256 位 key、没有 IV、没有 uIPC、没有 open/ioctl/mmap**，只调用了 `AES_set_decrypt_key`、`AES_decrypt`、`memcpy`。
+3. **`KeyArray` 只有 32 字节**（符号 size 0x20），内容恰好是 `SHA256("")`；不存在 256 字节的 KeyArray。下面给出 0x882c–0x8947 共 284 字节的完整邻接内存 dump。
+4. **两把目标 key 无法从这份 KeyArray 派生**：17 个组合族、157,795 次检查（116,086 个唯一 family/data 对），精确/字节倒序/4 字节字倒序/16 字节半段匹配全部为 0。T1/T2 也不在任何提供的文件里。
+5. **AES-256-CBC 那一层不在这两个库里**：talk 只导入 AES_decrypt/AES_set_decrypt_key，ufp 根本不导入 AES。T1/T2 的消费者需要另外的库或代码。
+
+---
+
+## 1. 符号与依赖关系
+
+`libupdaterufp.so.203`：
+
+```
+idx 22  Dec_ScrambleInit   val=0 size=0 shndx=0 (UND)   ; 导入
+idx 37  Dec_Scramble       val=0 size=0 shndx=0 (UND)   ; 导入
+DT_NEEDED: libupdatertalk.so, libupdatermedia.so, ...
+```
+
+`libupdatertalk.so`：
+
+```
+idx 19  KeyArray          val=0x8830  size=32   shndx=.data
+idx 21  Dec_ScrambleInit  val=0x0621  size=40   shndx=.text
+idx 22  decx              val=0x8854  size=244  shndx=.bss
+idx 23  Dec_Scramble      val=0x0649  size=48   shndx=.text
+导入: AES_decrypt, AES_set_decrypt_key, memcpy (libcrypto.so.1.1 / libc.so.6)
+```
+
+符号值都是奇数，说明实际入口在 `0x620`、`0x648`（Thumb）。
+
+---
+
+## 2. `Dec_ScrambleInit` 反汇编（0x620，40 字节）
+
+```
+0620  ldr  r3,[pc,#0x18]   ; lit@0x63c = 0x81ce
+0622  movs r1,#0x80        ; bits = 128   <-- 注意：不是 256
+0624  ldr  r2,[pc,#0x18]   ; lit@0x640 = 0x20
+0626  add  r3,pc           ; r3 = 0x87f8 (GOT 基址)
+0628  push {r7,lr}
+062a  add  r7,sp,#0
+062c  ldr  r0,[r3,r2]      ; r0 = GOT[0x8818] = &KeyArray (0x8830)
+062e  ldr  r2,[pc,#0x14]   ; lit@0x644 = 0x28
+0630  ldr  r2,[r3,r2]      ; r2 = GOT[0x8820] = &decx    (0x8854)
+0632  pop.w {r7,lr}
+0636  b.w  0x56c           ; Thumb veneer: bx pc -> AES_set_decrypt_key@plt(0x570)
+```
+
+等价 C：
+
+```c
+AES_set_decrypt_key(KeyArray, 128, &decx);
+```
+
+- `r0` 永远指向 `KeyArray`，函数无参数；调用方（crypter 或 ufp）传什么都被忽略。
+- `.rel.dyn` 可交叉验证：`0x8818` 是 `R_ARM_GLOB_DAT` → `KeyArray`，`0x8820` → `decx`。
+- 只用到 `KeyArray[0:16]`，后 16 字节在这条路径里从未被读取。
+
+---
+
+## 3. `Dec_Scramble` 反汇编（0x648，48 字节）
+
+```
+0648  ldr  r3,[pc,#0x24]   ; lit@0x670 = 0x81a4
+064a  push {r4,r7,lr}
+064c  sub  sp,#0x14        ; 20 字节栈缓冲
+064e  ldr  r2,[pc,#0x24]   ; lit@0x674 = 0x28
+0650  add  r3,pc           ; r3 = 0x87f8
+0652  add  r7,sp,#0
+0654  mov  r4,r0           ; r4 = 输入块指针
+0656  mov  r1,r7            ; out = 栈缓冲
+0658  ldr  r2,[r3,r2]      ; r2 = &decx
+065a  blx  0x560           ; AES_decrypt(in, sp, &decx)
+065e  mov  r0,r4
+0660  mov  r1,r7
+0662  movs r2,#0x10
+0664  blx  0x57c           ; memcpy(in, sp, 16)
+0668  add.w r7,r7,#0x14
+066c  mov  sp,r7
+066e  pop  {r4,r7,pc}
+```
+
+等价 C：
+
+```c
+uint8_t tmp[16];
+AES_decrypt(block, tmp, &decx);
+memcpy(block, tmp, 16);
+```
+
+- `AES_decrypt` 是 OpenSSL 低层**单块 ECB** 接口，签名里没有 IV。
+- 原地解密 16 字节，无链式模式、无 padding、无 IV。
+- 因此所谓“256 位 key + IV”在这两个函数里都不存在；`decx` 的 244 字节是 AES_KEY 结构体大小（60 字 + rounds），与 128/256 位无关。
+
+---
+
+## 4. KeyArray 与邻接内存（至少 256 字节的完整视图）
+
+符号只有 32 字节；`.data` 从 0x882c 开始、大小 0x24，`.bss` 从 0x8850 开始，**物理上放不下第二个 256 字节表**。a15 0x5f6c30 看到的 `2c 88 00 00 + 32 字节` 就是下面这 36 字节的 `.data` 块。
+
+```
+0x882c  2c 88 00 00                                       ; .data 起始：自指针（R_ARM_RELATIVE），不是 key
+0x8830  e3 b0 c4 42 98 fc 1c 14 9a fb f4 c8 99 6f b9 24   ; KeyArray +0x00..0x0f
+0x8840  27 ae 41 e4 64 9b 93 4c a4 95 91 b7 85 2b b8 55   ; KeyArray +0x10..0x1f
+0x8850  00 00 00 00                                       ; __bss_start 对齐空洞（运行时 0）
+0x8854  ...                                               ; decx，244 字节（运行时由 Dec_ScrambleInit 填充）
+0x8948                                                    ; _bss_end
+```
+
+**KeyArray 内容：**
+
+| 偏移 | 16 字节 | 说明 |
+|---|---|---|
+| +0x00 | `e3b0c44298fc1c149afbf4c8996fb924` | `SHA256("")[0:16]`，**实际 AES 密钥** |
+| +0x10 | `27ae41e4649b934ca495991b7852b855` | `SHA256("")[16:32]`，这两个函数不读 |
+
+`SHA256("") = e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`，逐字节相等。所以 `KeyArray` 不是随机秘密表，而是空串哈希。
+
+**decx（0x8854–0x8947，244 字节，`Dec_ScrambleInit` 执行后的值）：**
+
+```
+0x8854  0a 92 b5 6b 6b f9 dc ae 08 bb c5 7f c8 c2 d6 a6
+0x8864  e7 46 85 10 b4 00 eb f9 32 6e 81 34 0e dd 3b 9b
+0x8874  c3 d3 3b bb 53 46 6e e9 86 6e 6a cd 3c b3 ba af
+0x8884  00 c6 57 3c 90 95 55 52 d5 28 04 24 ba dd d0 62
+0x8894  c4 82 72 0e 90 53 02 6e 45 bd 51 76 6f f5 d4 46
+0x88a4  ae f4 2c 4c 54 d1 70 60 d5 ee 53 18 2a 48 85 30
+0x88b4  a7 b2 b3 e3 fa 25 5c 2c 81 3f 23 78 ff a6 d6 28
+0x88c4  a8 e5 63 a7 5d 97 ef cf 7b 1a 7f 54 7e 99 f5 50
+0x88d4  5e 27 3c b8 f5 72 8c 68 26 8d 90 9b 05 83 8a 04
+0x88e4  fc de bb 6b ab 55 b0 d0 d3 ff 1c f3 23 0e 1a 9f
+0x88f4  e3 b0 c4 42 98 fc 1c 14 9a fb f4 c8 99 6f b9 24   ; 最后一组轮密钥 = 原 key
+0x8904  00 * 16
+0x8914  00 * 16
+0x8924  00 * 16
+0x8934  00 * 16
+0x8944  0a 00 00 00                                       ; decx.rounds = 10
+```
+
+`decx` 是 OpenSSL 的 AES-128 **解密轮密钥调度**（`RK10, InvMix(RK9), ..., InvMix(RK1), RK0`，末尾 rounds=10），可由 `KeyArray[0:16]` 完整推出，不含新秘密。文件中该区是 NOBITS（全 0），运行时才填充。
+
+**结论：不存在 256 字节的 KeyArray。** 如果你在 a15 0x5f6c30 看到更多字节，那属于 `.data` 之后的其他数据；要确认需提供 a15 0x5f6b00–0x5f6d80 的原始 dump。但按这个 .so 的符号表和段布局，KeyArray 就 32 字节。
+
+---
+
+## 5. ufp 里的调用上下文：uIPC / open / mmap 的真相
+
+`libupdaterufp.so.203` 确实用了 uIPC 和 `/dev/mem`，但**都不在加解密路径里，也不产生 key**：
+
+| 地址 | 函数 | 行为 |
+|---|---|---|
+| 0x2190 | `udtr_ufp_init` (0x2184) | `blx Dec_ScrambleInit@plt(0xf94)`，调用一次，不传参 |
+| 0x26cc | `udtr_get_firm_info_inmedia` (0x2678) | `Fsys_Open(0xf58)` → `Fsys_Read(0x1018)` 读 0x204 字节 → `r6=buf..buf+0x200` 每次 +0x10 调 `Dec_Scramble@plt(0x1078)`，共 32 次（512 字节）→ `memcpy(0xf7c)` 0x204 字节 |
+| 0x1b62 | 本地命令处理函数 0x1a24 | 对 `r4+0x28` 开始的 0x200 字节做同样 32 次 `Dec_Scramble`；解密后读 `+0x14` 字节（`'O'`/`'U'`）、`+0x24` 半字、`+0x28/+0x2c` 字 |
+| 0x1c84 | 同上，另一命令分支 | `Backup_read@plt(0xedc)`，`r0=0xe7002e`（字面量@0x1cc0），发生在解密之后，用于取别的东西，不参与 key |
+| 0x23f4 | `udtr_copy2dmm` | `open(src)`；`open("/dev/mem")`（字面量 0x562@0x249c → 0x2974）；`mmap@0x2430` PROT_READ/MAP_SHARED；`mmap@0x2448` PROT_READ\|PROT_WRITE/MAP_SHARED 到 `/dev/mem`；`memcpy@0x246e`；`munmap/close`。这是 DMM 窗口烧写，不是密钥窗口 |
+
+- ufp 的导入里**没有 ioctl**（整个 .so 都没有）。
+- ufp 用 `Backup_read/Backup_write/Backup_sync_subsystem`、`Fsys_*`、`open/read/write/close/mmap/munmap`、`mount/umount`，但 `Dec_ScrambleInit`/`Dec_Scramble` 本体没有任何外部 I/O。
+- 0x200 字节循环正好对应你观察到的“前 512 字节 AES-128-ECB”。
+
+---
+
+## 6. KeyArray 组合搜索：全部试过的族，0 命中
+
+目标：
+
+```
+T1(官方包) = c1aa8f7c46341ffed15589fc8170a6bb5925e85f6282d7f95ba3fdf5d303e06b
+T2(运行时) = 7e68a34d461f1388620c91d76ac1113f78efb47fa3d5b5be6d025a40cd14fc3b
+KA = A||B = e3b0...b855,  A=KA[0:16], B=KA[16:32]
+```
+
+检查维度：32 字节精确相等、整体字节倒序、每 4 字节字内倒序、以及 T1/T2 的任意 16 字节半段（高位/低位、正序/倒序/字倒序）。**全部 0 命中。**
+
+| 组合族 | 次数 | 具体构造 |
+|---|---:|---|
+| 16 字节基元 | 262 | A/B、倒序、4 字节字倒序、字序倒置、A^B、~A、按字节旋转 1/2/4/8、128 位整数 ±1（大/小端）、hex ASCII 前缀、SHA-256/MD5/SHA-1/SHA-512/SHA-384/BLAKE2s 在偏移 0/16/32/48 的切片、AES-128 单块 E/D（key=A/B/A^B/0） |
+| 16×16 前后拼接 | 68,644 | 上述 262 个基元做全部 `p||q` |
+| 16×16 异或 | 68,644 | 全部 `p^q` |
+| 32 字节基元 | 143 | `A||B`、`B||A`、`A||A`、`B||B`、`A||0`、`0||A`、`B||0`、`0||B`、整体/字/字序倒置、hex 字符串（小写/大写/倒序）、17 个种子的 SHA-256/SHA-512/SHA-384/BLAKE2s、MD5×2、SHA-1 填充 |
+| 32 字节 XOR（固定 pad） | 730 | 与 `KA`、`0^32`、`0xff^32`、`rev(A||B)`、`(A^B)×2` 异或（与空串 SHA256 异或等价于与 KA 异或） |
+| 32 字节 XOR（IV） | 1,120 | 与 IV 候选 A/B/A^B/0 的 `IV||IV` 或 `IV||0` 异或 |
+| 32 字节哈希 | 858 | 对每个 32 字节基元做 SHA-256、SHA-512[:32]、SHA-384[:32]、BLAKE2s、MD5×2、SHA-1 填充 |
+| HMAC | 240 | HMAC-SHA256/512，key ∈ {A,B,A^B,KA,0}，msg ∈ 17 种子 + A/B/KA |
+| HKDF-SHA256 | 120 | ikm ∈ {A,B,KA,revKA}，salt ∈ {A,B,KA,0,空}，info ∈ {"",KeyArray,KEY_AES,Dec_Scramble,AES,KA} |
+| PBKDF2-HMAC-SHA256 | 120 | pwd ∈ {A,B,KA,hex}，salt ∈ {A,B,KA,0,空,KeyArray}，迭代 1/2/1000/10000 |
+| AES-128-ECB/CBC | 1,144 / 4,576 | 对 32 字节基元，key ∈ {A,B,A^B,0}，IV ∈ {A,B,A^B,0}，E/D 各一遍 |
+| AES-256-ECB/CBC | 2,002 / 8,008 | key ∈ {KA,B\|\|A,A\|\|A,B\|\|B,A\|\|0,0\|\|A,(A^B)×2}，IV ∈ {A,B,A^B,0}，E/D 各一遍 |
+| 二层 | 1,144 | SHA-256(AES-128 E/D 结果) |
+| AES-128 单块 | 32 | 16 字节基元直接做 E/D |
+| 16 字节整数变换 | 8 | ±1 大/小端 |
+
+合计 **157,795 次检查 / 116,086 个唯一 (family,data) 对 / 17 族，HITS: NONE**。
+
+附加检查：
+
+- 在 `/Users/wubin/a7c-tasks` 下遍历所有文件，T1/T2 **只在一个地方都没出现**；`SHA256("")` 只在 `libupdatertalk.so` 的 KeyArray 处出现。
+- T1 与 T2 之间：SHA-256、整体倒序、互相异或、与 KA 异或、AES-256-ECB E/D（key 为 KA/A||B/B||A/A||A/B||B/A||0/0||A）均无关系。
+- `203.asm` 头部是 `; crypter-203.elf`（237 个函数），是 crypter ELF 的反汇编，不含 KeyArray/Dec_Scramble 名称，不是这个 .so。
+
+---
+
+## 7. 判断与下一步
+
+- `KEY_AES = KeyArray 前 16 字节` 这句话是对的，但它是 **AES-128 key**；`Dec_ScrambleInit` 的 `bits=0x80` 是硬证据。`KeyArray` 后 16 字节和“256 位 key”在这条路径里根本没用上。
+- 你测到的 T1/T2 是 32 字节，**不可能由这两个函数产生**：这里既没有 AES-256，也没有 IV，密钥是编译进 .so 的固定常量。
+- 首 512 字节的 AES-128-ECB 已完全对上 ufp 的 0x200 循环。剩余的 AES-256-CBC（以及 T1/T2）在别的组件里；`libupdatertalk.so` 只有这三个导入，`libupdaterufp.so.203` 不导入 AES，所以不在本次提供的两个库中。
+
+要继续定位 T1/T2 的来源，需要以下任一份材料：
+
+1. 真正调用 AES-256 的那个库/可执行文件（能搜到 T1/T2 被引用或作为参数传递的位置）；
+2. a15 0x5f6b00–0x5f6d80 的原始 dump，用来确认 0x5f6c30 之后是否还有一张比 32 字节长的表（按 a1 这份 `libupdatertalk.so` 的符号表，KeyArray 结束于 0x884f，0x8850 就是 .bss）；
+3. 官方包里那 32 字节 key 被写入的位置（谁写、写之前干了什么）。
+
+在现有材料下，能确定的只有：`Dec_Scramble*` 的 key = `SHA256("")[:16]`，AES-128-ECB，无 IV，无 uIPC/open/ioctl/mmap。
