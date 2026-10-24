@@ -1,6 +1,32 @@
 # 低风险注入点地图（按"改坏了能不能救"排序）
 
-> 来源：MacBook 子代理 `setting-files` 全文报告见 `notes/setting-files-fullreport.md`；下面**只列我自己在本地复核过证据的**（复核命令都是在这台机器上跑的）。
+> 来源：MacBook 子代理 `setting-files` 全文报告见 `notes/setting-files-fullreport.md`；`modes` 报告见 `work/mac-mini-agents/modes/README.md`；下面**只列我自己在本地复核过证据的**。
+
+## ★旗标梯与两条必须记住的更正（`modes` 轮，我逐条验过）
+
+**旗标都在 `/setting/updater/` 下，看“文件存在与否”，内容无所谓（空文件即可）**。2.03 `UdtrMain.sh` 我对着行号看过（2.00 没有强制 PROD 那段）：
+
+```
+10:  test -f /root/IAMLDUDWRT            -> MODE_PROD      （恢复 ramroot 标记）
+15:  test -f /setting/updater/mode  ||   -> Forced Prod Mode + touch /ramdsk/mode1   ← 2.03 上只放 mode5 无效！
+18:  mode3 -> MINOR     21: mode2 -> SERVICE   24: mode6 -> VERSKIP   27: mode1 -> PROD   30: mode5 -> MSCRYPT(SD 卡链)
+```
+
+⇒ **优先级 `mode3 > mode2 > mode6 > mode1 > mode5`**；`mode4` 无读者（死键）；`mode2` 有读者无写者。
+⇒ **`execute_ufp.sh:32-33`：`if [ -e /setting/updater/comp ]; then rm -rf /setting/updater/mode*`**（`comp` 是**空文件**，不是脚本）⇒ **旗标是一次性的**，这就是 QEMU 里 mode5 每轮要重注入的原因。
+⇒ **`mode1` 会进产线链（`execute_prod.sh`），而产线链不做 comp 清理 ⇒ mode1 会残留**，以后每次进更新器都走产线链——放了要记得删。
+
+**更正 1：不能说“刷固件不写 /setting”。** 更新器会 `mount /dev/nflasha2 /setting` 并增删旗标（`rm -rf mode*`、`touch MediaUpdateCompleteFlag`）、`libObj.so` 会 `mkdir /setting/mode` 写 `cmode`、`change_mode.sh` 写 `dmode/preload`、`up.sh` 写 `dat4`。⇒ **不格式化、不整块重刷，但目录项会变**；风险等级不变，但“a2 完全不动”这个说法作废。
+**更正 2：影响正常开机的旗标不在 `updater/` 下**，而在 **`/setting/mode/`（`dmode`、`preload`，由 `bootin.elf` 每次正常启动读）和 `/setting/sen/`（`smode`）**；`/setting/updater/*` 只在进更新器时被读 ⇒ **改错最坏是更新会话失败/循环，不影响正常开机**（这块是安全游乐场）。
+
+## /setting(a2 FAT12) 完整清单（我自己解的，之前那份解包不全）
+
+```
+UPDATER/{COMP(0 B), DAT4(2 B, 内容 00 02 = 当前版本 2.00)}
+DmmConfig.bin 78,284 | .hasp 88 | .etools 4,096 | facedmy.bin 51,200 | facerec0..7.bin 各 57,888
+Backup.bin 1,210,408 | Backup.bak 1,210,408 | psd.bin 4,427,776 | kemco.txt 1,905 | ulogio.bin 3,772
+MODE/ (簇 440) | GPS/ (簇 4) | appfw_infra/
+```
 
 ## 复核过的硬证据（主系统 initrd = a3 里的 `initrd.img`，**ext2**，2,186,240 B；`/sbin/init` 28,524 B）
 

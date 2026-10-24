@@ -1,0 +1,11 @@
+已完成，结论在 `/Users/wubin/a7c-tasks/modes/README.md`，并新增了 `/Users/wubin/a7c-tasks/modes/fat12_ls.py`（可直接列 `/setting`、查看已删除的 `cmode`）。
+
+核心结论：
+
+- `nflasha15.bin` 实际是 ext2（magic `0xEF53`，1 KiB block），已解包到 `a15/`。
+- `/setting/updater/` 下固件认的旗标：`mode`、`mode1`、`mode2`、`mode3`、`mode4`、`mode5`、`mode6`、`comp`、`dat4`、`uincomp`、`debug`、`MediaUpdateCompleteFlag`；`/setting/mode/` 下还有 `dmode`、`preload`、`cmode`，`/setting/sen/smode` 也参与启动。
+- `comp` 是空文件，不是脚本；`execute_ufp.sh:33` 看到它才执行 `rm -rf /setting/updater/mode*`，所以自己塞的 `mode5` 是一次性开关。
+- 2.03 的 `UdtrMain.sh:15` 在 `mode` 不存在时强制 PROD，单独放 `mode5` 不生效；2.00 没有这条判定。优先级是 `mode3 > mode2 > mode6 > mode1 > mode5`。
+- “刷固件不写 /setting”不成立：更新器会挂载并删/建旗标、`touch MediaUpdateCompleteFlag`，机身 `libObj.so` 还会写 `cmode`。
+- 真正可能影响正常启动的是 `/setting/mode/dmode`、`preload`（`bootin.elf` 读取）；`/setting/updater/*` 只在更新器里读，用户态范围内改错最多导致更新失败或循环。
+- `mode2` 无写入者、`mode4` 无读取者、`comp` 无创建者、`CurrentFirmware` 切换方法无直接调用者等，已单独列在 README 的“分不清”一节。
