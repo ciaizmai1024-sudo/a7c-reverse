@@ -1,0 +1,9 @@
+已完成并核对：`README.md`（含 12 节完整结论）与 `commands.tsv`（1746 行 = 1715 AdjustControl + 19 Jiritsu + 12 pFunc）行数一致，Jiritsu 表基址/条数/qid 差异均已写入。
+
+三条能力边界结论（详见 README §7）：
+- **任意物理内存读**：有，`0xff03 MemoryDump`（A 级，`/dev/mem` + `MappedMemory`，单包 ≤1 MiB，分块 0x8000），已从代码证实。
+- **任意物理内存写**：没有主机可控的通用接口；只有回复通道 `0x13a60` 的“对端给地址 + mode 0 写入”原语，地址来自对端而非主机，可控性未完证（列入 §8 不确定项）。
+- **执行/加载代码**：有间接链——`FileControl`/`SET_FILE_PATH` 任意路径写（无 `..` 过滤）+ `SET_FILE2` 对 `/tmp/jiritsu/libJit.so` 的 dlopen + `START` 脚本引擎；不需要改固件。
+- **改寄存器 / DMA**：未发现 CPU 寄存器或 DMA 命令；但存在 GPIO 读写、器件寄存器/I2C/EEPROM/NVM/电源轨写（风险高的 180 条已在 TSV 中标注）。
+
+高风险命令（FORMAT/ERASE/FIRMUP/NOR_WRITE/PDT_WRITE 等）只做静态标注，未执行任何设备端操作；无法判定的 24 项单独列在 §8，未混入上述结论。
