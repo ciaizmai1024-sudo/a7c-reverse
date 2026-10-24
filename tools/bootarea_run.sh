@@ -31,10 +31,28 @@ for n in nflashaB0 nflashaB1; do
   python3 "$TOOL" dump "$n" --out "$D/$n.bin" --twice 2 || echo "  /dev/$n dump 失败"
 done
 
-# 3) 可选：整块 USER 区（含 64KiB 头区 + 分区表）。1.288 GiB，约 100 秒/次；只在 1) 2) 都顺利时做。
-if [ "${WHOLE:-0}" = 1 ]; then
+# 3) ★必做：整块 USER 区（含 64KiB 头区 + 真分区表 + 可能的 FixedArea）。
+#    FileControl 读没有偏移语义 ⇒ 只能整读（1.288 GiB，13MB/s 约 100 秒）。Round 10 的离线单点阻塞
+#    （backup.ko Data_check/Data_init + sauu 的 FixedAreaTop/Size=FFFFFFFF）很可能就缺这块。
+if [ "${WHOLE:-1}" != 0 ]; then
   echo "=== dump /dev/nflasha（整块 USER 区，单次读）==="
   python3 "$TOOL" dump nflasha --out "$D/nflasha_user.bin" --twice 1 || echo '  整区读失败'
+  if [ -f "$D/nflasha_user.bin" ]; then
+    head -c 65536 "$D/nflasha_user.bin" > "$D/user_head_64k.bin"
+    echo "=== 前 64 KiB 已切出：$D/user_head_64k.bin；头 512 B 应该是 nflasha 分区表 ==="
+    python3 - "$D/user_head_64k.bin" <<'PY'
+import struct, sys
+d = open(sys.argv[1], 'rb').read(512)
+magic, ver = d[:4], d[4:8]
+n_part = struct.unpack_from('<I', d, 8)[0]
+print('  magic=%r ver=%r n_part=%d  (驱动判据: buf[0]=="8246" buf[4]=="1.00" buf[8]<=30)' % (magic, ver, n_part))
+ok = magic == b'8246' and ver == b'1.00' and n_part <= 30
+print('  ✓ 表头与 QEMU 实测格式一致' if ok else '  ✗ 与 Round 9 推的格式不符 —— 格式要重推')
+for i in range(min(n_part or 30, 31)):
+    st, sz, ty, fl = struct.unpack_from('<4I', d, 0x20 + 16 * i)
+    print('   slot%02d start=%08x size=%08x type=%d flag=%08x' % (i, st, sz, ty, fl))
+PY
+  fi
 fi
 
 date -u

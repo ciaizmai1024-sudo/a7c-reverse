@@ -161,3 +161,43 @@ initrd `/dev` 里 **66 个 nflash 节点**（`nflasha1..30` + `dnflasha1..30` + 
 **对"a1 patch 路线"的新约束（重要）**
 - 该 initrd 的 cramfs 是 **压缩版（Compressed ROMFS / deflate）** ⇒ **原地按字节 patch `sauu` 不可行**；必须重建 cramfs。Round 9 已验证可行路径：**7z 解包 → mknod 补 /dev 节点 → `mkfs.cramfs` 重建**，内核能挂（但 7z 解包有 2 个 sub-item 错误、个别 dev 节点丢失）。⇒ 真机若走这条路，"重建保真度"是一项要单独评估的风险。
 - 表在 **USER LBA 0**，不属于任何 nflashaN 分区 ⇒ **改表/改 EXBL 区不是"写某个分区"能做到的**；要读它得用**裸节点 `/dev/nflasha`**（252:0，=整块 USER 区）。
+
+## 17. Round 10：离线链收窄成**单点阻塞**（`backup.ko` 的 Data_check/Data_init），而且它和缺 dump 是同一件事
+- **P0 `backup.ko file_load` 没修好，但失败域钉死了**：7 次对照（真机原样 `Backup.bin`+`.bak`、tmpfs 复制、pri/sec 同文件、magic 变异；两版模块：initrd 版 md5 `0a38eec6…`、a15 版 vermagic-patch 后 `638881c5…` 能 insmod）**全部**在 `backupfile_load()` 内失败 ⇒ 与 vfat/权限/簇链/文件差异无关，卡在 **`Data_check`/`Data_init`**：调用链 `backup_init → select_path → load_file(vfs_stat/vmalloc/filp_open/vfs_read) → Data_check → Data_init(hdr@0x0c 与模块内版本串比较，records = hdr@0x10 × 6)`。镜像 a2 区里的 `Backup.bin` md5 与真机一致，读路径无误。
+- **P1 `sauu` 崩溃根因（E1）**：干净配置（r10i：loop-mount 原 initrd `cp -a` 保住全部真 /dev 节点 + MODE=0）里 sauu 过了 `Begin main()` 才崩，内核解码器指到 **`mcmn_log_init @ libInfraMediaCommon.so:0x1d00a`**（由 `mcmn_list_get_node_count:0x1c9da` 调），page fault at **0xffffffff**（r4/fp=0xffffffff, r10=0xaa55）。与 Round 9 的 `PC=0xffffffff`、r10f 的 **`FixedAreaTop/Size: FFFFFFFF`** 同源：**Backup/FixedArea 没拿到 ⇒ 0xffffffff 哨兵被当指针/跳转目标**。⇒ 修好 backup 数据层就放行 sauu 状态机。
+- **★与真机 dump 的闭环**：镜像里 `boot0/boot1` 与 **USER 0x0–0x10000（真分区表 + 可能的 FixedArea）**全是零，因为**还没 dump**。所以"离线 R1 演练"的上限 = "真机只读补 dump"的下限，同一件事 ⇒ 真机那步（`tools/bootarea_run.sh`：`nflashaB0/B1` + 整块 USER 区取头 64 KiB）现在是关键路径。
+- **P5 逐分区来源表**（pt4）：FULLMATCH=真机 dump `a2/a4/a6/a7/a10/a13/a23`；官方包 `a3/a5`；合成空 vfat `a11/a12/a17/a18`；全零 `a16`；**`a1` 区是旧的不完整 dump，`0x3F0000` 起有洞 ⇒ 可用 `work/l1-camera/nflasha1.bin` 回填**；`boot0/1` 与 `USER 0–0x10000` 未 dump（全零）。
+- **cramfs 重建保真度（更正 §16 的手法）**：`7z` 解 cramfs 会把 `/dev/*` **降成普通文件** ⇒ 之前 r10b/c/f 的部分报错是假象。干净手法 = **loop-mount 原 initrd → `cp -a` → 改 → `mkfs.cramfs` 重建**（`initrd_r10i.img` md5 `0fbf9bb6…`）。⇒ 真机 a1-patch 路线要用这个手法，别用 7z。
+- 基线完好：`bionz.c 87febf2b…`、`sd.c e13776d0…`、QEMU `d4103e35…`、`pt4 85876746…`、Round 9 日志未动。产物 `work/qemu-a7c/results/round10/`（`FINDINGS.md`、`run_r10.sh`、`r10_r10a…i.ser`、`initrd_r10i.img`、`backup_15p.ko`、`bk_dis.txt`/`text_ann.txt`、`p5.py`）。
+- 下一轮（Round 11）输入清单：①真机 `nflashaB0/B1` + `USER 0–0x10000`（拿到就能填 FixedArea/真表）②回填 a1 区③重试 `backup.ko` → sauu → 真写一次低价值分区（P2/P3 未做，被 P0 吃掉时间盒）。
+
+## 18. Round 11：★离线**写路径已证到 R1**（闭源驱动写分区 + 冷重启后仍在）
+**做成了什么（r11f → r11g）**
+- 往 `/dev/nflasha23`（Sony AL_EMMC 驱动，major 252/minor 23）写 64 KiB 随机图案：`R11-DD-RC=0`，立即读回 md5 `5c5a00ec…` == 图案；**QEMU 冷重启后新开机的校验读仍是同一 md5** ⇒ 写持久化。宿主侧确认图案落在镜像文件偏移 **`0x50C00000`**（= `0x400000` boot 前缀 + `0x50800000` a23 起点）。
+- ⇒ **"真机数据 → 镜像 → QEMU eMMC → 闭源驱动 → 写 → 重启后读回"闭环成立**（E1/R1）。这是恢复故事里最硬的一块离线证据。
+**根因结论（把 Round 10 的单点再往前推了一层）**
+- H3 证实：`BK4` 串匹配，不是失败原因；`ud_im.elf` 确实起来了，且 `file_load` 路径里没有 OSAL 调用 ⇒ **Round 11 否掉了我上一轮的 H1 假设**（诚实记录）。
+- ★**cookie 不同**：rescue/updater 侧 `backup.ko`（`0a38eec6…`）期望 cookie **`0x9000e1a0`**，而真机文件里是 **`0xaaaaaaaa`**；**a15 产品侧模块**才期望 `0xaaaaaaaa`。把原生 ko 里 **5 个 cookie 比较点**全改掉 ⇒ **仍然失败** ⇒ `Data_init` 还有别的门（表/校验和）。
+- **`backup.ko` 没有软失败**：把 `bl backupfile_load` / `bl backup_senser_init` 直接 `mov r0,#0` 绕过（`.init.text+0x148/0x1d0`）⇒ 立刻 NULL 表崩溃（r11d）。
+- ★**`sauu` 崩溃的链条是硬的**：`mcmn_log_init`（`libInfraMediaCommon.so:0x1d00a`）解引用 `0xffffffff` = `MAP_FAILED` 的链表基址；**USER 模式不会 insmod `mcmn_drv.ko`**，而 `mcmn_drv.ko` 需要 **7 个 `Backup_*` 符号** ⇒ `sauu` ↔ `backup.file_load` 绑死。另：`sauu` 出错后内核 Exception monitor 会**冻住控制台** ⇒ 诊断脚本要把"写"放在 `sauu` 之前做。
+- `ud_reboot.elf` 在 QEMU 里 RC=255；busybox `reboot` 打 `Restarting system.` 但 cxd90045 机器不自复位（靠外部重启 QEMU = 遗留缺口）。busybox 有 `md5sum/cut/kill/sleep`，**没有 `cksum/cmp/timeout`**（坑过一次 r11e）。
+**仍未定（下轮）**：`Data_init` 过 cookie 之后的门（表/校验和）没吃透 ⇒ "正经链"`backup → mcmn_drv → sauu 状态机` 还通不过；**真机 USER 更新时 backup 是不是也这样"死着"跑完（H2）仍未证**。
+**顺带（真机侧）**：a6 里有 `CDiAdjCtl::ReadBackup/WriteBackup/ReadBackupSize` 与 `libbackup.so` 引的 `Backup_read/Backup_write/Backup_get_datasize` ⇒ Backup 区读写在 senser 服务里有**结构化原语**（DIAC 字典里可见 `FACTORYDEFAULT_BACKUP_CONFIG`、`AFADJ_FORMAT` 等 ADJ 族命令），但它不在我们已知的 19 个 Jiritsu opcode 里 —— 别当成可直接调的命令。
+
+## 19. Round 12：正经链通了；但**上一轮（R11）的 cookie 结论被推翻**（诚实记录）
+- ★真因是**参数语义**：`backup_init` 把模块参数 **`Backup_load` 的值**传进 `backupfile_init`。`Backup_load != 1` 时 `Data_init` 取 **`arch_phys_to_cache(hdr+0x00)`** 的 **RAM**（**不重读文件**）⇒ R11 那些"改 cookie / 换文件 / 换 FS / tmpfs"实验全都打在无关路径上。
+- 我本地复核并补上一等证据：真机 `Backup.bin`（1,210,408 B，md5 前缀 `7a549d06`）的 **`hdr+0x00 = 0x02e80000`** ⇒ **第一个 u32 就是 RAM 物理地址**，与 `arch_phys_to_cache(hdr+0x00)` 完全对上；`hdr+0x04=0xaaaaaaaa`、`+0x08=1`、`+0x0c="BK4"`、`+0x10=750`。⇒ **真机 updater 正常分支是从 RAM 里的这份 blob 取 Backup**（主系统/EXBL 预置），`Backup_load=1` 才是"从文件读"的救援分支（`insmod.sh` 里 `IAMLDUDWRT` 分支正是 `Backup_load=1 Backup_save=0`）。
+- 用 `Backup_load=1 Backup_save=0` + **未改一字**的真文件 ⇒ `insmod` RC=0、**38 个 `Backup_*` 进 kallsyms**、不再打 `file_load` 错。`mcmn_drv.ko` insmod **RC=0**、major **249** 与真节点 `/dev/mcmn (c 249,1)` 匹配、open OK、`mmap` = **ENOSYS**。
+- `sauu` **不再崩**，走到 **`BeginningState → WaitingConnectionState`** ⇒ 卡在"需要 PC 侧 USB"（QEMU 无 gadget 模型，`connection.val=0`）。
+- `mmc_drv.ko` 需要 `pcie_slot_ctrl/root_ctrl` ⇒ 内核得开 **`CONFIG_CXD900X0_PCIE2_DME`**；注意 **别用 gcc-9**（3.0.27 在 `BUILD_BUG` 挂），沿用 gcc-6.4 Bootlin 配方。
+- QEMU 侧新增 **reset hook**：`bionz.c` **md5 变为 `139a86cb…`**（旧源码备份 `…r11.bak`；`87febf2ba7fc4f19aa05ed1829edf804` 是 hook 前的版本），新二进制 `35b2e30c…`；用基线源码重编的二进制与旧 `d4103e35…` 逐字节一致 ⇒ 可还原。guest 侧 `arch_reset()` patch 已写好（`kernel-reboot-hook.patch`，写 `0xf240f004`）但还没编进内核。
+- 另：模块里 `0x9000e1a0` 出现 **5 次**、`0xaaaaaaaa` **4 次**（我本地字节扫描）⇒ R11"期望 0x9000e1a0"与 R12"全是 0xaaaaaaaa"**都不完整**；别再从 cookie 字面量推语义，以**行为实验**为准。
+
+## 20. Round 13：离线已到"只能靠真机补数据"的边界
+- **A 保真成功**：bionz 新增 `A7C_RAM_BLOB` 把**未改一字**的真机 `Backup.bin` 预填 **PA `0x02e80000`**（注册成 rom，复位自动重灌）⇒ **原生 `insmod backup.ko Backup_save=0` 一字未改：RC=0、38 个 `Backup_*` 进 kallsyms、无 `file_load` 错**；不预填的对照 RC=5/0。
+- ★**出厂 a1 命令行的 `memrsv=0x75e000@0x02E68000` 已覆盖该区**（`EJ_CLEAR_MEMORY` 只清空闲页）⇒ 不用加参数；这也**反向证实**真机就是"主系统把 serial-cfg blob 预置到 `0x02e80000`，updater 正常分支从 RAM 读"。
+- 注意：QEMU 里 `/dev/mem` 读出的 RAM 头 64 KiB md5 ≠ 文件头 64 KiB（E2）⇒ 真机 RAM 是**活副本**（运行期被改），要真机 RAM dump 才能定。
+- **B**：`ksrc-r13`（gcc-6.4 配方）把 Kconfig 里 `PCIE2_DME` 的 `!CXD900X0_QEMU` 依赖去掉重编（config diff 仅 +1 行），`System.map` 出现 `pcie_root_ctrl/pcie_slot_ctrl` ⇒ **`insmod mmc_drv.ko` RC=0**，但 **QEMU 没有 Sony SD host（PCIe-DME 通道）** ⇒ mmc_drv 装载了但**没有后端**。
+- **C 闭环**：R12 的 hook 在这棵 QEMU 树触发 `qapi_enum_lookup` assert（本树枚举无 host-reset）⇒ 改成 `shutdown_request(GUEST_SHUTDOWN)` → exit 0 → wrapper 同镜像重拉；guest 里 `reboot` 的 writel 要挪到 `arch_reset_core` **之前**（`pm_machine_reset` 不回返）。结果：**boot1 写 a23 → guest 自己重启 → boot2 读回同一 md5 `ef59d910…` 打 `REREAD-OK-AFTER-GUEST-REBOOT`**（两组复现；boot2 里 backup 正常分支仍 RC=0/38）。⇒ **R1 更强了：写 + guest 内重启 + 重启后重读，全程离线**。
+- **D（mode5）**：`/setting/updater/mode5` → `[DETAIL] MODE=5` → `insmodMediaDriver` 两模块 RC=0 → `exec sdfileinput.elf` → 内核 `MMC:Failed mcmnd_api_getbkupinfo_bus_connect_type` ⇒ **`[FIRMUP NG] Error 77`**（**77 不在 `common.src` 错误表里**，来自 mcmn/sdfileinput 层；a15 里该串旁边是 `Force Local bus` ⇒ **卡槽总线类型来自 Backup/serial-cfg 信息**）。合成 vfat 卡（`BODYDATA.DAT` = 猜壳 FDAT + 官方包 `udtrbody.bin`）放在 a10。**验签没到**，但机制钉死（E1）：`VerifySignature = SHA256(body−0x100)` + `RSA_verify(NID_sha256)`，公钥 = initrd `/etc/VerificationKey.pem`(RSA-2048)，卡上头带 256 B 签名。
+- md5 记录：`bionz.c 32dbbd76…`（R12 源码备份 `.r12.bak`；R12 版是 `139a86cb…`）、QEMU 二进制 `e3ae292c…`、新内核 `vmlinux.bin 5ad80118…`、initrd r13a/c/d/g = `72494113/6ac3d395/d3c67bb8/22ddef6b`、卡 `ce716b69`、`BODYDATA.DAT 4e6f45fa`、实验盘 `a7c_emmc_r13{,_m5}.img = c84208c9/d526e5f0`；**基线 pt4 `85876746…` 未动**。

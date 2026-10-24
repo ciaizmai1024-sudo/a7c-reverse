@@ -114,6 +114,9 @@ A7C 上验签具体发生在哪（`nflasha1` 里的 `mf`/UdtrMain.sh？还是 `c
 - 改 `firmware.tar` 内容 → 必须重算 DEND CRC + 帧校验 + 头 CRC32（都简单，已给规则），
   但 **256 B 签名重不出来** → 路线 A 在拿到 Sony 私钥或 patch 掉验签之前不成立。
 #### 1.5 ★最小改包实验（已离线做完，产物已生成）
+> ★**2025-10-24 更正（E1）**：这类"只改 512 B 头区"的改包**并不能绕过签名**。实测（`tools/sig_probe_fdat.py`，官方 `.dat` × 相机 a1 自带公钥）：签名 = `FDAT` 记录 payload 尾 256 B，消息 = `FDAT payload[0:size−0x100]`（**整块密文体，含那 512 B 头**）；未改 payload **Verified OK★**（2.00/2.03 同一把 key），密文体中段**翻 1 位即 FAIL**。
+> ⇒ 改包路线（路线 A）在相机侧**过不了验签**，除非换掉验签器（**Route A′**：改 a1 里 `sauu` 的调用/判定）。签名**外面**只有容器 magic 与 `DATV/PROV/UDID` 记录（可改 + 重算外层 CRC；`UDID` 是 PC 侧用的 USB VID:PID 白名单）。详见 `notes/updater_verify.md` 末节"★★签名门最终判定"。
+
 工具 `tools/fdat_hdr_edit.py`（只动 ECB 那 512B 里的身份字段，不碰 CBC 区）：
 ```
 # 往返证明（原文件）

@@ -1,0 +1,858 @@
+2,7c2,7
+< /bin/GPIO2SDIO.elf	3884
+< /bin/NsBkSet.elf	4400
+< /bin/SDIO2GPIO.elf	4356
+< /bin/SetPort.elf	4128
+< /bin/Wltestcmd	30107
+< /bin/adjstctl.elf	129868
+---
+> /bin/GPIO2SDIO.elf	3932
+> /bin/NsBkSet.elf	4448
+> /bin/SDIO2GPIO.elf	4404
+> /bin/SetPort.elf	4176
+> /bin/Wltestcmd	30159
+> /bin/adjstctl.elf	130060
+9,12c9,12
+< /bin/bk.elf	10040
+< /bin/bootin.elf	15288
+< /bin/bsa_server	4802607
+< /bin/btRFTest.elf	36144
+---
+> /bin/bk.elf	10088
+> /bin/bootin.elf	15336
+> /bin/bsa_server	5390567
+> /bin/btRFTest.elf	36192
+15c15
+< /bin/btblog.elf	7148
+---
+> /bin/btblog.elf	7196
+19,20c19,20
+< /bin/crypter.elf	39036
+< /bin/dhd	236796
+---
+> /bin/crypter.elf	39084
+> /bin/dhd	236876
+22,26c22,25
+< /bin/gpioctrl.elf	86824
+< /bin/im.elf	23172
+< /bin/iperf	62402
+< /bin/iw	119232
+< /bin/launch_shell.elf	5092
+---
+> /bin/gpioctrl.elf	86872
+> /bin/im.elf	23240
+> /bin/iperf	62418
+> /bin/launch_shell.elf	5140
+28,36c27,36
+< /bin/mpr_monio.elf	6728
+< /bin/mpr_viewLog.elf	8076
+< /bin/mwf_monio.elf	22600
+< /bin/netblog.elf	7032
+< /bin/openssl	564529
+< /bin/rcvcmd.elf	4976
+< /bin/scenario.elf	5320
+< /bin/sen.elf	19164
+< /bin/sndcmd.elf	5332
+---
+> /bin/mpr_monio.elf	6776
+> /bin/mpr_viewLog.elf	8124
+> /bin/mwf_monio.elf	22648
+> /bin/netblog.elf	7080
+> /bin/openssl	738201
+> /bin/rcvcmd.elf	5024
+> /bin/scenario.elf	5368
+> /bin/sen.elf	19208
+> /bin/sndcmd.elf	5380
+> /bin/soundstretch	40167
+39,44c39,43
+< /bin/testcmd.elf	5124
+< /bin/top	48410
+< /bin/ud_datcnv.elf	5892
+< /bin/ud_send_lsi.elf	4276
+< /bin/udtrbody.bin	143360
+< /bin/ujlog.elf	7100
+---
+> /bin/testcmd.elf	5172
+> /bin/ud_datcnv.elf	5940
+> /bin/ud_send_lsi.elf	4324
+> /bin/udtrbody.bin	147456
+> /bin/ujlog.elf	7148
+46c45
+< /bin/ulogio.elf	19152
+---
+> /bin/ulogio.elf	19200
+50,52c49,51
+< /bin/uuidgen	8772
+< /bin/wl	1160152
+< /bin/wpa_supplicant	766388
+---
+> /bin/uuidgen	8812
+> /bin/wl	1160186
+> /bin/wpa_supplicant	766436
+63,69c62,69
+< /kmod/backup.ko	73796
+< /kmod/bcmdhd.ko	491712
+< /kmod/cdc-acm.ko	26452
+< /kmod/cdc_ether.ko	8196
+< /kmod/cdrom.ko	36644
+< /kmod/cec.ko	79248
+< /kmod/cfg80211.ko	193648
+---
+> /kmod/backup.ko	73764
+> /kmod/bcmdhd.ko	522740
+> /kmod/cdc-acm.ko	26472
+> /kmod/cdc_ether.ko	8328
+> /kmod/cdc_ncm.ko	11292
+> /kmod/cdrom.ko	36636
+> /kmod/cec.ko	79240
+> /kmod/cfg80211.ko	192992
+75c75
+< /kmod/dma330.ko	256972
+---
+> /kmod/dma330.ko	256544
+78,80c78,80
+< /kmod/grm_gles.ko	15700
+< /kmod/grm_ma.ko	24852
+< /kmod/hdmi.ko	238836
+---
+> /kmod/grm_gles.ko	15648
+> /kmod/grm_ma.ko	24800
+> /kmod/hdmi.ko	238788
+82c82
+< /kmod/i2c.ko	14208
+---
+> /kmod/i2c.ko	14212
+85c85
+< /kmod/kikilog.ko	34296
+---
+> /kmod/kikilog.ko	35152
+90c90
+< /kmod/libcomposite.ko	33788
+---
+> /kmod/libcomposite.ko	33712
+92c92
+< /kmod/mac80211.ko	280800
+---
+> /kmod/mac80211.ko	280600
+94c94
+< /kmod/mcmn_drv.ko	116832
+---
+> /kmod/mcmn_drv.ko	116848
+96,98c96,98
+< /kmod/mmc_core.ko	73336
+< /kmod/mmc_drv.ko	240708
+< /kmod/mmcioWrapper.ko	6780
+---
+> /kmod/mmc_core.ko	73272
+> /kmod/mmc_drv.ko	240668
+> /kmod/mmcioWrapper.ko	6788
+102,104c102,104
+< /kmod/option.ko	78052
+< /kmod/osal_uipc.ko	38928
+< /kmod/osal_ulogio.ko	38988
+---
+> /kmod/option.ko	78048
+> /kmod/osal_uipc.ko	38920
+> /kmod/osal_ulogio.ko	38992
+107,110c107,110
+< /kmod/ppp_generic.ko	27528
+< /kmod/r8168.ko	424332
+< /kmod/rndis_host.ko	9156
+< /kmod/scsi_mod.ko	110708
+---
+> /kmod/ppp_generic.ko	26968
+> /kmod/r8168.ko	423780
+> /kmod/rndis_host.ko	9228
+> /kmod/scsi_mod.ko	110676
+112c112
+< /kmod/sd_mod.ko	33580
+---
+> /kmod/sd_mod.ko	33548
+117c117
+< /kmod/snd-hwdep.ko	9016
+---
+> /kmod/snd-hwdep.ko	9012
+119c119
+< /kmod/snd-page-alloc.ko	8152
+---
+> /kmod/snd-page-alloc.ko	8140
+121,123c121,123
+< /kmod/snd-pcm.ko	79596
+< /kmod/snd-rawmidi.ko	22524
+< /kmod/snd-seq-device.ko	7536
+---
+> /kmod/snd-pcm.ko	79644
+> /kmod/snd-rawmidi.ko	22796
+> /kmod/snd-seq-device.ko	7520
+128,132c128,132
+< /kmod/snd-seq-virmidi.ko	7932
+< /kmod/snd-seq.ko	58224
+< /kmod/snd-timer.ko	23712
+< /kmod/snd-usb-audio.ko	103320
+< /kmod/snd-usbmidi-lib.ko	20548
+---
+> /kmod/snd-seq-virmidi.ko	7928
+> /kmod/snd-seq.ko	58600
+> /kmod/snd-timer.ko	23768
+> /kmod/snd-usb-audio.ko	103780
+> /kmod/snd-usbmidi-lib.ko	20512
+134c134
+< /kmod/snd.ko	49924
+---
+> /kmod/snd.ko	49892
+140c140
+< /kmod/upm.ko	137164
+---
+> /kmod/upm.ko	137180
+145c145
+< /kmod/usb_extcmd.ko	14808
+---
+> /kmod/usb_extcmd.ko	14796
+149,150c149,150
+< /kmod/usbcore.ko	157952
+< /kmod/usbg_audio.ko	20468
+---
+> /kmod/usbcore.ko	157664
+> /kmod/usbg_audio.ko	20456
+155,159c155,159
+< /kmod/usbg_storage.ko	67212
+< /kmod/usbg_video.ko	20680
+< /kmod/usbhid.ko	23204
+< /kmod/usbnet.ko	22452
+< /kmod/usbserial.ko	27352
+---
+> /kmod/usbg_storage.ko	67220
+> /kmod/usbg_video.ko	20668
+> /kmod/usbhid.ko	23360
+> /kmod/usbnet.ko	22488
+> /kmod/usbserial.ko	27332
+161,163c161,163
+< /kmod/wlanIrq.ko	3784
+< /kmod/wlanMemoryAllocator.ko	5148
+< /kmod/xhci-hcd.ko	104280
+---
+> /kmod/wlanIrq.ko	3800
+> /kmod/wlanMemoryAllocator.ko	8268
+> /kmod/xhci-hcd.ko	104240
+165,169c165,169
+< /lib/CameraOnDemandSaver.so	9448
+< /lib/CautionConfig.so	16528812
+< /lib/CautionRsrcConfig.so	136452
+< /lib/ModelCautionConfig.so	6728
+< /lib/dataflowInfraFramework.so	172636
+---
+> /lib/CameraOnDemandSaver.so	9496
+> /lib/CautionConfig.so	16532928
+> /lib/CautionRsrcConfig.so	136496
+> /lib/ModelCautionConfig.so	6772
+> /lib/dataflowInfraFramework.so	172680
+172c172
+< /lib/githash	64
+---
+> /lib/githash	67
+174c174
+< /lib/ipsec/kernel-netlink.conf	2339
+---
+> /lib/ipsec/kernel-netlink.conf	2460
+177,179c177,179
+< /lib/ipsec/lib/ipsec/libcharon.so.0	511012
+< /lib/ipsec/lib/ipsec/libstrongswan.so.0	390642
+< /lib/ipsec/lib/ipsec/libvici.so.0	23664
+---
+> /lib/ipsec/lib/ipsec/libcharon.so.0	535972
+> /lib/ipsec/lib/ipsec/libstrongswan.so.0	422082
+> /lib/ipsec/lib/ipsec/libvici.so.0	24068
+181,185c181,185
+< /lib/ipsec/lib/ipsec/plugins/libstrongswan-kernel-netlink.so	65948
+< /lib/ipsec/lib/ipsec/plugins/libstrongswan-nonce.so	6204
+< /lib/ipsec/lib/ipsec/plugins/libstrongswan-openssl.so	97653
+< /lib/ipsec/lib/ipsec/plugins/libstrongswan-socket-default.so	12741
+< /lib/ipsec/lib/ipsec/plugins/libstrongswan-vici.so	125610
+---
+> /lib/ipsec/lib/ipsec/plugins/libstrongswan-kernel-netlink.so	75157
+> /lib/ipsec/lib/ipsec/plugins/libstrongswan-nonce.so	6252
+> /lib/ipsec/lib/ipsec/plugins/libstrongswan-openssl.so	110237
+> /lib/ipsec/lib/ipsec/plugins/libstrongswan-socket-default.so	12794
+> /lib/ipsec/lib/ipsec/plugins/libstrongswan-vici.so	135890
+188c188
+< /lib/ipsec/libexec/ipsec/charon	18379
+---
+> /lib/ipsec/libexec/ipsec/charon	18395
+190c190
+< /lib/ipsec/openssl.conf	301
+---
+> /lib/ipsec/openssl.conf	591
+192c192
+< /lib/ipsec/sbin/swanctl	79123
+---
+> /lib/ipsec/sbin/swanctl	81664
+195d194
+< /lib/iw.so	95216
+197,269c196,276
+< /lib/libBTAdjust.so	10936
+< /lib/libBTUtils.so	16428
+< /lib/libBackupManager.so	5796
+< /lib/libBizFw.so	318736
+< /lib/libBizFw2.so	249920
+< /lib/libBusPower.so	31168
+< /lib/libEMG.so	5828
+< /lib/libExternalCommand.so	5324
+< /lib/libGOConnectionManager.so	70068
+< /lib/libIMDB.so	36052
+< /lib/libInfraAirplaneMode.so	7864
+< /lib/libInfraBGMMeta.so	152280
+< /lib/libInfraBluetooth.so	86048
+< /lib/libInfraBluetoothCore.so	145008
+< /lib/libInfraBluetoothLowEnergy.so	264552
+< /lib/libInfraBluetoothWoLEBoot.so	7716
+< /lib/libInfraCacheMgr.so	172232
+< /lib/libInfraCameraAllSetting.so	68604
+< /lib/libInfraCameraProfile.so	51872
+< /lib/libInfraCertificate.so	12420
+< /lib/libInfraDevInfoSender.so	13136
+< /lib/libInfraDlnaControl.so	365908
+< /lib/libInfraExtBackupCommunicator.so	14200
+< /lib/libInfraExtCmdSvc.so	16148
+< /lib/libInfraExtTransferApp.so	10104
+< /lib/libInfraFsys.so	427984
+< /lib/libInfraFtpClient.so	131080
+< /lib/libInfraHdmi.so	400988
+< /lib/libInfraHighlight.so	196220
+< /lib/libInfraIPTC.so	109632
+< /lib/libInfraIPsec.so	27920
+< /lib/libInfraKikiLogGenerator.so	6780
+< /lib/libInfraKikiLogSender.so	6700
+< /lib/libInfraLensCommunicator.so	8152
+< /lib/libInfraMakeScenario.so	410316
+< /lib/libInfraMediaCommon.so	327148
+< /lib/libInfraMediaDetect.so	78204
+< /lib/libInfraMediaMount.so	36372
+< /lib/libInfraMetaSupplier.so	13540
+< /lib/libInfraMscServer.so	45256
+< /lib/libInfraMtpServer.so	171252
+< /lib/libInfraNetConnectionManager.so	24988
+< /lib/libInfraNetConnectionManagerEther.so	29648
+< /lib/libInfraNetDeviceInfo.so	7772
+< /lib/libInfraNetFunctionManager.so	36756
+< /lib/libInfraNetInitializer.so	21084
+< /lib/libInfraNetworkServiceInfo.so	33648
+< /lib/libInfraNfc.so	27216
+< /lib/libInfraPtpControl.so	94940
+< /lib/libInfraPtpExtCmd.so	34020
+< /lib/libInfraRemote.so	8692048
+< /lib/libInfraSKD.so	10160
+< /lib/libInfraStreamingUsb.so	52424
+< /lib/libInfraUsbCmn.so	94568
+< /lib/libInfraUsbHostStorage.so	19084
+< /lib/libJiritsu.so	174816
+< /lib/libMWF.so	247740
+< /lib/libNetCommon.so	122828
+< /lib/libNetContUtil.so	74800
+< /lib/libNetService.so	670204
+< /lib/libObj.so	21269480
+< /lib/libOnDemandLoader.so	40328
+< /lib/libResourceBluetooth.so	7752
+< /lib/libRsrcHotshoe.so	22384
+< /lib/libSysDef.so	3256316
+< /lib/libUsbBusPower.so	21492
+< /lib/libUsbChargingApp.so	37560
+< /lib/libUsbControl.so	94936
+< /lib/libWlanAdjust.so	56264
+< /lib/libWlanControlCommon.so	14744
+< /lib/libWlanResource.so	35204
+< /lib/libanl.so	21
+< /lib/libbackup.so	9336
+---
+> /lib/libBTAdjust.so	10984
+> /lib/libBTUtils.so	16472
+> /lib/libBackupManager.so	5832
+> /lib/libBizFw.so	318780
+> /lib/libBizFw2.so	249964
+> /lib/libBusPower.so	31532
+> /lib/libEMG.so	5876
+> /lib/libExternalCommand.so	5372
+> /lib/libGOConnectionManager.so	70228
+> /lib/libIMDB.so	36460
+> /lib/libInfraAccessLog.so	11716
+> /lib/libInfraAccessLogWrapper.so	3344
+> /lib/libInfraAirplaneMode.so	7912
+> /lib/libInfraBGMMeta.so	152324
+> /lib/libInfraBluetooth.so	90200
+> /lib/libInfraBluetoothCore.so	168992
+> /lib/libInfraBluetoothLowEnergy.so	264596
+> /lib/libInfraBluetoothWoLEBoot.so	7808
+> /lib/libInfraCacheMgr.so	172276
+> /lib/libInfraCameraAllSetting.so	68648
+> /lib/libInfraCameraProfile.so	51916
+> /lib/libInfraCertificate.so	12532
+> /lib/libInfraDevInfoSender.so	13184
+> /lib/libInfraDlnaControl.so	369932
+> /lib/libInfraExtBackupCommunicator.so	14244
+> /lib/libInfraExtCmdSvc.so	16196
+> /lib/libInfraExtTransferApp.so	10148
+> /lib/libInfraFsys.so	428492
+> /lib/libInfraFtpClient.so	131940
+> /lib/libInfraHdmi.so	401048
+> /lib/libInfraHighlight.so	196264
+> /lib/libInfraHttpClient.so	35208
+> /lib/libInfraHttpClientUtil.so	15936
+> /lib/libInfraIPTC.so	109676
+> /lib/libInfraIPsec.so	29388
+> /lib/libInfraKikiLogGenerator.so	12036
+> /lib/libInfraKikiLogSender.so	6748
+> /lib/libInfraLensCommunicator.so	8196
+> /lib/libInfraMakeScenario.so	407740
+> /lib/libInfraMediaCommon.so	331236
+> /lib/libInfraMediaDetect.so	78248
+> /lib/libInfraMediaMount.so	36416
+> /lib/libInfraMetaSupplier.so	13588
+> /lib/libInfraMscServer.so	45300
+> /lib/libInfraMtpServer.so	171296
+> /lib/libInfraNetConnectionManager.so	25116
+> /lib/libInfraNetConnectionManagerEther.so	29692
+> /lib/libInfraNetDeviceInfo.so	7820
+> /lib/libInfraNetFunctionManager.so	36800
+> /lib/libInfraNetInitializer.so	21132
+> /lib/libInfraNetworkServiceInfo.so	33696
+> /lib/libInfraNfc.so	27772
+> /lib/libInfraPtpControl.so	81576
+> /lib/libInfraPtpExtCmd.so	34064
+> /lib/libInfraRemote.so	8692096
+> /lib/libInfraSKD.so	10184
+> /lib/libInfraStreamingUsb.so	52524
+> /lib/libInfraUsbCmn.so	94612
+> /lib/libInfraUsbHostStorage.so	19128
+> /lib/libJiritsu.so	174860
+> /lib/libMWF.so	247768
+> /lib/libNetCommon.so	122876
+> /lib/libNetContUtil.so	74844
+> /lib/libNetService.so	674784
+> /lib/libObj.so	21285392
+> /lib/libOnDemandLoader.so	40372
+> /lib/libResourceBluetooth.so	7800
+> /lib/libRsrcHotshoe.so	22428
+> /lib/libSKDWrapperManager.so	6048
+> /lib/libSoundTouch.so	22
+> /lib/libSoundTouch.so.1	22
+> /lib/libSoundTouch.so.1.0.0	60348
+> /lib/libSysDef.so	3256360
+> /lib/libUsbBusPower.so	21616
+> /lib/libUsbChargingApp.so	37604
+> /lib/libUsbControl.so	95156
+> /lib/libWlanAdjust.so	56308
+> /lib/libWlanControlCommon.so	14804
+> /lib/libWlanResource.so	35240
+> /lib/libanl.so	21
+> /lib/libbackup.so	9384
+271c278
+< /lib/libbsa.so	108976
+---
+> /lib/libbsa.so	129536
+275c282
+< /lib/libcom_err.so.2.1	7920
+---
+> /lib/libcom_err.so.2.1	7964
+277,279c284,286
+< /lib/libcrypto.so	16
+< /lib/libcrypto.so.1	16
+< /lib/libcrypto.so.1.1	1897552
+---
+> /lib/libcrypto.so	14
+> /lib/libcrypto.so.3	2656568
+> /lib/libcrypto.so.3.0	14
+282,283c289,290
+< /lib/libcurl.so.4.7.0	364820
+< /lib/libdig_level.so	26688
+---
+> /lib/libcurl.so.4.8.0	409696
+> /lib/libdig_level.so	26732
+286c293
+< /lib/libe2p.so.2.3	20492
+---
+> /lib/libe2p.so.2.3	20540
+288c295
+< /lib/libevent-2.1.so.6.0.2	230628
+---
+> /lib/libevent-2.1.so.6.0.2	230672
+291c298
+< /lib/libevent_core-2.1.so.6.0.2	150856
+---
+> /lib/libevent_core-2.1.so.6.0.2	150900
+294c301
+< /lib/libevent_openssl-2.1.so.6.0.2	15016
+---
+> /lib/libevent_openssl-2.1.so.6.0.2	15056
+297c304
+< /lib/libevent_pthreads-2.1.so.6.0.2	4792
+---
+> /lib/libevent_pthreads-2.1.so.6.0.2	4836
+301,303c308,310
+< /lib/libexpat.so.1.6.11	105716
+< /lib/libgenuinetime.so	4060
+< /lib/libgps_rsrc.so	16708
+---
+> /lib/libexpat.so.1.6.11	107440
+> /lib/libgenuinetime.so	4108
+> /lib/libgps_rsrc.so	16756
+309,312c316,322
+< /lib/libmintx.so	1532192
+< /lib/libmpr.so	13019972
+< /lib/libmprctrl.so	263768
+< /lib/libmprdummy.so	5700
+---
+> /lib/libjsoncpp.so	200444
+> /lib/libjsoncpp.so.00.11.0	200444
+> /lib/libjsoncpp.so.23	200444
+> /lib/libmintx.so	1532236
+> /lib/libmpr.so	13020716
+> /lib/libmprctrl.so	263812
+> /lib/libmprdummy.so	5748
+315c325
+< /lib/libncurses.so.6.2	259892
+---
+> /lib/libncurses.so.6.2	259936
+334,336c344,349
+< /lib/libosal_uipc.so	26644
+< /lib/libosal_ulogio.so	31132
+< /lib/libosal_utm.so	4852
+---
+> /lib/libopus.so	16
+> /lib/libopus.so.0	16
+> /lib/libopus.so.0.8.0	352924
+> /lib/libosal_uipc.so	26692
+> /lib/libosal_ulogio.so	27712
+> /lib/libosal_utm.so	4900
+340c353
+< /lib/libpcap.so.1.0.0	153276
+---
+> /lib/libpcap.so.1.0.0	153300
+347,349c360,365
+< /lib/libpro00.so	3644
+< /lib/libptp.so	142320
+< /lib/libqrencode.so	27184
+---
+> /lib/libpro00.so	3692
+> /lib/libprocps.so	18
+> /lib/libprocps.so.6	18
+> /lib/libprocps.so.6.0.0	47820
+> /lib/libptp.so	52860
+> /lib/libqrencode.so	27228
+351c367
+< /lib/libsencore.so	369804
+---
+> /lib/libsencore.so	365612
+354,357c370,373
+< /lib/libssh2.so.1.0.1	114004
+< /lib/libssl.so	13
+< /lib/libssl.so.1	13
+< /lib/libssl.so.1.1	365040
+---
+> /lib/libssh2.so.1.0.1	159952
+> /lib/libssl.so	11
+> /lib/libssl.so.3	412204
+> /lib/libssl.so.3.0	11
+364,373c380,389
+< /lib/libtestcmd.so	10080
+< /lib/libtestcmd_scn.so	4996
+< /lib/libul_GpioCtrl.so	4512
+< /lib/libul_xml.so	56632
+< /lib/libupdatercommon.so	37004
+< /lib/libupdatermedia.so	3992
+< /lib/libupdatertalk.so	3404
+< /lib/libupdaterufp.so	12936
+< /lib/libupdaterufunc.so	4324
+< /lib/libusbcmd.so	15948
+---
+> /lib/libtestcmd.so	10128
+> /lib/libtestcmd_scn.so	5044
+> /lib/libul_GpioCtrl.so	4560
+> /lib/libul_xml.so	56676
+> /lib/libupdatercommon.so	37048
+> /lib/libupdatermedia.so	4040
+> /lib/libupdatertalk.so	3452
+> /lib/libupdaterufp.so	13152
+> /lib/libupdaterufunc.so	4372
+> /lib/libusbcmd.so	15996
+375c391
+< /lib/libutil_date.so	5776
+---
+> /lib/libutil_date.so	5824
+382c398
+< /lib/libz.so.1.2.11	77364
+---
+> /lib/libz.so.1.2.11	77484
+390,396c406,414
+< /lib/viewUnified2.so	13600200
+< /lib/viewUnified3.so	919052
+< /lib/viewUnified4.so	3226224
+< /lib/viewUnified5.so	745100
+< /lib/viewUnified6.so	576308
+< /lib/viewUnified7.so	573844
+< /lib/viewUnified8.so	274512
+---
+> /lib/ossl-modules	1024
+> /lib/ossl-modules/legacy.so	66068
+> /lib/viewUnified2.so	13605332
+> /lib/viewUnified3.so	919108
+> /lib/viewUnified4.so	3229116
+> /lib/viewUnified5.so	745520
+> /lib/viewUnified6.so	589280
+> /lib/viewUnified7.so	573888
+> /lib/viewUnified8.so	274680
+478c496
+< /sbin/dhcpd	1544299
+---
+> /sbin/dhcpd	1544303
+480c498
+< /sbin/iptables-multi	71285
+---
+> /sbin/iptables-multi	71301
+483,484c501,502
+< /sbin/pump	66129
+< /sbin/tcpdump	1853201
+---
+> /sbin/pump	66137
+> /sbin/tcpdump	1853209
+486,520c504,538
+< /scenario/AVBB_SCN_L_R_SETTING.so	4776
+< /scenario/AVBB_SCN_L_R_SETTING_PANELEVF.so	4784
+< /scenario/AVBB_SCN_OPTAXIS_PANELEVF.so	4780
+< /scenario/AVBB_SCN_START_AUDIO.so	10498
+< /scenario/AVBB_SCN_START_HDMI.so	20520
+< /scenario/AVBB_SCN_START_HDMI_INPUT.so	17319
+< /scenario/AVBB_SCN_START_HDMI_INPUT_SUB.so	17152
+< /scenario/AVBB_SCN_START_HDMI_SUB.so	14270
+< /scenario/AVBB_SCN_START_MIC.so	12060
+< /scenario/AVBB_SCN_START_MICSENSE.so	10453
+< /scenario/AVBB_SCN_START_PANELEVF.so	13033
+< /scenario/AVBB_SCN_START_VIDEO.so	10583
+< /scenario/AVBB_SCN_STOP_AUDIO.so	11797
+< /scenario/AVBB_SCN_STOP_HDMI.so	13860
+< /scenario/AVBB_SCN_STOP_HDMI_INPUT.so	18903
+< /scenario/AVBB_SCN_STOP_MIC.so	11801
+< /scenario/AVBB_SCN_STOP_MICSENSE.so	10448
+< /scenario/AVBB_SCN_STOP_PANELEVF.so	10758
+< /scenario/AVBB_SCN_STOP_VIDEO.so	10340
+< /scenario/CAMERA_SCN_EE_SETUP_START_STOP.so	17043
+< /scenario/CAMERA_SCN_EE_SET_PRM.so	8920
+< /scenario/CAMERA_SCN_EE_START_STOP.so	18273
+< /scenario/CAMERA_SCN_EXTERNAL_RAW_RECORD.so	7749
+< /scenario/CAMERA_SCN_FACE_REC_DATA.so	7504
+< /scenario/CAMERA_SCN_MOVIE_REC_START.so	7056
+< /scenario/CAMERA_SCN_SET_ZOOM_DRV.so	6405
+< /scenario/CAMERA_SCN_VIDEOLIGHT_SW.so	6556
+< /scenario/MPR_SCN_EXEC_FACTORY_MODE.so	6144
+< /scenario/MPR_SCN_EXEC_WIFI_TEST.so	5586
+< /scenario/MPR_SCN_FLASH_BACKUP_INIT.so	6093
+< /scenario/MPR_SCN_FORMAT.so	20074
+< /scenario/MPR_SCN_GET_CONTENT_COUNT.so	16410
+< /scenario/MPR_SCN_GET_TOTAL_LOG.so	21047
+< /scenario/MPR_SCN_INSTALL_MAP_DEMOMOVIE.so	165157
+< /scenario/MPR_SCN_SET_FACTORY_MODE.so	5718
+---
+> /scenario/AVBB_SCN_L_R_SETTING.so	4824
+> /scenario/AVBB_SCN_L_R_SETTING_PANELEVF.so	4832
+> /scenario/AVBB_SCN_OPTAXIS_PANELEVF.so	4828
+> /scenario/AVBB_SCN_START_AUDIO.so	10546
+> /scenario/AVBB_SCN_START_HDMI.so	20568
+> /scenario/AVBB_SCN_START_HDMI_INPUT.so	17367
+> /scenario/AVBB_SCN_START_HDMI_INPUT_SUB.so	17200
+> /scenario/AVBB_SCN_START_HDMI_SUB.so	14318
+> /scenario/AVBB_SCN_START_MIC.so	12108
+> /scenario/AVBB_SCN_START_MICSENSE.so	10501
+> /scenario/AVBB_SCN_START_PANELEVF.so	13081
+> /scenario/AVBB_SCN_START_VIDEO.so	10631
+> /scenario/AVBB_SCN_STOP_AUDIO.so	11845
+> /scenario/AVBB_SCN_STOP_HDMI.so	13908
+> /scenario/AVBB_SCN_STOP_HDMI_INPUT.so	18951
+> /scenario/AVBB_SCN_STOP_MIC.so	11849
+> /scenario/AVBB_SCN_STOP_MICSENSE.so	10496
+> /scenario/AVBB_SCN_STOP_PANELEVF.so	10806
+> /scenario/AVBB_SCN_STOP_VIDEO.so	10388
+> /scenario/CAMERA_SCN_EE_SETUP_START_STOP.so	17087
+> /scenario/CAMERA_SCN_EE_SET_PRM.so	8964
+> /scenario/CAMERA_SCN_EE_START_STOP.so	18317
+> /scenario/CAMERA_SCN_EXTERNAL_RAW_RECORD.so	7793
+> /scenario/CAMERA_SCN_FACE_REC_DATA.so	7552
+> /scenario/CAMERA_SCN_MOVIE_REC_START.so	7104
+> /scenario/CAMERA_SCN_SET_ZOOM_DRV.so	6453
+> /scenario/CAMERA_SCN_VIDEOLIGHT_SW.so	6604
+> /scenario/MPR_SCN_EXEC_FACTORY_MODE.so	6192
+> /scenario/MPR_SCN_EXEC_WIFI_TEST.so	5634
+> /scenario/MPR_SCN_FLASH_BACKUP_INIT.so	6141
+> /scenario/MPR_SCN_FORMAT.so	20122
+> /scenario/MPR_SCN_GET_CONTENT_COUNT.so	16458
+> /scenario/MPR_SCN_GET_TOTAL_LOG.so	21095
+> /scenario/MPR_SCN_INSTALL_MAP_DEMOMOVIE.so	165201
+> /scenario/MPR_SCN_SET_FACTORY_MODE.so	5766
+527c545
+< /share/app/Sony_DI_Icons.ttf	566836
+---
+> /share/app/Sony_DI_Icons.ttf	619664
+529c547
+< /share/app/area_check_data.dat	1123952
+---
+> /share/app/area_check_data.dat	1125309
+532c550
+< /share/app/global.xdb	12016
+---
+> /share/app/global.xdb	12056
+547,614c565,632
+< /share/app/string_arabic.uxc	259280
+< /share/app/string_arabic_f.uxc	469328
+< /share/app/string_brazilianportuguese.uxc	195784
+< /share/app/string_brazilianportuguese_f.uxc	348820
+< /share/app/string_bulgarian.uxc	306012
+< /share/app/string_bulgarian_f.uxc	531036
+< /share/app/string_canadianfrench.uxc	151076
+< /share/app/string_canadianfrench_f.uxc	142952
+< /share/app/string_croatian.uxc	187772
+< /share/app/string_croatian_f.uxc	335928
+< /share/app/string_czech.uxc	194148
+< /share/app/string_czech_f.uxc	351772
+< /share/app/string_danish.uxc	184116
+< /share/app/string_danish_f.uxc	333468
+< /share/app/string_dutch.uxc	189508
+< /share/app/string_dutch_f.uxc	354080
+< /share/app/string_english.uxc	173176
+< /share/app/string_english_f.uxc	331136
+< /share/app/string_finnish.uxc	182108
+< /share/app/string_finnish_f.uxc	329600
+< /share/app/string_french.uxc	206656
+< /share/app/string_french_f.uxc	375416
+< /share/app/string_german.uxc	197612
+< /share/app/string_german_f.uxc	358528
+< /share/app/string_greek.uxc	328888
+< /share/app/string_greek_f.uxc	572388
+< /share/app/string_hindi.uxc	406504
+< /share/app/string_hindi_f.uxc	712464
+< /share/app/string_hungarian.uxc	202584
+< /share/app/string_hungarian_f.uxc	362852
+< /share/app/string_indonesia.uxc	183796
+< /share/app/string_indonesia_f.uxc	327576
+< /share/app/string_italian.uxc	201408
+< /share/app/string_italian_f.uxc	365932
+< /share/app/string_japanese.uxc	219288
+< /share/app/string_japanese_f.uxc	402596
+< /share/app/string_korean.uxc	206588
+< /share/app/string_korean_f.uxc	367300
+< /share/app/string_malay.uxc	181640
+< /share/app/string_malay_f.uxc	325588
+< /share/app/string_norwegian.uxc	179232
+< /share/app/string_norwegian_f.uxc	323068
+< /share/app/string_persian.uxc	284488
+< /share/app/string_persian_f.uxc	511852
+< /share/app/string_polish.uxc	190512
+< /share/app/string_polish_f.uxc	352372
+< /share/app/string_portuguese.uxc	192328
+< /share/app/string_portuguese_f.uxc	345420
+< /share/app/string_romanian.uxc	200080
+< /share/app/string_romanian_f.uxc	363120
+< /share/app/string_russian.uxc	307252
+< /share/app/string_russian_f.uxc	548508
+< /share/app/string_simplifiedchinese.uxc	155340
+< /share/app/string_simplifiedchinese_f.uxc	285460
+< /share/app/string_spanish.uxc	195376
+< /share/app/string_spanish_f.uxc	358832
+< /share/app/string_swedish.uxc	179140
+< /share/app/string_swedish_f.uxc	331216
+< /share/app/string_thai.uxc	404596
+< /share/app/string_thai_f.uxc	679068
+< /share/app/string_traditionalchinese.uxc	157480
+< /share/app/string_traditionalchinese_f.uxc	286340
+< /share/app/string_turkish.uxc	188032
+< /share/app/string_turkish_f.uxc	341872
+< /share/app/string_ukrainian.uxc	308644
+< /share/app/string_ukrainian_f.uxc	542636
+< /share/app/string_vietnamese.uxc	220004
+< /share/app/string_vietnamese_f.uxc	394896
+---
+> /share/app/string_arabic.uxc	259664
+> /share/app/string_arabic_f.uxc	470204
+> /share/app/string_brazilianportuguese.uxc	196048
+> /share/app/string_brazilianportuguese_f.uxc	349468
+> /share/app/string_bulgarian.uxc	306464
+> /share/app/string_bulgarian_f.uxc	532184
+> /share/app/string_canadianfrench.uxc	151120
+> /share/app/string_canadianfrench_f.uxc	143088
+> /share/app/string_croatian.uxc	188064
+> /share/app/string_croatian_f.uxc	336608
+> /share/app/string_czech.uxc	194416
+> /share/app/string_czech_f.uxc	352512
+> /share/app/string_danish.uxc	184384
+> /share/app/string_danish_f.uxc	334128
+> /share/app/string_dutch.uxc	189796
+> /share/app/string_dutch_f.uxc	354812
+> /share/app/string_english.uxc	173420
+> /share/app/string_english_f.uxc	331784
+> /share/app/string_finnish.uxc	182356
+> /share/app/string_finnish_f.uxc	330264
+> /share/app/string_french.uxc	206968
+> /share/app/string_french_f.uxc	376204
+> /share/app/string_german.uxc	197892
+> /share/app/string_german_f.uxc	359284
+> /share/app/string_greek.uxc	329412
+> /share/app/string_greek_f.uxc	573608
+> /share/app/string_hindi.uxc	407036
+> /share/app/string_hindi_f.uxc	714076
+> /share/app/string_hungarian.uxc	202880
+> /share/app/string_hungarian_f.uxc	363572
+> /share/app/string_indonesia.uxc	184052
+> /share/app/string_indonesia_f.uxc	328292
+> /share/app/string_italian.uxc	201692
+> /share/app/string_italian_f.uxc	366628
+> /share/app/string_japanese.uxc	219584
+> /share/app/string_japanese_f.uxc	403576
+> /share/app/string_korean.uxc	206884
+> /share/app/string_korean_f.uxc	368144
+> /share/app/string_malay.uxc	181888
+> /share/app/string_malay_f.uxc	326264
+> /share/app/string_norwegian.uxc	179464
+> /share/app/string_norwegian_f.uxc	323700
+> /share/app/string_persian.uxc	284896
+> /share/app/string_persian_f.uxc	512904
+> /share/app/string_polish.uxc	190776
+> /share/app/string_polish_f.uxc	353144
+> /share/app/string_portuguese.uxc	192596
+> /share/app/string_portuguese_f.uxc	346104
+> /share/app/string_romanian.uxc	200372
+> /share/app/string_romanian_f.uxc	363848
+> /share/app/string_russian.uxc	307704
+> /share/app/string_russian_f.uxc	549708
+> /share/app/string_simplifiedchinese.uxc	155556
+> /share/app/string_simplifiedchinese_f.uxc	286016
+> /share/app/string_spanish.uxc	195664
+> /share/app/string_spanish_f.uxc	359528
+> /share/app/string_swedish.uxc	179408
+> /share/app/string_swedish_f.uxc	331896
+> /share/app/string_thai.uxc	405208
+> /share/app/string_thai_f.uxc	680604
+> /share/app/string_traditionalchinese.uxc	157688
+> /share/app/string_traditionalchinese_f.uxc	286892
+> /share/app/string_turkish.uxc	188304
+> /share/app/string_turkish_f.uxc	342588
+> /share/app/string_ukrainian.uxc	309076
+> /share/app/string_ukrainian_f.uxc	543784
+> /share/app/string_vietnamese.uxc	220332
+> /share/app/string_vietnamese_f.uxc	395772
+619c637
+< /share/app/viewAccessPoint.uxc	26964
+---
+> /share/app/viewAccessPoint.uxc	27488
+716c734
+< /share/app/viewInitialSetting.uxc	6152
+---
+> /share/app/viewInitialSetting.uxc	7976
+749a768
+> /share/app/viewPrivacyNotice.uxc	760
+807c826
+< /share/app/viewVersionNumber.uxc	1108
+---
+> /share/app/viewVersionNumber.uxc	2252
+867a887,888
+> /share/data	1024
+> /share/data/kikilog_pub.pem	625
+983d1003
+< /tool/libefence.so	18248
+987d1006
+< /tool/libmcheckb.so	7680

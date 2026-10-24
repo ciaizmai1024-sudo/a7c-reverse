@@ -1,0 +1,15 @@
+8587674613a0ffd86beea010e74fd47c  a7c_emmc_pt4.img
+139a86cbbc3a2b11054d3b4b23e15c23  qemu-sony/hw/arm/bionz.c
+87febf2ba7fc4f19aa05ed1829edf804  qemu-sony/hw/arm/bionz.c.r11.bak
+35b2e30cb15a617e00315f96d9584194  qemu-sony/arm-softmmu/qemu-system-arm
+d4103e35914e0609df6f57367c6e7efd  qemu-sony/arm-softmmu/qemu-system-arm.baseline-r12rebuild
+35b2e30cb15a617e00315f96d9584194  qemu-sony/arm-softmmu/qemu-system-arm.r12
+0754f54ac4da5b5343041449a1887659  r12/initrd_r12a.img
+60efaf2079ce8a868bfbf44252808531  r12/initrd_r12b.img
+08dfd982868df50c3353bab67a3c5939  r12/initrd_r12c.img
+38f80224e6e4c101826f13fa0e10609b  r12/initrd_r12d.img
+00cefd722c0af4a3e2eaaef81dc27b2b  r12/initrd_r12e.img
+0a38eec60f415bcffc6887a9f419de7f  r12/tree/usr/kmod/backup.ko
+7a549d0600ae452a7c8ca3b2a56b58f4  r12/tree/r12/ctrl.bin
+9d975f424226c52af859d3327b52b2ed  parts/nflasha2.bin
+0f00bf40c7d13f84cf9abf8c068c5f7a  parts/initrd.img

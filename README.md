@@ -9,6 +9,10 @@
 
 ---
 
+### 续跑入口
+
+暂停/换会话时先读 **`CHECKPOINT.md`**（当前成立的事实、被中断的轮次、真机一通就跑的只读批次、远端资产与 md5 基线）。
+
 ## 1. 先读什么（按顺序）
 
 | 文件 | 内容 |
@@ -17,13 +21,13 @@
 | `TEST_LADDER.md` | 变砖风险模型：哪个分区坏了等于砖、谁能救；「永不碰清单」；安全测试阶梯 L1→L2 |
 | `UPDATER_ANALYSIS.md` | 更新器内部机制：`config.xml` → 脚本 → ELF → 分区，以及更新模式旗标 |
 | `A7C_REAL_DEVICE_FEASIBILITY.md` | 真机连接与写入可行性的**保守评估**（把「能跑代码」和「能刷进去」分开算风险） |
-| `notes/` | 分项深挖：`jiritsu.md`（服务通道协议）、`updater_flow.md`（刷入枚度 / `us_mkfs.sh` 路径）、`updater_verify.md`（272 B 尾到底谁验）、`injection.md`、`qemu.md`、`zve10-qemu.md`（同芯片 ZV-E10 的 QEMU/救援全记录）、`a7c2-tools.md`、`github-survey.md`（同代次公开工作调研）、`camtool.md`、`senser_shell.md`、`toolchain.md` |
+| `notes/` | 分项深挖：`jiritsu.md`（服务通道协议）、`updater_flow.md`（刷入枚度 / `us_mkfs.sh` 路径）、`updater_verify.md`（272 B 尾到底谁验）、`injection.md`、`qemu.md`、`zve10-qemu.md`（同芯片 ZV-E10 的 QEMU/救援全记录）、`a7c2-tools.md`、`github-survey.md`（同代次公开工作调研）、`gh-issue23.md`（外部研究者在 ILCE-7C 2.03 上打通 Jiritsu root + 我们的跨版本对照）、`camtool.md`、`senser_shell.md`、`toolchain.md` |
 | `work/` | 逐项实验的现场：脚本 + 结果笔记（`*.md`）+ 小体积证据（manifest / diff / 串口日志） |
 
 关键结论（细节都在上面这些文件里）：
 
 - 外层容器 `UFU`（IFF 风格分块 + CRC32）→ `FDAT`（1024 B 帧 + 两段 AES，**密钥全部公开**）→ `UDTRFIRM` 明文区里带 `firmware.tar` / `updater.img`，逐字节比对全中。
-- 272 B 尾（16 B IV + 256 B blob）：**2.00 上 PC 可达的路径里没有一处真的调 `RSA_verify`**（`sauu` 是死代码；`mf` 到 2.03 才链进验签；只有 MSCRYPT(mode5) 的 SD 卡路径验）。所以「能不能自制包刷回去」不是被签名挡住，而是被 `0x142` 版本门禁和刷入枚度挡住。
+- 272 B 尾（16 B IV + 256 B blob）＝ **UFU 容器里 `FDAT` 记录尾部的 RSA-2048 / PKCS#1 v1.5 + SHA-256 签名**；消息 = `FDAT payload[0 : size−0x100]`（整块**密文体**，含 512 B 头与那 16 B IV）。用相机 a1 自带的 `/etc/VerificationKey.pem` 验：**2.00 与 2.03 的官方 `.dat` 都 Verified OK**；密文体中段**翻 1 位必 FAIL**。⇒ **2.00 也有签名门**（早先"`sauu` 是死代码 / 2.00 不验签"是我方 ELF32 解析 bug 造成的误判，已更正）。所以改 body（含相机侧门禁字段 `modeType/version/model/region`）**需要 Sony 私钥**，或换掉验签器（改 a1 里的 `sauu`）；签名**外**只有 `DATV/PROV/UDID` 小记录可改（外层 CRC 可重算：`DEND.payload = BE zlib.crc32(stream[0:n−12))`）。详见 `notes/updater_verify.md` 末节，工具 `tools/sig_probe_fdat.py`（官方包指纹与下载来源也在同一节：**2.00 可到 Sony 俄罗斯官网下载**）。
 - 首选路线是 **B：服务模式 → `SET_FILE2(0x4010)` 直写 `/tmp/jiritsu/libJit.so` → 自己写的 ARM32 载荷在 `.init` ctor 里干活**（同芯片 ZV-E10 已跑通；A7C 一代 2.03 上有第三方 root 实测）。
 - 真砖只有 `boot0/boot1`、分区表、`nflasha1/2`；app 分区（a3/5/7/15）写坏了更新器能重建。
 

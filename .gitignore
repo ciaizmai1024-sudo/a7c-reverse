@@ -95,6 +95,9 @@ work/qemu-a7c/results/round4/ring_*.txt
 work/qemu-a7c/results/round8/emmc_*.txt
 work/qemu-a7c/results/build.log
 
+# --- 从 Sony /usr 里解出来的“原件”（脚本/配置/可执行）一律不重分发（与 README 政策一致）---
+work/net-tools/extract/
+
 # --- 临时/杂项 ---
 .DS_Store
 *.part

@@ -22,3 +22,16 @@ nflasha23	0x00200000 (2097152)	494152495afdfbfb437e42cc13040674b6d5a974a855f5cbf
 #   所以头区要用**裸节点 `/dev/nflasha`（252:0=整块 USER 区）**读：`dd if=/dev/nflasha` 取前 64 KiB（先 64 KiB、再放大）。表不属于任何 nflashaN 分区。
 #   用途：拿到 EXBL 以回答「p1chksum 是纯 MD5 清单还是被签名固定」——`p1chksum` 在 initrd 与 a15(/usr) 里 **0 处引用** ⇒ 读它的只有 EXBL。这一条决定「改 a1 里的 sauu」路线的风险等级。
 # MISSING（次要，仍要补）：nflasha8/nflasha9/nflasha19..22/nflasha25..31（partinf 里存在但从未 dump 过 body 的编号）
+# ★新增只读目标（RAM 类，Round 12 语义推导 + 我本地证据）：PA 0x02e80000 的 Backup RAM blob
+#   真机 /setting/Backup.bin 的 hdr+0x00 = 0x02e80000（就是 RAM 物理地址）；updater 正常分支（不带 Backup_load）是从 RAM 取 Backup，不重读文件。
+#   手法：camtool 的 mem 读（Jiritsu 通道），长度先 4 KiB 试探再放大到 1,210,408 B；与 work/l2-camera/probe2/_setting_Backup.bin.bin 比对。
+#   用途：证实 hdr+0x00 语义 + 判定真机 updater 阶段是否"RAM 里有这份 blob"（决定离线保真做法与恢复语义）。等级：dump=E3、推论=E0。
+# ★新增真机目标（mode5/卡线，Round 13）：官方**更新卡**上的 `BODYDATA.DAT`（真 FDAT 头 + 尾 256 B RSA-2048 签名）
+#   离线侧机制已钉死（`VerifySignature=SHA256(body−0x100)`+`RSA_verify(NID_sha256)`+`/etc/VerificationKey.pem`），但没有真卡 payload 就做不了"正向验签通过"的实验。
+#   取法：把官方卡更新包写进 SD 卡（或跑一次真机卡更新后 dump 卡）。同时 dump 卡上目录结构（`GetFirmwarePath` 的确切期望路径仍未证）。
+# ★新增只读/低写风险目标（来自 gh issue #23 交叉验证）：a3(/system) 里的 DSP 平铺镜像
+#   实测我们 2.00 的 a3 dump 目录项含 AV-CAM / BONOBO / DFE_APP / DFE_DAT / LDR_DRV / LIF_APP / VMLINUX / WOLE_APP。
+#   首要：AV-CAM.BIN（他 2.03 = 17,398,676 B / md5 440c2a3e77a43c16c2bae5af2f3845c9）⇒ 我们要解出 2.00 版本做哈希与 LUT 表状态对比。
+#   注意：0x635c6000 是 DSP 地址，不在 ARM mem= 窗口内（/dev/mem 读它会挂死 USB）；平铺镜像 VA−base==文件偏移，改文件即可。
+# ★新 USB 状态：退出服务 0336 会短暂出现 054c:0994（期间 StartSenser 无效，等 ~30 s 回 0d29）。
+# ★Jiritsu 前置：出厂没有 /tmp/jiritsu，mount nflasha6 返 0x10000004；用 select("/mnt/../tmp/jiritsu/.keep")+set_file2(mode=1) 触发 sys_dir_create2 逐级建目录。

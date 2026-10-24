@@ -214,3 +214,45 @@ EOF
 - 而 `execute_ufp.sh`（见 notes/qemu.md §15）在 **USER / MINOR(`sauu -m`) / VERSKIP(`sauu -s`) / SERVICE** 分支里跑的就是 `LD_PRELOAD=/usr/lib/libSysDef.so sauu`；只有 **MODE_MSCRYPT(5)** 走 `sdfileinput.elf`（并 `insmod mcmn_drv.ko mmc_drv.ko` = 插存储卡）后 `touch /setting/updater/MediaUpdateCompleteFlag`。
 ⇒ 结论方向变化：**验签在 2.00 的 USER 路径上是"存在"的**；能不能绕过取决于**控制流**（是否无条件、结果是否致命、签名覆盖哪些字节）——见 `work/sauu/SIG_RECHECK_200.md`（待做）。
 ⇒ 但有一个此前没注意的事实对我们有利：**验签者本身（`/etc/VerificationKey.pem`、`/usr/bin/sauu`）都在 a1 的 initrd 里**，而 a1 是我们已有完整 dump、且技术上可重写的分区。
+
+---
+## ★★签名门最终判定（2025-10-24；离线 **E1**，本机官方 `.dat` × 相机自带公钥）
+**工件**：`~/Downloads/Update_ILCE7CV200.dmg` → `SystemSoftwareUpdater.app/Contents/Resources/FirmwareData_ILCE7CV200.dat`（**346,206,712 B**）；2.03 同构（363,197,944 B）。工具：**`tools/sig_probe_fdat.py`**。
+
+**容器（UFU）结构【实测走链】**：`89 'UFU' 0d0a1a0a`（PNG 式 magic）+ 记录链 `[BE u32 size][4B TYPE][payload]`，游标 `+= 8+size`：
+`DATV(4B)` → `PROV(4B)` → `UDID(172B)` → `FDAT(≈330/346 MiB，熵 7.88)` → `DEND(4B)`。
+流末 12 B 就是 `DEND` 记录，**其 payload = BE `zlib.crc32(stream[0 : n−12))`**（2.00 实测 `aaaa81b8` 重算相符）⇒ **外层 CRC 完全可重算**。
+
+**★签名（决定性）**：`FDAT` 记录 payload 的**最后 256 B** = **RSA-2048 / PKCS#1 v1.5 + SHA-256 签名**；消息 = **`FDAT payload[0 : size−0x100]`**（即**密文体本身**，含 512 B `UDTRFIRM` 头与那 16 B IV）。
+用相机 a1 里的 `/etc/VerificationKey.pem` 验：**2.00 → Verified OK★；2.03 → Verified OK★**（**同一把 key**）。
+负向对照：密文体**中段翻 1 位 → FAIL**；签名区翻 1 位 → FAIL。
+⇒ 与 `sauu` / `SDDecryptorModule::execWriteFirm` 的 `verify_info{data=body, len=total−0x100, sig=body+(total−0x100), siglen=0x100, key=/etc/VerificationKey.pem}` **完全对上** —— 那个 body 就是这个 **FDAT 记录**。⇒ **USER/SERVICE 与 mode5 两条路都有签名门，2.00 也有**（"2.00 没有签名门"是 ELF32 解析 bug 造成的误判）。
+
+**签名外（可改，只需重算外层 CRC）**：容器 magic、`DATV`、`PROV`、`UDID` 记录与其记录头。
+**`UDID` = USB VID:PID 白名单**（21 条：`[PID BE u16][VID=0x054c u16][flag u8 + 3 pad]`；第 19 条 **`054c:0d29` = 我们 A7C 的 MSC PID**；末条 `054c:03e2` flag=2）。**a15/a1 里 0 处引用 "UDID"** ⇒ 它是 **PC 侧更新器**消费的门禁（改它不影响相机）。
+**签名内（改不动，除非重签）**：解密体前 512 B 的相机侧门禁字段实测 2.00/2.03 = `modeType@+0x10='U'`、`version@+0x20=0x200/0x203`、`model@+0x24=0x91030019`、`region@+0x28=0` ⇒ 改这些**必须 Sony 私钥重签**，或换掉验签器（a1 里的 `sauu`，**Route A′**）。
+
+**可检验的预测（相机一通就做，最便宜）**：`FIRMWARE_MOD §1.5` 那两个"只改 ECB 头区（`modeType`）"的测试包，**预测在真机 USER 路径签名失败**（改的是签名覆盖的密文区）。风险低（在验签处中止，还没到写分区）。
+**更正 Round 14**："正对照必须自签"结论来自**解密流**（`full_dec_200.bin` 尾 256 B 全零）——签名其实在**加密容器**里；**正对照直接用真 `.dat` 即可，不需要自签**。
+
+---
+## 官方包指纹与来源（签名结论的可复现前提）
+本机已持有官方更新器安装包（macOS 版 `.dmg`；另有 Windows 版 `Update_ILCE7CV200.exe`）：
+
+| 文件 | 大小 | md5 | sha256 |
+|---|---|---|---|
+| `Update_ILCE7CV200.dmg` | 346,967,314 | `9b4cff2392499f3e554db2ffe5b14645` | `9ad320ca…ec35624`（全值见本表下方命令） |
+| `Update_ILCE7CV203.dmg` | 363,936,232 | `40f54fe42887cc44e6b21018f20ac5b0` | `bd890b70…07d1d6` |
+| └ `…/Resources/FirmwareData_ILCE7CV200.dat` | **346,206,712** | `058628057a5d73af90c3a232eac8fb66` | — |
+| └ `…/Resources/FirmwareData_ILCE7CV203.dat` | **363,197,944** | `91507fc258de1fd7e8def8b3a6e4dbe7` | — |
+
+**来源提示：2.00 固件到俄罗斯官方下载页拿得到**（索尼在部分区域仍保留 ILCE-7C 的系统软件下载）：
+`https://www.sony.ru/electronics/support/e-mount-camera-ilce-series/ilce-7c/downloads`
+（本机 `curl` 直连返回 **403**（WAF/地域），请用浏览器打开；下载后请核对上面的 md5/sha256。）
+
+复现签名判定（不碰相机）：
+```bash
+hdiutil attach -readonly -nobrowse -mountpoint /tmp/ilce7c200 ~/Downloads/Update_ILCE7CV200.dmg
+python3 tools/sig_probe_fdat.py /tmp/ilce7c200/SystemSoftwareUpdater.app/Contents/Resources/FirmwareData_ILCE7CV200.dat --walk-only
+python3 tools/sig_probe_fdat.py <同一个 .dat> --dec work/v203/full_dec_200.bin   # 正向 OK★ + 各候选范围
+```

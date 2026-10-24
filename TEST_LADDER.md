@@ -323,6 +323,27 @@
 - 未证（弱 E0）：`sauu -m`/`-s`（MINOR/VERSKIP）是否走同一路径（`sauu` 里没有 `-m`/`-s` 字串，argc 只 1 处 cmp）；PROD 侧；失败时的用户可见码。
 - ⇒ **顺序上先试"不改 a1"的模式实验（PROD/MINOR/VERSKIP 旗标）**，但必须先在 QEMU 里 R1 演练"只有旗标、没有 payload"会发生什么（会不会半刷）。
 
+### ★R1 里程碑（2025-10-24，Round 11 离线）：写分区 + 重启后仍在，已经证到
+往 QEMU 里的 `/dev/nflasha23`（**闭源 Sony AL_EMMC 驱动**）写 64 KiB 图案 → 立即读回 md5 一致 → **QEMU 冷重启后再读仍是同一 md5**；宿主侧确认落在镜像偏移 `0x50C00000`（=`0x400000` boot 前缀 + `0x50800000`=a23 起点）。⇒ **恢复原语（把分区镜像写回去 + 重启后生效）在离线侧成立（R1）**。剩下的是**真机写通道**这一环。
+
+### L2.6（新增・真机・恢复原语）：FileControl 写**块设备节点** `/dev/nflashaX`
+- 为什么需要：整分区回写（改 a1、恢复 a23…）不能靠"往 FAT 里放文件"，必须能 raw 写节点。L2.5 只证了 FAT 文件写。
+- 手法：`fput /dev/nflasha10`（`/tmp`=FAT16、12 MiB、可弃）先写 **512 B** 图案 → 立刻 `fget` 读回比对 → 再**重挂/重启后**重读比对（Sony 改过 FAT 的 CLOSE_NOSYNC 语义，"写成功"≠落盘）。
+- 风险控制：目标区在写时**不要处于挂载状态**（挂载中 raw 写会撕裂）；只挑可弃区（a10 `/tmp`）；先完成 L1.5 备份；一次一发、不重试（`tools/wrapw.sh`）。
+- 判据：三次读（写前/写后即时/重启后）哈希符合预期，且相机功能正常。做成 ⇒ **改 a1 / 恢复任意已备份分区**从 R0 升到 R1 可达。
+
+### 关于 backup 的两条新事实（影响"能不能靠 updater 重建"）
+- `rescue/updater` 侧 `backup.ko` 期望 cookie **`0x9000e1a0`**，真机 `/setting/Backup.bin` 里是 **`0xaaaaaaaa`**；**产品侧(a15) 模块**才期望 `0xaaaaaaaa`（其头部：`+0x04=aaaaaaaa`、`+0x0c="BK4"`、`+0x10=0x2ee`×6）。⇒ 真机 updater 阶段的 `backup.ko` **很可能也加载不上这个文件**（H2 可能成立）；但 `mcmn_drv.ko` 需要 **7 个 `Backup_*` 符号**，而 `sauu` 的 `mcmn_log_init` 会解引用 `MAP_FAILED` ⇒ 这条链在离线侧是硬绑的，**真机 USER 更新时 backup 是不是也"死着"跑完仍未证**（E0）。
+- `backup.ko` **没有软失败**：绕过 `backupfile_load`/`backup_senser_init` 会立刻 NULL 表崩溃。
+
+### L5（新增・真机・内容面旁路）：改 `/system`(a3) 里的产品侧文件 —— **不经过 updater，也就不经过签名门**
+- 已确证（E3，本地解包 `work/a3-avcam/`）：a3 = **FAT12** 卷（BPB@0、簇 16 KiB、root@`0x8200`、data@`0xC200`、卷大小正好 = 我们 dump），里面有
+  `AV-CAM.BIN`(2.00 = **17,394,576 B / md5 `8a382272…`**；2.03 = 17,398,676 / `440c2a3e…`)、**`VMLINUX`(4,117,632)**、**`INITRD.IMG`(2,186,240)**、`BONOBO/DFE_APP/DFE_DAT/LDR_DRV/LIF_APP/WOLE_APP/BT_FIRM.HCD`。
+- `AV-CAM.BIN` = **DSP 平铺镜像**（`ORIL` 头在文件 `0x4`，entry `0x635c6044` ⇒ 基址 **`0x635c6000`**，两版相同；`VA − base == 文件偏移`），由 **`/usr/kmod/liro.ko`** 装载；**2.00 与 2.03 的 LUT 指针表同构但整体平移 −0x1004/−0xFFC**（表基址 2.00 = 文件 `0x108b9c0`）⇒ **补丁偏移必须按版本重算**。
+- 前置（顺序不可换）：①**a3 已整卷备份在手**（`work/l1_v/nflasha3.bin`）；②**L2.6 的 raw 节点写验证先做成**（写 `/dev/nflashaX` 512 B + 重启后重读）；③离线 QEMU 演练过回写（已有 R1）。
+- 风险要点：`/system` 里含 `VMLINUX/INITRD.IMG` ⇒ **a3 在启动链上**；改前必须先确认 **EXBL 是否校验这些文件**（等 `nflashaB0/B1` dump），否则属于 R0。
+- 别照抄的推断：一代 LUT 表**是否真被调用**仍未证（只有 Unicorn 单元级证据；A7C 菜单没有 Creative Look）。
+
 ## 4. 变砖前的三件"救命东西"（必须已在手）
 1. 原厂 `/tmp/jiritsu` 全套副本（L1）+ SHA-256 清单。
 2. `/setting`(`nflasha2`) 的完整镜像（校准！含 `Backup.bin`、`updater/dat4`、`updater/mode*`、`sen/`）——**只读一次就永久存好**；再加一份 `nflasha4`（MPR，每次官方更新都会被 `ud_lerase` 擦）。

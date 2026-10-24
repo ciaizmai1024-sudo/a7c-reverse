@@ -1,0 +1,622 @@
+/bin	40755	1024	d
+/bin/cp	120777	7	l	?
+/bin/touch	120777	7	l	?
+/bin/pwd	120777	7	l	?
+/bin/login	120777	7	l	?
+/bin/true	120777	7	l	?
+/bin/rmdir	120777	7	l	?
+/bin/mkdir	120777	7	l	?
+/bin/echo	120777	7	l	?
+/bin/hostname	100755	16729	f
+/bin/fgrep	120777	7	l	?
+/bin/chown	120777	7	l	?
+/bin/egrep	120777	7	l	?
+/bin/rm	120777	7	l	?
+/bin/sleep	120777	7	l	?
+/bin/ps	100755	59782	f
+/bin/ln	120777	7	l	?
+/bin/tar	120777	7	l	?
+/bin/dmesg	120777	7	l	?
+/bin/grep	120777	7	l	?
+/bin/busybox	100755	396600	f
+/bin/sed	120777	7	l	?
+/bin/mount	120777	7	l	?
+/bin/chgrp	120777	7	l	?
+/bin/mv	120777	7	l	?
+/bin/ping	120777	7	l	?
+/bin/zcat	120777	7	l	?
+/bin/cpio	120777	7	l	?
+/bin/ls	120777	7	l	?
+/bin/umount	120777	7	l	?
+/bin/gunzip	120777	7	l	?
+/bin/dnsdomainname	100755	16729	f
+/bin/dd	120777	7	l	?
+/bin/false	120777	7	l	?
+/bin/gzip	120777	7	l	?
+/bin/sh	120777	7	l	?
+/bin/usleep	120777	7	l	?
+/bin/chattr	100755	12429	f
+/bin/compile_et	100755	1485	f
+/bin/ash	120777	7	l	?
+/bin/ping6	120777	7	l	?
+/bin/mknod	120777	7	l	?
+/bin/sync	120777	7	l	?
+/bin/mk_cmds	100755	1322	f
+/bin/kill	120777	7	l	?
+/bin/date	120777	7	l	?
+/bin/uname	120777	7	l	?
+/bin/cat	100755	25172	f
+/bin/pidof	120777	7	l	?
+/bin/chmod	120777	7	l	?
+/bin/lsattr	100755	11599	f
+/bin/mktemp	120777	7	l	?
+/cert	40755	1024	d
+/dev	40755	6144	d
+/dev/nflashaB0	60777	0	f
+/dev/dnflasha24	60777	0	f
+/dev/satauhs	120777	4	l	?
+/dev/ram7	60660	0	f
+/dev/port	20640	0	f
+/dev/satab	20777	0	f
+/dev/dnflasha14	60777	0	f
+/dev/tty12	20666	0	f
+/dev/vcs14	20600	0	f
+/dev/mmcab1	60777	0	f
+/dev/ram13	60660	0	f
+/dev/mmcda	60777	0	f
+/dev/ttyUSB5	20644	0	f
+/dev/mmccd	60777	0	f
+/dev/nflasha23	60777	0	f
+/dev/nflasha20	60777	0	f
+/dev/core	120777	11	l	?
+/dev/nflasha16	60777	0	f
+/dev/vcsa8	20600	0	f
+/dev/tty13	20666	0	f
+/dev/nflasha21	60777	0	f
+/dev/ttyUSB3	20644	0	f
+/dev/sio4	20777	0	f
+/dev/stderr	120777	4	l	?
+/dev/sda	60644	0	f
+/dev/vcsa5	20600	0	f
+/dev/vcsa13	20600	0	f
+/dev/ram3	60660	0	f
+/dev/vcs7	20600	0	f
+/dev/tty17	20666	0	f
+/dev/nflasha4	60777	0	f
+/dev/ram4	60660	0	f
+/dev/vcsa14	20600	0	f
+/dev/ram16	60660	0	f
+/dev/nflasha2	60777	0	f
+/dev/mmcbc	60777	0	f
+/dev/ms6	60777	0	f
+/dev/mmcba1	60777	0	f
+/dev/vcs16	20600	0	f
+/dev/boss-t3	20777	0	f
+/dev/ram9	60660	0	f
+/dev/dnflasha3	60777	0	f
+/dev/backup	20777	0	f
+/dev/mmce	60777	0	f
+/dev/nflasha22	60777	0	f
+/dev/urandom	20444	0	f
+/dev/mmcad	60777	0	f
+/dev/mmcaa1	60777	0	f
+/dev/vcsa0	20600	0	f
+/dev/dnflasha27	60777	0	f
+/dev/mmcb4	60777	0	f
+/dev/ms1	60777	0	f
+/dev/mmcd	60777	0	f
+/dev/console	20600	0	f
+/dev/crash	20600	0	f
+/dev/tty6	20666	0	f
+/dev/mmcdb	60777	0	f
+/dev/sda4	60644	0	f
+/dev/mmcdc1	60777	0	f
+/dev/sdb	60644	0	f
+/dev/ram12	60660	0	f
+/dev/dnflasha17	60777	0	f
+/dev/ram6	60660	0	f
+/dev/fuse	20666	0	f
+/dev/hdmi_input	20777	0	f
+/dev/nflasha9	60777	0	f
+/dev/mmcbc1	60777	0	f
+/dev/ttyAM0	20644	0	f
+/dev/nflasha28	60777	0	f
+/dev/sdc	60644	0	f
+/dev/ttyUSB6	20644	0	f
+/dev/mem	20640	0	f
+/dev/tty15	20666	0	f
+/dev/net	40775	1024	d
+/dev/net/tun	20664	0	f
+/dev/ms8	60777	0	f
+/dev/satac	20777	0	f
+/dev/ttyACM2	20644	0	f
+/dev/mmcac	60777	0	f
+/dev/dnflasha7	60777	0	f
+/dev/mmcbd1	60777	0	f
+/dev/mmcc	60777	0	f
+/dev/ram2	60660	0	f
+/dev/mmcc1	60777	0	f
+/dev/nflasha19	60777	0	f
+/dev/compswap	60644	0	f
+/dev/mmcdd1	60777	0	f
+/dev/mmccd1	60777	0	f
+/dev/loop6	60660	0	f
+/dev/mmce2	60777	0	f
+/dev/vcsa16	20600	0	f
+/dev/ttyUSB4	20644	0	f
+/dev/vcs2	20600	0	f
+/dev/dnflasha6	60777	0	f
+/dev/dnflasha15	60777	0	f
+/dev/vcs4	20600	0	f
+/dev/vcs9	20600	0	f
+/dev/ttycons	120777	6	l	?
+/dev/ram1	60660	0	f
+/dev/qcqmi0	20644	0	f
+/dev/mmcb1	60777	0	f
+/dev/mmca3	60777	0	f
+/dev/vcs15	20600	0	f
+/dev/mmcd4	60777	0	f
+/dev/tty16	20666	0	f
+/dev/sdb1	60644	0	f
+/dev/loop4	60660	0	f
+/dev/dnflasha19	60777	0	f
+/dev/satad	20777	0	f
+/dev/mmcea	60777	0	f
+/dev/ram10	60660	0	f
+/dev/mmcbd	60777	0	f
+/dev/dmpgles2	20777	0	f
+/dev/mmcd3	60777	0	f
+/dev/loop2	60660	0	f
+/dev/ppp	20600	0	f
+/dev/vcs19	20600	0	f
+/dev/dnflasha29	60777	0	f
+/dev/tty19	20666	0	f
+/dev/mmca-char	20777	0	f
+/dev/ram0	60660	0	f
+/dev/nflasha12	60777	0	f
+/dev/vcs18	20600	0	f
+/dev/ttyUSB10	20644	0	f
+/dev/loop3	60660	0	f
+/dev/mmce4	60777	0	f
+/dev/satauhsb	120777	5	l	?
+/dev/vcsa	120777	5	l	?
+/dev/vcs12	20600	0	f
+/dev/mmcb3	60777	0	f
+/dev/ttyS3	20660	0	f
+/dev/ttyBT	120777	6	l	?
+/dev/ram11	60660	0	f
+/dev/mmcd-char	20777	0	f
+/dev/dnflasha22	60777	0	f
+/dev/ms2	60777	0	f
+/dev/mmcc3	60777	0	f
+/dev/full	20666	0	f
+/dev/tty7	20666	0	f
+/dev/vcs17	20600	0	f
+/dev/mmccb1	60777	0	f
+/dev/nflasha17	60777	0	f
+/dev/tty0	20600	0	f
+/dev/nflasha	60777	0	f
+/dev/sda2	60644	0	f
+/dev/hdmi	20777	0	f
+/dev/vcsa12	20600	0	f
+/dev/mmcac1	60777	0	f
+/dev/nflasha15	60777	0	f
+/dev/nflasha3	60777	0	f
+/dev/nflasha11	60777	0	f
+/dev/ttyUSB8	20644	0	f
+/dev/mmca4	60777	0	f
+/dev/mmcec1	60777	0	f
+/dev/vcs8	20600	0	f
+/dev/mmca2	60777	0	f
+/dev/vcs0	20600	0	f
+/dev/ram8	60660	0	f
+/dev/uipc	20777	0	f
+/dev/mmcca1	60777	0	f
+/dev/tty14	20666	0	f
+/dev/vcsa2	20600	0	f
+/dev/ptmx	20644	0	f
+/dev/loop1	60660	0	f
+/dev/usb	40755	1024	d
+/dev/usb/cur	20777	0	f
+/dev/usb/usbcore	20777	0	f
+/dev/usb/sicd_core	20777	0	f
+/dev/usb/buspwric	20777	0	f
+/dev/usb/audio	20664	0	f
+/dev/usb/otgcore	20777	0	f
+/dev/usb/std	20777	0	f
+/dev/usb/usb_extcmd	20777	0	f
+/dev/usb/scsi	20777	0	f
+/dev/usb/massstorage	20777	0	f
+/dev/usb/kikilog	20777	0	f
+/dev/usb/buspwr	20777	0	f
+/dev/usb/video	20664	0	f
+/dev/usb/event	20777	0	f
+/dev/usb/sen	20777	0	f
+/dev/usb/swic	20777	0	f
+/dev/usb/sicd_event	20777	0	f
+/dev/usb/adb	20777	0	f
+/dev/usb/vspe	20777	0	f
+/dev/usb/usbg_bspwr	20777	0	f
+/dev/usb/portmon	20777	0	f
+/dev/usb/sicd_data	20777	0	f
+/dev/usb/ter	20777	0	f
+/dev/usb/gadgetcore	20777	0	f
+/dev/tty4	20666	0	f
+/dev/vcsa4	20600	0	f
+/dev/nflasha8	60777	0	f
+/dev/dnflasha30	60777	0	f
+/dev/loop5	60660	0	f
+/dev/uio0	20644	0	f
+/dev/kmem	20640	0	f
+/dev/rtc	20660	0	f
+/dev/ttyAM3	20644	0	f
+/dev/loop0	60660	0	f
+/dev/ms-char	20777	0	f
+/dev/nflasha30	60777	0	f
+/dev/nflasha7	60777	0	f
+/dev/stdin	120777	4	l	?
+/dev/ttyACM1	20644	0	f
+/dev/ttyUSB0	20644	0	f
+/dev/ram14	60660	0	f
+/dev/fb1	20644	0	f
+/dev/nflasha18	60777	0	f
+/dev/ms4	60777	0	f
+/dev/emif	20777	0	f
+/dev/tty11	20666	0	f
+/dev/fd	120777	13	l	?
+/dev/vcsa1	20600	0	f
+/dev/hdmi_external_tx	20777	0	f
+/dev/mmccc	60777	0	f
+/dev/ttyS1	20660	0	f
+/dev/nflasha14	60777	0	f
+/dev/sr1	60644	0	f
+/dev/stdout	120777	4	l	?
+/dev/nflasha24	60777	0	f
+/dev/ram15	60660	0	f
+/dev/vcsa9	20600	0	f
+/dev/mmce-char	20777	0	f
+/dev/mmcdb1	60777	0	f
+/dev/stream	20777	0	f
+/dev/nflasha26	60777	0	f
+/dev/vcsa18	20600	0	f
+/dev/ttyUSB1	20644	0	f
+/dev/nflasha29	60777	0	f
+/dev/mmcaa	60777	0	f
+/dev/vcsa6	20600	0	f
+/dev/boss-t1	20777	0	f
+/dev/random	20444	0	f
+/dev/ttyACM0	20644	0	f
+/dev/ttyUSB11	20644	0	f
+/dev/sdd	60644	0	f
+/dev/dma330	20777	0	f
+/dev/rmon	20600	0	f
+/dev/mmca1	60777	0	f
+/dev/nflasha5	60777	0	f
+/dev/mmcbb1	60777	0	f
+/dev/ms5	60777	0	f
+/dev/tty9	20666	0	f
+/dev/dnflasha4	60777	0	f
+/dev/vcsa11	20600	0	f
+/dev/sio2	20777	0	f
+/dev/tty10	20666	0	f
+/dev/mmcd1	60777	0	f
+/dev/nflasha10	60777	0	f
+/dev/tty8	20666	0	f
+/dev/mmcb	60777	0	f
+/dev/nflasha27	60777	0	f
+/dev/vcs11	20600	0	f
+/dev/zero	20666	0	f
+/dev/sataa	20777	0	f
+/dev/dnflasha23	60777	0	f
+/dev/sio3	20777	0	f
+/dev/mmcc4	60777	0	f
+/dev/mmccc1	60777	0	f
+/dev/qcqmi2	20644	0	f
+/dev/nflasha25	60777	0	f
+/dev/sata	20777	0	f
+/dev/mmcb2	60777	0	f
+/dev/boss-t2	20777	0	f
+/dev/mmccb	60777	0	f
+/dev/ttyAM2	20644	0	f
+/dev/mmcdd	60777	0	f
+/dev/vcsa15	20600	0	f
+/dev/mmcc2	60777	0	f
+/dev/mmcb-char	20777	0	f
+/dev/snd	40775	1024	d
+/dev/snd/timer	20664	0	f
+/dev/snd/pcmC0D0p	20664	0	f
+/dev/snd/controlC0	20664	0	f
+/dev/snd/pcmC0D0c	20664	0	f
+/dev/dnflasha9	60777	0	f
+/dev/qcqmi1	20644	0	f
+/dev/mmce3	60777	0	f
+/dev/vcsa17	20600	0	f
+/dev/dnflasha20	60777	0	f
+/dev/vcs6	20600	0	f
+/dev/ms7	60777	0	f
+/dev/dnflasha5	60777	0	f
+/dev/bus	40755	1024	d
+/dev/bus/usb	40755	1024	d
+/dev/dnflasha11	60777	0	f
+/dev/mcmn	20777	0	f
+/dev/ca	20777	0	f
+/dev/mmcad1	60777	0	f
+/dev/null	20666	0	f
+/dev/ttyUSB9	20644	0	f
+/dev/nflasha13	60777	0	f
+/dev/ttyS2	20660	0	f
+/dev/dnflasha	60777	0	f
+/dev/vcsa10	20600	0	f
+/dev/dnflasha8	60777	0	f
+/dev/vcs13	20600	0	f
+/dev/satassd	120777	4	l	?
+/dev/ttyUSB2	20644	0	f
+/dev/dnflasha18	60777	0	f
+/dev/ioexp	20777	0	f
+/dev/ttyUSB7	20644	0	f
+/dev/mmcab	60777	0	f
+/dev/gpio	20777	0	f
+/dev/dnflasha31	60777	0	f
+/dev/mmcdc	60777	0	f
+/dev/mmced1	60777	0	f
+/dev/vcsa7	20600	0	f
+/dev/ldec	20777	0	f
+/dev/bootimg	20600	0	f
+/dev/mmca	60777	0	f
+/dev/tty3	20666	0	f
+/dev/tty	20666	0	f
+/dev/vcs	120777	4	l	?
+/dev/mmcda1	60777	0	f
+/dev/sxs_blk0	20777	0	f
+/dev/ram	120777	4	l	?
+/dev/loop7	60660	0	f
+/dev/pts	40755	1024	d
+/dev/vcs1	20600	0	f
+/dev/jet	40777	1024	d
+/dev/jet/adj_drv	20777	0	f
+/dev/jet/pcl_obex	20777	0	f
+/dev/jet/wrapper	20777	0	f
+/dev/jet/event	20777	0	f
+/dev/jet/obex	20777	0	f
+/dev/jet/scsi_tgt	20777	0	f
+/dev/jet/pclc_ctr	20777	0	f
+/dev/jet/TransferJet_APM2PCLCD	10664	0	f
+/dev/jet/pclc_msg	20777	0	f
+/dev/jet/TransferJet_PCLCD2APM	10664	0	f
+/dev/mmcca	60777	0	f
+/dev/mmcbb	60777	0	f
+/dev/mmcea1	60777	0	f
+/dev/ms9	60777	0	f
+/dev/cec	20777	0	f
+/dev/mmced	60777	0	f
+/dev/vcsa19	20600	0	f
+/dev/fb0	20644	0	f
+/dev/mmcec	60777	0	f
+/dev/dnflasha25	60777	0	f
+/dev/mmceb	60777	0	f
+/dev/input	40755	1024	d
+/dev/input/event2	20644	0	f
+/dev/input/event1	20644	0	f
+/dev/input/event0	20644	0	f
+/dev/vcs3	20600	0	f
+/dev/dnflasha1	60777	0	f
+/dev/vcs5	20600	0	f
+/dev/tty2	20666	0	f
+/dev/ttyAM1	20644	0	f
+/dev/uinput	20644	0	f
+/dev/sda3	60644	0	f
+/dev/dnflasha26	60777	0	f
+/dev/ms3	60777	0	f
+/dev/satauhsa	120777	5	l	?
+/dev/nflasha1	60777	0	f
+/dev/vcs10	20600	0	f
+/dev/sr0	60644	0	f
+/dev/mmce1	60777	0	f
+/dev/dmac	20777	0	f
+/dev/dnflasha16	60777	0	f
+/dev/nflasha31	60777	0	f
+/dev/sdc1	60644	0	f
+/dev/sxs_blk1	20777	0	f
+/dev/dnflasha13	60777	0	f
+/dev/mmcba	60777	0	f
+/dev/dnflasha12	60777	0	f
+/dev/sio0	20777	0	f
+/dev/tty5	20666	0	f
+/dev/sio1	20777	0	f
+/dev/stream2	20777	0	f
+/dev/nflashaB1	60777	0	f
+/dev/mmcc-char	20777	0	f
+/dev/sda1	60644	0	f
+/dev/tty18	20666	0	f
+/dev/ms	60777	0	f
+/dev/nflasha6	60777	0	f
+/dev/tty1	20666	0	f
+/dev/sdd1	60644	0	f
+/dev/dnflasha2	60777	0	f
+/dev/ram5	60660	0	f
+/dev/ttyS0	20660	0	f
+/dev/mmceb1	60777	0	f
+/dev/dnflasha21	60777	0	f
+/dev/dnflasha28	60777	0	f
+/dev/dnflasha10	60777	0	f
+/dev/vcsa3	20600	0	f
+/dev/mmcd2	60777	0	f
+/etc	40755	1024	d
+/initrd	40755	1024	d
+/kmod	40755	1024	d
+/kmod/nand.ko	100755	152212	f
+/kmod/lld.ko	100755	79340	f
+/kmod/dmac.ko	100755	17096	f
+/kmod/emmc.ko	100755	214252	f
+/kmod/ldec.ko	100755	15840	f
+/kmod/devno.ko	100755	4368	f
+/lens	40755	1024	d
+/lib	40755	1024	d
+/lib/libm-2.11.2.so	100777	427692	f
+/lib/libblkid.so.1.1.0	100777	140176	f
+/lib/ld-linux.so.3	120777	12	l	?
+/lib/libutil.so.1	120777	17	l	?
+/lib/libc-2.11.2.so	100777	984292	f
+/lib/libnss_nis.so.2	120777	20	l	?
+/lib/libnss_nis-2.11.2.so	100777	34576	f
+/lib/libnsl-2.11.2.so	100777	67600	f
+/lib/libSTMcmdexecute.so	100777	4640	f
+/lib/libdl.so.2	120777	15	l	?
+/lib/libnsl.so.1	120777	16	l	?
+/lib/libnss_files.so.2	120777	22	l	?
+/lib/libm.so.6	120777	14	l	?
+/lib/libpthread.so.0	120777	20	l	?
+/lib/libproc-3.2.7.so	100777	40928	f
+/lib/librt-2.11.2.so	100777	22468	f
+/lib/libcrypt-2.11.2.so	100777	38532	f
+/lib/libpthread-2.11.2.so	100777	67996	f
+/lib/libcrypt.so.1	120777	18	l	?
+/lib/libblkid.so.1	120777	17	l	?
+/lib/libutil-2.11.2.so	100777	14008	f
+/lib/libc.so.6	120777	14	l	?
+/lib/libuuid.so.1	120777	16	l	?
+/lib/libnss_files-2.11.2.so	100777	34540	f
+/lib/libuuid.so.1.3.0	100777	36150	f
+/lib/libnss_dns-2.11.2.so	100777	22192	f
+/lib/libnss_dns.so.2	120777	20	l	?
+/lib/xtables	40777	3072	d
+/lib/xtables/libxt_SECMARK.so	100755	6809	f
+/lib/xtables/libipt_ECN.so	100755	7425	f
+/lib/xtables/libxt_cluster.so	100755	8692	f
+/lib/xtables/libxt_CLASSIFY.so	100755	6621	f
+/lib/xtables/libxt_TEE.so	100755	8317	f
+/lib/xtables/libipt_TTL.so	100755	7171	f
+/lib/xtables/libxt_dscp.so	100755	8010	f
+/lib/xtables/libxt_esp.so	100755	7539	f
+/lib/xtables/libipt_addrtype.so	100755	10377	f
+/lib/xtables/libipt_SNAT.so	100755	8905	f
+/lib/xtables/libip6t_REJECT.so	100755	7725	f
+/lib/xtables/libip6t_rt.so	100755	10663	f
+/lib/xtables/libip6t_mh.so	100755	10032	f
+/lib/xtables/libxt_state.so	100755	7603	f
+/lib/xtables/libxt_TCPOPTSTRIP.so	100755	7977	f
+/lib/xtables/libxt_CONNMARK.so	100755	11609	f
+/lib/xtables/libipt_ah.so	100755	7615	f
+/lib/xtables/libxt_tcpmss.so	100755	7289	f
+/lib/xtables/libipt_icmp.so	100755	9550	f
+/lib/xtables/libip6t_frag.so	100755	8966	f
+/lib/xtables/libxt_udp.so	100755	8296	f
+/lib/xtables/libxt_DSCP.so	100755	7860	f
+/lib/xtables/libxt_NFLOG.so	100755	8142	f
+/lib/xtables/libipt_ecn.so	100755	7535	f
+/lib/xtables/libxt_recent.so	100755	10193	f
+/lib/xtables/libxt_TPROXY.so	100755	7510	f
+/lib/xtables/libxt_rateest.so	100755	11860	f
+/lib/xtables/libxt_sctp.so	100755	12659	f
+/lib/xtables/libipt_MASQUERADE.so	100755	7214	f
+/lib/xtables/libxt_dccp.so	100755	10177	f
+/lib/xtables/libip6t_dst.so	100755	8819	f
+/lib/xtables/libxt_NFQUEUE.so	100755	7561	f
+/lib/xtables/libxt_TCPMSS.so	100755	7031	f
+/lib/xtables/libxt_physdev.so	100755	8748	f
+/lib/xtables/libxt_statistic.so	100755	8837	f
+/lib/xtables/libxt_tos.so	100755	9067	f
+/lib/xtables/libipt_REDIRECT.so	100755	7360	f
+/lib/xtables/libxt_limit.so	100755	10187	f
+/lib/xtables/libxt_cpu.so	100755	6671	f
+/lib/xtables/libxt_mark.so	100755	7742	f
+/lib/xtables/libxt_multiport.so	100755	12019	f
+/lib/xtables/libxt_TOS.so	100755	9869	f
+/lib/xtables/libxt_CT.so	100755	9036	f
+/lib/xtables/libxt_tcp.so	100755	10781	f
+/lib/xtables/libxt_set.so	100755	10715	f
+/lib/xtables/libip6t_hbh.so	100755	8851	f
+/lib/xtables/libip6t_hl.so	100755	7132	f
+/lib/xtables/libxt_comment.so	100755	6921	f
+/lib/xtables/libxt_socket.so	100755	5000	f
+/lib/xtables/libxt_connbytes.so	100755	8343	f
+/lib/xtables/libxt_quota.so	100755	6345	f
+/lib/xtables/libxt_u32.so	100755	8680	f
+/lib/xtables/libxt_MARK.so	100755	9645	f
+/lib/xtables/libxt_string.so	100755	10563	f
+/lib/xtables/libxt_mac.so	100755	7254	f
+/lib/xtables/libipt_SAME.so	100755	7935	f
+/lib/xtables/libipt_MIRROR.so	100755	5007	f
+/lib/xtables/libxt_length.so	100755	7423	f
+/lib/xtables/libxt_policy.so	100755	13674	f
+/lib/xtables/libip6t_ipv6header.so	100755	9173	f
+/lib/xtables/libipt_REJECT.so	100755	8786	f
+/lib/xtables/libxt_time.so	100755	12255	f
+/lib/xtables/libxt_TRACE.so	100755	5002	f
+/lib/xtables/libxt_conntrack.so	100755	20607	f
+/lib/xtables/libxt_RATEEST.so	100755	8996	f
+/lib/xtables/libipt_LOG.so	100755	9925	f
+/lib/xtables/libxt_osf.so	100755	8027	f
+/lib/xtables/libip6t_eui64.so	100755	5002	f
+/lib/xtables/libxt_hashlimit.so	100755	18656	f
+/lib/xtables/libxt_IDLETIMER.so	100755	7045	f
+/lib/xtables/libipt_realm.so	100755	8640	f
+/lib/xtables/libxt_CONNSECMARK.so	100755	6835	f
+/lib/xtables/libip6t_LOG.so	100755	9809	f
+/lib/xtables/libxt_LED.so	100755	7862	f
+/lib/xtables/libipt_ttl.so	100755	7324	f
+/lib/xtables/libipt_CLUSTERIP.so	100755	9481	f
+/lib/xtables/libipt_ULOG.so	100755	8840	f
+/lib/xtables/libipt_unclean.so	100755	5005	f
+/lib/xtables/libxt_owner.so	100755	11878	f
+/lib/xtables/libxt_SET.so	100755	11268	f
+/lib/xtables/libxt_iprange.so	100755	10676	f
+/lib/xtables/libxt_connmark.so	100755	7802	f
+/lib/xtables/libxt_CHECKSUM.so	100755	6372	f
+/lib/xtables/libxt_NOTRACK.so	100755	5008	f
+/lib/xtables/libipt_DNAT.so	100755	8905	f
+/lib/xtables/libxt_pkttype.so	100755	7576	f
+/lib/xtables/libipt_NETMAP.so	100755	7370	f
+/lib/xtables/libxt_connlimit.so	100755	8179	f
+/lib/xtables/libip6t_ah.so	100755	8151	f
+/lib/xtables/libxt_ipvs.so	100755	11220	f
+/lib/xtables/libip6t_HL.so	100755	7153	f
+/lib/xtables/libip6t_icmp6.so	100755	9326	f
+/lib/xtables/libxt_helper.so	100755	6815	f
+/lib/xtables/libxt_standard.so	100755	5285	f
+/lib/ld-2.11.2.so	100777	101736	f
+/lib/libgcc_s.so.1	100666	252717	f
+/lib/libresolv-2.11.2.so	100777	67488	f
+/lib/librt.so.1	120777	15	l	?
+/lib/libresolv.so.2	120777	19	l	?
+/lib/libdl-2.11.2.so	100777	13976	f
+/lib/libanl.so.1	120777	16	l	?
+/lib/libanl-2.11.2.so	100777	14124	f
+/log	40755	1024	d
+/mnt	40755	1024	d
+/network	120777	4	l	?
+/proc	40755	1024	d
+/root	40755	1024	d
+/root/chassis	100644	9	f
+/root/common.src	100644	2595	f
+/sbin	40755	1024	d
+/sbin/lsmod	120777	14	l	?
+/sbin/ifconfig	120777	14	l	?
+/sbin/freeramdisk	120777	14	l	?
+/sbin/route	120777	14	l	?
+/sbin/sysctl	100755	8562	f
+/sbin/insmod	120777	14	l	?
+/sbin/mkdosfs	100755	47425	f
+/sbin/getty	120777	14	l	?
+/sbin/halt	120777	14	l	?
+/sbin/rmmod	120777	14	l	?
+/sbin/dosfsck	100755	64774	f
+/sbin/pivot_root	120777	14	l	?
+/sbin/swapon	120777	14	l	?
+/sbin/swapoff	120777	14	l	?
+/sbin/poweroff	120777	14	l	?
+/sbin/init	100555	28524	f
+/sbin/reboot	120777	14	l	?
+/setting	40755	1024	d
+/sys	40755	1024	d
+/system	40755	1024	d
+/tmp	40755	1024	d
+/tmp_bt	40755	1024	d
+/tmp_cert	40755	1024	d
+/tmp_ipsec	40755	1024	d
+/tmp_network	40755	1024	d
+/tmp_updater	40755	1024	d
+/usr	40755	1024	d
+/usr/lib	40755	1024	d
+/var	40755	1024	d
+/version.txt	100644	19	f
