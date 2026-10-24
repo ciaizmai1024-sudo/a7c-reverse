@@ -120,6 +120,7 @@ UND: AES_decrypt / AES_set_decrypt_key（OPENSSL_1_1_0）、memcpy、__aeabi_unw
 
 **已试过的否定结论**（别重复劳动）：`7e68a34d…`(运行时) 与 `c1aa8f7c…`(官方包实际用) 之间
 用 `KeyArray[0:16]`、`KeyArray[0x10:0x20]` 做 AES-128-ECB 加/解密（任一半、任方向）**都不匹配**；
+对 KeyArray 窗口（KA1、KA2、KA1+KA2、KA2+KA1、KA1+IV、KA1^KA2 等）做 SHA256/SHA1/MD5 也**不命中**。
 
 
 **下一步（已下达）**：QEMU 里把 **运行时的 KeyArray**（libupdatertalk.so 加载基址 + 0x8830）、GOT 槽 `0x8814/0x881c`、AES_KEY 上下文整个 dump 出来，跟文件里的比；再扫 guest RAM 看 `7e68a34d…` 从哪冒出来的。
